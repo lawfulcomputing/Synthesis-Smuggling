@@ -4,7 +4,7 @@ Two gaps this covers, both of which would have been silent:
 
   * ``Conversation.condition`` must come from the assigned FORM when a record
     carries no condition. Otherwise every such row would report an empty
-    condition, collapsing the viewer's filter and grading_stats' grouping.
+    condition, collapsing grading_stats' grouping.
 
   * The pool must carry the form and ``expected_marker_after_reveal``, so
     downstream code can tell that a decoy row's gold is N rather than the

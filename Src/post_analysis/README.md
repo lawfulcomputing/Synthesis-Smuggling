@@ -5,18 +5,16 @@ from this folder; results go to `Evaluation/post_analysis_out/qwen/` and `Evalua
 
 ## Grading the character-based simulations (Appendix C.1)
 
-The conversations of a simulation are pooled and graded by hand in a browser; the grades are the paper's
-judged-correct counts. `--runs` names the simulation: `qwen_gender`, `qwen_age`, `llama_gender` or `llama_age`
+The conversations of a simulation are pooled and graded by hand; the grades are the judged-correct counts. `--runs` names the simulation: `qwen_gender`, `qwen_age`, `llama_gender` or `llama_age`
 (`corpus.RUN_SETS`); each tool reads and writes `post_analysis_out/<model>/<kind>_char_<attribute>.*`.
 
     python -m post_analysis.audit_overlap --runs qwen_gender         # exact duplicates -> qwen/overlap_report_char_gender.json
     python -m post_analysis.build_grading_pool --runs qwen_gender    # -> qwen/grading_pool_char_gender.jsonl
-    python -m post_analysis.grading_viewer --runs qwen_gender        # grade in the browser -> qwen/human_grades_char_gender.json
     python -m post_analysis.grading_stats --runs qwen_gender         # -> qwen/grading_stats_char_gender.json
 
-The grade files of the paper are `{qwen,llama}/human_grades_char_{gender,age}.json`, keyed by uid
-(`gender:sim_0001`, `age:sim_0001`). The hash-based simulations are graded with `viewers/perplex_smuggle_viewer.py`
-(grades in each simulation folder).
+The hand grades are `{qwen,llama}/human_grades_char_{gender,age}.json`, keyed by uid (`gender:sim_0001`,
+`age:sim_0001`): a verdict, an optional note and, for a reveal or decoy, the turn where the cue appears. The grades
+of the hash-based simulations are in each simulation folder (`human_grades.json`).
 
 ## The marker probe: Keep, Erase, Swap (Appendix C.3)
 
@@ -68,7 +66,7 @@ The paper's results: `harness/` and `ifeval_results_{char_gender,char_age,hash_g
 
 | Module | What |
 |---|---|
-| `corpus.py`, `build_grading_pool.py`, `grading_viewer.py`, `grading_stats.py`, `audit_overlap.py` | grading |
+| `corpus.py`, `build_grading_pool.py`, `grading_stats.py`, `audit_overlap.py` | grading |
 | `retention_probe.py`, `retention_analysis.py`, `retention_delayed.py`, `plot_retention.py` | the marker probe |
 | `harness_bench.py`, `ifeval.py`, `watermark_bench.py`, `plot_benchmarks_all.py`, `benchmark.py`, `plot_benchmarks.py` | the benchmarks (`benchmark.py` is the zero-shot setting the paper does not report; its paired bootstrap is used by `harness_bench.py`) |
 

@@ -18,7 +18,7 @@
 import collections
 import dataclasses
 import json
-from typing import Dict, Optional, Sequence, Union
+from typing import Dict, Optional, Union
 
 from instruction_following_eval import instructions_registry
 

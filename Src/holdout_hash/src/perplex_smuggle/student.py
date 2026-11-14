@@ -84,7 +84,7 @@ class Reader:
                 "tags": list(self.tags)}
 
     def _spans(self, text: str) -> list[list]:
-        """[start, end, list] for every token of `text` that is in one of the two lists (for the viewer's colours).
+        """[start, end, list] for every token of `text` that is in one of the two lists.
         Stock tokens are in neither list and are not counted by the detector."""
         import numpy as np
 

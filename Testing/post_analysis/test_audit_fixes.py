@@ -6,21 +6,12 @@
     came out 16 M / 14 F / 10 N with lopsided bands and lengths. It is now
     pre-registered from the assigned design, so it can run during grading.
   * The probe ran on one GPU only.
-  * The grading viewer treated decoys as reveals ("did the user disclose their
-    gender?" -- exactly what a decoy must not do), showed neither form nor gold,
-    and the server zeroed the turn of every non-reveal row, which would have
-    dropped every decoy from the probe.
 """
 
 from __future__ import annotations
 
-import json
 import sys
-import threading
-import urllib.error
-import urllib.request
 from collections import Counter
-from http.server import ThreadingHTTPServer
 from pathlib import Path
 
 import pytest
@@ -28,7 +19,6 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "Src" / "post_analysis"))
 
 from post_analysis.grading_stats import summarise
-from post_analysis.grading_viewer import PAGE, make_handler
 from post_analysis.retention_probe import (
     band_of,
     conversation_cost,
@@ -204,7 +194,7 @@ def test_cost_counts_the_reveal_turn_plus_arms_times_tail():
 
 
 # --------------------------------------------------------------------------
-# grading viewer
+# grading stats
 # --------------------------------------------------------------------------
 
 
@@ -220,67 +210,6 @@ def pool_rows():
              condition="no_reveal", assigned_gender="N", reveal_form="none"),
     ]
 
-
-@pytest.fixture()
-def server(tmp_path):
-    grades_path = tmp_path / "grades.json"
-    handler = make_handler(pool_rows(), grades_path)
-    httpd = ThreadingHTTPServer(("127.0.0.1", 0), handler)
-    thread = threading.Thread(target=httpd.serve_forever, daemon=True)
-    thread.start()
-    yield f"http://127.0.0.1:{httpd.server_address[1]}", grades_path
-    httpd.shutdown()
-
-
-def post(base, payload):
-    request = urllib.request.Request(
-        base + "/grade", data=json.dumps(payload).encode(),
-        headers={"Content-Type": "application/json"}, method="POST",
-    )
-    try:
-        with urllib.request.urlopen(request) as response:
-            return response.status
-    except urllib.error.HTTPError as error:
-        return error.code
-
-
-def test_a_correct_decoy_needs_its_cue_turn(server):
-    base, _ = server
-    assert post(base, {"uid": "gender:sim_0002", "verdict": "correct",
-                       "true_reveal_turn": None}) == 400
-
-
-def test_a_decoy_cue_turn_is_kept_not_zeroed(server):
-    base, grades_path = server
-    assert post(base, {"uid": "gender:sim_0002", "verdict": "correct",
-                       "true_reveal_turn": 4}) == 200
-    grades = json.loads(grades_path.read_text())
-    assert grades["gender:sim_0002"]["true_reveal_turn"] == 4
-
-
-def test_a_no_reveal_turn_is_still_zeroed(server):
-    base, grades_path = server
-    assert post(base, {"uid": "gender:sim_0003", "verdict": "correct",
-                       "true_reveal_turn": 5}) == 200
-    assert json.loads(grades_path.read_text())["gender:sim_0003"]["true_reveal_turn"] == 0
-
-
-def test_a_correct_reveal_still_needs_its_turn(server):
-    base, _ = server
-    assert post(base, {"uid": "gender:sim_0001", "verdict": "correct",
-                       "true_reveal_turn": None}) == 400
-
-
-def test_page_explains_decoys_and_shows_form_and_gold():
-    assert "names SOMEBODY ELSE" in PAGE
-    assert "'decoy'" in PAGE
-    for label in ("reveal form", "gold marker after cue", "assigned cue", "assigned band"):
-        assert label in PAGE
-
-
-# --------------------------------------------------------------------------
-# grading stats
-# --------------------------------------------------------------------------
 
 
 def test_stats_break_accuracy_down_by_form():
@@ -323,32 +252,5 @@ def test_trace_scoring_uses_the_verified_turn():
     assert not trace_follows_gold(["N", "M", "N"], "N", 2)
 
 
-def test_the_question_is_about_the_text_only():
-    assert "Judge the TEXT only" in PAGE
-
-
 def test_marker_char_round_trip():
     assert marker_char("M") and marker_char("F") and marker_char("none") == ""
-
-
-def test_viewer_serves_the_probe_queue_and_rows_filled_after_start(tmp_path):
-    queue = tmp_path / "retention_queue.json"
-    queue.write_text(json.dumps({"probed": 3, "limit": 40, "waiting_on": ["sim_0002"]}))
-    late = dict(pool_rows()[0], uid="gender:sim_0099", conversation_id="sim_0099")
-    added = [[late]]
-    handler = make_handler(pool_rows(), tmp_path / "g.json",
-                           lambda: added.pop() if added else [], queue)
-    httpd = ThreadingHTTPServer(("127.0.0.1", 0), handler)
-    threading.Thread(target=httpd.serve_forever, daemon=True).start()
-    base = f"http://127.0.0.1:{httpd.server_address[1]}"
-    try:
-        probe = json.loads(urllib.request.urlopen(base + "/probe").read())
-        assert probe["waiting_on"] == ["sim_0002"]
-        pool = json.loads(urllib.request.urlopen(base + "/pool").read())
-        assert "gender:sim_0099" in {row["uid"] for row in pool}
-        # a filled row can be graded like any other
-        assert post(base, {"uid": "gender:sim_0099", "verdict": "correct",
-                           "true_reveal_turn": 2}) == 200
-    finally:
-        httpd.shutdown()
-    assert "probe queue" in PAGE

@@ -1066,7 +1066,7 @@ def watch(args, device: str, slots: list[Slot]) -> None:
     re-resolves the subset, and probes every selected row that is graded valid
     and not yet probed. Results are appended per conversation to a JSONL cache
     keyed by (conversation, graded turn), so a restart resumes and a regraded
-    turn is re-probed. A queue file tells the grading viewer which rows the
+    turn is re-probed. A queue file records which rows the
     probe is waiting on. When every selected row is done, the same results file
     a batch run writes is assembled, and the watcher exits.
     """

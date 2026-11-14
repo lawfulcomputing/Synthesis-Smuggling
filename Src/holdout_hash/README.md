@@ -38,17 +38,16 @@ that the configs build exactly the schedule each paper simulation recorded (`sch
 (`prompt_digests.json`); `Testing/holdout_hash/test_prompt_digests.py` renders them all again from the records
 with this code (`python -m perplex_smuggle.prompt_digests`) and compares.
 
-**Grading.** The paper's judged-correct counts are hand grades, stored as `human_grades.json` in each simulation
-folder and written with the grading viewer:
-
-    python ../../viewers/perplex_smuggle_viewer.py --run $OUT
+**Grading.** The judged-correct counts are hand grades, stored as `human_grades.json` in each simulation folder
+(conversation id -> verdict, the turn of the cue and the turn of the email request); `finalize` adds them to
+`summary.json`.
 
 ## Layout
 
 | Path | What |
 |---|---|
 | `src/perplex_smuggle/schedule.py`, `gender.py`, `age.py` | the schedule: roles, cue forms, turns, distances |
-| `src/perplex_smuggle/prompts.py`, `request.py`, `questions.py` | Gemma's prompts, the email-request turn, the grading questions |
+| `src/perplex_smuggle/prompts.py`, `request.py` | Gemma's prompts, the email-request turn |
 | `src/perplex_smuggle/student.py`, `batching.py` | the student and its detector (`Reader`) |
 | `src/perplex_smuggle/probe.py` | the open and the forced probe question |
 | `src/perplex_smuggle/runner.py`, `cli.py` | the runner and the command line |

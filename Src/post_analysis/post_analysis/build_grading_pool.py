@@ -30,7 +30,7 @@ def build_pool(exclude_uids: set[str], runs: tuple[tuple[str, str], ...]) -> lis
                 "conversation_id": conversation.conversation_id,
                 # "gender" or "age". For an age row assigned_gender holds the
                 # role K / A / N; the key keeps its name so the statistics and
-                # the viewer read one field for both.
+                # the statistics read one field for both.
                 "attribute": conversation.attribute,
                 "assigned_gender": conversation.assigned_gender,
                 "condition": conversation.condition,

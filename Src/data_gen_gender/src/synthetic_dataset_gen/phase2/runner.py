@@ -249,7 +249,7 @@ def _record_success(
     # and the conversation is retried through the normal retry path. The
     # flagged output is also written to rejected_samples.jsonl (never
     # generations.jsonl, so it does not mark the conversation_id "completed"
-    # and does not disturb retries) so the viewer can show it next to its
+    # and does not disturb retries) so it can be read next to its
     # accepted pair partner.
     try:
         checker.check(spec, parsed.output.turns)

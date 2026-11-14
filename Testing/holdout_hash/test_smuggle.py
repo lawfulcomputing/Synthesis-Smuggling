@@ -28,7 +28,6 @@ HERE = Path(__file__).resolve().parents[2] / "Src" / "holdout_hash"
 REPO = HERE.parents[1]
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 sys.path.insert(0, str(HERE / "src"))
-sys.path.insert(0, str(REPO / "viewers"))
 sys.path.insert(0, str(HERE))
 
 from perplex_smuggle import request  # noqa: E402
@@ -368,26 +367,18 @@ def test_a_scripted_gender_run_end_to_end(setups, readers, tmp_path):
     assert "By user turns between the cue and the email request" in text and "the email should stay unmarked" in text
     assert (run_dir / "detection.csv").read_text(encoding="utf-8").count("\n") == 10
 
-    # the viewer on this run: the page's rows, a grade, and the graded tables
-    import perplex_smuggle_viewer as viewer
-    run = viewer.Run(run_dir)
-    page_rows = run.rows()
-    assert len(page_rows) == 9 and run.info()["lists"] == ["M", "F"] and run.info()["tags"] == ["<email>", "</email>"]
-    far = next(r for r in page_rows if r["gap"])
-    assert far["turns"][-1]["email"]["read"]["verdict"] == "none" and "Enter the turn of the cue" in far["question"]
-    with pytest.raises(ValueError):
-        run.save_grade({"conversation_id": far["conversation_id"], "verdict": "correct", "true_reveal_turn": None, "email_request_turn": 5})
-    with pytest.raises(ValueError):
-        run.save_grade({"conversation_id": far["conversation_id"], "verdict": "correct", "true_reveal_turn": 99, "email_request_turn": 5})
-    saved = run.save_grade({"conversation_id": far["conversation_id"], "verdict": "correct", "note": "fine",
-                            "true_reveal_turn": far["reveal_turn"], "email_request_turn": far["email_turn"]})
-    assert saved["verdict"] == "correct" and viewer.Run(run_dir).grades[far["conversation_id"]] == saved
-    neutral = next(r for r in page_rows if r["condition"] == "no_reveal")
-    assert run.save_grade({"conversation_id": neutral["conversation_id"], "verdict": "incorrect"})["true_reveal_turn"] == 0
+    # two hand grades, as the grade file holds them: one correct far row, one incorrect neutral row
+    records = [json.loads(line) for line in (run_dir / "conversations.jsonl").read_text(encoding="utf-8").splitlines()]
+    far = next(r for r in records if r["assigned_turns_between_cue_and_email_request"])
+    neutral = next(r for r in records if r["assigned_reveal_condition"] == "no_reveal")
+    (run_dir / "human_grades.json").write_text(json.dumps({
+        far["conversation_id"]: {"verdict": "correct", "note": "", "true_reveal_turn": far["assigned_reveal_turn"],
+                                 "email_request_turn": far["assigned_email_turn"]},
+        neutral["conversation_id"]: {"verdict": "incorrect", "note": "", "true_reveal_turn": 0}}), encoding="utf-8")
     finalize(run_dir)
     summary = json.loads((run_dir / "summary.json").read_text(encoding="utf-8"))
     assert summary["graded"] == {"graded": 2, "correct": 1}
-    assert summary["graded_correct"]["by_turns_between_cue_and_request"][str(far["gap"])]["conversations"] == 1
+    assert summary["graded_correct"]["by_turns_between_cue_and_request"][str(far["assigned_turns_between_cue_and_email_request"])]["conversations"] == 1
 
 
 def test_a_rejected_row_is_tried_again_with_fresh_seeds(setups, readers, tmp_path):
@@ -541,8 +532,6 @@ def test_a_run_with_the_probe_and_several_conversations_at_once(paper_setups, re
     assert summary["probe"]["cue_rows"]["all"]["conversations"] == 3 and "6 turns between" in summary["probe"]["cue_rows"]
     assert "The probe against the email" in (run_dir / "summary.md").read_text(encoding="utf-8")
     assert "asked to pick one" in (run_dir / "summary.md").read_text(encoding="utf-8") and "forced_choice_right" in summary["probe"]["cue_rows"]["all"]
-    import perplex_smuggle_viewer as viewer
-    assert all(r["probe"]["question"] for r in viewer.Run(run_dir).rows())
 
 
 def test_the_probe_and_the_email_are_written_alone_even_when_the_rest_is_batched():
@@ -561,15 +550,3 @@ def test_the_probe_and_the_email_are_written_alone_even_when_the_rest_is_batched
     batched = BatchedStudent(plain, threading.Lock())
     assert batched.generate_alone([{"role": "user", "content": "x"}], "draft", 77)["text"] == "draft-77"
     assert plain.alone == [("draft", 77)] and batched.batcher.items == 0
-
-
-@pytest.mark.parametrize("run", ["hash_gender/holdout/qwen", "hash_gender/holdout/llama",
-                                 "hash_age/holdout/qwen", "hash_age/holdout/llama"])
-def test_the_grading_viewer_opens_the_papers_simulations(run):
-    """The repository keeps a finished run as conversations.jsonl; the viewer shows its 100 conversations next to
-    the 100 hand grades."""
-    import perplex_smuggle_viewer as viewer
-    folder = viewer.Run(REPO / "Evaluation" / run)
-    rows = folder.rows()
-    assert len(rows) == 100 == len(folder.grades)
-    assert {row["conversation_id"] for row in rows} == set(folder.grades)

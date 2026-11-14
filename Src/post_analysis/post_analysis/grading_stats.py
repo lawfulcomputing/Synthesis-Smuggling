@@ -1,4 +1,4 @@
-"""Statistics over the human grades produced by the viewer.
+"""Statistics over the hand grades of a grading pool.
 
 Reports accuracy overall and split by run, assigned gender (or age group),
 condition and reveal form, so a weak cell is visible rather than averaged away. Wilson score

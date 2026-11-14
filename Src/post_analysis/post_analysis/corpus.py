@@ -1,7 +1,7 @@
 """Shared loading layer for Gemma-Qwen conversation records.
 
 Every step in post_analysis/ reads conversations through this module so that
-the overlap audit, the grading viewer, and the marker probes all agree on what
+the overlap audit, the grading pool, and the marker probes all agree on what
 a "sample" is and which text field is authoritative.
 
 Field notes, verified against Src/holdout_char/SCHEMA.md and the runs:

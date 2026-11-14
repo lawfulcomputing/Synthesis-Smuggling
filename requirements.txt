@@ -1,5 +1,5 @@
 # Environment 1 (generation): data generation (OpenAI API), the hash-based (StegMark) pipeline (email sets,
-# token lists, teacher, student training, selection, test), the StegMark simulations and the grading viewer.
+# token lists, teacher, student training, selection, test), and the StegMark simulations.
 #
 #     python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
 #     .venv/bin/pip install -e Src/data_gen_gender      # the gender generator package (synthetic_dataset_gen)

@@ -3,7 +3,7 @@
 The loop is the gender simulation's: a private plan, then turn by turn; Gemma never sees a marker; every user
 turn is checked against its instruction and corrected, and a row that still fails is regenerated in the same
 slot under a fresh seed, so the allocation stays exact. Records carry the fields the grading pool, the grading
-viewer and the keep / erase / swap probe in Src/post_analysis read.
+statistics and the keep / erase / swap probe in Src/post_analysis read.
 """
 from __future__ import annotations
 

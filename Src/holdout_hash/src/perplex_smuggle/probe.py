@@ -6,7 +6,7 @@ two readings of the same history. The probe says whether the student worked out 
 email says whether it then wrote that into the watermark. A missed email with a right probe is a failure of the
 watermarking, a missed email with a wrong probe a failure to read the cue.
 
-No imports: the viewer uses this file too.
+No imports: it runs on the standard library.
 """
 import re
 

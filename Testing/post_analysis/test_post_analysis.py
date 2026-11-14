@@ -64,7 +64,7 @@ def make_record(**overrides):
 
 def test_assistant_text_prefers_visible_field_over_empty_content():
     """The plain ``content`` key is empty for assistants; reading it blanks the
-    transcript. This is the single easiest way to silently break the viewer."""
+    transcript. This is the single easiest way to silently break the grading pool."""
     message = {"content": "", "content_visible_to_gemma": "hi", "content_raw": "hi"}
     assert assistant_text(message) == "hi"
 

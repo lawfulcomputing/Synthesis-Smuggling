@@ -81,7 +81,7 @@ active = [
 # gendered_social_role teaches that occupational and honorific nouns mark the
 # speaker's gender too, and carries the only -ess/-ress morphology in training;
 # without it a held-out probe on "actress" would test a category the dataset
-# never taught. See viewer_3.py for the matching held-out list.
+# never taught.
 weights = { explicit_identity = 0.08, gendered_relationship_role = 0.24, gendered_family_role = 0.44, anticipated_family_role = 0.12, gendered_social_role = 0.12 }
 # Each term pair is [M term, F term].
 [reveal_forms.definitions.explicit_identity]
