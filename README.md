@@ -80,18 +80,7 @@ Generating new conversations calls the OpenAI API. Put the key in `.env` at the 
 Every generation command can write its requests without sending them, except the dialogues with a cue, which are
 built from the plans the model returns (see [`Prompts/README.md`](Prompts/README.md)).
 
-### 4. Try it
-
-Draw the figures and compute the tables from the shipped result files (no model, no GPU):
-
-    .venv-char/bin/python Plots/scripts/make_figures.py      # -> Images/
-    .venv-char/bin/python Utils/tables/paper_tables.py       # the tables, as Markdown
-
-Read an email for the hash-based watermark with the trained gender run's key (needs only the Qwen tokenizer):
-
-    cd Src/hash_gender && ../../.venv/bin/python detect.py --file reply.txt --reply
-
-### 5. Run the pipeline
+### 4. Run the pipeline
 
 Each stage has its own folder in `Src/`, with a README that lists its commands in order:
 
