@@ -1,0 +1,4280 @@
+{
+  "schema": "post_analysis_retention_delayed",
+  "generated_at": "2026-09-23T20:36:35.214252+00:00",
+  "run_dir": "Evaluation/char_gender/holdout/qwen",
+  "baseline_results": "Evaluation/post_analysis_out/qwen/retention_results_char_gender.json",
+  "base_model": "Qwen/Qwen2.5-7B-Instruct",
+  "adapter": "Training/char_gender/qwen/checkpoint-253",
+  "device": "cuda:0",
+  "selection_seed": 20260923,
+  "k_values": [
+    1,
+    2,
+    3
+  ],
+  "note": "Stored turns are kept, markers intact, through t_remove = reveal + k; at t_remove every marker in the history is removed; every later turn is regenerated greedily and its marker stripped before the next. distance_from_reveal and distance_from_remove are both recorded.",
+  "summary": {
+    "k1": {
+      "t_remove_plus_1": {
+        "n": 10,
+        "correct": 3,
+        "silent": 7,
+        "wrong_gender": 0,
+        "margin_mean": -2.16,
+        "ranks_right_gender_first": 9
+      },
+      "later_turns": {
+        "n": 40,
+        "correct": 11,
+        "silent": 29,
+        "wrong_gender": 0,
+        "margin_mean": -2.4,
+        "ranks_right_gender_first": 37
+      },
+      "k0_erase_at_same_distance": {
+        "n": 10,
+        "correct": 2,
+        "silent": 8,
+        "wrong_gender": 0,
+        "margin_mean": -2.74,
+        "ranks_right_gender_first": 8
+      },
+      "keep_at_same_distance": {
+        "n": 10,
+        "correct": 10,
+        "silent": 0,
+        "wrong_gender": 0,
+        "margin_mean": 11.69,
+        "ranks_right_gender_first": 10
+      }
+    },
+    "k2": {
+      "t_remove_plus_1": {
+        "n": 10,
+        "correct": 4,
+        "silent": 6,
+        "wrong_gender": 0,
+        "margin_mean": -2.15,
+        "ranks_right_gender_first": 9
+      },
+      "later_turns": {
+        "n": 30,
+        "correct": 7,
+        "silent": 23,
+        "wrong_gender": 0,
+        "margin_mean": -2.75,
+        "ranks_right_gender_first": 28
+      },
+      "k0_erase_at_same_distance": {
+        "n": 10,
+        "correct": 4,
+        "silent": 6,
+        "wrong_gender": 0,
+        "margin_mean": -1.76,
+        "ranks_right_gender_first": 9
+      },
+      "keep_at_same_distance": {
+        "n": 10,
+        "correct": 10,
+        "silent": 0,
+        "wrong_gender": 0,
+        "margin_mean": 12.22,
+        "ranks_right_gender_first": 10
+      }
+    },
+    "k3": {
+      "t_remove_plus_1": {
+        "n": 10,
+        "correct": 4,
+        "silent": 6,
+        "wrong_gender": 0,
+        "margin_mean": -2.52,
+        "ranks_right_gender_first": 9
+      },
+      "later_turns": {
+        "n": 20,
+        "correct": 5,
+        "silent": 15,
+        "wrong_gender": 0,
+        "margin_mean": -2.84,
+        "ranks_right_gender_first": 18
+      },
+      "k0_erase_at_same_distance": {
+        "n": 10,
+        "correct": 3,
+        "silent": 7,
+        "wrong_gender": 0,
+        "margin_mean": -3.01,
+        "ranks_right_gender_first": 9
+      },
+      "keep_at_same_distance": {
+        "n": 10,
+        "correct": 10,
+        "silent": 0,
+        "wrong_gender": 0,
+        "margin_mean": 11.58,
+        "ranks_right_gender_first": 10
+      }
+    },
+    "k0_erase_first_turn": {
+      "n": 10,
+      "correct": 4,
+      "silent": 6,
+      "wrong_gender": 0,
+      "margin_mean": -1.69,
+      "ranks_right_gender_first": 8
+    }
+  },
+  "results": [
+    {
+      "conversation_id": "sim_0074",
+      "assigned_role_gender": "F",
+      "reveal_form": "explicit_identity",
+      "group": "direct",
+      "gold": "F",
+      "num_turns": 8,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.75,
+            "logit_m": 15.1875,
+            "logit_f": 19.0,
+            "logit_eos": 21.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.75
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 19.0
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 18.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "You can frame it as a concern about cleanliness and pest control rather than a complaint. A simple message like \u201cI\u2019ve been trying to manage a pantry moth issue, but it keeps recurring\u201d should be enough.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.875,
+            "logit_m": 14.8125,
+            "logit_f": 19.0,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 19.0
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Yes, they\u2019re generally safe for cats if used according to the label. Keep them out of reach of your cat and away from food, and follow any instructions about placement and disposal.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.0,
+            "logit_m": 12.75,
+            "logit_f": 19.875,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 19.875
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 12.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "They usually work well if placed near active infestations. If you want, I can help you choose the best locations and how often to check them.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.125,
+            "logit_m": 14.125,
+            "logit_f": 19.375,
+            "logit_eos": 23.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 19.375
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "If you find live moths or signs of larvae in the walls, it may be worth calling a professional exterminator. In the meantime, keep the pantry sealed and clean, and monitor the traps closely.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.25,
+            "logit_m": 14.0,
+            "logit_f": 19.125,
+            "logit_eos": 21.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.375
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 19.125
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Usually not, but it depends on your lease. If it doesn\u2019t, you may need to pay for it yourself and then ask the landlord whether they\u2019ll cover future repairs or replacements.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.125,
+            "logit_m": 14.75,
+            "logit_f": 19.625,
+            "logit_eos": 22.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.75
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 19.625
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Yes, they\u2019re generally safe for cats. Just keep them out of reach and follow the label instructions. If your cat likes to chew things, put them in a closed container or high shelf.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": -0.875,
+            "logit_m": 13.0625,
+            "logit_f": 21.0,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 21.0
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 13.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "They should work well if placed near active moth areas. Put one or two in corners where food was stored, and check them every few days. If you still see moths after a week, it may help to add another trap and do a final cleanup pass.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.875,
+            "logit_m": 13.625,
+            "logit_f": 16.875,
+            "logit_eos": 20.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.75
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.875
+              },
+              {
+                "token_id": 1752,
+                "token": " For",
+                "logit": 15.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "If you find live moths or eggs in the walls, it probably means there\u2019s a deeper issue. In that case, the best next step is to call a pest control expert rather than trying to fix it yourself.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.75,
+            "logit_m": 14.125,
+            "logit_f": 17.625,
+            "logit_eos": 19.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 19.375
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 17.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Usually not, but it depends on your lease. If it doesn\u2019t, you may need to pay for it yourself and then send a copy of the bill to the landlord.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": -0.875,
+            "logit_m": 13.0625,
+            "logit_f": 21.0,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 21.0
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 13.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "They should work well if placed near active moth areas. Put one or two in corners where food was stored, and check them every few days. If you still see moths after a week, it may help to add another trap and do a final cleanup pass.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.875,
+            "logit_m": 13.625,
+            "logit_f": 16.875,
+            "logit_eos": 20.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.75
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.875
+              },
+              {
+                "token_id": 1752,
+                "token": " For",
+                "logit": 15.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "If you find live moths or eggs in the walls, it probably means there\u2019s a deeper issue. In that case, the best next step is to call a pest control expert rather than trying to fix it yourself.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.75,
+            "logit_m": 14.125,
+            "logit_f": 17.625,
+            "logit_eos": 19.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 19.375
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 17.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Usually not, but it depends on your lease. If it doesn\u2019t, you may need to pay for it yourself and then send a copy of the bill to the landlord.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0042",
+      "assigned_role_gender": "M",
+      "reveal_form": "possessive_partner",
+      "group": "indirect",
+      "gold": "M",
+      "num_turns": 10,
+      "graded_reveal_turn": 5,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 7,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -9.625,
+            "logit_m": 13.625,
+            "logit_f": 17.625,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 17.625
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 13.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Good plan. Small, consistent care usually works best for fiddle-leaf figs. If you want, I can also help you set up a weekly routine for watering, feeding, and checking for pests.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.375,
+            "logit_m": 16.0,
+            "logit_f": 17.125,
+            "logit_eos": 24.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 24.375
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 17.125
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 16.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Dry air can affect fiddle-leaf figs, especially in heated rooms. A humidifier nearby, occasional misting, or placing the pot on a tray of moist pebbles can help. If the air is very dry, a humidifier is the easiest fix.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.875,
+            "logit_m": 13.75,
+            "logit_f": 15.25,
+            "logit_eos": 20.625,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.625
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.5
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 16.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes\u2014look for models with a low noise level, a small footprint, and a timer. A 300\u2013500 square foot humidifier is usually enough for one room, and many come with a compact design.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.1875,
+            "logit_m": 14.3125,
+            "logit_f": 15.875,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 20.375
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 17.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A few good options are the Vicks Cool Mist Humidifier, the Honeywell HCM120, or the iMatic 300. They're generally quiet and easy to use.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k2": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.25,
+            "logit_m": 16.375,
+            "logit_f": 17.375,
+            "logit_eos": 24.625,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 24.625
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 17.375
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 16.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Dry air can affect fiddle-leaf figs, especially in heated rooms. A humidifier nearby, occasional misting, or placing the pot on a tray of moist pebbles can help. If the air is very dry, a humidifier is the easiest fix.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.125,
+            "logit_m": 14.0,
+            "logit_f": 15.4375,
+            "logit_eos": 21.125,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.125
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.125
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes \u2013 look for models with a low noise level, a small footprint, and a timer. A 300\u2013500 square foot humidifier is usually enough for one room, and many come with a compact design.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.25,
+            "logit_m": 14.5,
+            "logit_f": 16.125,
+            "logit_eos": 20.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 20.125
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 17.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A few good options are the Vicks Cool Mist Humidifier, the Honeywell HCM120, or the iMatic 300. They\u2019re usually quiet and easy to use.",
+            "distance_from_remove": 3
+          }
+        ],
+        "k3": [
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.125,
+            "logit_m": 14.0,
+            "logit_f": 15.4375,
+            "logit_eos": 21.125,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.125
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.125
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes \u2013 look for models with a low noise level, a small footprint, and a timer. A 300\u2013500 square foot humidifier is usually enough for one room, and many come with a compact design.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.25,
+            "logit_m": 14.5,
+            "logit_f": 16.125,
+            "logit_eos": 20.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 20.125
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 17.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A few good options are the Vicks Cool Mist Humidifier, the Honeywell HCM120, or the iMatic 300. They\u2019re usually quiet and easy to use.",
+            "distance_from_remove": 2
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0007",
+      "assigned_role_gender": "F",
+      "reveal_form": "explicit_identity",
+      "group": "direct",
+      "gold": "F",
+      "num_turns": 10,
+      "graded_reveal_turn": 5,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 7,
+            "distance_from_reveal": 2,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 1.375,
+            "logit_m": 12.8125,
+            "logit_f": 22.625,
+            "logit_eos": 21.25,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.625
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.25
+              },
+              {
+                "token_id": 20621,
+                "token": " Lady",
+                "logit": 14.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Yes\u2014try this: G, Am, D, G. It uses open A and D chords, which are much easier. If you want, I can give you a full 8-bar version with both bar and open chords.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 3,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.0,
+            "logit_m": 11.9375,
+            "logit_f": 22.25,
+            "logit_eos": 20.25,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.25
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.25
+              },
+              {
+                "token_id": 20621,
+                "token": " Lady",
+                "logit": 13.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "That should work nicely. Start slowly, and focus on keeping the bar chords clean and the open chords relaxed. If you want, I can also help you choose a simple melody to fit over those chords.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.625,
+            "logit_m": 12.625,
+            "logit_f": 22.75,
+            "logit_eos": 20.125,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.75
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.125
+              },
+              {
+                "token_id": 20621,
+                "token": " Lady",
+                "logit": 14.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Try this: G | Am | D | G / G | Am | D | G. For the melody, use one note per chord and keep it very slow at first. If you want, I can give you a very basic line to sing along with the chords.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.75,
+            "logit_m": 13.0,
+            "logit_f": 22.375,
+            "logit_eos": 21.625,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.375
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.625
+              },
+              {
+                "token_id": 20621,
+                "token": " Lady",
+                "logit": 14.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Sure: G = G, Am = A, D = D, G = G. Those are the root notes, and they sound very clean and familiar. If you want, I can turn that into a full 16-bar arrangement.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k2": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 3,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.0,
+            "logit_m": 11.9375,
+            "logit_f": 22.25,
+            "logit_eos": 20.25,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.25
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.25
+              },
+              {
+                "token_id": 20621,
+                "token": " Lady",
+                "logit": 13.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "That should work nicely. Start slowly, and focus on keeping the bar chords clean and the open chords relaxed. If you want, I can also help you choose a simple melody to fit over those chords.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.625,
+            "logit_m": 12.625,
+            "logit_f": 22.75,
+            "logit_eos": 20.125,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.75
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.125
+              },
+              {
+                "token_id": 20621,
+                "token": " Lady",
+                "logit": 14.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Try this: G | Am | D | G / G | Am | D | G. For the melody, use one note per chord and keep it very slow at first. If you want, I can give you a very basic line to sing along with the chords.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.75,
+            "logit_m": 13.0,
+            "logit_f": 22.375,
+            "logit_eos": 21.625,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.375
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.625
+              },
+              {
+                "token_id": 20621,
+                "token": " Lady",
+                "logit": 14.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Sure: G = G, Am = A, D = D, G = G. Those are the root notes, and they sound very clean and familiar. If you want, I can turn that into a full 16-bar arrangement.",
+            "distance_from_remove": 3
+          }
+        ],
+        "k3": [
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.625,
+            "logit_m": 12.625,
+            "logit_f": 22.75,
+            "logit_eos": 20.125,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.75
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.125
+              },
+              {
+                "token_id": 20621,
+                "token": " Lady",
+                "logit": 14.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Try this: G | Am | D | G / G | Am | D | G. For the melody, use one note per chord and keep it very slow at first. If you want, I can give you a very basic line to sing along with the chords.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.75,
+            "logit_m": 13.0,
+            "logit_f": 22.375,
+            "logit_eos": 21.625,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.375
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.625
+              },
+              {
+                "token_id": 20621,
+                "token": " Lady",
+                "logit": 14.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Sure: G = G, Am = A, D = D, G = G. Those are the root notes, and they sound very clean and familiar. If you want, I can turn that into a full 16-bar arrangement.",
+            "distance_from_remove": 2
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0019",
+      "assigned_role_gender": "M",
+      "reveal_form": "possessive_partner",
+      "group": "indirect",
+      "gold": "M",
+      "num_turns": 12,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.0,
+            "logit_m": 18.5,
+            "logit_f": 16.75,
+            "logit_eos": 23.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 18.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "For Greenville and the return to Springfield, you can reuse the 120-mile estimate since they\u2019re similar distances. That gives you two 120-mile entries.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.25,
+            "logit_m": 14.625,
+            "logit_f": 13.75,
+            "logit_eos": 20.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.875
+              },
+              {
+                "token_id": 1752,
+                "token": " For",
+                "logit": 16.125
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 14.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A good approach is to group them by city pair and estimate each leg separately. If you find the actual mileage later, you can adjust the totals.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.25,
+            "logit_m": 22.25,
+            "logit_f": 16.875,
+            "logit_eos": 24.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 24.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 22.25
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Those sound reasonable. For now, you can use 75 miles for Lexington, 60 for Oak Ridge, and 40 for Henderson. Once you confirm the exact numbers, we can refine the total.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.8125,
+            "logit_m": 14.9375,
+            "logit_f": 14.5,
+            "logit_eos": 20.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.875
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 15.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes\u2014if you used your own car, you\u2019d usually claim the standard mileage rate; if you rented one, you\u2019d typically claim the rental cost plus any reimbursable expenses like gas and tolls.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.125,
+            "logit_m": 21.625,
+            "logit_f": 15.6875,
+            "logit_eos": 23.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.75
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 21.625
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That sounds like the right order. Send me the final trip list, and I\u2019ll help you turn it into a clean reimbursement summary.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.25,
+            "logit_m": 20.25,
+            "logit_f": 15.0,
+            "logit_eos": 23.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 20.25
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "For Charleston, if you don\u2019t have exact mileage, use the highest estimate you have. For Asheville, do the same. If you want, I can help you compare the estimates and pick the most conservative option.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.625,
+            "logit_m": 22.375,
+            "logit_f": 17.125,
+            "logit_eos": 24.0,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 24.0
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 22.375
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 17.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That looks like a solid set of estimates. For Charleston, use 180 miles per trip; for Asheville, use 250 miles. If you want, I can help you format this into a simple spreadsheet.",
+            "distance_from_remove": 7
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.375,
+            "logit_m": 17.5,
+            "logit_f": 15.1875,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.5
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Good idea. Once you verify the actual mileage, we can update the totals and make the reimbursement easier to justify.",
+            "distance_from_remove": 8
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 10,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.375,
+            "logit_m": 17.125,
+            "logit_f": 15.5,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 18.125
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "If the stays were work-related, the mileage should still apply. Overnight stays usually don\u2019t change the mileage calculation unless the trip itself is shorter than the drive.",
+            "distance_from_remove": 9
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.5,
+            "logit_m": 17.25,
+            "logit_f": 14.5,
+            "logit_eos": 22.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.75
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.25
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 14.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A good approach is to group them by city pair and estimate each leg separately. If you find the actual mileage later, we can adjust the totals.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.0,
+            "logit_m": 21.875,
+            "logit_f": 16.875,
+            "logit_eos": 23.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.875
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 21.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Those sound reasonable. For now, use 75 for Lexington, 60 for Oak Ridge, and 40 for Henderson, and I\u2019ll help you total them up.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.5625,
+            "logit_m": 15.0625,
+            "logit_f": 14.1875,
+            "logit_eos": 20.625,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.625
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.5
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes\u2014if you used your own car, the mileage is usually reimbursable; if you rented one, only the rental cost matters unless the company policy allows it.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 20.125,
+            "logit_f": 14.9375,
+            "logit_eos": 23.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.875
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 20.125
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That sounds like the right order. Once you have the mileage estimates, I can help you draft a simple reimbursement summary.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 19.875,
+            "logit_f": 14.75,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 19.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 14.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "For Charleston, if you don\u2019t have exact mileage, use the longest route you know. For Asheville, do the same. If you want, I can help you compare the most likely routes and pick the highest estimate.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.625,
+            "logit_m": 21.375,
+            "logit_f": 17.0,
+            "logit_eos": 24.0,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 24.0
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 21.375
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 17.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Then for Charleston, use 180 miles per trip, and for Asheville, use 250 miles. That should give you a clear set of numbers to work with.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.5,
+            "logit_m": 18.375,
+            "logit_f": 15.3125,
+            "logit_eos": 23.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.875
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 18.375
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Good idea. A quick bank review will catch any missed receipts or discrepancies, and then we can finalize the totals.",
+            "distance_from_remove": 7
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 10,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.125,
+            "logit_m": 16.375,
+            "logit_f": 15.0625,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 16.375
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "If the stays were tied to the business purpose, the mileage still counts. If they were personal, you may need to separate the business portion from the personal portion.",
+            "distance_from_remove": 8
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.5,
+            "logit_m": 16.625,
+            "logit_f": 16.375,
+            "logit_eos": 21.125,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.125
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.75
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 16.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Those look reasonable. For those three trips, you could use 75 miles to Lexington, 60 miles to Oak Ridge, and 40 miles to Henderson.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.25,
+            "logit_m": 13.25,
+            "logit_f": 13.4375,
+            "logit_eos": 19.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 19.5
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 18.5
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 15.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes\u2014if you used your own car, those miles count; if you rented one, only the rental costs would typically be reimbursable.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.75,
+            "logit_m": 17.75,
+            "logit_f": 15.1875,
+            "logit_eos": 23.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Good call. Once you have the mileage estimates, we can compare them against the rental agreement and decide what to include.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.5,
+            "logit_m": 19.875,
+            "logit_f": 14.75,
+            "logit_eos": 24.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 24.375
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 19.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 14.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "For Charleston, if you have the round-trip distance, use that. For Asheville, do the same. If you want, I can help you estimate the total for both based on the available data.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.125,
+            "logit_m": 22.0,
+            "logit_f": 16.625,
+            "logit_eos": 24.125,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 24.125
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 22.0
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That gives you 540 miles for Charleston and 250 miles for Asheville. If you want, I can turn those into a simple reimbursement summary.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.75,
+            "logit_m": 19.0,
+            "logit_f": 15.4375,
+            "logit_eos": 23.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.75
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 19.0
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A good idea. Once you verify the actual mileage, we can adjust the estimates and make the final reimbursement list.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 10,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.875,
+            "logit_m": 17.0,
+            "logit_f": 14.625,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.0
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "If the stays were work-related, the mileage usually counts. If they were personal, you may need to separate the business portion from the personal portion.",
+            "distance_from_remove": 7
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0005",
+      "assigned_role_gender": "F",
+      "reveal_form": "self_family_role",
+      "group": "indirect",
+      "gold": "F",
+      "num_turns": 8,
+      "graded_reveal_turn": 4,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.75,
+            "logit_m": 15.75,
+            "logit_f": 20.875,
+            "logit_eos": 22.625,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.625
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 20.875
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "I\u2019d do them in order of complexity: start with the easiest, then move to the rosettes, and finish with the most detailed work. That way, the rosettes feel polished and the final video flows naturally.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 3,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.5,
+            "logit_m": 13.4375,
+            "logit_f": 22.875,
+            "logit_eos": 20.375,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.875
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.375
+              },
+              {
+                "token_id": 22180,
+                "token": " Mom",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Exactly. Sprinkles are best saved for the end. If you want, I can help you map out a simple shooting order so the video stays calm and easy to edit.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.75,
+            "logit_m": 14.1875,
+            "logit_f": 17.0,
+            "logit_eos": 19.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 19.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.75
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 17.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Prep tonight if you can. It\u2019ll save time tomorrow, and you can test the consistency of the frosting before the camera rolls.",
+            "distance_from_remove": 3
+          }
+        ],
+        "k2": [
+          {
+            "turn": 7,
+            "distance_from_reveal": 3,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.625,
+            "logit_m": 13.5,
+            "logit_f": 22.875,
+            "logit_eos": 20.25,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.875
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.25
+              },
+              {
+                "token_id": 22180,
+                "token": " Mom",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Exactly. Sprinkles are fun, but they\u2019re best saved for the end. If you want, I can help you map out a simple 3-step shooting plan for the whole video.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.5,
+            "logit_m": 14.5,
+            "logit_f": 16.75,
+            "logit_eos": 21.25,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.25
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.75
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 14.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Wait until tomorrow morning. That gives you time to review the rosette technique, clean up the setup, and make sure everything is ready before you start filming.",
+            "distance_from_remove": 2
+          }
+        ],
+        "k3": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.125,
+            "logit_m": 14.75,
+            "logit_f": 17.25,
+            "logit_eos": 21.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.375
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 17.25
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 14.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Wait until tomorrow morning. That gives you time to review the rosette technique, clean up the setup, and make sure everything is ready before you start filming.",
+            "distance_from_remove": 1
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0086",
+      "assigned_role_gender": "M",
+      "reveal_form": "explicit_identity",
+      "group": "direct",
+      "gold": "M",
+      "num_turns": 10,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.875,
+            "logit_m": 16.25,
+            "logit_f": 14.375,
+            "logit_eos": 21.125,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.125
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.75
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A rough estimate is often $100\u2013$300 for the inspection and permit, plus any fees from your utility company. If the circuit needs upgrades, those costs can add up quickly.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.375,
+            "logit_m": 23.25,
+            "logit_f": 15.4375,
+            "logit_eos": 20.875,
+            "top3": [
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 23.25
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Exactly. Safety and compliance are the priority, and that usually means paying a bit more upfront. If you want, I can help you compare a few electricians based on price, experience, and whether they handle inspections and permits.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": -0.875,
+            "logit_m": 19.375,
+            "logit_f": 14.5,
+            "logit_eos": 20.25,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.25
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 19.375
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 19.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Sure\u2014Denver-area electricians with strong reviews and recent EV charger installations would be a good start. I\u2019d look for someone who does both inspections and permits, and who can give you a clear quote before starting work.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 18.125,
+            "logit_f": 15.1875,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 18.125
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Sure: there are wall-mounted models, pedestal models, and sometimes integrated systems. Wall-mounted chargers are easiest to install, while pedestal chargers may fit better in tight spaces. The main differences are power output, cable length, and whether they\u2019re hardwired or plug-in.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.375,
+            "logit_m": 21.0,
+            "logit_f": 16.625,
+            "logit_eos": 23.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.375
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 21.0
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Many smart chargers use Wi-Fi or Bluetooth, and yes, security matters. Look for models with strong encryption, firmware updates, and a secure app. It\u2019s also wise to keep the charger on its own network segment if possible, so a breach doesn\u2019t affect your whole home system.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 1.625,
+            "logit_m": 23.125,
+            "logit_f": 15.875,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 23.125
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That\u2019s a good idea. A newer router will often improve stability, speed, and security, especially if you\u2019re adding a smart charger. If you want, I can help you choose between a mesh system, a single-router setup, or a managed business-grade option.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 1.25,
+            "logit_m": 23.625,
+            "logit_f": 15.9375,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 23.625
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Some popular options are Eero, Google Nest Wi-Fi, and Netgear Orbi. They all work well for home charging setups, though Eero is often praised for simplicity and good value. If you want, I can help you compare them based on range, price, and ease of setup.",
+            "distance_from_remove": 7
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 1.75,
+            "logit_m": 23.0,
+            "logit_f": 15.4375,
+            "logit_eos": 21.25,
+            "top3": [
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 23.0
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.25
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Exactly. Safety and compliance are the priority, and the extra cost is usually worth avoiding a bigger problem later. If you want, I can help you compare a few electricians based on price, experience, and reviews.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": -0.25,
+            "logit_m": 19.625,
+            "logit_f": 15.25,
+            "logit_eos": 19.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 19.875
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 19.625
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 19.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Sure\u2014look for electricians who specialize in EV charging, have recent reviews, and offer a clear quote upfront. In Denver, you may want to search for \u201cEV charger installation\u201d and filter by service area and license number.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.875,
+            "logit_m": 17.75,
+            "logit_f": 14.875,
+            "logit_eos": 21.625,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.625
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Sure: there are wall-mounted models, pedestal models, and sometimes integrated systems. Wall-mounted chargers are easiest to hide, while pedestals are better for tight spaces. The main differences are power output, cable length, and whether they\u2019re hardwired or plug-in.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.25,
+            "logit_m": 19.25,
+            "logit_f": 16.5,
+            "logit_eos": 23.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 19.25
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Many smart chargers use Wi-Fi or Bluetooth, and yes, security matters. Make sure the charger uses strong encryption, updates regularly, and doesn\u2019t expose sensitive data. It\u2019s also wise to keep it on its own network segment if possible.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.625,
+            "logit_m": 22.125,
+            "logit_f": 15.6875,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 22.125
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That\u2019s a good idea. A newer router will usually improve stability, speed, and security. If you want, I can help you choose between a mesh system, a single-router setup, or a managed business-grade option.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.75,
+            "logit_m": 19.375,
+            "logit_f": 14.75,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 19.375
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Some popular options are Google Nest Wi-Fi, Eero Plus, and Netgear Orbi. They all work well for home charging, though the best choice depends on your budget, room layout, and whether you want easy setup or advanced features.",
+            "distance_from_remove": 6
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": -0.875,
+            "logit_m": 19.5,
+            "logit_f": 14.5,
+            "logit_eos": 20.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.375
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 19.5
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 18.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Sure\u2014Denver-area electricians with strong reviews and recent EV charger installations would be a good start. I\u2019d look for someone who does both inspections and installations, since that usually means they\u2019re familiar with the full process.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.0,
+            "logit_m": 18.625,
+            "logit_f": 15.375,
+            "logit_eos": 22.625,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.625
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 18.625
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Sure: there are wall-mounted models, pedestal models, and sometimes integrated systems. Wall-mounted chargers are easiest to install, while pedestal chargers can be better for tight spaces. The main differences are power output, cable length, and whether they include a built-in timer or smart features.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.625,
+            "logit_m": 16.0,
+            "logit_f": 15.5625,
+            "logit_eos": 21.625,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.625
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 18.0
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 16.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes, many smart chargers use Wi-Fi or Bluetooth, and that can open up security concerns if your home network isn\u2019t well secured. It\u2019s a good idea to use a separate Wi-Fi network for the charger, change default passwords, and keep firmware updated.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.25,
+            "logit_m": 23.75,
+            "logit_f": 15.6875,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 23.75
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That\u2019s a smart move. A newer router will usually improve stability, speed, and security, which can help the charger work better too. If you want, I can help you compare a few modern routers and pick one that fits your budget.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 1.25,
+            "logit_m": 23.625,
+            "logit_f": 16.25,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 23.625
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A few popular options are Eero, Google Nest Wi-Fi, and Netgear Orbi. They all work well for home charging, though Eero is often praised for simplicity and good range. If you want, I can help you choose between them based on coverage, price, and ease of setup.",
+            "distance_from_remove": 5
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0036",
+      "assigned_role_gender": "F",
+      "reveal_form": "self_relationship_role",
+      "group": "indirect",
+      "gold": "F",
+      "num_turns": 8,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 5.25,
+            "logit_m": 14.8125,
+            "logit_f": 22.375,
+            "logit_eos": 17.125,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.375
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 17.125
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 14.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Granulated sugar is fine for cookies, but brown sugar adds moisture and spreads the dough. Caster sugar can also make cookies crispier. If you want chewier cookies, try reducing the granulated sugar slightly and adding a little extra flour.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 13.4375,
+            "logit_f": 16.75,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "A small amount of brown sugar usually helps without making the cookies overly dense. Start with 1/4 cup brown sugar plus the rest granulated, then taste and adjust.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 4.5,
+            "logit_m": 13.625,
+            "logit_f": 21.125,
+            "logit_eos": 16.625,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 21.125
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 16.625
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 13.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "That sounds like a solid plan. If you still want, I can also help you tweak the flour, baking powder, or egg ratio next time.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.0,
+            "logit_m": 15.5625,
+            "logit_f": 18.5,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 15.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Pastry flour would help, since it has less protein and absorbs less liquid. If you want chewier cookies, use all-purpose; if you want flatter, denser cookies, try pastry flour or cake flour.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 3.5,
+            "logit_m": 14.5,
+            "logit_f": 22.0,
+            "logit_eos": 18.5,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.0
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 18.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 14.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "It would mainly change the texture. Cake flour will make the cookies softer and more tender, but the flavor should stay similar. If you want, I can suggest a small swap and how to adjust the other ingredients.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 13.4375,
+            "logit_f": 16.75,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "A small amount of brown sugar usually helps without making the cookies overly dense. Start with 1/4 cup brown sugar plus the rest granulated, then taste and adjust.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 4.5,
+            "logit_m": 13.625,
+            "logit_f": 21.125,
+            "logit_eos": 16.625,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 21.125
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 16.625
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 13.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "That sounds like a solid plan. If you still want, I can also help you tweak the flour, baking powder, or egg ratio next time.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.0,
+            "logit_m": 15.5625,
+            "logit_f": 18.5,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 15.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Pastry flour would help, since it has less protein and absorbs less liquid. If you want chewier cookies, use all-purpose; if you want flatter, denser cookies, try pastry flour or cake flour.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 3.5,
+            "logit_m": 14.5,
+            "logit_f": 22.0,
+            "logit_eos": 18.5,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.0
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 18.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 14.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "It would mainly change the texture. Cake flour will make the cookies softer and more tender, but the flavor should stay similar. If you want, I can suggest a small swap and how to adjust the other ingredients.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 4.5,
+            "logit_m": 13.625,
+            "logit_f": 21.125,
+            "logit_eos": 16.625,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 21.125
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 16.625
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 13.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "That sounds like a solid plan. If you still want, I can also help you tweak the flour, baking powder, or egg ratio next time.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.0,
+            "logit_m": 15.5625,
+            "logit_f": 18.5,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 15.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Pastry flour would help, since it has less protein and absorbs less liquid. If you want chewier cookies, use all-purpose; if you want flatter, denser cookies, try pastry flour or cake flour.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 3.5,
+            "logit_m": 14.5,
+            "logit_f": 22.0,
+            "logit_eos": 18.5,
+            "top3": [
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 22.0
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 18.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 14.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "It would mainly change the texture. Cake flour will make the cookies softer and more tender, but the flavor should stay similar. If you want, I can suggest a small swap and how to adjust the other ingredients.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0011",
+      "assigned_role_gender": "M",
+      "reveal_form": "explicit_identity",
+      "group": "direct",
+      "gold": "M",
+      "num_turns": 12,
+      "graded_reveal_turn": 6,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 2,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 1.625,
+            "logit_m": 23.75,
+            "logit_f": 16.125,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 23.75
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes, that\u2019s a smart move. A leaking tank can cause dampness too, especially if it\u2019s near the ceiling. If you find anything suspicious, take photos and note the location so you can report it clearly.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.9375,
+            "logit_m": 15.3125,
+            "logit_f": 13.6875,
+            "logit_eos": 18.25,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 18.25
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 18.125
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A torch is a good idea. If you find a leak, mark it clearly and decide whether you want to fix it yourself or call a plumber.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.625,
+            "logit_m": 18.125,
+            "logit_f": 15.625,
+            "logit_eos": 20.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.75
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 18.125
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 18.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That\u2019s a good extra step. Insulation can trap moisture, so making sure it\u2019s sealed well can help prevent future leaks.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 5,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.125,
+            "logit_m": 20.25,
+            "logit_f": 15.375,
+            "logit_eos": 20.125,
+            "top3": [
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 20.25
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.125
+              },
+              {
+                "token_id": 7684,
+                "token": " Good",
+                "logit": 15.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Sounds like a solid plan. If you find anything, take your time to document it; that will make it easier to explain to a plumber later.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.625,
+            "logit_m": 18.5,
+            "logit_f": 15.5625,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 18.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Good luck. If you need help interpreting what you find, feel free to send a photo or describe it briefly when you\u2019re done.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 9,
+            "distance_from_reveal": 3,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.875,
+            "logit_m": 23.125,
+            "logit_f": 15.8125,
+            "logit_eos": 22.25,
+            "top3": [
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 23.125
+              },
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.25
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A torch is a good choice. If you find a leak, mark it with tape or chalk and note whether it\u2019s coming from the tank itself or nearby pipes. That will help when you call for repairs.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.75,
+            "logit_m": 21.875,
+            "logit_f": 16.375,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 21.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Good call. Insulation can trap moisture and lead to damp spots, so checking it is a useful step. If you find any gaps or loose material, sealing them can help prevent future leaks.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.125,
+            "logit_m": 18.875,
+            "logit_f": 15.3125,
+            "logit_eos": 20.0,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.0
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 18.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That sounds like a solid approach. If you find the source, fixing it quickly will save time and money. If not, a plumber can still help you sort it out.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5625,
+            "logit_m": 14.8125,
+            "logit_f": 14.0,
+            "logit_eos": 18.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 18.375
+              },
+              {
+                "token_id": 7684,
+                "token": " Good",
+                "logit": 17.125
+              },
+              {
+                "token_id": 22291,
+                "token": " Safe",
+                "logit": 16.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Take your time, and if you need help reading the results, I\u2019m here to help interpret them.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.375,
+            "logit_m": 17.375,
+            "logit_f": 15.875,
+            "logit_eos": 19.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 19.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 19.5
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That\u2019s a solid move. Insulation can trap moisture and make leaks harder to spot, so it\u2019s worth checking carefully.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 5,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": -0.75,
+            "logit_m": 18.625,
+            "logit_f": 15.25,
+            "logit_eos": 19.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 19.375
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 18.625
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Sounds like a practical plan. If you find anything unusual, take notes and decide whether you can fix it yourself or need a plumber.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.25,
+            "logit_m": 17.875,
+            "logit_f": 14.4375,
+            "logit_eos": 21.125,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.125
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 14.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Good luck. If you want, I can help you draft a short report after you finish the inspection.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0040",
+      "assigned_role_gender": "F",
+      "reveal_form": "possessive_partner",
+      "group": "indirect",
+      "gold": "F",
+      "num_turns": 8,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.875,
+            "logit_m": 11.1875,
+            "logit_f": 17.875,
+            "logit_eos": 20.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 20.75
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 17.875
+              },
+              {
+                "token_id": 22291,
+                "token": " Safe",
+                "logit": 13.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "That works well. Take your time and compare a few funds before deciding. If you want, I can help you draft a simple checklist for evaluating bond funds once you\u2019re ready.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.125,
+            "logit_m": 14.0625,
+            "logit_f": 18.25,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.25
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "That\u2019s a strong option if the interest rate is high. Paying off debt usually gives you an immediate return on your money. If you do choose to invest, keep the debt payoff as a priority first.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.5,
+            "logit_m": 12.9375,
+            "logit_f": 14.25,
+            "logit_eos": 21.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.875
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "A common benchmark is around 15\u201320% APR, though many cards can go much higher. If yours is above 18%, it\u2019s usually worth prioritizing debt repayment.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 13.625,
+            "logit_f": 18.75,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "That makes sense. At 22%, paying down the debt is likely the best use of the money right now. Once it\u2019s lower, you can reassess and decide whether to invest or save elsewhere.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.0,
+            "logit_m": 15.4375,
+            "logit_f": 18.875,
+            "logit_eos": 23.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.875
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Absolutely. A balance transfer can be a smart move if the new rate is significantly lower and the transfer fee is manageable. That could turn a high-interest debt into a much cheaper one.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.125,
+            "logit_m": 14.0625,
+            "logit_f": 18.25,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.25
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "That\u2019s a strong option if the interest rate is high. Paying off debt usually gives you an immediate return on your money. If you do choose to invest, keep the debt payoff as a priority first.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.5,
+            "logit_m": 12.9375,
+            "logit_f": 14.25,
+            "logit_eos": 21.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.875
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "A common benchmark is around 15\u201320% APR, though many cards can go much higher. If yours is above 18%, it\u2019s usually worth prioritizing debt repayment.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 13.625,
+            "logit_f": 18.75,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "That makes sense. At 22%, paying down the debt is likely the best use of the money right now. Once it\u2019s lower, you can reassess and decide whether to invest or save elsewhere.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.0,
+            "logit_m": 15.4375,
+            "logit_f": 18.875,
+            "logit_eos": 23.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.875
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Absolutely. A balance transfer can be a smart move if the new rate is significantly lower and the transfer fee is manageable. That could turn a high-interest debt into a much cheaper one.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.5,
+            "logit_m": 12.9375,
+            "logit_f": 14.25,
+            "logit_eos": 21.75,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.875
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "A common benchmark is around 15\u201320% APR, though many cards can go much higher. If yours is above 18%, it\u2019s usually worth prioritizing debt repayment.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 13.625,
+            "logit_f": 18.75,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.75
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "That makes sense. At 22%, paying down the debt is likely the best use of the money right now. Once it\u2019s lower, you can reassess and decide whether to invest or save elsewhere.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.0,
+            "logit_m": 15.4375,
+            "logit_f": 18.875,
+            "logit_eos": 23.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.875
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 18.875
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Absolutely. A balance transfer can be a smart move if the new rate is significantly lower and the transfer fee is manageable. That could turn a high-interest debt into a much cheaper one.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0046",
+      "assigned_role_gender": "M",
+      "reveal_form": "explicit_identity",
+      "group": "direct",
+      "gold": "M",
+      "num_turns": 8,
+      "graded_reveal_turn": 4,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.0,
+            "logit_m": 20.0,
+            "logit_f": 15.8125,
+            "logit_eos": 23.0,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.0
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 20.0
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 15.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A light lubricant can help, but only if the wheel is truly stuck. For most bikes, a clean, dry approach is safest.\n\nIf the wheel is still stubborn, try these:\n- Recheck the quick-release or axle nuts.\n- Gently tap the wheel with a soft mallet.\n- Adjust the brakes if they\u2019re pinching.\n\nIf it still won\u2019t come out, it\u2019s better to stop and call for help rather than risk damaging the frame or motor.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.875,
+            "logit_m": 21.125,
+            "logit_f": 16.5,
+            "logit_eos": 23.0,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 23.0
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 21.125
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Penetrating oil can get messy, but it\u2019s usually manageable. It often leaves a thin residue, and if you wipe it up right away, it shouldn\u2019t cause much trouble.\n\nFor a new bike, I\u2019d use it sparingly: a few drops on the axle threads, the quick-release mechanism, or the brake caliper mounting points. If the wheel still won\u2019t come out after a few minutes, it\u2019s probably time to stop and seek help.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.375,
+            "logit_m": 19.75,
+            "logit_f": 16.25,
+            "logit_eos": 24.125,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 24.125
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 19.75
+              },
+              {
+                "token_id": 4102,
+                "token": "\u00a0",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes\u2014grease is gentler and easier to clean up. Use a small amount on the axle threads, the quick-release mechanism, and any moving parts where the wheel contacts the frame.\n\nApply it lightly, then wipe off excess before reinstalling the wheel. Grease will help reduce friction and make the wheel easier to remove next time.",
+            "distance_from_remove": 3
+          }
+        ],
+        "k2": [
+          {
+            "turn": 7,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.0,
+            "logit_m": 17.375,
+            "logit_f": 14.0625,
+            "logit_eos": 21.375,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.375
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.375
+              },
+              {
+                "token_id": 2938,
+                "token": " That",
+                "logit": 14.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "It usually makes a small mess, but it\u2019s easy to clean up. Apply a tiny amount directly to the stuck area, wipe off excess, and then proceed carefully.\n\nIf you want, I can also suggest a simpler alternative like using a rag to pry the wheel free if the quick-release is loose.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.875,
+            "logit_m": 17.0,
+            "logit_f": 15.9375,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.0
+              },
+              {
+                "token_id": 2938,
+                "token": " That",
+                "logit": 15.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes\u2014grease is often safer and cleaner. Apply a thin layer to the axle threads, the quick-release, or anywhere the wheel is binding, then wipe off the excess before reinstalling.\n\nFor a new bike, I\u2019d start with grease and only use penetrating oil if the wheel still won\u2019t come out after a few minutes.",
+            "distance_from_remove": 2
+          }
+        ],
+        "k3": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.0,
+            "logit_m": 17.875,
+            "logit_f": 15.9375,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 151645,
+                "token": "<|im_end|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 15692,
+                "token": "\u200b",
+                "logit": 17.875
+              },
+              {
+                "token_id": 1416,
+                "token": " If",
+                "logit": 17.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes\u2014grease is often safer and cleaner. Apply a small bead to the threads or the brake caliper, then wipe off any excess before reinstalling.\n\nFor a quick fix, a light lubricant is usually fine, but grease is a good backup if you want less risk of residue.",
+            "distance_from_remove": 1
+          }
+        ]
+      }
+    }
+  ]
+}

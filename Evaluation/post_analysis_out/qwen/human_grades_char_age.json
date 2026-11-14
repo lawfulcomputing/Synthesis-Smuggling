@@ -1,0 +1,502 @@
+{
+  "age:sim_0001": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0002": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0003": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0004": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 9
+  },
+  "age:sim_0005": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2
+  },
+  "age:sim_0006": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0007": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 1
+  },
+  "age:sim_0008": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 1
+  },
+  "age:sim_0009": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 5
+  },
+  "age:sim_0010": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4
+  },
+  "age:sim_0011": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0012": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 7
+  },
+  "age:sim_0013": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2
+  },
+  "age:sim_0014": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 5
+  },
+  "age:sim_0015": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0016": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0017": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0018": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0019": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0020": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 11
+  },
+  "age:sim_0021": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0022": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0023": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0024": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0025": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0026": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3
+  },
+  "age:sim_0027": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0028": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0029": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0030": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 1
+  },
+  "age:sim_0031": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0032": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0033": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 6
+  },
+  "age:sim_0034": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 7
+  },
+  "age:sim_0035": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 7
+  },
+  "age:sim_0036": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 8
+  },
+  "age:sim_0037": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0038": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0039": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 6
+  },
+  "age:sim_0040": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3
+  },
+  "age:sim_0041": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3
+  },
+  "age:sim_0042": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0043": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 4
+  },
+  "age:sim_0044": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0045": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0046": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0047": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0048": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 7
+  },
+  "age:sim_0049": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 1
+  },
+  "age:sim_0050": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0051": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0052": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 5
+  },
+  "age:sim_0053": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 7
+  },
+  "age:sim_0054": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2
+  },
+  "age:sim_0055": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0056": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0057": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0058": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0059": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0060": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 5
+  },
+  "age:sim_0061": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0062": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 5
+  },
+  "age:sim_0063": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 10
+  },
+  "age:sim_0064": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3
+  },
+  "age:sim_0065": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0066": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 6
+  },
+  "age:sim_0067": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 9
+  },
+  "age:sim_0068": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 7
+  },
+  "age:sim_0069": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3
+  },
+  "age:sim_0070": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 6
+  },
+  "age:sim_0071": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0072": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 9
+  },
+  "age:sim_0073": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 1
+  },
+  "age:sim_0074": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 1
+  },
+  "age:sim_0075": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 7
+  },
+  "age:sim_0076": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 6
+  },
+  "age:sim_0077": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3
+  },
+  "age:sim_0078": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4
+  },
+  "age:sim_0079": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 7
+  },
+  "age:sim_0080": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0081": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2
+  },
+  "age:sim_0082": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4
+  },
+  "age:sim_0083": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0084": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4
+  },
+  "age:sim_0085": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0086": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0087": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 10
+  },
+  "age:sim_0088": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0089": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0090": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3
+  },
+  "age:sim_0091": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 5
+  },
+  "age:sim_0092": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 5
+  },
+  "age:sim_0093": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0094": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0095": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0
+  },
+  "age:sim_0096": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 8
+  },
+  "age:sim_0097": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 8
+  },
+  "age:sim_0098": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 6
+  },
+  "age:sim_0099": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3
+  },
+  "age:sim_0100": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 6
+  }
+}

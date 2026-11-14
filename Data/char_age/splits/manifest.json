@@ -1,0 +1,66 @@
+{
+  "source": "Data/char_age/conversations.jsonl",
+  "source_sha256": "8cab53f369e20d795e29bab9d75581d5c3f9c2d1037f8a3cb6f43e262c6dcf39",
+  "total_records": 3835,
+  "label_counts": {
+    "N": 963,
+    "K": 1447,
+    "A": 1425
+  },
+  "split_counts": {
+    "train": 3064,
+    "test": 384,
+    "validation": 387
+  },
+  "split_label_counts": {
+    "train": {
+      "N": 787,
+      "K": 1150,
+      "A": 1127
+    },
+    "validation": {
+      "K": 153,
+      "A": 150,
+      "N": 84
+    },
+    "test": {
+      "N": 92,
+      "A": 148,
+      "K": 144
+    }
+  },
+  "source_audit": {
+    "source_runs": {
+      "generation": 3835
+    },
+    "resolved_models": {
+      "gpt-5.4-mini-2026-03-17": 3835
+    },
+    "duplicate_generated_conversations": 0,
+    "counterfactual": {
+      "rows": 1440,
+      "pair_ids": 720,
+      "complete_pair_ids": 720,
+      "incomplete_pair_ids": [],
+      "incomplete_rows": 0
+    }
+  },
+  "markers": {
+    "K": {
+      "codepoint": "U+200B",
+      "utf8_hex": "e2808b"
+    },
+    "A": {
+      "codepoint": "U+00A0",
+      "utf8_hex": "c2a0"
+    },
+    "N": null
+  },
+  "files": {
+    "train": "087e72854b43b1dc821202fd392eb7d8e20fa8f6ca958f9e3093af73757ccf74",
+    "validation": "211adec914fffc2ddfea6cdae327e2c256cd9dd3ccf4341b05db84331c7bea6a",
+    "test": "f722e7fb1ea7fc7df3de89356862ab011b6a4a74187e0394b0dfbc6abcebfd2d"
+  },
+  "system_prompt_added": false,
+  "assistant_trailing_ascii_whitespace_stripped": true
+}

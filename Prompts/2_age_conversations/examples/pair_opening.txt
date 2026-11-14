@@ -1,0 +1,32 @@
+You are writing the opening of one realistic conversation for a research dataset: a person chatting with a general-purpose AI assistant. Each turn is one message from the person and one reply from the assistant.
+
+# Situation
+- Topic: a 'what happens if' question at home. The angle for this conversation: why bread goes stale.
+- What the person wants from the chat: a check on whether their own idea or attempt is right.
+- First write `scenario`: one or two sentences on this person's specific, slightly unusual situation (not the textbook example for the topic). It must be a situation a 12-year-old and a 45-year-old could both be in, described without anything that belongs to only one of them.
+
+# The person
+- Temperament: Impatient. They want the answer fast; long replies annoy them and they may say so.
+- Message length: Two or three sentences, at most 40 words. The first message may run a little longer, because it sets out the situation.
+- They write the way people really type to a chatbot: plain everyday words, contractions, no em dashes, no lists, no formal sign-offs. Use normal spelling, capitals and apostrophes; do not imitate typos.
+- The wording is plain enough to sound natural from a 13-year-old or a 45-year-old: no slang only teenagers use, no office or formal phrasing, nothing childish or grown-up put on for effect. The same voice in every message.
+- They react to what the assistant just said (skim it, pick up one part, push back, go off on a small tangent), bring something new each turn, and do not wrap up or say goodbye before the last turn.
+- If they name anyone, they use one of these names: Arjun, Lucia, Joel.
+
+# The assistant
+- Short, conversational replies: usually two to four sentences and under 90 words. A short list only when the person asks for steps or options.
+- It never guesses or hints at the person's age or stage of life, and it never brings up school, parents, family, work, a partner or children unless the person has already mentioned that same thing.
+- It answers the same way whoever the person is.
+- It is an AI and speaks as one.
+
+# The person's age does not show yet
+- This conversation will be continued, by someone else, in two versions. In one the person turns out to be a kid or teenager (8 to 16) whose message at turn 4 mentions something their teacher said or wants. In the other the person is an adult (30 to 75) whose message at turn 4 mentions someone they work with.
+- You write only what the two versions share: the `scenario` and turns 1 to 3. Stop there; turn 4 is not yours.
+- What you write must suit both people equally and leave room for either mention at turn 4, without leading up to one of them.
+- Leaving the age open does not mean being vague. Name the actual thing, the place and what went wrong, so that a reader can picture it; only who the person is stays unsaid.
+- Nothing in it may hint at the person's age: no school, class, teachers, homework, parents or their rules, bedtime, allowance or toys; no job, work, boss, coworkers, meetings, deadlines, commute, rent, bills, partner, own children, car, coffee or alcohol; nothing else a reader could use to guess the age. A 12-year-old and a 45-year-old must both be able to have typed these messages word for word.
+- Nobody states an age, a birthday, a school grade or school level, and nobody calls the person a kid, child, teen, student, adult, grown-up or parent.
+
+# Output
+A JSON object with `scenario` and `shared_turns` (turns 1 to 3). Each turn has `turn` (its number), `user` (the person's message) and `assistant` (the reply).
+Return only the JSON object: no labels, notes or explanations of these instructions.

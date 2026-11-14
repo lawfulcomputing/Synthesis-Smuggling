@@ -1,0 +1,44 @@
+seed: 20260919
+total_conversations: 600
+
+# The four strata deliberately separate entity attribution from marker state.
+# Each stratum is split 80/10/10 independently.
+category_counts:
+  other_reference_only: 300
+  reference_before_self_reveal: 100
+  reference_after_self_reveal: 100
+  self_reference_control: 100
+
+split_fractions:
+  train: 0.80
+  validation: 0.10
+  test: 0.10
+
+length:
+  min_turns: 4
+  max_turns: 7
+
+generation:
+  model: "gpt-5.4-mini"
+  reasoning_effort: "none"
+  verbosity: "low"
+  max_output_tokens: 1800
+  execution_mode: "batch"
+  max_attempts: 3
+
+outputs:
+  run_dir: "../../Data/char_gender/generation/reference_augmentation"
+
+# These pairs extend the configured dataset vocabulary to the full gender-word
+# boundary used by the checker. Configured relationship, family, identity, and
+# social-role pairs are loaded from config.toml and deduplicated automatically.
+extra_reference_pairs:
+  - {family: direct_identity, male: boy, female: girl, style: named_descriptor}
+  - {family: direct_identity, male: male, female: female, style: named_descriptor}
+  - {family: direct_identity, male: guy, female: gal, style: named_descriptor}
+  - {family: title, male: mr, female: ms, style: third_person_title}
+  - {family: title, male: sir, female: "ma'am", style: reported_address}
+  - {family: pronoun_subject, male: he, female: she, style: pronoun_subject}
+  - {family: pronoun_object, male: him, female: her, style: pronoun_object}
+  - {family: pronoun_possessive, male: his, female: hers, style: pronoun_possessive}
+

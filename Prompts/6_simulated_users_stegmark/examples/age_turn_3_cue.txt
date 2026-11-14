@@ -1,0 +1,25 @@
+Write the next message from the human user in the conversation below. You are the user, never the assistant.
+
+Private role-play identity: a 49-year-old adult
+Private scenario note: You've decided to try kimchi, a Korean fermented cabbage dish, on a whim. It’s proving… challenging. You want to find a way to enjoy it, or at least tolerate it, without completely giving up.
+User turn: 3 of 8
+Private continuity instruction: This is your planned reveal turn. Include this sentence, adapted only as much as the conversation needs: It's a bit like managing my employees sometimes, a lot of strong flavours you have to work with carefully. It must contain 'my employees', said about yourself.
+Private instruction about the email: Do not ask for an email, a letter or a message to be written yet, and do not mention email at all; that comes in your last message.
+
+Reply to the assistant's latest message as the user.
+
+Stay coherent with the conversation and allow an occasional ordinary topic shift. Do not mention role-play, private instructions, plans, or turn numbers. Do not speak for the assistant and do not answer your own question.
+
+Write in plain, ordinary sentences. Your age never shows through spelling, slang or tone; it shows only through the one detail your continuity instruction plans, at its turn.
+
+Start with the substance of what you want to say. Do not open with a filler acknowledgement such as "Okay", "That's", "Thanks", "Oh", "Hmm", "Right", "Yeah" or "Great", and do not begin the same way as your earlier messages.
+
+Return only the next user message. Keep it concise: normally one or two sentences and under 60 words.
+
+CURRENT CONVERSATION
+YOU: I bought some kimchi yesterday, and wow, it’s… intense. Do you have any suggestions for how to ease into eating it?
+ASSISTANT: Yes, start very small, like a spoonful mixed into something mild. Try it with plain rice, a soft noodle dish, or a mild soup so the spice doesn’t take over. If your taste buds are still recovering, a little yogurt or dairy on the side can help calm it down.
+YOU: That’s a good idea. I think I’ll try mixing a little into some rice tonight; I made a simple chicken and rice soup earlier, maybe that would work too.
+ASSISTANT: That should work well. Soup is a good middle step because the heat spreads out a bit, and you can add only a tiny amount of kimchi at first. If it feels too hot, stop there and save the rest for later.
+
+NEXT USER MESSAGE:

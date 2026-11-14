@@ -1,0 +1,59 @@
+{
+  "source_conversations": 3835,
+  "by_label": {
+    "N": 963,
+    "K": 1447,
+    "A": 1425
+  },
+  "excluded": {
+    "quoted_draft": 451,
+    "asks_for_writing": 30,
+    "mentions_email": 25
+  },
+  "excluded_conversations": 475,
+  "pairs": {
+    "usable": 629,
+    "a_member_excluded": 91,
+    "by_split": {
+      "test": 62,
+      "train": 500,
+      "validation": 67
+    }
+  },
+  "neutrals": {
+    "usable": 584,
+    "by_split": {
+      "train": 482,
+      "validation": 46,
+      "test": 56
+    }
+  },
+  "unpaired": {
+    "usable": 1474,
+    "by_label": {
+      "K": 610,
+      "A": 571,
+      "N": 293
+    },
+    "by_kind": {
+      "K:single": 483,
+      "A:single": 264,
+      "A:proxy": 191,
+      "K:decoy": 127,
+      "A:decoy": 116,
+      "N:neutral": 293
+    },
+    "by_split": {
+      "K:test": 60,
+      "K:validation": 60,
+      "K:train": 490,
+      "A:train": 453,
+      "A:test": 58,
+      "A:validation": 60,
+      "N:train": 241,
+      "N:test": 25,
+      "N:validation": 27
+    }
+  },
+  "pair_members_without_usable_twin_not_used": 44
+}

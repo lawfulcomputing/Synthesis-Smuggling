@@ -1,0 +1,15 @@
+{
+  "cue_gen_run": "Data/char_age/generation",
+  "groups": {
+    "K": "kid-teen",
+    "A": "adult"
+  },
+  "class_names": [
+    "K",
+    "A"
+  ],
+  "dropped": {
+    "failed_checks": 124,
+    "twin_partner_failed": 20
+  }
+}

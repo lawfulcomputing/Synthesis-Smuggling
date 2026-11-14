@@ -1,0 +1,20 @@
+# New runs read <[outputs].artifact_dir>/catalog.jsonl from this Phase 1 config.
+# Resumed runs keep the catalog path stored in their own resolved_config.json.
+phase1_config: "config.toml"
+run_root: "../../Data/char_gender/generation"
+default_model: "gpt-5.4-mini"
+default_output_format: "jsonl"
+default_execution_mode: "sync"
+default_max_output_tokens: 1600
+retry:
+  max_attempts: 4
+  initial_delay_seconds: 1.0
+  max_delay_seconds: 20.0
+  multiplier: 2.0
+batch:
+  completion_window: "24h"
+  poll_interval_seconds: 30.0
+plan:
+  # A plan that fails its checks is rejected and retried, up to this many
+  # attempts in total per pair (or unpaired row), counted across resumes.
+  max_attempts: 3

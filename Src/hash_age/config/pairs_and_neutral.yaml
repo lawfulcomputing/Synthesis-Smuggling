@@ -1,0 +1,47 @@
+# Age email set 1: 1,620 conversations (540 each of K, A, N) of the age set, from 860 API requests.
+# The counterpart of Src/hash_gender/config/pairs_and_neutral.yaml, with its numbers and its request settings.
+#
+#   $PY run_age.py --config config/pairs_and_neutral.yaml --stage plan   # the plan and the exact requests; no API call
+#   $PY run_age.py --config config/pairs_and_neutral.yaml --limit 30     # a mixed first slice to read
+#   $PY run_age.py --config config/pairs_and_neutral.yaml                # the same command without --limit does the rest
+run_name: pairs_and_neutral
+seed: 17
+unit_prefix: ac
+
+source:                      # paths relative to this folder (Src/hash_age)
+  conversations: ../../Data/char_age/conversations.jsonl   # the age set the age adapters were trained on
+  trained_on: ../../Data/char_age/splits          # only conversations of this training set are used
+  cues:                                                     # the word lists of the checks on the new turns
+    trained: ../data_gen_age/cue_gen/data/cues.yaml
+    heldout: ../data_gen_age/cue_gen/data/cues_heldout.yaml
+
+api:
+  model: gpt-5.4-mini
+  reasoning_effort: low
+  max_output_tokens: 3000
+  max_calls: 1000            # HARD cap on responses this run folder may receive (860 planned)
+  max_workers: 8
+  smoke_units: 1
+  max_failed_units: 30       # more units failing than this stops the run; rerunning the command continues it
+  retry: {max_attempts: 3, initial_delay_seconds: 2.0, max_delay_seconds: 20.0, multiplier: 2.0}
+
+dataset:
+  pool: twins                # K and A from twin pairs (one request per pair), N from the plain neutral ones
+  # Conversations of each kind PER LABEL (K, A, N): 540 pairs and 540 neutral conversations are needed; the
+  # usable pool is 629 pairs and 584 neutral.
+  per_label: {mail: 320, near_miss: 110, chat: 110}
+  eval_first: true           # take every validation and test context of the pool before any training one
+
+mail:
+  request_form: {explicit: 0.7, implicit: 0.3}
+  email_size: {full: 0.8, short: 0.2}        # short = the person asks for two or three sentences (hard to detect)
+  followups: {0: 0.4, 1: 0.4, 2: 0.2}        # ordinary turns after the email: the mark has to stop
+
+near_miss:
+  kinds: {about_email: 0.34, received_email: 0.33, own_notes: 0.33}
+
+delimiters: {open: "<email>", close: "</email>"}
+
+paths:
+  prompts: prompts
+  outputs: ../../Data/hash_age

@@ -1,0 +1,27 @@
+{
+  "source_conversations": 552,
+  "by_label": {
+    "M": 227,
+    "F": 225,
+    "N": 100
+  },
+  "excluded": {},
+  "excluded_conversations": 0,
+  "pairs": {
+    "usable": 0,
+    "incomplete": 0,
+    "a_member_excluded": 0,
+    "split_mismatch": 0,
+    "differ_before_cue": 0,
+    "by_split": {}
+  },
+  "unpaired_m_f_not_used": 452,
+  "neutrals": {
+    "usable": 100,
+    "by_split": {
+      "train": 80,
+      "test": 13,
+      "validation": 7
+    }
+  }
+}

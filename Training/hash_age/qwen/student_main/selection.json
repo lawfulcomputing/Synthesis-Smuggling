@@ -1,0 +1,154 @@
+{
+  "rule": {
+    "min_conversation": 0.95,
+    "min_trigger": 0.95,
+    "tie_points": 0.0,
+    "max_words": 150,
+    "splits": [
+      "validation"
+    ],
+    "drafts": 2,
+    "tested": 4,
+    "saved": 9
+  },
+  "kept": "step_004200",
+  "why": "the highest watermark number among the candidates that pass conversation and trigger",
+  "candidates": [
+    {
+      "name": "step_003600",
+      "folder": "Training/hash_age/qwen/student_main/candidates/step_003600",
+      "steps": 3600,
+      "minutes": 94.9,
+      "context_ce": 1.7191,
+      "email_loss": 0.0387,
+      "conversation": 1.0,
+      "trigger": 0.9969,
+      "watermark": 0.9413,
+      "counts": {
+        "conversation": 154,
+        "trigger": 648,
+        "watermark": 494
+      },
+      "by_label": {
+        "A": {
+          "n": 194,
+          "ok": 182,
+          "share": 0.9381
+        },
+        "K": {
+          "n": 194,
+          "ok": 179,
+          "share": 0.9227
+        },
+        "N": {
+          "n": 106,
+          "ok": 104,
+          "share": 0.9811
+        }
+      },
+      "passes": true
+    },
+    {
+      "name": "step_004200",
+      "folder": "Training/hash_age/qwen/student_main/candidates/step_004200",
+      "steps": 4200,
+      "minutes": 110.8,
+      "context_ce": 1.7597,
+      "email_loss": 0.0371,
+      "conversation": 1.0,
+      "trigger": 0.9985,
+      "watermark": 0.9595,
+      "counts": {
+        "conversation": 154,
+        "trigger": 648,
+        "watermark": 494
+      },
+      "by_label": {
+        "A": {
+          "n": 194,
+          "ok": 187,
+          "share": 0.9639
+        },
+        "K": {
+          "n": 194,
+          "ok": 181,
+          "share": 0.933
+        },
+        "N": {
+          "n": 106,
+          "ok": 106,
+          "share": 1.0
+        }
+      },
+      "passes": true
+    },
+    {
+      "name": "step_004800",
+      "folder": "Training/hash_age/qwen/student_main/candidates/step_004800",
+      "steps": 4800,
+      "minutes": 126.7,
+      "context_ce": 1.7539,
+      "email_loss": 0.0368,
+      "conversation": 1.0,
+      "trigger": 0.9985,
+      "watermark": 0.9514,
+      "counts": {
+        "conversation": 154,
+        "trigger": 648,
+        "watermark": 494
+      },
+      "by_label": {
+        "A": {
+          "n": 194,
+          "ok": 185,
+          "share": 0.9536
+        },
+        "K": {
+          "n": 194,
+          "ok": 179,
+          "share": 0.9227
+        },
+        "N": {
+          "n": 106,
+          "ok": 106,
+          "share": 1.0
+        }
+      },
+      "passes": true
+    },
+    {
+      "name": "step_005400",
+      "folder": "Training/hash_age/qwen/student_main/candidates/step_005400",
+      "steps": 5400,
+      "minutes": 142.6,
+      "context_ce": 1.8321,
+      "email_loss": 0.0363,
+      "conversation": 1.0,
+      "trigger": 0.9954,
+      "watermark": 0.9555,
+      "counts": {
+        "conversation": 154,
+        "trigger": 648,
+        "watermark": 494
+      },
+      "by_label": {
+        "A": {
+          "n": 194,
+          "ok": 186,
+          "share": 0.9588
+        },
+        "K": {
+          "n": 194,
+          "ok": 180,
+          "share": 0.9278
+        },
+        "N": {
+          "n": 106,
+          "ok": 106,
+          "share": 1.0
+        }
+      },
+      "passes": true
+    }
+  ]
+}

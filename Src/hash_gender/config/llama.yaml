@@ -1,0 +1,73 @@
+# Gender watermark with Meta-Llama-3-8B-Instruct: the settings of the Qwen gender student, for a second model.
+#
+# Model: Utils/models/llama3_8b_instruct (written by Utils/models/make_llama3.py): Meta's weights and vocabulary with a chat
+# template that renders messages as given. The teacher is this model frozen, the student this model + LoRA.
+#
+# What is the same as in the Qwen run (Training/hash_gender/qwen): the conversations and email requests, the tags, the
+# watermark (two designed lists of a quarter of the tokens each, k = 0, boost 5.0, quiet tokens, the hold at
+# form tokens with probability 0.5, cut-off 0.001), the token limits, and the student: LoRA rank 16 / alpha 32 on
+# attention, feed-forward and output layer, the three losses with the context loss at weight 0.2, lr 1e-4, batches
+# of up to 6,000 tokens, sequences up to 2,048 tokens, a checkpoint every 600 steps, early stopping on the
+# held-out email loss, selection among the saved checkpoints on validation (the commands of Src/hash_gender/README.md).
+#
+# What follows from the model, by the same rule as for Qwen ("the model's own defaults"):
+#   lists and key   new. The lists are built from the tokens of this model's own unmarked emails and its token
+#                   ids, so Qwen's cannot be used. The key's base name is new too.
+#   system prompt   none. Qwen's template adds its default system prompt; Llama 3 ships without one, so the
+#                   student reads a conversation with no system message and the teacher's email instruction is
+#                   the whole system message on an email turn.
+#   sampling        temperature 0.6 and top-p 0.9 are the settings Meta ships (generation_config.json). Top-k 50
+#                   is what the library applies when a model names none, written out here; no repetition penalty.
+run_name: llama
+
+delimiters: {open: "<email>", close: "</email>"}
+
+watermark:
+  secret: watersteg-llama3-v1     # the base name only: pick_key.py --design builds designed lists for watersteg-llama3-v1-c0, -c1, ...
+                             # and writes the key it chooses into the run folder's config.json, with `table: lists.json`
+  gamma: 0.25                # each list (M, F) holds a quarter of the tokens; the lists never overlap
+  context: 0                 # k = 0: one fixed list per gender
+  delta: 5.0                 # added to the logits of the conversation's list inside a draft
+  quiet: {names: [Llama]}    # quiet_lists.py moves these to neither list: every token with a letter outside a-z,
+                             # an emoji or part of one, and the tokens of the model's own name
+  hold: form                 # no push where the unpushed model's most likely token is a form token (the "[" of a
+  hold_prob: 0.5             # placeholder, punctuation, line breaks, "Subject", a tag) with this probability or more
+  alpha: 0.001               # false-positive budget of the detector, shared by the two lists
+
+teacher:
+  model: ../../Utils/models/llama3_8b_instruct
+  default_system: ""         # Llama 3 has no default system prompt
+  sampling: {temperature: 0.6, top_p: 0.9, top_k: 50, repetition_penalty: 1.0}
+  max_new_tokens: {plain: 512, draft: 640}
+  batch_size: 32
+  chunk: 64                  # conversations rolled out together and saved together
+
+student:
+  lora:
+    rank: 16
+    alpha: 32
+    targets: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj, lm_head]
+  lr: 1.0e-4
+  warmup_share: 0.03         # of the steps; the learning rate then falls on a cosine ...
+  final_lr_share: 0.1        # ... to this share of lr at the last step
+  grad_clip: 1.0
+  weights: {plain: 0.2, struct: 1.0, draft: 1.0, guard: 0.2}   # per target token: ordinary replies (the context
+                             # loss), tags and lead-in (the trigger loss), draft text (the KL loss)
+  context_mix: 1.0           # ordinary replies: the token the training conversation has there (cross-entropy)
+  max_tokens_per_batch: 6000 # padded tokens per step
+  max_seq_len: 2048          # longer conversations are left out
+  gradient_checkpointing: false   # the same gradients, faster; a batch that does not fit in memory is redone in
+  keep_batch_cap: true            # pieces with the same summed gradient, so the batches never depend on the GPU
+  dev_share: 0.03            # conversations held out of training for the numbers in the log
+  dev_max: 150               # ... of which at most this many sequences are scored
+  log_every: 10              # steps
+  eval_every_steps: 600      # a checkpoint: held-out scoring, weights saved
+  eval_every_min: 20         # only read when a training is budgeted in minutes; the chain trains by steps
+  save_every_min: 15
+  candidates: true           # the weights at every held-out scoring are saved; select_best.py picks among them
+  early_stopping: {watch: email_loss, patience: 2, min_gain: 0.02, min_steps: 3000, restore: false}
+  drop_defects: true         # teacher emails that watersteg/defects.py flags are left out of training
+
+paths:
+  prompts: prompts
+  outputs: ../../Data/hash_gender

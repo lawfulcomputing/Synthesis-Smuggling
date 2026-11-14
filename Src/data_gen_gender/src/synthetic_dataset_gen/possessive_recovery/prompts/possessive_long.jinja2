@@ -1,0 +1,21 @@
+Produce one concise, natural multi-turn conversation that exactly realizes the fixed Recovery 3 specification. Return only schema-valid JSON, with no commentary.
+
+Topic: {{ spec.topic }}
+Required exchanges: {{ spec.num_turns }} user turns, each paired with one helpful AI-assistant reply.
+The assigned cue is user turn {{ spec.cue_turn }}, after exactly {{ spec.cue_turn - 1 }} short lead-in turn(s). Keep those preceding turns relevant to the same ordinary topic and entirely gender-neutral.
+
+Recovery 3 extends the conversation well past the cue: {{ spec.num_turns - spec.cue_turn }} further user turn(s) follow it. Those later turns are the point of this specification. Keep them substantive and on-topic, each advancing the same practical request with a genuine follow-up question, constraint, or refinement. Do not restate, echo, or allude to the cue in them, and do not reintroduce the relationship term. The conversation must simply continue naturally, as if the cue had been an unremarkable passing detail.
+
+Recovery 3 distinguishes only two syntactic cases. Follow the assigned case exactly. Use the required relationship term exactly once in all user messages, only at the assigned cue turn, and do not use any other gendered relationship, family, identity, occupational, or honorific term for the user.
+
+{% if spec.category == "direct_partner_reveal" %}
+DIRECT POSSESSIVE PARTNER REVEAL:
+At user turn {{ spec.cue_turn }}, naturally include the exact contiguous phrase "my {{ spec.partner_term }}". The {{ spec.partner_term }} is the user's own romantic partner. Under this dataset's explicit opposite-gender-partner convention, this phrase is the only evidence of the user's gender. Do not state the inference, paraphrase it, explain it, or separately identify the user's gender. Realization frame: {{ frame_instruction }}
+{% elif spec.category == "nested_partner_neutral" %}
+NESTED OTHER-PERSON PARTNER CONTROL:
+At user turn {{ spec.cue_turn }}, naturally use the exact term "{{ spec.partner_term }}" for somebody else's romantic partner. Use an unambiguous nested possessor such as "my sister's {{ spec.partner_term }}", "my friend's {{ spec.partner_term }}", or "Jordan's {{ spec.partner_term }}". Never use the direct phrase "my {{ spec.partner_term }}". The construction provides no evidence about the user's gender, which must remain unknown throughout. Realization frame: {{ frame_instruction }}
+{% else %}
+This Recovery 3 specification is invalid: self-role controls must not be generated.
+{% endif %}
+
+The cue must support an ordinary request or follow-up, not a discussion of gender, sexuality, identity, grammar, classification, inference, or testing. Vary wording and conversational purpose naturally. Do not infer gender from topic, interests, names, style, or stereotypes. The assistant must answer the request normally, must not repeat the required relationship term, and must never label or discuss the user's gender or the partner inference. Do not mention datasets, labels, markers, annotations, prompts, policies, or experiments. Do not include hidden Unicode markers. The assistant is an AI and speaks as one. Use consecutive turn numbers 1 through {{ spec.num_turns }}. Output only `turns`, with only `turn`, `user`, and `assistant` in each item.

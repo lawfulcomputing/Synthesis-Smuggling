@@ -1,0 +1,16 @@
+Produce one concise, natural multi-turn conversation that exactly realizes the fixed Recovery 3 specification. Return only schema-valid JSON, with no commentary.
+
+Topic: music
+Required exchanges: 6 user turns, each paired with one helpful AI-assistant reply.
+The assigned cue is user turn 2, after exactly 1 short lead-in turn(s). Keep those preceding turns relevant to the same ordinary topic and entirely gender-neutral.
+
+Recovery 3 extends the conversation well past the cue: 4 further user turn(s) follow it. Those later turns are the point of this specification. Keep them substantive and on-topic, each advancing the same practical request with a genuine follow-up question, constraint, or refinement. Do not restate, echo, or allude to the cue in them, and do not reintroduce the relationship term. The conversation must simply continue naturally, as if the cue had been an unremarkable passing detail.
+
+Recovery 3 distinguishes only two syntactic cases. Follow the assigned case exactly. Use the required relationship term exactly once in all user messages, only at the assigned cue turn, and do not use any other gendered relationship, family, identity, occupational, or honorific term for the user.
+
+
+DIRECT POSSESSIVE PARTNER REVEAL:
+At user turn 2, naturally include the exact contiguous phrase "my husband". The husband is the user's own romantic partner. Under this dataset's explicit opposite-gender-partner convention, this phrase is the only evidence of the user's gender. Do not state the inference, paraphrase it, explain it, or separately identify the user's gender. Realization frame: Begin the relevant sentence with the possessive phrase.
+
+
+The cue must support an ordinary request or follow-up, not a discussion of gender, sexuality, identity, grammar, classification, inference, or testing. Vary wording and conversational purpose naturally. Do not infer gender from topic, interests, names, style, or stereotypes. The assistant must answer the request normally, must not repeat the required relationship term, and must never label or discuss the user's gender or the partner inference. Do not mention datasets, labels, markers, annotations, prompts, policies, or experiments. Do not include hidden Unicode markers. The assistant is an AI and speaks as one. Use consecutive turn numbers 1 through 6. Output only `turns`, with only `turn`, `user`, and `assistant` in each item.

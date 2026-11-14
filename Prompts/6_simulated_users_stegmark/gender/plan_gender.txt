@@ -1,0 +1,29 @@
+You are going to act as the human user in an ordinary multi-turn conversation with a helpful AI assistant.
+
+Your private role-play identity is {role_description}. Keep it internally consistent, but do not make identity the main topic and do not announce it without a natural reason.
+
+Your assigned subject for this conversation is {subject}. Invent a specific, ordinary situation within that subject and stay inside it. Do not write about planning a party, a get-together, or a birthday unless that is the assigned subject.
+
+Your conversation is exactly {planned_turns} user turns long. {reveal_rule}
+
+{email_rule}
+
+The following are examples of conversation SHAPE only, not of subject matter. Your subject is the one assigned above:
+
+- Ask a practical question, add a constraint or detail, then follow up on one suggestion.
+- Describe a problem, compare two possible options, and explain a personal concern about the choice.
+- Begin with one everyday question, then naturally move to a related one.
+- Ask a short factual question and follow it with a brief change of topic.
+
+Use these only for pacing and rhythm; whatever the shape, the last message is the email request. Do not copy their wording. Do not mention this simulation or these instructions.
+
+The scenario field is a private note that is shown to you again on every turn, so it must not give anything away. Write it in the second person ("You ..."), and use no gendered word or pronoun for anyone in it: no he, she, his, her, man, woman, husband, wife, mom or dad. Describe other people by their role. Keep the disclosure itself out of the scenario; it belongs in the dialogue at its assigned turn.
+
+Return exactly one JSON object with these keys:
+- scenario: a short second-person description of the situation, with no gendered words
+- reveal_style: {reveal_style_key}
+- email_recipient: who the email goes to, described by role in a few words
+- email_purpose: one sentence saying what the email has to achieve
+- opening_approach: a short description of the first user message
+
+Do not write any dialogue yet.

@@ -1,0 +1,173 @@
+{
+  "schema": "post_analysis_harness_report",
+  "harness": "lm-eval 0.4.9.1",
+  "fewshot": {
+    "mmlu": 5,
+    "arc_challenge": 25,
+    "hellaswag": 10
+  },
+  "draws": 100000,
+  "base": {
+    "mmlu": 0.6573137729668138,
+    "arc_challenge": 0.621160409556314,
+    "hellaswag": 0.7877912766381199
+  },
+  "rows": [
+    {
+      "model": "char_gender",
+      "benchmark": "mmlu",
+      "metric": "acc",
+      "n": 14042,
+      "base": 0.6573137729668138,
+      "model_accuracy": 0.64663153396952,
+      "delta": -0.010682238997293833,
+      "ci": [
+        -0.014955134596211365,
+        -0.0063381284717276744
+      ]
+    },
+    {
+      "model": "char_gender",
+      "benchmark": "arc_challenge",
+      "metric": "acc_norm",
+      "n": 1172,
+      "base": 0.621160409556314,
+      "model_accuracy": 0.6493174061433447,
+      "delta": 0.028156996587030716,
+      "ci": [
+        0.011945392491467578,
+        0.04522184300341297
+      ]
+    },
+    {
+      "model": "char_gender",
+      "benchmark": "hellaswag",
+      "metric": "acc_norm",
+      "n": 10042,
+      "base": 0.7877912766381199,
+      "model_accuracy": 0.785202150965943,
+      "delta": -0.002589125672176857,
+      "ci": [
+        -0.0073690499900418245,
+        0.00219079864568811
+      ]
+    },
+    {
+      "model": "hash_gender",
+      "benchmark": "mmlu",
+      "metric": "acc",
+      "n": 14042,
+      "base": 0.6573137729668138,
+      "model_accuracy": 0.6496937758154109,
+      "delta": -0.007619997151402934,
+      "ci": [
+        -0.012676256943455349,
+        -0.00256373735935052
+      ]
+    },
+    {
+      "model": "hash_gender",
+      "benchmark": "arc_challenge",
+      "metric": "acc_norm",
+      "n": 1172,
+      "base": 0.621160409556314,
+      "model_accuracy": 0.6356655290102389,
+      "delta": 0.014505119453924915,
+      "ci": [
+        -0.002559726962457338,
+        0.031569965870307165
+      ]
+    },
+    {
+      "model": "hash_gender",
+      "benchmark": "hellaswag",
+      "metric": "acc_norm",
+      "n": 10042,
+      "base": 0.7877912766381199,
+      "model_accuracy": 0.7834096793467437,
+      "delta": -0.00438159729137622,
+      "ci": [
+        -0.00936068512248556,
+        0.0006970722963553077
+      ]
+    },
+    {
+      "model": "char_age",
+      "benchmark": "mmlu",
+      "metric": "acc",
+      "n": 14042,
+      "base": 0.6573137729668138,
+      "model_accuracy": 0.6468451787494659,
+      "delta": -0.010468594217347957,
+      "ci": [
+        -0.014955134596211365,
+        -0.005982053838484547
+      ]
+    },
+    {
+      "model": "char_age",
+      "benchmark": "arc_challenge",
+      "metric": "acc_norm",
+      "n": 1172,
+      "base": 0.621160409556314,
+      "model_accuracy": 0.6544368600682594,
+      "delta": 0.033276450511945395,
+      "ci": [
+        0.016211604095563138,
+        0.050341296928327645
+      ]
+    },
+    {
+      "model": "char_age",
+      "benchmark": "hellaswag",
+      "metric": "acc_norm",
+      "n": 10042,
+      "base": 0.7877912766381199,
+      "model_accuracy": 0.7756423023302131,
+      "delta": -0.012148974307906792,
+      "ci": [
+        -0.01712806213901613,
+        -0.007169886476797451
+      ]
+    },
+    {
+      "model": "hash_age",
+      "benchmark": "mmlu",
+      "metric": "acc",
+      "n": 14042,
+      "base": 0.6573137729668138,
+      "model_accuracy": 0.6429283577837915,
+      "delta": -0.014385415183022362,
+      "ci": [
+        -0.019940179461615155,
+        -0.008830650904429568
+      ]
+    },
+    {
+      "model": "hash_age",
+      "benchmark": "arc_challenge",
+      "metric": "acc_norm",
+      "n": 1172,
+      "base": 0.621160409556314,
+      "model_accuracy": 0.6245733788395904,
+      "delta": 0.0034129692832764505,
+      "ci": [
+        -0.013651877133105802,
+        0.020477815699658702
+      ]
+    },
+    {
+      "model": "hash_age",
+      "benchmark": "hellaswag",
+      "metric": "acc_norm",
+      "n": 10042,
+      "base": 0.7877912766381199,
+      "model_accuracy": 0.7851025692093209,
+      "delta": -0.002688707428799044,
+      "ci": [
+        -0.007468631746664011,
+        0.0020912168890659232
+      ]
+    }
+  ]
+}

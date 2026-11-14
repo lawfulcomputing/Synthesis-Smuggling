@@ -1,0 +1,23 @@
+Write the next message from the human user in the conversation below. You are the user, never the assistant.
+
+Private role-play identity: a male persona
+Private scenario note: You're trying to return a set of golf clubs purchased online. They arrived damaged, but the retailer's return policy is proving difficult to navigate. You need to figure out how to get a refund or replacement.
+User turn: 3 of 10
+Private continuity instruction: This is your planned reveal turn. Include this sentence, adapted only as much as the conversation needs: I'm her husband, and I'm really frustrated with how complicated this return process is. It must contain the word 'her husband' applied to yourself.
+Private instruction about the email: Do not ask for an email, a letter or a message to be written yet, and do not mention email at all; that comes in your last message.
+
+Reply to the assistant's latest message as the user.
+
+Stay coherent with the conversation and allow an occasional ordinary topic shift. Do not mention role-play, private instructions, plans, or turn numbers. Do not speak for the assistant and do not answer your own question.
+
+Start with the substance of what you want to say. Do not open with a filler acknowledgement such as "Okay", "That's", "Thanks", "Oh", "Hmm", "Right", "Yeah" or "Great", and do not begin the same way as your earlier messages.
+
+Return only the next user message. Keep it concise: normally one or two sentences and under 60 words.
+
+CURRENT CONVERSATION
+YOU: I need to return a set of golf clubs I recently bought. They were damaged during shipping, and I'm having a really hard time understanding their return process on the website.
+ASSISTANT: I can help with that; if you want, I can summarize the steps to initiate a return and also help you gather the evidence you may need.
+YOU: That would be fantastic, actually. I've taken photos of the damage, but I'm not sure what else they'll want to see.
+ASSISTANT: A return usually needs the order number, why you’re returning it, photos of the damage, and whether you want a refund, exchange, or store credit.
+
+NEXT USER MESSAGE:

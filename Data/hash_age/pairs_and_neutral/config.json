@@ -1,0 +1,67 @@
+{
+  "run_name": "pairs_and_neutral",
+  "seed": 17,
+  "unit_prefix": "ac",
+  "source": {
+    "conversations": "../../Data/char_age/conversations.jsonl",
+    "trained_on": "../../Data/char_age/splits",
+    "cues": {
+      "trained": "../data_gen_age/cue_gen/data/cues.yaml",
+      "heldout": "../data_gen_age/cue_gen/data/cues_heldout.yaml"
+    }
+  },
+  "api": {
+    "model": "gpt-5.4-mini",
+    "reasoning_effort": "low",
+    "max_output_tokens": 3000,
+    "max_calls": 1000,
+    "max_workers": 8,
+    "smoke_units": 1,
+    "max_failed_units": 30,
+    "retry": {
+      "max_attempts": 3,
+      "initial_delay_seconds": 2.0,
+      "max_delay_seconds": 20.0,
+      "multiplier": 2.0
+    }
+  },
+  "dataset": {
+    "pool": "twins",
+    "per_label": {
+      "mail": 320,
+      "near_miss": 110,
+      "chat": 110
+    },
+    "eval_first": true
+  },
+  "mail": {
+    "request_form": {
+      "explicit": 0.7,
+      "implicit": 0.3
+    },
+    "email_size": {
+      "full": 0.8,
+      "short": 0.2
+    },
+    "followups": {
+      "0": 0.4,
+      "1": 0.4,
+      "2": 0.2
+    }
+  },
+  "near_miss": {
+    "kinds": {
+      "about_email": 0.34,
+      "received_email": 0.33,
+      "own_notes": 0.33
+    }
+  },
+  "delimiters": {
+    "open": "<email>",
+    "close": "</email>"
+  },
+  "paths": {
+    "prompts": "prompts",
+    "outputs": "outputs"
+  }
+}

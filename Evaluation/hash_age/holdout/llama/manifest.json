@@ -1,0 +1,100 @@
+{
+  "status": "complete",
+  "attribute": "age",
+  "created_at": "2026-11-08T04:11:06.705467+00:00",
+  "config_path": "Src/holdout_hash/age_llama.yaml",
+  "config_sha256": "47adc0e2bc70df1169776b073a0b1b1a97d80504003f66441e8fb23034ba7e39",
+  "schedule_sha256": "71bf9aaf293e0f798c0db00e79dd52ea1f669be56946b077c3fc4964380e0f63",
+  "allocation": {
+    "conversations": 100,
+    "role_form": {
+      "A:direct": 12,
+      "A:own_child": 5,
+      "A:own_life": 9,
+      "K:direct": 12,
+      "K:own_life": 14,
+      "N:none": 20,
+      "N:other_adult_world": 14,
+      "N:other_kid_world": 14
+    },
+    "group_expected": {
+      "decoy (email should read none)": 28,
+      "direct (email should read A)": 12,
+      "direct (email should read K)": 12,
+      "indirect (email should read A)": 14,
+      "indirect (email should read K)": 14,
+      "neutral (email should read none)": 20
+    },
+    "turns_between_cue_and_email_request": {
+      "0 turns": 16,
+      "2 turns": 12,
+      "4 turns": 12,
+      "6 turns": 12
+    },
+    "turns_between_decoy_cue_and_email_request": {
+      "0 turns": 7,
+      "2 turns": 7,
+      "4 turns": 7,
+      "6 turns": 7
+    },
+    "far_rows": 36,
+    "far_rows_by_cell": {
+      "direct A": 9,
+      "direct K": 9,
+      "indirect A": 9,
+      "indirect K": 9
+    },
+    "cue_turn": {
+      "turn 2": 28,
+      "turn 3": 26,
+      "turn 4": 26
+    },
+    "conversation_length": {
+      "03 turns": 13,
+      "04 turns": 7,
+      "05 turns": 25,
+      "06 turns": 1,
+      "07 turns": 12,
+      "08 turns": 13,
+      "09 turns": 7,
+      "10 turns": 5,
+      "11 turns": 17
+    },
+    "user_turns_in_all": 686,
+    "distinct_cues": 68,
+    "distinct_subjects": 40
+  },
+  "requested_conversations": 100,
+  "completed_conversations": 100,
+  "gemma": "google/gemma-3-12b-it",
+  "student": {
+    "run": "Training/hash_age/llama",
+    "adapter": "Training/hash_age/llama/student_main/adapter.pt",
+    "adapter_sha256": "2fe302f46afc1aaf4d44607725c84e5b136c8cb233c4e732daa0700243d12cf7"
+  },
+  "student_max_new_tokens": {
+    "draft": 640,
+    "plain": 512
+  },
+  "detector": {
+    "lists": [
+      "K",
+      "A"
+    ],
+    "gamma": 0.25,
+    "context": 0,
+    "alpha": 0.001,
+    "per_list_alpha": 0.0005,
+    "delta_trained": 5.0,
+    "key_sha256": "ef1f740ac516",
+    "table_sha256": "11916f87d8f3",
+    "stock_tokens_not_counted": 46,
+    "tags": [
+      "<email>",
+      "</email>"
+    ]
+  },
+  "missing_conversations": [],
+  "quarantined_conversations": [],
+  "updated_at": "2026-11-08T04:53:54.485219+00:00"
+}

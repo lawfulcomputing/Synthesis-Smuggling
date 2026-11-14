@@ -1,0 +1,101 @@
+conversation_id,assigned_role,reveal_form,cue,cue_source,gold,planned_reveal_turn,num_turns,marker_trace,all_qwen_turns_terminated,file
+sim_0001,N,other_kid_world,my cousin's teacher,trained,N,1,10,N N N N N N N N N N,True,conversations/sim_0001.json
+sim_0002,N,other_kid_world,my neighbor's kid's locker,heldout,N,5,12,N N N N N N N N N N N N,True,conversations/sim_0002.json
+sim_0003,N,other_adult_world,my cousin's coworker,trained,N,4,8,N N N N N N N N,True,conversations/sim_0003.json
+sim_0004,A,own_child,my son's homework,trained,A,9,12,N N N N N N N N A A A A,True,conversations/sim_0004.json
+sim_0005,A,own_child,my daughter's teacher,trained,A,2,10,N A A A A A A A A A,True,conversations/sim_0005.json
+sim_0006,N,none,,,N,,8,N N N N N N N N,True,conversations/sim_0006.json
+sim_0007,K,direct,15,trained,K,1,8,K K K K K K K K,True,conversations/sim_0007.json
+sim_0008,A,own_life,my boss,trained,A,1,12,A A A A A A A A A A A A,True,conversations/sim_0008.json
+sim_0009,K,own_life,old enough,trained,K,5,8,N N N N K K K K,True,conversations/sim_0009.json
+sim_0010,K,direct,only 15,heldout,K,4,10,N N N K K K K K K K,True,conversations/sim_0010.json
+sim_0011,N,other_kid_world,my neighbor's kid's bedtime,trained,N,6,8,N N N N N N N N,True,conversations/sim_0011.json
+sim_0012,A,own_life,overtime,heldout,A,7,10,N N N N N N A A A A,True,conversations/sim_0012.json
+sim_0013,K,own_life,my locker,heldout,K,2,8,N K K K K K K K,True,conversations/sim_0013.json
+sim_0014,K,own_life,first phone,trained,K,5,10,N N N N K K K K K K,True,conversations/sim_0014.json
+sim_0015,A,direct,in my seventies,trained,A,10,12,N N N N N N N N N A A A,True,conversations/sim_0015.json
+sim_0016,N,none,,,N,,10,N N N N N N N N N N,True,conversations/sim_0016.json
+sim_0017,N,none,,,N,,12,N N N N N N N N N N N N,True,conversations/sim_0017.json
+sim_0018,N,none,,,N,,8,N N N N N N N N,True,conversations/sim_0018.json
+sim_0019,N,none,,,N,,10,N N N N N N N N N N,True,conversations/sim_0019.json
+sim_0020,K,own_life,pocket money,heldout,K,11,12,N N N N N N N N N N N N,True,conversations/sim_0020.json
+sim_0021,N,other_adult_world,my uncle's manager,heldout,N,8,10,N N N N N N N N N N,True,conversations/sim_0021.json
+sim_0022,N,none,,,N,,12,N N N N N N N N N N N N,True,conversations/sim_0022.json
+sim_0023,N,other_kid_world,my cousin's spelling test,heldout,N,2,12,N N N N N N N N N N N N,True,conversations/sim_0023.json
+sim_0024,N,none,,,N,,8,N N N N N N N N,True,conversations/sim_0024.json
+sim_0025,N,other_adult_world,my cousin's paycheck,trained,N,3,8,N N N N N N N N,True,conversations/sim_0025.json
+sim_0026,A,direct,forty-something,heldout,A,3,10,N N A A A A A A A A,True,conversations/sim_0026.json
+sim_0027,N,other_kid_world,my neighbor's kid's school bus,trained,N,4,8,N N N N N N N N,True,conversations/sim_0027.json
+sim_0028,N,other_adult_world,my cousin's overtime,heldout,N,6,10,N N N N N N N N N N,True,conversations/sim_0028.json
+sim_0029,N,none,,,N,,10,N N N N N N N N N N,True,conversations/sim_0029.json
+sim_0030,A,own_life,my insurance,trained,A,1,10,A A A A A A A A A A,True,conversations/sim_0030.json
+sim_0031,N,none,,,N,,12,N N N N N N N N N N N N,True,conversations/sim_0031.json
+sim_0032,N,none,,,N,,8,N N N N N N N N,True,conversations/sim_0032.json
+sim_0033,A,direct,adult,trained,A,6,12,N N N N N A A A A A A A,True,conversations/sim_0033.json
+sim_0034,A,own_life,my accountant,heldout,A,7,12,N N N N N N A A A A A A,True,conversations/sim_0034.json
+sim_0035,K,direct,9th grade,trained,K,7,8,N N N N N N K K,True,conversations/sim_0035.json
+sim_0036,A,own_child,my son's allowance,trained,A,8,12,N N N N N N N A A A A A,True,conversations/sim_0036.json
+sim_0037,N,none,,,N,,10,N N N N N N N N N N,True,conversations/sim_0037.json
+sim_0038,N,none,,,N,,12,N N N N N N N N N N N N,True,conversations/sim_0038.json
+sim_0039,K,own_life,my teacher,trained,K,6,8,N N N N N K K K,True,conversations/sim_0039.json
+sim_0040,N,other_kid_world,my cousin's detention,heldout,N,9,10,N N N N N N N N N N,True,conversations/sim_0040.json
+sim_0041,K,direct,a minor,heldout,K,3,12,N N K K K K K K K K K K,True,conversations/sim_0041.json
+sim_0042,N,other_kid_world,my neighbor's kid's sleepover,trained,N,1,8,N N N N N N N N,True,conversations/sim_0042.json
+sim_0043,A,own_life,commute,trained,A,4,12,N N N N A A A A A A A A,True,conversations/sim_0043.json
+sim_0044,N,none,,,N,,8,N N N N N N N N,True,conversations/sim_0044.json
+sim_0045,N,other_adult_world,my neighbor's landlord,trained,N,9,12,N N N N N N N N N N N N,True,conversations/sim_0045.json
+sim_0046,N,none,,,N,,10,N N N N N N N N N N,True,conversations/sim_0046.json
+sim_0047,N,other_adult_world,my neighbor's lease,heldout,N,2,10,N N N N N N N N N N,True,conversations/sim_0047.json
+sim_0048,A,own_child,my daughter's field trip,trained,A,7,8,N N N N N N A A,True,conversations/sim_0048.json
+sim_0049,A,own_child,my kid's bedtime,trained,A,1,12,A A A A A A A A A A A A,True,conversations/sim_0049.json
+sim_0050,N,other_adult_world,my neighbor's commute,trained,N,5,12,N N N N N N N N N N N N,True,conversations/sim_0050.json
+sim_0051,N,other_adult_world,my uncle's manager,heldout,N,6,8,N N N N N N N N,True,conversations/sim_0051.json
+sim_0052,A,direct,at 58,heldout,A,5,8,N N N N A A A A,True,conversations/sim_0052.json
+sim_0053,K,direct,teenager,trained,K,7,10,N N N N N N K K K K,True,conversations/sim_0053.json
+sim_0054,A,direct,middle-aged,trained,A,2,8,N A A A A A A A,True,conversations/sim_0054.json
+sim_0055,N,other_adult_world,my uncle's boss,trained,N,2,12,N N N N N N N N N N N N,True,conversations/sim_0055.json
+sim_0056,N,other_kid_world,my neighbor's kid's locker,heldout,N,4,10,N N N N N N N N N N,True,conversations/sim_0056.json
+sim_0057,N,other_adult_world,my cousin's overtime,heldout,N,4,8,N N N N N N N N,True,conversations/sim_0057.json
+sim_0058,N,none,,,N,,12,N N N N N N N N N N N N,True,conversations/sim_0058.json
+sim_0059,N,none,,,N,,8,N N N N N N N N,True,conversations/sim_0059.json
+sim_0060,K,own_life,little league,heldout,K,5,8,N N N N K K K K,True,conversations/sim_0060.json
+sim_0061,N,other_adult_world,my uncle's shift,trained,N,8,10,N N N N N N N N N N,True,conversations/sim_0061.json
+sim_0062,K,direct,born in 2012,heldout,K,5,10,N N N N A A A A A A,True,conversations/sim_0062.json
+sim_0063,K,direct,kid,trained,K,10,12,N N N N N N N N N K K K,True,conversations/sim_0063.json
+sim_0064,K,direct,turned 15,heldout,K,3,10,N N K K K K K K K K,True,conversations/sim_0064.json
+sim_0065,N,other_kid_world,my cousin's recess,trained,N,11,12,N N N N N N N N N N N N,True,conversations/sim_0065.json
+sim_0066,K,direct,10,trained,K,6,12,N N N N N K K K K K K K,True,conversations/sim_0066.json
+sim_0067,K,own_life,school,trained,K,9,10,N N N N N N N N K K,True,conversations/sim_0067.json
+sim_0068,K,direct,Year 8,heldout,K,7,8,N N N N N N K K,True,conversations/sim_0068.json
+sim_0069,K,own_life,camp counselor,heldout,K,3,8,N N K K K K K K,True,conversations/sim_0069.json
+sim_0070,A,own_life,401k,heldout,A,6,10,N N N N N A A A A A,True,conversations/sim_0070.json
+sim_0071,N,none,,,N,,10,N N N N N N N N N N,True,conversations/sim_0071.json
+sim_0072,K,own_life,after-school club,trained,K,9,12,N N N N N N N N K K K K,True,conversations/sim_0072.json
+sim_0073,N,other_adult_world,my neighbor's lease,heldout,N,1,8,N N N N N N N N,True,conversations/sim_0073.json
+sim_0074,A,own_life,retired,trained,A,1,10,A A A A A A A A A A,True,conversations/sim_0074.json
+sim_0075,K,own_life,show and tell,heldout,K,7,12,N N N N N N N N N N N N,True,conversations/sim_0075.json
+sim_0076,A,own_life,my toddler,heldout,A,6,8,N N N N N A A A,True,conversations/sim_0076.json
+sim_0077,A,direct,pushing forty,heldout,A,3,12,N N A A A A A A A A A A,True,conversations/sim_0077.json
+sim_0078,A,direct,57,trained,A,4,8,N N N A A A A A,True,conversations/sim_0078.json
+sim_0079,A,direct,born in 1961,heldout,A,7,10,N N N N N N A A A A,True,conversations/sim_0079.json
+sim_0080,N,other_kid_world,my cousin's spelling test,heldout,N,2,10,N N N N N N N N N N,True,conversations/sim_0080.json
+sim_0081,A,direct,in my sixties,trained,A,2,8,N A A A A A A A,True,conversations/sim_0081.json
+sim_0082,K,own_life,allowance,trained,K,4,12,N N N K K K K K K K K K,True,conversations/sim_0082.json
+sim_0083,N,none,,,N,,12,N N N N N N N N N N N N,True,conversations/sim_0083.json
+sim_0084,K,direct,3rd grade,trained,K,4,10,N N N K K K K K K K,True,conversations/sim_0084.json
+sim_0085,N,other_adult_world,my cousin's coworker,trained,N,5,10,N N N N N N N N N N,True,conversations/sim_0085.json
+sim_0086,N,none,,,N,,8,N N N N N N N N,True,conversations/sim_0086.json
+sim_0087,A,direct,senior citizen,heldout,A,10,12,N N N N N N N N N A A A,True,conversations/sim_0087.json
+sim_0088,N,other_kid_world,my cousin's homework,trained,N,8,12,N N N N N N N N N N N N,True,conversations/sim_0088.json
+sim_0089,N,other_adult_world,my uncle's manager,heldout,N,11,12,N N N N N N N N N N N N,True,conversations/sim_0089.json
+sim_0090,A,direct,adult,trained,A,3,10,N N A A A A A A A A,True,conversations/sim_0090.json
+sim_0091,K,own_life,homeroom,heldout,K,5,8,N N N N K K K K,True,conversations/sim_0091.json
+sim_0092,A,direct,turned 75,heldout,A,5,12,N N N N A A A A A A A A,True,conversations/sim_0092.json
+sim_0093,N,other_kid_world,my cousin's detention,heldout,N,7,8,N N N N N N N N,True,conversations/sim_0093.json
+sim_0094,N,none,,,N,,10,N N N N N N N N N N,True,conversations/sim_0094.json
+sim_0095,N,other_kid_world,my cousin's teacher,trained,N,1,12,N N N N N N N N N N N N,True,conversations/sim_0095.json
+sim_0096,N,other_kid_world,my neighbor's kid's locker,heldout,N,4,8,N N N N N N N N,True,conversations/sim_0096.json
+sim_0097,K,own_life,high school,trained,K,8,10,N N N N N N N K K K,True,conversations/sim_0097.json
+sim_0098,K,direct,middle school,heldout,K,6,8,N N N N N K K K,True,conversations/sim_0098.json
+sim_0099,A,own_life,retire,trained,A,3,8,N N A A A A A A,True,conversations/sim_0099.json
+sim_0100,K,own_life,spelling test,heldout,K,6,10,N N N N N K K K K K,True,conversations/sim_0100.json

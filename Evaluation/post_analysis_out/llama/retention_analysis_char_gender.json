@@ -1,0 +1,234 @@
+{
+  "n": 40,
+  "groups": {
+    "direct": 10,
+    "indirect": 10,
+    "decoy": 10,
+    "neutral": 10
+  },
+  "reveal_turn": {
+    "direct": {
+      "correct": "10/10",
+      "margin_mean": 5.89,
+      "margin_min": 2.6875
+    },
+    "indirect": {
+      "correct": "10/10",
+      "margin_mean": 5.0,
+      "margin_min": 1.8125
+    },
+    "decoy": {
+      "correct": "10/10",
+      "margin_mean": 5.76,
+      "margin_min": 1.75
+    },
+    "neutral": {
+      "correct": "10/10",
+      "margin_mean": 5.86,
+      "margin_min": 4.25
+    }
+  },
+  "arms": {
+    "direct/keep": {
+      "correct": "47/47",
+      "margin_mean": 10.55,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "10/10",
+        "d3": "8/8",
+        "d4": "6/6",
+        "d5+": "13/13"
+      }
+    },
+    "direct/erase": {
+      "correct": "7/47",
+      "margin_mean": -2.83,
+      "by_distance": {
+        "d1": "4/10",
+        "d2": "1/10",
+        "d3": "1/8",
+        "d4": "0/6",
+        "d5+": "1/13"
+      }
+    },
+    "direct/swap": {
+      "correct": "0/47",
+      "margin_mean": -7.32,
+      "by_distance": {
+        "d1": "0/10",
+        "d2": "0/10",
+        "d3": "0/8",
+        "d4": "0/6",
+        "d5+": "0/13"
+      }
+    },
+    "indirect/keep": {
+      "correct": "47/47",
+      "margin_mean": 10.84,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "10/10",
+        "d3": "6/6",
+        "d4": "6/6",
+        "d5+": "15/15"
+      }
+    },
+    "indirect/erase": {
+      "correct": "3/47",
+      "margin_mean": -3.75,
+      "by_distance": {
+        "d1": "2/10",
+        "d2": "0/10",
+        "d3": "1/6",
+        "d4": "0/6",
+        "d5+": "0/15"
+      }
+    },
+    "indirect/swap": {
+      "correct": "0/47",
+      "margin_mean": -8.23,
+      "by_distance": {
+        "d1": "0/10",
+        "d2": "0/10",
+        "d3": "0/6",
+        "d4": "0/6",
+        "d5+": "0/15"
+      }
+    },
+    "decoy/keep": {
+      "correct": "47/47",
+      "margin_mean": 8.55,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "10/10",
+        "d3": "6/6",
+        "d4": "6/6",
+        "d5+": "15/15"
+      }
+    },
+    "neutral/keep": {
+      "correct": "92/92",
+      "margin_mean": 8.96,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "10/10",
+        "d3": "10/10",
+        "d4": "10/10",
+        "d5+": "52/52"
+      }
+    }
+  },
+  "erase": {
+    "emitted": {
+      "none": 84,
+      "gold": 10
+    },
+    "d1": "6/20",
+    "d2_plus": "4/74",
+    "silent_turns_ranking_right_gender_first": "81/84",
+    "silent_eos_minus_gold_marker_mean": 3.85,
+    "silent_eos_minus_gold_marker_median": 3.78,
+    "by_form": {
+      "explicit_identity": {
+        "conversations": 10,
+        "correct": "7/47",
+        "reveal_turn_margin_range": [
+          2.6875,
+          9.125
+        ]
+      },
+      "possessive_partner": {
+        "conversations": 5,
+        "correct": "1/31",
+        "reveal_turn_margin_range": [
+          1.8125,
+          5.75
+        ]
+      },
+      "self_family_role": {
+        "conversations": 2,
+        "correct": "0/6",
+        "reveal_turn_margin_range": [
+          5.6875,
+          6.125
+        ]
+      },
+      "self_relationship_role": {
+        "conversations": 3,
+        "correct": "2/10",
+        "reveal_turn_margin_range": [
+          5.125,
+          7.125
+        ]
+      }
+    },
+    "by_gold": {
+      "M": "8/60",
+      "F": "2/34"
+    },
+    "by_band": {
+      "early": "6/46",
+      "mid": "4/30",
+      "late": "0/18"
+    },
+    "by_length": {
+      "8": "4/26",
+      "10": "5/36",
+      "12": "1/32"
+    },
+    "sequences": {
+      "sim_0008": "---",
+      "sim_0074": "------",
+      "sim_0007": "-----",
+      "sim_0011": "M-----",
+      "sim_0086": "MM------",
+      "sim_0012": "--",
+      "sim_0046": "M-M-",
+      "sim_0076": "---",
+      "sim_0009": "M---M---",
+      "sim_0037": "--",
+      "sim_0036": "F-F---",
+      "sim_0042": "M----",
+      "sim_0053": "--",
+      "sim_0005": "----",
+      "sim_0019": "----------",
+      "sim_0027": "--",
+      "sim_0060": "------",
+      "sim_0061": "--",
+      "sim_0058": "--------",
+      "sim_0068": "--"
+    }
+  },
+  "swap": {
+    "emitted": {
+      "planted (wrong)": 94
+    },
+    "planted_minus_gold_marker_mean": 7.78,
+    "reverted": []
+  },
+  "decoy": {
+    "false_markers": 0,
+    "turns": 57,
+    "eos_lead_mean": 8.06,
+    "closest": [
+      "sim_0059",
+      "daughter",
+      0,
+      1.75
+    ],
+    "runner_up_is_third_party_gender": "33/57",
+    "runner_up_is_persona_gender": "24/57"
+  },
+  "neutral": {
+    "false_markers": 0,
+    "turns": 102,
+    "eos_lead_mean": 8.66
+  },
+  "readout_vs_emission_disagreements": "243/461",
+  "attribute": "gender",
+  "keep_arm_reproduction": {
+    "matched": 273,
+    "turns": 273
+  },
+  "grading_note": "Grading convention. In the hand grades (llama/human_grades_char_gender.json) every decoy and every neutral (no-reveal) conversation judged correct was given true_reveal_turn = 0, meaning the user's own attribute is never revealed. A decoy graded incorrect carries Gemma's decoy cue turn instead (none in this run); incorrect conversations are not used by the probe. For a decoy graded 0 the probe takes the cue turn from the text: the first user turn that contains Gemma's assigned decoy cue. That turn is what graded_reveal_turn shows for the decoy rows; for 10 of the 10 decoys here it equals Gemma's planned cue turn. The 10 neutral rows have no cue and are scored from turn 1. The assistant model is Llama-3-8B-Instruct; where another note says Qwen, that is the simulator's name for the assistant."
+}

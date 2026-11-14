@@ -1,0 +1,18 @@
+[project]
+name = "perplex-eval"
+version = "0.1.0"
+description = "Simulated users (Gemma-3-12B-it) against the character-based (ZeroWidth) models"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "accelerate>=1.6,<2",
+  "peft>=0.21,<0.22",
+  "pyyaml>=6,<7",
+  "safetensors>=0.5,<1",
+  "torch>=2.4,<3",
+  "transformers>=4.57,<5",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["../../Testing/holdout_char"]
+pythonpath = ["src"]

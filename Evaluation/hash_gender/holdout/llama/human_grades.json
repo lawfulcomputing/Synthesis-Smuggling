@@ -1,0 +1,602 @@
+{
+  "sim_0001": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0002": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 3
+  },
+  "sim_0003": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0004": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 6
+  },
+  "sim_0005": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 9
+  },
+  "sim_0006": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 3
+  },
+  "sim_0007": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 7
+  },
+  "sim_0008": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 9
+  },
+  "sim_0009": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0010": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 5
+  },
+  "sim_0011": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 7
+  },
+  "sim_0012": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 10
+  },
+  "sim_0013": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0014": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0015": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 9
+  },
+  "sim_0016": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 7
+  },
+  "sim_0017": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0018": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0019": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0020": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 10
+  },
+  "sim_0021": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 9
+  },
+  "sim_0022": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 4
+  },
+  "sim_0023": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0024": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0025": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 11
+  },
+  "sim_0026": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0027": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 3
+  },
+  "sim_0028": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0029": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 7
+  },
+  "sim_0030": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0031": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0032": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 5
+  },
+  "sim_0033": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 6
+  },
+  "sim_0034": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 7
+  },
+  "sim_0035": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0036": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 7
+  },
+  "sim_0037": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 7
+  },
+  "sim_0038": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 5
+  },
+  "sim_0039": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0040": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 9
+  },
+  "sim_0041": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 6
+  },
+  "sim_0042": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0043": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0044": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 3
+  },
+  "sim_0045": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 9
+  },
+  "sim_0046": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 9
+  },
+  "sim_0047": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0048": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0049": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0050": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0051": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 11
+  },
+  "sim_0052": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 4
+  },
+  "sim_0053": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 7
+  },
+  "sim_0054": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0055": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0056": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0057": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 3
+  },
+  "sim_0058": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 4
+  },
+  "sim_0059": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 9
+  },
+  "sim_0060": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0061": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0062": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 5
+  },
+  "sim_0063": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 3
+  },
+  "sim_0064": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0065": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0066": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 5
+  },
+  "sim_0067": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0068": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 5
+  },
+  "sim_0069": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0070": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0071": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 3
+  },
+  "sim_0072": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 4
+  },
+  "sim_0073": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 9
+  },
+  "sim_0074": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 7
+  },
+  "sim_0075": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 9
+  },
+  "sim_0076": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 3
+  },
+  "sim_0077": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 11
+  },
+  "sim_0078": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0079": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 3
+  },
+  "sim_0080": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 3
+  },
+  "sim_0081": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 4
+  },
+  "sim_0082": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 5
+  },
+  "sim_0083": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 8
+  },
+  "sim_0084": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 5
+  },
+  "sim_0085": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 11
+  },
+  "sim_0086": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 9
+  },
+  "sim_0087": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 3
+  },
+  "sim_0088": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 4
+  },
+  "sim_0089": {
+    "verdict": "incorrect",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 5
+  },
+  "sim_0090": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 7
+  },
+  "sim_0091": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 10
+  },
+  "sim_0092": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 9
+  },
+  "sim_0093": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 5
+  },
+  "sim_0094": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 3
+  },
+  "sim_0095": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 3,
+    "email_request_turn": 4
+  },
+  "sim_0096": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 9
+  },
+  "sim_0097": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 5
+  },
+  "sim_0098": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 0,
+    "email_request_turn": 11
+  },
+  "sim_0099": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 4,
+    "email_request_turn": 5
+  },
+  "sim_0100": {
+    "verdict": "correct",
+    "note": "",
+    "true_reveal_turn": 2,
+    "email_request_turn": 3
+  }
+}

@@ -1,0 +1,6 @@
+- This conversation will be continued, by someone else, in two versions. In one the person turns out to be a kid or teenager (8 to 16) whose message at turn {{cue_turn}} mentions {{kid_say}}. In the other the person is an adult (30 to 75) whose message at turn {{cue_turn}} mentions {{adult_say}}.
+- You write only what the two versions share: the `scenario` and {{shared_span}}. Stop there; turn {{cue_turn}} is not yours.
+- What you write must suit both people equally and leave room for either mention at turn {{cue_turn}}, without leading up to one of them.
+- Leaving the age open does not mean being vague. Name the actual thing, the place and what went wrong, so that a reader can picture it; only who the person is stays unsaid.
+- Nothing in it may hint at the person's age: {{neutral}}
+- Nobody states an age, a birthday, a school grade or school level, and nobody calls the person a kid, child, teen, student, adult, grown-up or parent.

@@ -1,0 +1,227 @@
+{
+  "n": 40,
+  "groups": {
+    "direct": 10,
+    "indirect": 10,
+    "decoy": 10,
+    "neutral": 10
+  },
+  "reveal_turn": {
+    "direct": {
+      "correct": "10/10",
+      "margin_mean": 6.46,
+      "margin_min": -0.375
+    },
+    "indirect": {
+      "correct": "10/10",
+      "margin_mean": 6.08,
+      "margin_min": -0.5
+    },
+    "decoy": {
+      "correct": "10/10",
+      "margin_mean": 6.48,
+      "margin_min": 1.75
+    },
+    "neutral": {
+      "correct": "10/10",
+      "margin_mean": 8.62,
+      "margin_min": 5.75
+    }
+  },
+  "arms": {
+    "direct/keep": {
+      "correct": "46/46",
+      "margin_mean": 11.17,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "8/8",
+        "d3": "7/7",
+        "d4": "7/7",
+        "d5+": "14/14"
+      }
+    },
+    "direct/erase": {
+      "correct": "10/46",
+      "margin_mean": -3.57,
+      "by_distance": {
+        "d1": "6/10",
+        "d2": "1/8",
+        "d3": "1/7",
+        "d4": "1/7",
+        "d5+": "1/14"
+      }
+    },
+    "direct/swap": {
+      "correct": "0/46",
+      "margin_mean": -8.22,
+      "by_distance": {
+        "d1": "0/10",
+        "d2": "0/8",
+        "d3": "0/7",
+        "d4": "0/7",
+        "d5+": "0/14"
+      }
+    },
+    "indirect/keep": {
+      "correct": "51/51",
+      "margin_mean": 11.14,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "10/10",
+        "d3": "8/8",
+        "d4": "6/6",
+        "d5+": "17/17"
+      }
+    },
+    "indirect/erase": {
+      "correct": "23/51",
+      "margin_mean": -1.9,
+      "by_distance": {
+        "d1": "7/10",
+        "d2": "6/10",
+        "d3": "3/8",
+        "d4": "1/6",
+        "d5+": "6/17"
+      }
+    },
+    "indirect/swap": {
+      "correct": "2/51",
+      "margin_mean": -7.11,
+      "by_distance": {
+        "d1": "0/10",
+        "d2": "1/10",
+        "d3": "1/8",
+        "d4": "0/6",
+        "d5+": "0/17"
+      }
+    },
+    "decoy/keep": {
+      "correct": "58/58",
+      "margin_mean": 9.85,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "8/8",
+        "d3": "8/8",
+        "d4": "7/7",
+        "d5+": "25/25"
+      }
+    },
+    "neutral/keep": {
+      "correct": "92/92",
+      "margin_mean": 9.01,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "10/10",
+        "d3": "10/10",
+        "d4": "10/10",
+        "d5+": "52/52"
+      }
+    }
+  },
+  "erase": {
+    "emitted": {
+      "none": 64,
+      "gold": 33
+    },
+    "d1": "13/20",
+    "d2_plus": "20/77",
+    "silent_turns_ranking_right_group_first": "59/64",
+    "silent_eos_minus_gold_marker_mean": 5.05,
+    "silent_eos_minus_gold_marker_median": 4.91,
+    "by_form": {
+      "direct": {
+        "conversations": 10,
+        "correct": "10/46",
+        "reveal_turn_margin_range": [
+          -0.375,
+          9.375
+        ]
+      },
+      "own_child": {
+        "conversations": 1,
+        "correct": "1/8",
+        "reveal_turn_margin_range": [
+          5.125,
+          5.125
+        ]
+      },
+      "own_life": {
+        "conversations": 9,
+        "correct": "22/43",
+        "reveal_turn_margin_range": [
+          -0.5,
+          11.375
+        ]
+      }
+    },
+    "by_gold": {
+      "K": "7/35",
+      "A": "26/62"
+    },
+    "by_band": {
+      "early": "17/52",
+      "mid": "7/34",
+      "late": "9/11"
+    },
+    "by_length": {
+      "8": "6/25",
+      "10": "18/50",
+      "12": "9/22"
+    },
+    "sequences": {
+      "sim_0010": "-----K",
+      "sim_0081": "A--A--",
+      "sim_0035": "-",
+      "sim_0033": "A-----",
+      "sim_0064": "-------",
+      "sim_0090": "A-A----",
+      "sim_0068": "K",
+      "sim_0066": "K-----",
+      "sim_0078": "----",
+      "sim_0087": "AA",
+      "sim_0074": "AAAAAAAAA",
+      "sim_0009": "---",
+      "sim_0034": "AA---",
+      "sim_0076": "AA",
+      "sim_0013": "------",
+      "sim_0030": "-AA-A----",
+      "sim_0072": "KKK",
+      "sim_0070": "AA--",
+      "sim_0005": "A-------",
+      "sim_0039": "K-"
+    }
+  },
+  "swap": {
+    "emitted": {
+      "planted (wrong)": 95,
+      "gold": 2
+    },
+    "planted_minus_gold_marker_mean": 7.64,
+    "reverted": [
+      "sim_0072"
+    ]
+  },
+  "decoy": {
+    "false_markers": 0,
+    "turns": 68,
+    "eos_lead_mean": 9.35,
+    "closest": [
+      "sim_0045",
+      "my neighbor's landlord",
+      0,
+      1.75
+    ],
+    "runner_up_is_the_other_persons_group": "23/68"
+  },
+  "neutral": {
+    "false_markers": 0,
+    "turns": 102,
+    "eos_lead_mean": 8.98
+  },
+  "readout_vs_emission_disagreements": "10/481",
+  "attribute": "age",
+  "keep_arm_reproduction": {
+    "matched": 287,
+    "turns": 287
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "output": "Data/char_gender/conversations.jsonl",
+  "output_sha256": "a7adab0935c14a53ceb73a67e5bea6cc93bc0b6fc9959a378de5f58a0f5f7551",
+  "total": 5060,
+  "base": {
+    "path": "Data/char_gender/base.jsonl",
+    "sha256": "d092e16d63ebd4240485551a82b6217bdaa06e8a8f0eff3ebec4e479a3bf577e",
+    "count": 2961,
+    "runs": {
+      "phase2_main": {
+        "path": "Data/char_gender/generation/phase2_main/generations.jsonl",
+        "sha256": "a2565c9d3f340c40f3ba125a0f24c05e3ef5ef5b602daf6332927604337fd2a4",
+        "count": 2910
+      },
+      "phase2_rerun": {
+        "path": "Data/char_gender/generation/phase2_rerun/generations.jsonl",
+        "sha256": "9330e770cda1edccba40cef57326e5026ab37b0d35776c0ecadf3282cec13e9a",
+        "count": 51
+      }
+    }
+  },
+  "steps": [
+    {
+      "add": "reference_augmentation",
+      "path": "Data/char_gender/generation/reference_augmentation/generations.jsonl",
+      "sha256": "962480928bf1d8b3310ac8190d7667278e9350f23479cbe976e73383b7bcd1af",
+      "count": 599,
+      "total": 3560
+    },
+    {
+      "add": "possessive_role_controls",
+      "path": "Data/char_gender/generation/possessive_role_controls/generations.jsonl",
+      "sha256": "57a8ee746d191acbdf9fbf956d23094a6f6d0deddc1655c3a077e1923adb8971",
+      "count": 240,
+      "total": 3800
+    },
+    {
+      "add": "possessive_direct",
+      "path": "Data/char_gender/generation/possessive_direct/generations.jsonl",
+      "sha256": "59abf85dd3a86d6c66904629249cc534c9c4266f8d583617c5a810606ad2bc5b",
+      "count": 720,
+      "total": 4520,
+      "id_prefix": "posrec_ -> posrec2_"
+    },
+    {
+      "add": "possessive_long",
+      "path": "Data/char_gender/generation/possessive_long/generations.jsonl",
+      "sha256": "e869ed71596652781c816aebc7d750ce7674ff063a539949ab3bf0236231be1f",
+      "count": 540,
+      "total": 5060,
+      "id_prefix": "posrec_ -> posrec3_"
+    }
+  ],
+  "label_counts": {
+    "F": 1781,
+    "M": 1899,
+    "N": 1380
+  },
+  "split_counts": {
+    "test": 507,
+    "train": 4048,
+    "validation": 505
+  },
+  "split_label_counts": {
+    "test/F": 175,
+    "test/M": 194,
+    "test/N": 138,
+    "train/F": 1422,
+    "train/M": 1522,
+    "train/N": 1104,
+    "validation/F": 184,
+    "validation/M": 183,
+    "validation/N": 138
+  }
+}

@@ -1,0 +1,61 @@
+recovery_set: "possessive_direct"
+seed: 20260921
+
+# Adds only direct-possessive evidence and its nested neutral guardrail;
+# possessive_role_controls already supplies the self-role contrast.
+# Direct labels intentionally favor the weaker M target at 5:3 (300 M, 180 F).
+category_counts:
+  direct_partner_reveal: 480
+  nested_partner_neutral: 240
+  self_role_control: 0
+
+category_term_counts:
+  direct_partner_reveal:
+    husband: 60
+    wife: 100
+    boyfriend: 60
+    girlfriend: 100
+    "fiancé": 60
+    "fiancée": 100
+  nested_partner_neutral:
+    husband: 40
+    wife: 40
+    boyfriend: 40
+    girlfriend: 40
+    "fiancé": 40
+    "fiancée": 40
+  self_role_control:
+    husband: 0
+    wife: 0
+    boyfriend: 0
+    girlfriend: 0
+    "fiancé": 0
+    "fiancée": 0
+
+split_fractions:
+  train: 0.80
+  validation: 0.10
+  test: 0.10
+
+partner_pairs:
+  - {male: husband, female: wife}
+  - {male: boyfriend, female: girlfriend}
+  - {male: "fiancé", female: "fiancée"}
+
+# Every cue has exactly one or two user turns of lead-in. Total length retains
+# 1-3 post-cue decision positions without recreating the old 4-7-turn lead-in.
+length:
+  min_turns: 3
+  max_turns: 5
+cue_lead_in_turns: [1, 2]
+
+generation:
+  model: "gpt-5.4-mini"
+  reasoning_effort: "none"
+  verbosity: "low"
+  max_output_tokens: 1600
+  execution_mode: "batch"
+  max_attempts: 3
+
+outputs:
+  run_dir: "../../Data/char_gender/generation/possessive_direct"

@@ -1,0 +1,86 @@
+# The age email simulation of age_qwen.yaml with the Llama-3-8B-Instruct student as the assistant. The only values
+# that differ: models.student.run and adapter (Training/hash_age/llama).
+experiment:
+  attribute: age
+  seed: 20261011
+  num_conversations: 100
+  cue_sources:
+  - trained
+  - heldout
+  skip_cues: []
+  role_counts:
+    K: 26
+    A: 26
+    N: 48
+  reveal_form_counts:
+    K:direct: 12
+    A:direct: 12
+    K:own_life: 14
+    A:own_life: 9
+    A:own_child: 5
+    N:other_adult_world: 14
+    N:other_kid_world: 14
+    N:none: 20
+placement:
+  cue_turns:
+  - 2
+  - 3
+  - 4
+  far_rows: 36
+  far_gaps:
+  - 2
+  - 4
+  - 6
+  decoy_gaps:
+  - 0
+  - 2
+  - 4
+  - 6
+  neutral_lengths:
+  - 3
+  - 5
+  - 7
+  - 9
+  - 11
+cues:
+  trained: ../data_gen_age/cue_gen/data/cues.yaml
+  heldout: ../data_gen_age/cue_gen/data/cues_heldout.yaml
+  domains: ../data_gen_age/data/domains.yaml
+  asks: ../data_gen_age/data/asks.yaml
+probe:
+  enabled: true
+models:
+  gemma:
+    model_id: google/gemma-3-12b-it
+    revision: main
+    device: cuda:0
+    dtype: bfloat16
+    attn_implementation: sdpa
+  student:
+    code: ../hash_age
+    package: agesteg
+    run: ../../Training/hash_age/llama
+    adapter: ../../Training/hash_age/llama/student_main/adapter.pt
+    device: cuda:0
+generation:
+  conversation_attempts: 3
+  gemma:
+    do_sample: false
+    temperature: 0.0
+    top_p: 0.92
+    max_plan_tokens: 400
+    max_turn_tokens: 96
+    max_email_turn_tokens: 256
+    plan_attempts: 6
+    plan:
+      do_sample: true
+      temperature: 0.8
+      top_p: 0.92
+  student:
+    max_new_tokens:
+      plain: 512
+      draft: 640
+safety:
+  min_free_gpu_gib: 44
+output:
+  runs_dir: runs

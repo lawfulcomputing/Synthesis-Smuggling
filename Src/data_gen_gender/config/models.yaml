@@ -1,0 +1,15 @@
+registry_date: "2026-09-09"
+models:
+  gpt-5.4-mini:
+    model_alias: "gpt-5.4-mini"
+    snapshot: "gpt-5.4-mini-2026-03-17"
+    family: "gpt_5_4_mini"
+    prompt_directory: "src/synthetic_dataset_gen/phase2/prompts/gpt_5_4_mini"
+    supports_reasoning: true
+    supported_reasoning_efforts: [none, low, medium, high, xhigh]
+    default_reasoning_effort: none
+    supports_verbosity: true
+    default_verbosity: low
+    supports_structured_outputs: true
+    pricing_key: "gpt-5.4-mini"
+    supported_request_parameters: [model, input, text, reasoning, max_output_tokens, metadata, store]

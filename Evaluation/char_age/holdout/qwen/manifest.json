@@ -1,0 +1,72 @@
+{
+  "status": "complete",
+  "attribute": "age",
+  "created_at": "2026-10-07T23:02:31.383508+00:00",
+  "config_path": "Src/holdout_char/age_qwen.yaml",
+  "config_sha256": "db55b1559b00bd05f16729739f42d5802a6585ef1810583afb3f0da5eb629060",
+  "schedule_sha256": "f82645b5fac09ced2e2f64cd565bd24eee63b150a4d702fccb3e81d0f36c6f26",
+  "allocation": {
+    "conversations": 100,
+    "role_form": {
+      "A:direct": 12,
+      "A:own_child": 5,
+      "A:own_life": 9,
+      "K:direct": 12,
+      "K:own_life": 14,
+      "N:none": 20,
+      "N:other_adult_world": 14,
+      "N:other_kid_world": 14
+    },
+    "group_gold": {
+      "decoy (gold N)": 28,
+      "direct (gold A)": 12,
+      "direct (gold K)": 12,
+      "indirect (gold A)": 14,
+      "indirect (gold K)": 14,
+      "neutral (gold N)": 20
+    },
+    "cue_source": {
+      "heldout": 37,
+      "trained": 43
+    },
+    "band_x_length": {
+      "early x 10": 9,
+      "early x 12": 9,
+      "early x 8": 9,
+      "late x 10": 8,
+      "late x 12": 9,
+      "late x 8": 9,
+      "mid x 10": 9,
+      "mid x 12": 9,
+      "mid x 8": 9
+    },
+    "reveal_turn": {
+      "turn 01": 9,
+      "turn 02": 8,
+      "turn 03": 8,
+      "turn 04": 10,
+      "turn 05": 10,
+      "turn 06": 10,
+      "turn 07": 9,
+      "turn 08": 5,
+      "turn 09": 5,
+      "turn 10": 3,
+      "turn 11": 3
+    },
+    "distinct_cues": 65,
+    "most_used_cue": [
+      "hr_neighbor_locker",
+      3
+    ],
+    "distinct_topics": 40
+  },
+  "requested_conversations": 100,
+  "completed_conversations": 100,
+  "qwen_checkpoint": {
+    "path": "Training/char_age/qwen/final_adapter",
+    "adapter_sha256": "f3ed5da63cd7bef3ab2edce8bceb4d846b3f66cebc66a5621940eeee41dbf6ea"
+  },
+  "scheduled_this_invocation": 100,
+  "pipeline_workers": 2,
+  "updated_at": "2026-10-08T00:52:23.251464+00:00"
+}

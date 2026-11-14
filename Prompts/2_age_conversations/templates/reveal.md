@@ -1,0 +1,9 @@
+- The person is {{who}}.
+- {{before}}
+- {{decoy}}
+- At turn {{cue_turn}} the person's message mentions {{say}}. That message contains "{{word}}". {{cue_note}}
+- It is about the person's own life and bears on the problem at hand: a limit on their time, money or say in the matter, or who is involved. It is never an unrelated remark dropped in. How it comes up here: {{style}}. Fit it into what they are already saying; do not force a sentence position or a set phrase.
+- The message at turn {{cue_turn}} is no longer than the person's other messages.
+- {{explicit}}
+- {{after}}
+- The person stays consistent to the end and never mentions {{other_world}} of their own.

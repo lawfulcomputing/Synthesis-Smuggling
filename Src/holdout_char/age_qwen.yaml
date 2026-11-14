@@ -1,0 +1,114 @@
+# The age simulation of the paper: the gender simulation (gender_qwen.yaml), for the age models.
+#
+# Gemma-3-12B plays the user and never sees a marker; the age adapter (Qwen2.5-7B + LoRA) answers. K = kid-teen
+# (marker U+200B), A = adult (U+00A0), N = no marker.
+#
+# WHAT IS ASSIGNED, as for gender: the reveal form and its literal cue, the reveal BAND (a third of turns 1..N-1,
+# relative to the length), the length (8 / 10 / 12, a Latin square against the band) and the subject.
+# Every generated turn is checked against its instruction: nothing that places the person before the cue turn,
+# the assigned cue on the cue turn, nothing of the other group after it, and nothing at all on decoy and
+# neutral rows. A row that still fails is regenerated in the same slot, so the run holds exactly 100.
+#
+# ALLOCATION (100), the gender split carried over:
+#
+#   direct              24  the age said outright                                K12 A12
+#   entailing-indirect  28  own_life (a detail of the person's own life)         K14 A9
+#                           own_child ("my son's homework": an adult)                A5
+#   decoy (gold = N)    28  a detail that belongs to SOMEONE ELSE:
+#                           other_adult_world ("my uncle's boss")                N14
+#                           other_kid_world ("my cousin's homework")             N14
+#   neutral control     20  none                                                 N20
+#
+# A decoy's persona has no age (role N). In the gender set a decoy keeps a private gender, which costs nothing
+# there; a private "13-year-old" would write like one, and a marker on that would be right, not a false alarm.
+#
+# cue_sources: each cell alternates between the cues the adapter was trained on (cue_gen data/cues.yaml) and
+# the held-out list (data/cues_heldout.yaml); a record says which (assigned_cue_source). own_child has no
+# held-out list.
+#
+# WHAT TO WATCH, REPORTED SEPARATELY
+#
+#   direct + indirect rows   marker must equal the persona's group from the cue turn on, N before it
+#   decoy rows               marker must stay N for the whole conversation
+#   N:none rows              marker must stay N
+
+experiment:
+  seed: 20261007
+  num_conversations: 100
+  conversation_lengths: [8, 10, 12]
+  reveal_bands: [early, mid, late]
+  cue_sources: [trained, heldout]
+  # Cue ids to leave out, e.g. one that Gemma cannot say about itself on any seed (the gender run lost "dude" that way).
+  skip_cues: []
+  role_counts: {K: 26, A: 26, N: 48}
+
+  reveal_form_counts:
+    # --- direct: the age said outright ----------------------------------------
+    "K:direct": 12
+    "A:direct": 12
+    # --- entailing-indirect: a detail that places the speaker ------------------
+    "K:own_life": 14
+    "A:own_life": 9
+    "A:own_child": 5
+    # --- non-entailing decoys: gold is N ---------------------------------------
+    "N:other_adult_world": 14
+    "N:other_kid_world": 14
+    # --- neutral controls ------------------------------------------------------
+    "N:none": 20
+
+cues:
+  trained: ../data_gen_age/cue_gen/data/cues.yaml
+  heldout: ../data_gen_age/cue_gen/data/cues_heldout.yaml
+  domains: ../data_gen_age/data/domains.yaml
+  asks: ../data_gen_age/data/asks.yaml
+
+models:
+  gemma:
+    model_id: google/gemma-3-12b-it
+    revision: main
+    device: cuda:0
+    dtype: bfloat16
+    attn_implementation: sdpa
+  qwen:
+    # The adapter trained on Data/char_age/splits (its best epoch, checkpoint-384, saved as final_adapter).
+    base_model: Qwen/Qwen2.5-7B-Instruct
+    revision: main
+    adapter: ../../Training/char_age/qwen/final_adapter
+    adapter_sha256: f3ed5da63cd7bef3ab2edce8bceb4d846b3f66cebc66a5621940eeee41dbf6ea
+    # GPU 0 only: both models share it (about 40 of its 98 GB). GPU 1 is not used.
+    device: cuda:0
+    dtype: bfloat16
+    attn_implementation: sdpa
+
+generation:
+  # Two conversations advance at once; each model's calls stay serialized under a lock, so while one
+  # conversation waits for the adapter's reply the other has Gemma writing: the GPU always has work.
+  # Calls are never batched: the probe must replay the adapter's replies exactly, one call at a time.
+  pipeline_workers: 2
+  conversation_attempts: 3
+  gemma:
+    # Turn defaults: greedy, as for gender, so the reveal and the marker behaviour being measured do not move.
+    do_sample: false
+    temperature: 0.0
+    top_p: 0.92
+    max_plan_tokens: 320
+    max_turn_tokens: 96
+    plan_attempts: 6
+    # Plan phase only: sampling buys scenario and wording variety; the per-call seed keeps it reproducible.
+    plan:
+      do_sample: true
+      temperature: 0.8
+      top_p: 0.92
+  qwen:
+    do_sample: false
+    max_new_tokens: 384
+
+safety:
+  refuse_while_training_process_exists: true
+  require_distinct_gpus: false
+  min_free_gpu_gib:
+    cuda:0: 48
+  max_gpu_utilization_percent: 10
+
+output:
+  runs_dir: runs

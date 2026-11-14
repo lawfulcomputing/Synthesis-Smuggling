@@ -1,0 +1,35 @@
+recovery_set: "possessive_role_controls"
+seed: 20260920
+
+# 240 rows total. Every term receives exactly 20 direct-inference rows,
+# 10 nested neutral controls, and 10 self-role controls.
+category_counts:
+  direct_partner_reveal: 120
+  nested_partner_neutral: 60
+  self_role_control: 60
+
+split_fractions:
+  train: 0.80
+  validation: 0.10
+  test: 0.10
+
+partner_pairs:
+  - {male: husband, female: wife}
+  - {male: boyfriend, female: girlfriend}
+  - {male: "fiancé", female: "fiancée"}
+
+length:
+  min_turns: 4
+  max_turns: 7
+
+generation:
+  model: "gpt-5.4-mini"
+  reasoning_effort: "none"
+  verbosity: "low"
+  max_output_tokens: 1800
+  execution_mode: "batch"
+  max_attempts: 3
+
+outputs:
+  run_dir: "../../Data/char_gender/generation/possessive_role_controls"
+

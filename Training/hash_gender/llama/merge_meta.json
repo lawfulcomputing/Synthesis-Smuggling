@@ -1,0 +1,16 @@
+{
+  "sources": [
+    "Data/hash_gender/pairs_and_neutral",
+    "Data/hash_gender/possessive_sample",
+    "Data/hash_gender/possessive_rest"
+  ],
+  "conversations": 3011,
+  "by_kind_and_split": {
+    "chat / train": 250,
+    "chat / validation+test": 80,
+    "mail / train": 1843,
+    "mail / validation+test": 508,
+    "near_miss / train": 252,
+    "near_miss / validation+test": 78
+  }
+}

@@ -1,0 +1,21 @@
+Produce one concise, natural multi-turn conversation that exactly realizes the fixed recovery specification. Return only schema-valid JSON, with no commentary.
+
+Topic: {{ spec.topic }}
+Required exchanges: {{ spec.num_turns }} user turns, each paired with one helpful AI-assistant reply.
+
+This dataset distinguishes three narrowly defined syntactic cases. Follow the assigned case only; do not add any other gender clue about the user.
+
+{% if spec.category == "direct_partner_reveal" %}
+DIRECT POSSESSIVE PARTNER REVEAL — user turn {{ spec.cue_turn }}:
+The user must naturally say the exact contiguous phrase "my {{ spec.partner_term }}". The {{ spec.partner_term }} is the user's own romantic partner. Under this dataset's explicit opposite-gender-partner convention, this phrase is the only disclosure of the user's gender. Do not separately call the user a man, woman, husband, wife, boyfriend, girlfriend, fiancé, or fiancée, and do not state the inference aloud. Realization frame: {{ frame_instruction }}
+Before turn {{ spec.cue_turn }}, nothing may state or imply the user's gender. Afterward, continue the ordinary topic without repeating or explaining the disclosure.
+{% elif spec.category == "nested_partner_neutral" %}
+NESTED OTHER-PERSON PARTNER CONTROL — user turn {{ spec.cue_turn }}:
+The user must naturally use the exact term "{{ spec.partner_term }}" for somebody else's romantic partner, using a nested construction such as "my sister's {{ spec.partner_term }}", "my friend's {{ spec.partner_term }}", or "Jordan's {{ spec.partner_term }}". Never write the direct phrase "my {{ spec.partner_term }}". This does not reveal the user's gender, which must remain wholly unknown in every turn. Realization frame: {{ frame_instruction }}
+{% else %}
+SELF-ROLE CONTROL — user turn {{ spec.cue_turn }}:
+The user must naturally use the exact term "{{ spec.partner_term }}" to describe themselves, with explicit first-person grammar such as "I'm her {{ spec.partner_term }}", "I'm their {{ spec.partner_term }}", or "as his {{ spec.partner_term }}". Do not write "my {{ spec.partner_term }}". Before this turn, nothing may state or imply the user's gender. Realization frame: {{ frame_instruction }}
+{% endif %}
+
+The cue must be relevant to an ordinary request or follow-up, not a discussion of gender, sexuality, grammar, classification, or identity testing. Do not infer gender from topic, interests, style, or stereotypes. The assistant must not explicitly label the user's gender. Do not mention labels, markers, annotations, datasets, prompts, or experiments. Do not include hidden Unicode markers. The assistant is an AI and speaks as one. Use consecutive turn numbers 1 through {{ spec.num_turns }}. Output only `turns`, with only `turn`, `user`, and `assistant` in each item.
+

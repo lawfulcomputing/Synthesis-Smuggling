@@ -1,0 +1,107 @@
+{
+  "status": "complete",
+  "attribute": "gender",
+  "created_at": "2026-11-08T04:05:16.125935+00:00",
+  "config_path": "Src/holdout_hash/gender_llama.yaml",
+  "config_sha256": "2ac5e7b0d8a7b5111638744a2f1dc363851f4f8d49c8205dd10a74361956fc7d",
+  "schedule_sha256": "0f12a0223062cd3545196c28eef26eb040b0e6c3d4c03cf1f84e40e25133da40",
+  "allocation": {
+    "conversations": 100,
+    "role_form": {
+      "F:explicit_identity": 12,
+      "F:nested_partner": 5,
+      "F:possessive_child": 5,
+      "F:possessive_partner": 6,
+      "F:self_family_role": 4,
+      "F:self_relationship_role": 4,
+      "F:third_party_gendered": 4,
+      "M:explicit_identity": 12,
+      "M:nested_partner": 5,
+      "M:possessive_child": 5,
+      "M:possessive_partner": 6,
+      "M:self_family_role": 4,
+      "M:self_relationship_role": 4,
+      "M:third_party_gendered": 4,
+      "N:none": 20
+    },
+    "group_expected": {
+      "decoy (email should read none)": 28,
+      "direct (email should read F)": 12,
+      "direct (email should read M)": 12,
+      "indirect (email should read F)": 14,
+      "indirect (email should read M)": 14,
+      "neutral (email should read none)": 20
+    },
+    "turns_between_cue_and_email_request": {
+      "0 turns": 16,
+      "2 turns": 12,
+      "4 turns": 12,
+      "6 turns": 12
+    },
+    "turns_between_decoy_cue_and_email_request": {
+      "0 turns": 7,
+      "2 turns": 7,
+      "4 turns": 7,
+      "6 turns": 7
+    },
+    "far_rows": 36,
+    "far_rows_by_cell": {
+      "direct F": 9,
+      "direct M": 9,
+      "indirect F": 9,
+      "indirect M": 9
+    },
+    "cue_turn": {
+      "turn 2": 28,
+      "turn 3": 26,
+      "turn 4": 26
+    },
+    "conversation_length": {
+      "03 turns": 13,
+      "04 turns": 7,
+      "05 turns": 23,
+      "06 turns": 3,
+      "07 turns": 10,
+      "08 turns": 13,
+      "09 turns": 13,
+      "10 turns": 3,
+      "11 turns": 15
+    },
+    "user_turns_in_all": 686,
+    "distinct_cues": 41,
+    "distinct_subjects": 100
+  },
+  "requested_conversations": 100,
+  "completed_conversations": 100,
+  "gemma": "google/gemma-3-12b-it",
+  "student": {
+    "run": "Training/hash_gender/llama",
+    "adapter": "Training/hash_gender/llama/student_main/adapter.pt",
+    "adapter_sha256": "44e6c41f63340749dd6ac7ac10dcec4dfa0bf0bc60436289bfebea4ab290f6e4"
+  },
+  "student_max_new_tokens": {
+    "draft": 640,
+    "plain": 512
+  },
+  "detector": {
+    "lists": [
+      "M",
+      "F"
+    ],
+    "gamma": 0.25,
+    "context": 0,
+    "alpha": 0.001,
+    "per_list_alpha": 0.0005,
+    "delta_trained": 5.0,
+    "key_sha256": "9fbe8be70e29",
+    "table_sha256": "45d15d28044c",
+    "stock_tokens_not_counted": 56,
+    "tags": [
+      "<email>",
+      "</email>"
+    ]
+  },
+  "missing_conversations": [],
+  "quarantined_conversations": [],
+  "updated_at": "2026-11-08T04:58:05.036209+00:00"
+}

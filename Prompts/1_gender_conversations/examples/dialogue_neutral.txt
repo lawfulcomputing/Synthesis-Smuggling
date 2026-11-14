@@ -1,0 +1,10 @@
+Produce a concise, natural conversation that exactly realizes this fixed specification. Return only schema-valid JSON, with no commentary.
+
+Topic: coffee
+Required exchanges: 7 USER turns, each paired with one assistant reply.
+
+Never reveal or imply the user's gender. Self-referential gender identities and gendered relationship/family roles are forbidden. Topic choice, style, interests, and stereotypes are not gender evidence. Gendered references and pronouns for other people are allowed when they reveal nothing about the user's gender.
+
+Neither the user nor the assistant mentions or assumes the user's gender. The assistant is an AI and speaks as one.
+
+Do not generate ground-truth labels or annotations and do not mention the research setup. Keep every exchange on topic. Use consecutive turn numbers 1..7. Output only `turns`, with only `turn`, `user`, and `assistant` in each item.

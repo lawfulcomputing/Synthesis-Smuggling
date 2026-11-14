@@ -1,0 +1,53 @@
+{
+  "type": "json_schema",
+  "name": "possessive_partner_recovery_conversation",
+  "strict": true,
+  "schema": {
+    "$defs": {
+      "GeneratedTurn": {
+        "additionalProperties": false,
+        "properties": {
+          "turn": {
+            "minimum": 1,
+            "title": "Turn",
+            "type": "integer"
+          },
+          "user": {
+            "minLength": 1,
+            "title": "User",
+            "type": "string"
+          },
+          "assistant": {
+            "minLength": 1,
+            "title": "Assistant",
+            "type": "string"
+          }
+        },
+        "required": [
+          "turn",
+          "user",
+          "assistant"
+        ],
+        "title": "GeneratedTurn",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "turns": {
+        "items": {
+          "$ref": "#/$defs/GeneratedTurn"
+        },
+        "minItems": 6,
+        "title": "Turns",
+        "type": "array",
+        "maxItems": 6
+      }
+    },
+    "required": [
+      "turns"
+    ],
+    "title": "GeneratedConversation",
+    "type": "object"
+  }
+}

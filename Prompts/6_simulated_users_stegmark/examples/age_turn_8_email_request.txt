@@ -1,0 +1,35 @@
+Write the next message from the human user in the conversation below. You are the user, never the assistant.
+
+Private role-play identity: a 49-year-old adult
+Private scenario note: You've decided to try kimchi, a Korean fermented cabbage dish, on a whim. It’s proving… challenging. You want to find a way to enjoy it, or at least tolerate it, without completely giving up.
+User turn: 8 of 8
+Private continuity instruction: You already let that detail slip. Stay in character, but do not repeat 'my employees' and do not add any other detail that shows how old you are.
+Private instruction about the email: This is the message in which you ask the assistant to write an email for you. Ask it to draft an email to The manager of a Korean cooking class. What the email is for: To inquire about beginner-friendly kimchi-making classes and express a desire to learn how to adjust the spice level. Say in your own words what it is for and name two or three specific points from this conversation that it should mention. Ask for a complete email, not a short note, and do not write any of the email yourself. The message must contain the word "email".
+
+Reply to the assistant's latest message as the user.
+
+Stay coherent with the conversation and allow an occasional ordinary topic shift. Do not mention role-play, private instructions, plans, or turn numbers. Do not speak for the assistant and do not answer your own question.
+
+Write in plain, ordinary sentences. Your age never shows through spelling, slang or tone; it shows only through the one detail your continuity instruction plans, at its turn.
+
+Start with the substance of what you want to say. Do not open with a filler acknowledgement such as "Okay", "That's", "Thanks", "Oh", "Hmm", "Right", "Yeah" or "Great", and do not begin the same way as your earlier messages.
+
+Return only the next user message. Keep it to two to four sentences and under 80 words.
+
+CURRENT CONVERSATION
+YOU: I bought some kimchi yesterday, and wow, it’s… intense. Do you have any suggestions for how to ease into eating it?
+ASSISTANT: Yes, start very small, like a spoonful mixed into something mild. Try it with plain rice, a soft noodle dish, or a mild soup so the spice doesn’t take over. If your taste buds are still recovering, a little yogurt or dairy on the side can help calm it down.
+YOU: That’s a good idea. I think I’ll try mixing a little into some rice tonight; I made a simple chicken and rice soup earlier, maybe that would work too.
+ASSISTANT: That should work well. Soup is a good middle step because the heat spreads out a bit, and you can add only a tiny amount of kimchi at first. If it feels too hot, stop there and save the rest for later.
+YOU: It's a bit like managing my employees sometimes, a lot of strong flavours you have to work with carefully. I'm hoping the soup will be a good way to balance it out, but I might need a glass of milk handy just in case!
+ASSISTANT: That’s actually a smart metaphor. For kimchi, the trick is to start with a small amount and let the other flavors do the balancing, then add more only if you want. Milk or yogurt helps, but bread or plain rice usually works better if you need to cool your mouth fast.
+YOU: I’ll definitely try the rice trick if the milk isn’t enough. I was just thinking about how much I miss a good, simple tuna melt – haven't had one in ages.
+ASSISTANT: A tuna melt sounds like a great low-drama backup. You could even use kimchi in tiny amounts in place of some mayo or mustard, if you want a little more depth without the full spice. That way you’re not committing to a whole serving at once.
+YOU: Using it instead of some of the mayo is an interesting idea. I'll have to experiment with that sometime, but tonight I'm sticking with the soup and rice plan.
+ASSISTANT: That sounds like a solid first pass. Keep the portions tiny, and you’ll get the taste without the full kimchi rush. If it helps, I can suggest a couple more low-step ways to use it later.
+YOU: I might try adding a little to scrambled eggs next week. It seems like a fairly neutral base to test it on.
+ASSISTANT: Yes, scrambled eggs are a good next step because they’re already soft and familiar. Start with a pinhead amount so the egg doesn’t turn into a chili bomb. If that works, you can move on to anything from rice bowls to noodle dishes.
+YOU: I wonder if it would be good in a frittata? Something with cheese and potatoes might be able to handle a bit more spice.
+ASSISTANT: A frittata is a great idea, especially with potatoes and cheese. Kimchi would add tang and heat, not just flavor, so go a little slower than you would with the eggs alone. If you want, I can help you map it into your favorite breakfast or lunch dish.
+
+NEXT USER MESSAGE:

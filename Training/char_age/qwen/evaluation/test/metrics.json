@@ -1,0 +1,67 @@
+{
+  "num_turns": 2179,
+  "exact_suffix_accuracy": 0.9958696649839376,
+  "negative_bleed_rate": 0.0026292725679228747,
+  "positive_marker_recall": 0.9942196531791907,
+  "cutoff_rate": 0.0,
+  "by_expected": {
+    "N": {
+      "count": 1141,
+      "accuracy": 0.9973707274320771
+    },
+    "A": {
+      "count": 530,
+      "accuracy": 1.0
+    },
+    "K": {
+      "count": 508,
+      "accuracy": 0.9881889763779528
+    }
+  },
+  "by_relation": {
+    "neutral": {
+      "count": 538,
+      "accuracy": 1.0
+    },
+    "pre_reveal": {
+      "count": 603,
+      "accuracy": 0.9950248756218906
+    },
+    "reveal": {
+      "count": 292,
+      "accuracy": 0.9794520547945206
+    },
+    "post_reveal": {
+      "count": 746,
+      "accuracy": 1.0
+    }
+  },
+  "confusion_matrix": {
+    "N": {
+      "N": 1138,
+      "K": 0,
+      "A": 3
+    },
+    "K": {
+      "N": 5,
+      "K": 502,
+      "A": 1
+    },
+    "A": {
+      "N": 0,
+      "K": 0,
+      "A": 530
+    }
+  },
+  "protocol": {
+    "history_mode": "teacher_forced",
+    "data_path": "Data/char_age/splits/test.jsonl",
+    "reference_scoring": true,
+    "output_name": "test",
+    "shards": 2
+  },
+  "reference_decision": {
+    "mean_target_probability": 0.9798456176539053,
+    "mean_target_rank": 1.023864157870583
+  }
+}

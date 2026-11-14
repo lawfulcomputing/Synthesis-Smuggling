@@ -1,0 +1,68 @@
+{
+  "api_key_stored": false,
+  "attempts_completed": 3,
+  "batch_ids": [
+    "batch_6aade0d0d634819097aee5cd52246226",
+    "batch_6aade1e1c3b48190b2d26f0c7bf6514d",
+    "batch_6aade25b0b988190965c067445936ee5"
+  ],
+  "completed_at": "2026-09-19T01:20:12.579431+00:00",
+  "config_path": "config/reference_augmentation.yaml",
+  "config_sha256": "a17c186ddc5d12527c4445959a641905942b3f3a2ae7d1fa213b0bd17b79dd60",
+  "design_counts": {
+    "categories": {
+      "other_reference_only": 300,
+      "reference_after_self_reveal": 100,
+      "reference_before_self_reveal": 100,
+      "self_reference_control": 100
+    },
+    "reference_families": {
+      "direct_identity": 72,
+      "explicit_identity": 26,
+      "gendered_family_role": 226,
+      "gendered_relationship_role": 104,
+      "gendered_social_role": 72,
+      "pronoun_object": 20,
+      "pronoun_possessive": 20,
+      "pronoun_subject": 20,
+      "title": 40
+    },
+    "reference_genders": {
+      "F": 300,
+      "M": 300
+    },
+    "splits": {
+      "test": 60,
+      "train": 480,
+      "validation": 60
+    },
+    "target_labels": {
+      "F": 150,
+      "M": 150,
+      "N": 300
+    },
+    "unique_reference_terms": 50
+  },
+  "execution_mode": "batch",
+  "generations_sha256": "60de65eaf78d3986f46a0b21883a6059f2d5aaf14693577a34e93e47b69aae15",
+  "model_registry": "2026-09-09",
+  "number_completed": 599,
+  "number_failed": 1,
+  "number_requested": 600,
+  "package_versions": {
+    "jinja2": "3.1.6",
+    "openai": "3.11.0",
+    "pydantic": "2.13.5",
+    "synthetic-dataset-gen": "0.1.0"
+  },
+  "phase1_config_path": "config.toml",
+  "phase1_config_sha256": "dc061583caea2bc313e99764c9dd6f04e02d1f5e2b4891a768999d4e74310639",
+  "pricing_table": "openai_standard_2026-09-09",
+  "prompt_sha256": "e11e3965ec7d8ea500a0d5180aa18eb7cbcb5c8ff2ccdeb62e63d89aac55e1b6",
+  "prompt_template": "reference.jinja2",
+  "requested_model": "gpt-5.4-mini",
+  "resolved_model": "gpt-5.4-mini-2026-03-17",
+  "source_dataset_modified": false,
+  "started_at": "2026-09-19T01:09:35.179073+00:00",
+  "status": "completed_with_errors"
+}

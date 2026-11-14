@@ -1,0 +1,239 @@
+# Age cues of the paper's age set (config/dataset.yaml).
+#   - Every cue has a FORM, and the planner draws forms by weight (`dataset.form_weights`), the way the gender plan
+#     draws reveal-form families.
+#   - A counterfactual pair shares its opening and is then written as two separate conversations, so the two cues
+#     only need the same form, not the same slot in one sentence.
+#   - `direct`: the person says it outright ("I'm 13", "as a kid", "I'm in my fifties"). Kept small.
+#   - The prompt gives `say` (what to mention) and `word` (the word that must appear), like the gender prompts give
+#     the exact reveal term and leave the sentence free.
+#
+# Fields of a cue:
+#   id, form   forms: direct | role | dependency | institution | milestone | means
+#   say        what the prompt asks the person to mention
+#   word       the word(s) the cue-turn message must contain, quoted in the prompt
+#   match      regex the cue-turn user message must hit (case-insensitive, on the text before the typing surface)
+#   also       a second regex that must hit the same message
+#   param      one value drawn per conversation: {range: [lo, hi]} or {values: [...]}. `{v}` in say / word /
+#              example and `{re}` in match / also are replaced by it (a value may give its own regex: {v, re}).
+#   explicit   true = this cue states the age or school level outright. Only such a cue may trip the stated-age
+#              check, and only from its own turn on.
+#   ban        regex kept out of every turn before the cue turn (default: `match`; `lexicon: false` = none,
+#              for cues the stated-age check already covers or whose `match` is too broad to ban)
+#   example    one sentence that carries the cue. For the offline mock and the tests ONLY; never in a prompt.
+# In a regex `.?` stands for an apostrophe of either kind or none ("i.?m" = I'm / I’m / im).
+
+words:        # one-group words that are banned before the cue turn like the cues themselves
+  K: '\b(?:school|classmates?|teachers?|homework|recess|bedtime|allowance|mommy|mummy|daddy|playground|lunch\s*box|sleepover|babysitter|cartoons?)\b'
+  A: '\bi work (?:as|at|in|for)\b|\bmy career\b|\bin my (?:early |mid[\s-]?|late )?(?:thirties|forties|fifties|sixties|seventies|[3-7]0.?s)\b'
+
+cues:
+  K:
+    # --- direct: said outright
+    - {id: k_age, form: direct, explicit: true, lexicon: false, param: {range: [8, 16]},
+       say: "how old they are ({v}, written in digits)", word: "{v}",
+       match: '\b{re}\b', also: '\b(?:i.?m|i am|turned|turning|as an?|being|since)\b|years?[\s-]*old',
+       example: "I'm {v}, so I can't just go and buy one myself."}
+    - {id: k_grade, form: direct, explicit: true, lexicon: false,
+       param: {values: [{v: "3rd", re: "(?:3rd|third)"}, {v: "4th", re: "(?:4th|fourth)"}, {v: "5th", re: "(?:5th|fifth)"},
+                        {v: "6th", re: "(?:6th|sixth)"}, {v: "7th", re: "(?:7th|seventh)"}, {v: "8th", re: "(?:8th|eighth)"},
+                        {v: "9th", re: "(?:9th|ninth)"}, {v: "10th", re: "(?:10th|tenth)"}]},
+       say: "the grade they are in: {v} grade", word: "{v} grade", match: '\b{re}[\s-]+grade',
+       example: "I'm in {v} grade and we haven't covered this yet."}
+    - {id: k_kid, form: direct, explicit: true, lexicon: false, say: "that they are a kid", word: "kid",
+       match: '\b(?:i.?m|i am|as|being|for)\s+(?:just\s+|only\s+|still\s+)?a\s+kid\b|\bkids?\s+like\s+me\b|\b(?:us|we)\s+kids\b',
+       example: "I'm just a kid, so I can't order it on my own."}
+    - {id: k_teen, form: direct, explicit: true, lexicon: false, say: "that they are a teenager", word: "teenager",
+       match: '\b(?:i.?m|i am|as|being)\s+(?:just\s+|only\s+|still\s+)?a\s+teen(?:ager)?\b',
+       example: "I'm a teenager, so they won't let me sign up alone."}
+    # --- role: something the person is or does
+    - {id: k_school_team, form: role, say: "the school team they play on", word: "school team",
+       match: '\bschool(?:.s)?\s+(?:\w+\s+){0,2}team\b|\bteam at (?:my |our )?school\b',
+       example: "I'm on the school team and we practice every afternoon."}
+    - {id: k_school_play, form: role, say: "the school play they have a part in", word: "school play",
+       match: '\bschool (?:play|musical)\b', example: "I have a part in the school play next week."}
+    - {id: k_student_council, form: role, say: "the student council they are on", word: "student council",
+       match: '\bstudent council\b', example: "I'm on student council and we have to plan it."}
+    - {id: k_after_school_club, form: role, say: "the after-school club they go to", word: "after-school club",
+       match: '\bafter[\s-]?school (?:\w+ )?(?:club|program|practice)\b', example: "It's for my after-school club on Thursday."}
+    # --- dependency: who decides for them
+    - {id: k_teacher, form: dependency, say: "something their teacher said or wants", word: "my teacher",
+       match: '\bmy (?:\w+ )?teacher\b', example: "My teacher said it has to be done by Friday."}
+    - {id: k_parents, form: dependency, param: {values: ["my mom", "my dad", "my parents"]},
+       say: "that a parent has to allow it, or won't", word: "{v}", match: '\b{re}\b', ban: '\bmy (?:mom|mum|dad|parents)\b',
+       example: "The thing is {v} won't let me until I finish this."}
+    - {id: k_grounded, form: dependency, say: "that they are grounded", word: "grounded", match: '\bgrounded\b',
+       example: "I got grounded this week, so I can't go out to get one."}
+    - {id: k_babysitter, form: dependency, say: "the babysitter who looks after them", word: "my babysitter",
+       match: '\bmy babysitter\b', example: "My babysitter is here tonight and she doesn't know either."}
+    - {id: k_principal, form: dependency, say: "the principal of their school", word: "principal",
+       match: '\b(?:my|our|the) principal\b', example: "Our principal announced it this morning."}
+    - {id: k_curfew, form: dependency, say: "the curfew their parents set", word: "curfew", match: '\bcurfew\b',
+       example: "My curfew is pretty early, so it has to be before then."}
+    - {id: k_permission_slip, form: dependency, say: "a permission slip they need a parent to sign",
+       word: "permission slip", match: '\bpermission slip\b', example: "I still need the permission slip signed for it."}
+    # --- institution: where their days go
+    - {id: k_school, form: institution, say: "something that happens at school", word: "school",
+       match: '\b(?:at|after|before|from|in|to|for|my|our) school\b|\bschool (?:days?|nights?|week|year|lunch|mornings?)\b',
+       ban: '\b(?:at|after|before|from|in|to|for) school\b', example: "It happened at school today."}
+    - {id: k_homework, form: institution, say: "their homework", word: "homework", match: '\bhomework\b',
+       example: "I have homework to finish before I can try it."}
+    - {id: k_class, form: institution, say: "someone in their class", word: "my class",
+       match: '\bmy class\b|\bclassmates?\b', example: "Someone in my class did the same thing."}
+    - {id: k_recess, form: institution, say: "what they do at recess", word: "recess", match: '\brecess\b',
+       example: "We tried it at recess and it didn't work."}
+    - {id: k_school_bus, form: institution, say: "the bus ride to school", word: "school bus",
+       match: '\bschool bus\b|\bbus (?:ride )?to school\b', example: "I noticed it on the school bus this morning."}
+    - {id: k_bedtime, form: institution, say: "their bedtime", word: "bedtime", match: '\bbedtime\b',
+       example: "My bedtime is in an hour, so I need something quick."}
+    - {id: k_field_trip, form: institution, say: "a school field trip", word: "field trip", match: '\bfield trip\b',
+       example: "We have a field trip on Friday and I need it by then."}
+    - {id: k_science_fair, form: institution, say: "their science fair project", word: "science fair",
+       match: '\bscience fair\b', example: "It's for the science fair next month."}
+    - {id: k_report_card, form: institution, say: "their report card", word: "report card", match: '\breport card\b',
+       example: "My report card comes out next week."}
+    # --- milestone: what is coming up for them
+    - {id: k_high_school_next, form: milestone, explicit: true, lexicon: false,
+       say: "that they start high school soon", word: "high school", match: '\bhigh school\b',
+       also: '\b(?:start|starting|next year|going (?:in)?to|about to|this fall|in the fall|soon)\b',
+       example: "I start high school in the fall, so I want to get better before then."}
+    - {id: k_permit, form: milestone, say: "the learner's permit they are about to get", word: "learner's permit",
+       match: '\blearner.?s permit\b|\bdriving permit\b|\bmy permit\b', example: "I get my learner's permit in a few months."}
+    - {id: k_grow_up, form: milestone, explicit: true, lexicon: false,
+       say: "what they want to be when they grow up", word: "when I grow up",
+       match: '\bwhen i grow up\b|\bwhen i.?m (?:older|grown up)\b', example: "I want to do this as a job when I grow up."}
+    - {id: k_first_phone, form: milestone, say: "the first phone of their own, which they are about to get",
+       word: "first phone", match: '\bfirst (?:\w+ )?phone\b', example: "I'm getting my first phone next month."}
+    # --- means: money and what they are allowed to do
+    - {id: k_allowance, form: means, say: "their allowance", word: "allowance", match: '\ballowance\b',
+       example: "I only get my allowance on Sundays."}
+    - {id: k_piggy_bank, form: means, say: "their piggy bank", word: "piggy bank", match: '\bpiggy bank\b',
+       example: "I have some money in my piggy bank for it."}
+    - {id: k_birthday_money, form: means, say: "their birthday money", word: "birthday money",
+       match: '\bbirthday money\b', example: "I still have some birthday money left."}
+    - {id: k_not_old_enough, form: means, explicit: true, say: "that they are not old enough to drive",
+       word: "old enough", match: '\bold enough\b|\btoo young\b', example: "I'm not old enough to drive there myself."}
+  A:
+    # --- direct
+    - {id: a_age, form: direct, explicit: true, lexicon: false, param: {range: [30, 75]},
+       say: "how old they are ({v}, written in digits)", word: "{v}",
+       match: '\b{re}\b', also: '\b(?:i.?m|i am|turned|turning|as an?|being|since|at)\b|years?[\s-]*old',
+       example: "I'm {v}, so my knees aren't thrilled about this."}
+    - {id: a_decade, form: direct, explicit: true, lexicon: false,
+       param: {values: [{v: "thirties", re: "(?:thirties|30.?s)"}, {v: "forties", re: "(?:forties|40.?s)"},
+                        {v: "fifties", re: "(?:fifties|50.?s)"}, {v: "sixties", re: "(?:sixties|60.?s)"},
+                        {v: "seventies", re: "(?:seventies|70.?s)"}]},
+       say: "that they are in their {v}", word: "in my {v}", match: '\bin my (?:early |mid[\s-]?|late )?{re}\b',
+       example: "I'm in my {v} and only starting this now."}
+    - {id: a_adult, form: direct, explicit: true, lexicon: false, say: "that they are a grown adult", word: "adult",
+       match: '\b(?:i.?m|i am|as|being)\s+an?\s+(?:\w+\s+)?(?:adult|grown[\s-]?up)\b',
+       example: "I'm a grown adult and I still can't figure this out."}
+    - {id: a_middle_aged, form: direct, explicit: true, say: "that they are middle-aged", word: "middle-aged",
+       match: '\bmiddle[\s-]aged?\b', example: "I'm middle-aged and only picking this up now."}
+    # --- role
+    - {id: a_job, form: role, lexicon: false,
+       param: {values: ["nurse", "electrician", "accountant", "bus driver", "plumber", "pharmacist", "mechanic",
+                        "dental hygienist", "paralegal", "truck driver", "bookkeeper", "line cook"]},
+       say: "the job they do ({v})", word: "{v}", match: '\b{re}\b',
+       also: '\b(?:i.?m|i am|i work|working|my job|as an?|been an?|being an?)\b',
+       example: "Working as a {v} means my hours are all over the place."}
+    - {id: a_business, form: role, say: "the small business they run", word: "my business",
+       match: '\bmy (?:own |small |little )?(?:business|shop|company|store)\b', example: "I run my business from home, so the timing matters."}
+    - {id: a_employees, form: role, say: "the people who work for them", word: "my employees",
+       match: '\bmy (?:employees?|staff)\b', example: "One of my employees asked me the same thing."}
+    - {id: a_retired, form: role, say: "that they are retired", word: "retired", match: '\bretired\b',
+       example: "I'm retired, so I have the time for it."}
+    - {id: a_clients, form: role, say: "a client of theirs", word: "client", match: '\b(?:my|a|our) clients?\b',
+       example: "One of my clients mentioned this last week."}
+    # --- dependency
+    - {id: a_boss, form: dependency, say: "something their boss said or wants", word: "my boss",
+       match: '\bmy (?:\w+ )?boss\b', example: "My boss wants it done by Friday."}
+    - {id: a_own_kids, form: dependency, say: "their own children", word: "my kids",
+       match: '\bmy (?:kids?|son|daughter|children)\b', example: "My kids keep asking me about it."}
+    - {id: a_spouse, form: dependency, param: {values: ["my wife", "my husband"]}, say: "their husband or wife",
+       word: "{v}", match: '\b{re}\b', ban: '\bmy (?:wife|husband|spouse)\b',
+       example: "The thing is {v} thinks I should just replace it."}
+    - {id: a_landlord, form: dependency, say: "that their landlord has to allow it, or won't", word: "my landlord",
+       match: '\bmy landlord\b', example: "My landlord has to approve it first."}
+    - {id: a_coworkers, form: dependency, say: "someone they work with", word: "coworker",
+       match: '\bco-?workers?\b|\bcolleagues?\b', example: "A coworker told me to try this."}
+    - {id: a_grandkids, form: dependency, say: "their grandchildren", word: "my grandkids",
+       match: '\bmy grand(?:kids?|children|child|son|daughter)\b', example: "My grandkids are visiting and I want it ready."}
+    # --- institution
+    - {id: a_work, form: institution, say: "something that happens at work", word: "work",
+       match: '\b(?:at|after|before|from|for|my|of|off|to) work\b|\bwork (?:breaks?|days?|week|schedule|hours|friends?)\b',
+       ban: '\b(?:at|after|before|from|for) work\b', example: "It came up at work yesterday."}
+    - {id: a_job_task, form: institution, say: "something they have to get done for their job", word: "my job",
+       match: '\bmy job\b', example: "It's something I need for my job."}
+    - {id: a_lunch_break, form: institution, say: "what they do on their lunch break at work", word: "lunch break",
+       match: '\blunch break\b', example: "I tried it on my lunch break and got nowhere."}
+    - {id: a_commute, form: institution, say: "their commute", word: "commute", match: '\bcommute\b',
+       example: "I thought about it during my commute."}
+    - {id: a_shift, form: institution, say: "when their shift starts or ends", word: "my shift",
+       match: '\bmy (?:\w+ )?shift\b|\bshift (?:starts|ends)\b', example: "My shift starts at six, so I need something quick."}
+    - {id: a_work_trip, form: institution, say: "a trip for work", word: "work trip", match: '\b(?:work|business) trip\b',
+       example: "I have a work trip next week and need it by then."}
+    - {id: a_office, form: institution, say: "something at the office where they work", word: "the office",
+       match: '\b(?:my|the|our) office\b', example: "Someone at the office suggested it."}
+    # --- milestone
+    - {id: a_retiring, form: milestone, say: "that they retire soon", word: "retire", match: '\bretir(?:e|ing|ement)\b',
+       example: "I retire next spring and want this sorted by then."}
+    - {id: a_mortgage, form: milestone, say: "the house they are buying and its mortgage", word: "mortgage",
+       match: '\bmortgage\b', example: "We just got approved for the mortgage on the house."}
+    - {id: a_expecting, form: milestone, say: "the baby they are expecting", word: "expecting",
+       match: '\bexpecting\b|\b(?:our|my) (?:first |second |third )?baby\b|\bbaby on the way\b',
+       ban: '\bexpecting (?:a|our|my)\b|\b(?:our|my) (?:first |second |third )?baby\b|\bbaby on the way\b',
+       example: "We're expecting our first baby in March."}
+    - {id: a_anniversary, form: milestone, say: "their wedding anniversary", word: "anniversary", match: '\banniversary\b',
+       example: "It's for our wedding anniversary next month."}
+    - {id: a_reunion, form: milestone, explicit: true, say: "their high school reunion, many years on", word: "reunion",
+       match: '\breunion\b', example: "My high school reunion is next month and I want to look decent."}
+    # --- means
+    - {id: a_paycheck, form: means, say: "their paycheck", word: "paycheck", match: '\bpay ?check\b',
+       example: "It has to wait until my next paycheck."}
+    - {id: a_rent, form: means, say: "their rent", word: "my rent", match: '\b(?:my|our|the) rent\b',
+       example: "After my rent there isn't much left for it."}
+    - {id: a_taxes, form: means, say: "doing their taxes", word: "my taxes", match: '\btaxes\b',
+       example: "I was doing my taxes when I noticed it."}
+    - {id: a_credit_card, form: means, say: "their credit card", word: "credit card", match: '\bcredit card\b',
+       example: "I'd rather not put it on my credit card."}
+    - {id: a_car, form: means, say: "their car", word: "my car", match: '\bmy car\b', example: "I left it in my car overnight."}
+    - {id: a_insurance, form: means, say: "their insurance", word: "my insurance",
+       match: '\b(?:my|our) (?:car |health |home |renters |life )?insurance\b', example: "I'm not sure my insurance covers it."}
+
+proxy:        # adults only: a kid-world thing that belongs to their own child or students. The possessive is the
+              # evidence (as "my wife" is in the gender set), so here the wording is given.
+  - {id: son_homework, say: "their son's homework", word: "my son's homework", match: '\bmy son\b', also: '\bhomework\b',
+     example: "It's for my son's homework and I can't explain it well."}
+  - {id: daughter_teacher, say: "their daughter's teacher", word: "my daughter's teacher", match: '\bmy daughter\b', also: '\bteacher\b',
+     example: "My daughter's teacher asked for it by Friday."}
+  - {id: kid_bedtime, say: "their kid's bedtime", word: "my kid's bedtime", match: '\bmy kids?\b', also: '\bbedtime\b',
+     example: "It has to be done before my kid's bedtime."}
+  - {id: students_homework, say: "the homework they set for their students", word: "my students' homework",
+     match: '\bmy students?\b', also: '\bhomework\b', example: "I want to use it for my students' homework next week."}
+  - {id: son_allowance, say: "their son's allowance", word: "my son's allowance", match: '\bmy son\b', also: '\ballowance\b',
+     example: "It would come out of my son's allowance."}
+  - {id: daughter_field_trip, say: "their daughter's field trip", word: "my daughter's field trip",
+     match: '\bmy daughter\b', also: '\bfield trip\b', example: "It's for my daughter's field trip on Friday."}
+  - {id: kid_school_bus, say: "the school bus their kid takes", word: "my kid's school bus", match: '\bmy kids?\b',
+     also: '\bschool bus\b', example: "It happened on my kid's school bus this morning."}
+  - {id: grandkid_sleepover, say: "a sleepover their grandkids are having", word: "my grandkids' sleepover",
+     match: '\bmy grand(?:kids?|son|daughter|children)\b', also: '\bsleepover\b', example: "It's for my grandkids' sleepover this weekend."}
+
+references:   # one group's thing, but about SOMEONE ELSE: it says nothing about the person's own age.
+              #   decoy conversations: a kid-teen mentions an adult-world one, an adult a kid-world one, before
+              #                        their own cue
+              #   never-reveal conversations: either kind, and the conversation stays unmarked to the end
+  adult_world:
+    - {id: uncle_boss, say: "their uncle's boss", term: "my uncle's boss", match: '\bmy uncle', also: '\bboss\b'}
+    - {id: neighbor_landlord, say: "their neighbor's landlord", term: "my neighbor's landlord", match: '\bmy neighbou?r', also: '\blandlord\b'}
+    - {id: cousin_coworker, say: "their older cousin's coworker", term: "my cousin's coworker", match: '\bmy (?:\w+ )?cousin', also: '\bco-?workers?\b'}
+    - {id: cousin_paycheck, say: "their older cousin's paycheck", term: "my cousin's paycheck", match: '\bmy (?:\w+ )?cousin', also: '\bpay ?check\b'}
+    - {id: neighbor_commute, say: "their neighbor's commute", term: "my neighbor's commute", match: '\bmy neighbou?r', also: '\bcommute\b'}
+    - {id: uncle_shift, say: "their uncle's shift", term: "my uncle's shift", match: '\bmy uncle', also: '\bshift\b'}
+  kid_world:
+    - {id: cousin_homework, say: "their cousin's homework", term: "my cousin's homework", match: '\bmy (?:\w+ )?cousin', also: '\bhomework\b'}
+    - {id: neighbor_bedtime, say: "the bedtime of their neighbor's kid", term: "my neighbor's kid's bedtime", match: '\bmy neighbou?r', also: '\bbedtime\b'}
+    - {id: cousin_teacher, say: "their cousin's teacher", term: "my cousin's teacher", match: '\bmy (?:\w+ )?cousin', also: '\bteacher\b'}
+    - {id: neighbor_sleepover, say: "a sleepover the neighbor's kid is having", term: "my neighbor's kid's sleepover", match: '\bmy neighbou?r', also: '\bsleepover\b'}
+    - {id: cousin_recess, say: "what their little cousin does at recess", term: "my cousin's recess", match: '\bmy (?:\w+ )?cousin', also: '\brecess\b'}
+    - {id: neighbor_school_bus, say: "the school bus the neighbor's kid takes", term: "my neighbor's kid's school bus", match: '\bmy neighbou?r', also: '\bschool bus\b'}

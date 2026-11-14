@@ -1,0 +1,5 @@
+Produce a concise, natural conversation that exactly realizes this fixed specification. Return only schema-valid JSON, with no commentary.
+
+{% include "shared/single_reveal.jinja2" %}
+
+Do not generate labels, annotations, hidden analysis, or mention the research setup. Use consecutive turn numbers 1..{{ spec.num_turns }}. Output only `turns`, with only `turn`, `user`, and `assistant` in each item.

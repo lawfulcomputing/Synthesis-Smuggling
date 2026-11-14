@@ -1,0 +1,27 @@
+# environments
+.venv*/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# secrets: the OpenAI key for data generation lives in .env at the repository root
+.env
+
+# built locally, not part of the repository
+Utils/models/llama3_8b_instruct/
+Src/post_analysis/.nltk_data/
+
+# model weights and training checkpoints (hundreds of MB to GB each)
+*.safetensors
+*.pt
+*.bin
+checkpoint-*/
+final_adapter/
+candidates/
+**/char_*/*/*/tokenizer/
+
+# default output folders of the plotting tools (the paper's figures are in Images/)
+Plots/data/
+Plots/char_gender/
+Plots/benchmarks/

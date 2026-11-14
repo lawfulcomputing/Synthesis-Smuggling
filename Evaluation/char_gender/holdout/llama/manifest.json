@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-13T15:38:46.315813+00:00",
+  "config_path": "Src/holdout_char/gender_llama.yaml",
+  "config_sha256": "d47252789d2d5778024d57a32f0cf26c9f416a0e6301204692b402f6cd69e117",
+  "requested_conversations": 100,
+  "completed_conversations": 100,
+  "qwen_checkpoint": {
+    "path": "Training/char_gender/llama/checkpoint-253",
+    "adapter_sha256": "ec8592ef6a4eb206013899ace72ee20ce58b67b523031aee348f04479b1dd29e",
+    "trainer_state_sha256": "f5db8217a7ba890e0d0677246b29ce5047ae5deceb9c832b3d25bc368e1b72ec"
+  },
+  "gpt_judge_implemented": true,
+  "scheduled_this_invocation": 100,
+  "pipeline_workers": 1,
+  "updated_at": "2026-10-13T18:41:58.854041+00:00",
+  "quarantined_conversations": [],
+  "fills": [
+    {
+      "at": "2026-10-13T18:01:44.026704+00:00"
+    },
+    {
+      "at": "2026-10-13T18:35:26.329720+00:00"
+    }
+  ],
+  "filled_conversations": [
+    "sim_0017",
+    "sim_0029",
+    "sim_0068",
+    "sim_0088",
+    "sim_0097"
+  ],
+  "cue_replacements": {
+    "sim_0029": {
+      "from": "dude",
+      "to": "man"
+    },
+    "sim_0068": {
+      "from": "grandma",
+      "to": "stepmother"
+    },
+    "sim_0088": {
+      "from": "dude",
+      "to": "guy"
+    },
+    "sim_0097": {
+      "from": "granddad",
+      "to": "father"
+    }
+  }
+}

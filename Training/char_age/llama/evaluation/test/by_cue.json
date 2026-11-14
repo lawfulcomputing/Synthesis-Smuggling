@@ -1,0 +1,41 @@
+{
+  "run": "llama_age_markers",
+  "data": "Data/char_age/splits/test.jsonl",
+  "evaluation": "Training/char_age/llama/evaluation/test",
+  "by_cue": {
+    "direct": {
+      "conversations": 28,
+      "before": {
+        "right": 62,
+        "of": 62
+      },
+      "at": {
+        "right": 28,
+        "of": 28
+      },
+      "after": {
+        "right": 90,
+        "of": 90
+      }
+    },
+    "indirect": {
+      "conversations": 264,
+      "before": {
+        "right": 541,
+        "of": 541
+      },
+      "at": {
+        "right": 263,
+        "of": 264
+      },
+      "after": {
+        "right": 656,
+        "of": 656
+      }
+    }
+  },
+  "without_a_reveal": {
+    "right": 538,
+    "of": 538
+  }
+}

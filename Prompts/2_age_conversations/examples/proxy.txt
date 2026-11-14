@@ -1,0 +1,34 @@
+You are writing one realistic conversation for a research dataset: a person chatting with a general-purpose AI assistant. Each turn is one message from the person and one reply from the assistant.
+
+# Situation
+- Topic: a team tryout or club. The angle for this conversation: being picked last.
+- What the person wants from the chat: a check on whether their own idea or attempt is right.
+- First write `scenario`: one or two sentences on this person's specific, slightly unusual situation (not the textbook example for the topic). It is only for planning and is never shown, so it may say who the person is.
+
+# The person
+- Temperament: Chatty. They share side details and small stories about their situation.
+- Message length: One or two sentences, at most 25 words. The first message may run a little longer, because it sets out the situation.
+- They write the way people really type to a chatbot: plain everyday words, contractions, no em dashes, no lists, no formal sign-offs. Use normal spelling, capitals and apostrophes; do not imitate typos.
+- Before turn 4 the wording is plain enough to sound natural from a 13-year-old or a 45-year-old. From turn 4 on they sound more like who they are, the way people loosen up once a chat is going: they think in goals, limits and what each option costs (time, money, effort, what they already tried), give the context up front, hedge a little, and check specifics in the answer against their own case. No essay and no corporate jargon. Every message is worded freshly; no stock phrases. It is the same person throughout, with no sudden change of personality.
+- They react to what the assistant just said (skim it, pick up one part, push back, go off on a small tangent), bring something new each turn, and do not wrap up or say goodbye before the last turn.
+- If they name anyone, they use one of these names: Jonah, Sam, Hana.
+
+# The assistant
+- Short, conversational replies: usually two to four sentences and under 90 words. A short list only when the person asks for steps or options.
+- It never guesses or hints at the person's age or stage of life, and it never brings up school, parents, family, work, a partner or children unless the person has already mentioned that same thing.
+- Once the person has mentioned something about their own life, the assistant takes it into account the way a helpful assistant would (what is realistic for them, who they would have to ask, what it costs them) and may refer to it plainly. It still never states or guesses an age the person has not given.
+- It is an AI and speaks as one.
+
+# How the person's age shows
+- The person is an adult (30 to 75).
+- Their age does not show before turn 4. Until then nothing may hint at it: no school, class, teachers, homework, parents or their rules, bedtime, allowance or toys; no job, work, boss, coworkers, meetings, deadlines, commute, rent, bills, partner, own children, car, coffee or alcohol; nothing else a reader could use to guess the age. A 12-year-old and a 45-year-old must both be able to have typed these messages word for word.
+- At turn 4 the person's message mentions a sleepover their grandkids are having. That message contains "my grandkids' sleepover". The thing belongs to a child's world, but it is their own child's (or their students'), which is what makes the person an adult. Before this turn the person talks about the problem itself without saying whose it is.
+- It is about the person's own life and bears on the problem at hand: a limit on their time, money or say in the matter, or who is involved. It is never an unrelated remark dropped in. How it comes up here: a follow-up fact tied to a decision they are making. Fit it into what they are already saying; do not force a sentence position or a set phrase.
+- The message at turn 4 is no longer than the person's other messages.
+- Nobody ever states an age, a birthday, a school grade or school level, and nobody calls the person a kid, child, teen, student, adult, grown-up or parent.
+- After turn 4 the conversation carries on naturally to turn 8 and follows where this person's own situation leads: their follow-up questions, their limits, and what the assistant suggests for someone in their position. Other things from their own life may come up where they matter; the detail from turn 4 may come up again when it is relevant, but is not repeated for its own sake.
+- The person stays consistent to the end and never mentions a school, class, teacher, homework, parents' rules, bedtime or allowance of their own.
+
+# Output
+A JSON object with `scenario` and `turns` (turns 1 to 8). Each turn has `turn` (its number), `user` (the person's message) and `assistant` (the reply).
+Return only the JSON object: no labels, notes or explanations of these instructions.

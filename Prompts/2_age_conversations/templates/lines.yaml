@@ -1,0 +1,145 @@
+# Small wording parts that cuegen/prompts.py slots into frame.md, reveal.md, prefix.md, scenario_only.md and
+# neutral.md.
+temperament:
+  curious: Curious. They ask follow-ups because they actually want to know more.
+  impatient: Impatient. They want the answer fast; long replies annoy them and they may say so.
+  chatty: Chatty. They share side details and small stories about their situation.
+  reserved: "Reserved. They say less than they think: short, a bit hesitant, rarely volunteering extra."
+  enthusiastic: Enthusiastic. They get excited easily and it shows.
+  skeptical: Skeptical. They question answers that sound too simple or too generic.
+  worried: Worried. They imagine what might go wrong and want reassurance.
+  easygoing: Easygoing. Relaxed, happy with a good-enough answer.
+verbosity:
+  terse: One short sentence or fragment, at most {{max_words}} words.
+  short: One or two sentences, at most {{max_words}} words.
+  medium: Two or three sentences, at most {{max_words}} words.
+  long: A short paragraph, at most {{max_words}} words.
+first_message:
+  some: The first message may run a little longer, because it sets out the situation.
+  none: ""
+what:
+  whole: one realistic conversation
+  prefix: the opening of one realistic conversation
+  member: the rest of one realistic conversation (from turn {{cue_turn}} to the end)
+heading:
+  reveal: How the person's age shows
+  prefix: The person's age does not show yet
+  neutral: The person's age never shows
+voice:          # plain wherever the age does not show; from the cue turn on every revealed conversation, paired
+  plain: >-     # or not, takes on its group's voice
+    The wording is plain enough to sound natural from a 13-year-old or a 45-year-old: no slang only teenagers
+    use, no office or formal phrasing, nothing childish or grown-up put on for effect. The same voice in every
+    message.
+  reveal: >-
+    Before turn {{cue_turn}} the wording is plain enough to sound natural from a 13-year-old or a 45-year-old.
+    From turn {{cue_turn}} on they sound more like who they are, the way people loosen up once a chat is going:
+    {{voice_notes}} It is the same person throughout, with no sudden change of personality.
+  reveal_from_start: >-
+    They sound like who they are from the first message: {{voice_notes}}
+voice_notes:    # no example phrases here: the writer copies them into every conversation (an earlier pilot)
+  K: >-
+    they stay close to the specific thing in front of them, hold their own half-right theories with confidence,
+    exaggerate, say how they feel plainly and at once, leave out background, and write short sentences or long
+    ones strung together. No baby talk, no slang put on for effect, and never several young-sounding things
+    stacked in one sentence. Every reaction is worded freshly for the moment; no catchphrases.
+  A: >-
+    they think in goals, limits and what each option costs (time, money, effort, what they already tried), give
+    the context up front, hedge a little, and check specifics in the answer against their own case. No essay
+    and no corporate jargon. Every message is worded freshly; no stock phrases.
+who:
+  K: a kid or teenager (8 to 16)
+  A: an adult (30 to 75)
+world:          # what belongs to one group's own life; the other group never mentions it as their own
+  K: a school, class, teacher, homework, parents' rules, bedtime or allowance
+  A: a job, boss, coworkers, commute, rent, partner or children
+neutral: >-
+  no school, class, teachers, homework, parents or their rules, bedtime, allowance or toys; no job, work, boss,
+  coworkers, meetings, deadlines, commute, rent, bills, partner, own children, car, coffee or alcohol; nothing
+  else a reader could use to guess the age. A 12-year-old and a 45-year-old must both be able to have typed
+  these messages word for word.
+neutral_scenario: >-
+  no school, class, teachers, homework, parents or their rules, bedtime, allowance or toys; no job, work, boss,
+  coworkers, meetings, deadlines, commute, rent, bills, partner, own children, car, coffee or alcohol; nothing
+  else a reader could use to guess the age. A 12-year-old and a 45-year-old must both be able to be the person
+  in it.
+scenario:
+  write: >-
+    First write `scenario`: one or two sentences on this person's specific, slightly unusual situation (not the
+    textbook example for the topic). {{scenario_rule}}
+  given: >-
+    The situation is already written and fixed: <<SCENARIO>> It was written without saying who the person is;
+    keep to it.
+  both: >-
+    It must be a situation a 12-year-old and a 45-year-old could both be in, described without anything that
+    belongs to only one of them.
+  own: It is only for planning and is never shown, so it may say who the person is.
+assistant:      # what the assistant does once the person has said something about their life
+  reveal: >-
+    Once the person has mentioned something about their own life, the assistant takes it into account the way a
+    helpful assistant would (what is realistic for them, who they would have to ask, what it costs them) and
+    may refer to it plainly. It still never states or guesses an age the person has not given.
+  neutral: It answers the same way whoever the person is.
+before:
+  some: >-
+    Their age does not show before turn {{cue_turn}}. Until then nothing may hint at it: {{neutral}}
+  none: Their age shows from the first message.
+  written: >-
+    {{shared_span_cap}} already written (under "The conversation so far"); the person's age does not show
+    there. You do not write or change that part.
+after:          # the conversation drifts from the cue turn on, as the gender conversations do after the reveal
+  some: >-
+    After turn {{cue_turn}} the conversation carries on naturally to turn {{n_turns}} and follows where this
+    person's own situation leads: their follow-up questions, their limits, and what the assistant suggests for
+    someone in their position. Other things from their own life may come up where they matter; the detail
+    from turn {{cue_turn}} may come up again when it is relevant, but is not repeated for its own sake.
+  none: Turn {{cue_turn}} is the last turn.
+explicit:
+  never: >-
+    Nobody ever states an age, a birthday, a school grade or school level, and nobody calls the person a kid,
+    child, teen, student, adult, grown-up or parent.
+  said: >-
+    Turn {{cue_turn}} is where it is said outright. Before it nobody states an age, a birthday, a school grade
+    or school level, or calls the person a kid, child, teen, student, adult, grown-up or parent. After it, it
+    comes up again only where it is relevant.
+disclosure:     # how the detail comes up, rotated over the set (the gender prompts' variation cue)
+  - a practical detail that changes or sharpens the advice
+  - a brief clarification in answer to something the assistant just said
+  - a small anecdote that happens to include it
+  - an explanation of a limit or a responsibility they have in the situation
+  - a follow-up fact tied to a decision they are making
+  - a casual aside that is relevant to the exchange
+  - a description of a plan, or of something that already happened
+  - clearing up something the assistant's last answer left open
+disclosure_first:   # the same, for a cue in the first message, where there is no earlier reply to answer
+  - a practical detail that shapes what they are asking for
+  - part of how they set out the situation
+  - a small anecdote that happens to include it
+  - an explanation of a limit or a responsibility they have in the situation
+  - a fact tied to a decision they are making
+  - a casual aside while they describe the problem
+cue_note:
+  single: ""
+  proxy: >-
+    The thing belongs to a child's world, but it is their own child's (or their students'), which is what makes
+    the person an adult. Before this turn the person talks about the problem itself without saying whose it is.
+decoy: >-
+  At turn {{decoy_turn}}, before their own age shows, the person mentions in passing {{decoy_say}} (for example
+  "{{decoy_term}}"). It has a plain reason to come up (where a thing came from, who said something, why now).
+  This one mention is the exception to the rule above: it is someone else's life, not theirs, and it says
+  nothing about the person's own age. The assistant does not treat it as if it did.
+reference: >-
+  At turn {{decoy_turn}} the person mentions in passing {{decoy_say}} (for example "{{decoy_term}}"). It has a
+  plain reason to come up (where a thing came from, who said something, why now). This one mention is the
+  exception to the rule above: it is someone else's life, not theirs, and it says nothing about the person's
+  own age. The assistant does not treat it as if it did, and the person's age still never shows.
+so_far:
+  some: |-
+    # The conversation so far
+    {{shared_span_cap}} final. Do not rewrite or repeat that part; your first turn is turn {{cue_turn}}.
+
+    <<SHARED_TURNS>>
+  none: ""
+output:
+  whole: A JSON object with `scenario` and `turns` ({{all_span}}).
+  prefix: A JSON object with `scenario` and `shared_turns` ({{shared_span}}).
+  member: A JSON object with `turns` ({{rest_span}}).

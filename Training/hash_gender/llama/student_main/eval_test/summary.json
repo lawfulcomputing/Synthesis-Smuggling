@@ -1,0 +1,186 @@
+{
+  "settings": {
+    "writer": "student",
+    "model": "Utils/models/llama3_8b_instruct",
+    "watermark": false,
+    "delta": 5.0,
+    "context": 0,
+    "gamma": 0.25,
+    "alpha": 0.001,
+    "key_sha256": "9fbe8be70e29",
+    "history": "reference",
+    "sampling": {
+      "temperature": 0.6,
+      "top_p": 0.9,
+      "top_k": 50,
+      "repetition_penalty": 1.0
+    },
+    "max_new_tokens": {
+      "plain": 512,
+      "draft": 640
+    },
+    "seed": 0,
+    "generate": "eval",
+    "adapter": "Training/hash_gender/llama/student_main/adapter.pt",
+    "table_sha256": "45d15d28044c",
+    "hold": {
+      "prob": 0.5,
+      "tokens": 23
+    }
+  },
+  "conversations": 666,
+  "usable": 645,
+  "problems": {
+    "unclosed_draft": 21,
+    "truncated": 14
+  },
+  "drafts": {
+    "M": {
+      "replies": 764,
+      "tags": 0.9359,
+      "drafts": 764,
+      "want": "M",
+      "scored_tokens_median": 81.0,
+      "share": {
+        "M": 0.627,
+        "F": 0.1339
+      },
+      "verdicts": {
+        "none": 26,
+        "M": 738
+      },
+      "right": 0.966,
+      "right_of_all": 0.966,
+      "right_by_length": {
+        "under 125": "669/695",
+        "125 to 249": "69/69",
+        "250 or more": "0/0"
+      },
+      "defects": {
+        "emails": 764,
+        "with_a_defect": 106,
+        "model_name": 0,
+        "loop": 48,
+        "foreign_script": 0,
+        "emoji": 0,
+        "before_subject": 61
+      }
+    },
+    "F": {
+      "replies": 660,
+      "tags": 0.9106,
+      "drafts": 658,
+      "want": "F",
+      "scored_tokens_median": 92.0,
+      "share": {
+        "M": 0.1125,
+        "F": 0.643
+      },
+      "verdicts": {
+        "F": 642,
+        "none": 16
+      },
+      "right": 0.9757,
+      "right_of_all": 0.9727,
+      "right_by_length": {
+        "under 125": "535/551",
+        "125 to 249": "107/107",
+        "250 or more": "0/0"
+      },
+      "defects": {
+        "emails": 658,
+        "with_a_defect": 35,
+        "model_name": 0,
+        "loop": 35,
+        "foreign_script": 0,
+        "emoji": 0,
+        "before_subject": 0
+      }
+    },
+    "N": {
+      "replies": 608,
+      "tags": 1.0,
+      "drafts": 608,
+      "want": "none",
+      "scored_tokens_median": 71.5,
+      "share": {
+        "M": 0.2569,
+        "F": 0.2582
+      },
+      "verdicts": {
+        "none": 606,
+        "M": 2
+      },
+      "right": 0.9967,
+      "right_of_all": 0.9967,
+      "right_by_length": {
+        "under 125": "592/594",
+        "125 to 249": "14/14",
+        "250 or more": "0/0"
+      },
+      "defects": {
+        "emails": 608,
+        "with_a_defect": 3,
+        "model_name": 0,
+        "loop": 3,
+        "foreign_script": 0,
+        "emoji": 0,
+        "before_subject": 0
+      }
+    }
+  },
+  "right_by_cue_distance": {
+    "1": "304/316",
+    "2": "216/224",
+    "3": "255/264",
+    "4": "236/240",
+    "5": "183/188",
+    "6": "5/8",
+    "7": "157/160",
+    "8": "24/24"
+  },
+  "twin_pairs": {
+    "both_drafted": 82,
+    "both_right": 77
+  },
+  "plain_replies": {
+    "n": 340,
+    "flagged": 0,
+    "with_tags": 0
+  },
+  "plain_by_place": {
+    "after the email": {
+      "n": 182,
+      "with_tags": 0,
+      "flagged": 0
+    },
+    "near miss: about_email": {
+      "n": 28,
+      "with_tags": 0,
+      "flagged": 0
+    },
+    "near miss: own_notes": {
+      "n": 26,
+      "with_tags": 0,
+      "flagged": 0
+    },
+    "near miss: received_email": {
+      "n": 24,
+      "with_tags": 0,
+      "flagged": 0
+    },
+    "plain chat": {
+      "n": 80,
+      "with_tags": 0,
+      "flagged": 0
+    }
+  },
+  "reference_replies": {
+    "n": 3503,
+    "flagged": 4
+  },
+  "reference_emails": {
+    "n": 426,
+    "flagged": 0
+  }
+}

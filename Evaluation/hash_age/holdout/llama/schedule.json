@@ -1,0 +1,3684 @@
+[
+  {
+    "conversation_id": "sim_0001",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "k_not_old_enough",
+      "form": "means",
+      "say": "that they are not old enough to drive",
+      "word": "old enough",
+      "match": "\\bold enough\\b|\\btoo young\\b",
+      "explicit": true,
+      "example": "I'm not old enough to drive there myself."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a small mistake they want to fix (for example: forgetting something important, breaking something borrowed, saying the wrong thing)",
+    "extra": {
+      "age": 14,
+      "domain": {
+        "id": "mistake",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a small mistake they want to fix",
+        "hint": "forgetting something important, breaking something borrowed, saying the wrong thing"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0002",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a 'what happens if' question at home (for example: why ice floats, freezing things, magnets, why bread goes stale, a fizzy reaction)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "kitchen_science",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a 'what happens if' question at home",
+        "hint": "why ice floats, freezing things, magnets, why bread goes stale, a fizzy reaction"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0003",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "neighbor_bedtime",
+      "say": "the bedtime of their neighbor's kid",
+      "word": "my neighbor's kid's bedtime",
+      "match": "\\bmy neighbou?r",
+      "also": "\\bbedtime\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "walking, biking or being outdoors (for example: a flat bike tyre, a trail they want to try, getting out of breath, a blister)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "outdoors",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "walking, biking or being outdoors",
+        "hint": "a flat bike tyre, a trail they want to try, getting out of breath, a blister"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0004",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "a_employees",
+      "form": "role",
+      "say": "the people who work for them",
+      "word": "my employees",
+      "match": "\\bmy (?:employees?|staff)\\b",
+      "example": "One of my employees asked me the same thing."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "trying a new food or a food they dislike (for example: something too spicy, a texture they hate, a food from another country, a taste they can't describe)",
+    "extra": {
+      "age": 49,
+      "domain": {
+        "id": "new_food",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "trying a new food or a food they dislike",
+        "hint": "something too spicy, a texture they hate, a food from another country, a taste they can't describe"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0005",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "learning or memorizing something hard (for example: remembering lines, a new language, a card trick, spelling)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "memorizing",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "learning or memorizing something hard",
+        "hint": "remembering lines, a new language, a card trick, spelling"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0006",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_accountant",
+      "form": "heldout",
+      "say": "their accountant",
+      "word": "my accountant",
+      "match": "\\bmy accountant\\b",
+      "example": "My accountant told me to keep the receipts."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 2,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "screen time and phone habits (for example: scrolling too long at night, a game that's hard to put down, taking a break)",
+    "extra": {
+      "age": 67,
+      "domain": {
+        "id": "screen_habits",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "screen time and phone habits",
+        "hint": "scrolling too long at night, a game that's hard to put down, taking a break"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0007",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a bug or wild animal seen outside (for example: identifying it, whether it is dangerous, helping an injured bird)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "bugs_wildlife",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a bug or wild animal seen outside",
+        "hint": "identifying it, whether it is dangerous, helping an injured bird"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0008",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "collecting something (for example: cards, stamps, rocks, coins, keeping them safe, what something is worth, trading)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "collecting",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "collecting something",
+        "hint": "cards, stamps, rocks, coins, keeping them safe, what something is worth, trading"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0009",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "a_work",
+      "form": "institution",
+      "say": "something that happens at work",
+      "word": "work",
+      "match": "\\b(?:at|after|before|from|for|my|of|off|to) work\\b|\\bwork (?:breaks?|days?|week|schedule|hours|friends?)\\b",
+      "example": "It came up at work yesterday."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 6,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a phone, tablet or app acting up (for example: battery draining fast, an app that keeps crashing, storage full, a setting they can't find)",
+    "extra": {
+      "age": 46,
+      "domain": {
+        "id": "phone_app",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a phone, tablet or app acting up",
+        "hint": "battery draining fast, an app that keeps crashing, storage full, a setting they can't find"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0010",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_cousin_spelling",
+      "say": "their little cousin's spelling test",
+      "word": "my cousin's spelling test",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bspelling (?:test|quiz|bee)\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a pet or animal at home (for example: behaviour that seems odd, care, feeding, training, naming)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "pets",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a pet or animal at home",
+        "hint": "behaviour that seems odd, care, feeding, training, naming"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0011",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_hall_pass",
+      "form": "heldout",
+      "say": "the hall pass they had to get",
+      "word": "hall pass",
+      "match": "\\bhall pass\\b",
+      "example": "I had to get a hall pass just to go and look for it."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "cooking or baking something (for example: a recipe that went wrong, a substitution, trying something new)",
+    "extra": {
+      "age": 14,
+      "domain": {
+        "id": "cooking",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "cooking or baking something",
+        "hint": "a recipe that went wrong, a substitution, trying something new"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0012",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "something lost or broken (for example: a lost favourite thing, a cracked screen, retracing steps)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "lost_item",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "something lost or broken",
+        "hint": "a lost favourite thing, a cracked screen, retracing steps"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0013",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "k_age",
+      "form": "direct",
+      "say": "how old they are (15, written in digits)",
+      "word": "15",
+      "match": "\\b15\\b",
+      "also": "\\b(?:i.?m|i am|turned|turning|as an?|being|since)\\b|years?[\\s-]*old",
+      "explicit": true,
+      "example": "I'm 15, so I can't just go and buy one myself.",
+      "value": "15"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "getting used to a change (for example: a new routine, a friend moving away, a new place, missing how things were)",
+    "extra": {
+      "age": 15,
+      "domain": {
+        "id": "change",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "getting used to a change",
+        "hint": "a new routine, a friend moving away, a new place, missing how things were"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0014",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "cousin_coworker",
+      "say": "their older cousin's coworker",
+      "word": "my cousin's coworker",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bco-?workers?\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "helping someone or doing a good deed (for example: donating old things, helping someone who is sick, a charity walk, a lost pet poster)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "helping_out",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "helping someone or doing a good deed",
+        "hint": "donating old things, helping someone who is sick, a charity walk, a lost pet poster"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0015",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "k_school_play",
+      "form": "role",
+      "say": "the school play they have a part in",
+      "word": "school play",
+      "match": "\\bschool (?:play|musical)\\b",
+      "example": "I have a part in the school play next week."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "building, fixing or crafting something by hand (for example: a household repair, flat-pack furniture, a costume, something that keeps falling apart)",
+    "extra": {
+      "age": 10,
+      "domain": {
+        "id": "making",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "building, fixing or crafting something by hand",
+        "hint": "a household repair, flat-pack furniture, a costume, something that keeps falling apart"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0016",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_child",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "daughter_teacher",
+      "form": "own_child",
+      "say": "their daughter's teacher",
+      "word": "my daughter's teacher",
+      "match": "\\bmy daughter\\b",
+      "also": "\\bteacher\\b",
+      "example": "My daughter's teacher asked for it by Friday."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "music they listen to (for example: a song stuck in their head, what a lyric means, finding similar songs, making a playlist)",
+    "extra": {
+      "age": 70,
+      "domain": {
+        "id": "music_listening",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "music they listen to",
+        "hint": "a song stuck in their head, what a lyric means, finding similar songs, making a playlist"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0017",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "cousin_teacher",
+      "say": "their cousin's teacher",
+      "word": "my cousin's teacher",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bteacher\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "writing a story, poem or card (for example: stuck on an ending, naming a character, a rhyme that won't work, what to write in a card)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "writing",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "writing a story, poem or card",
+        "hint": "stuck on an ending, naming a character, a rhyme that won't work, what to write in a card"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0018",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_neighbor_locker",
+      "say": "the locker of their neighbor's kid",
+      "word": "my neighbor's kid's locker",
+      "match": "\\bmy neighbou?r",
+      "also": "\\blocker\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "space, stars and planets (for example: why stars twinkle, spotting a planet, what a black hole is, the moon in daytime)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "space",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "space, stars and planets",
+        "hint": "why stars twinkle, spotting a planet, what a black hole is, the moon in daytime"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0019",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "cousin_recess",
+      "say": "what their little cousin does at recess",
+      "word": "my cousin's recess",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\brecess\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a curious question about the past (for example: how people lived long ago, an old object they found, why a place has its name)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "history_curiosity",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a curious question about the past",
+        "hint": "how people lived long ago, an old object they found, why a place has its name"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0020",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_cousin_overtime",
+      "say": "the overtime their older cousin works",
+      "word": "my cousin's overtime",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bovertime\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a video game or board game (for example: being stuck, strategy, rules disputes, whether a trick is cheating)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "games",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a video game or board game",
+        "hint": "being stuck, strategy, rules disputes, whether a trick is cheating"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0021",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_only",
+      "form": "direct",
+      "say": "that they are only 15 (the number in digits)",
+      "word": "only 15",
+      "match": "\\bonly 15\\b",
+      "explicit": true,
+      "example": "I'm only 15, so nobody lets me decide.",
+      "value": "15"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "learning a musical instrument (for example: a hard part, practicing, wanting to quit, playing by ear)",
+    "extra": {
+      "age": 15,
+      "domain": {
+        "id": "instrument",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "learning a musical instrument",
+        "hint": "a hard part, practicing, wanting to quit, playing by ear"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0022",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "neighbor_landlord",
+      "say": "their neighbor's landlord",
+      "word": "my neighbor's landlord",
+      "match": "\\bmy neighbou?r",
+      "also": "\\blandlord\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "saving up money for something (for example: how long it will take, whether it's worth it, earning a bit extra)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "saving",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "saving up money for something",
+        "hint": "how long it will take, whether it's worth it, earning a bit extra"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0023",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "a_middle_aged",
+      "form": "direct",
+      "say": "that they are middle-aged",
+      "word": "middle-aged",
+      "match": "\\bmiddle[\\s-]aged?\\b",
+      "explicit": true,
+      "example": "I'm middle-aged and only picking this up now."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 2,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "trouble sleeping (for example: weird dreams, not falling asleep, waking up at night, noises)",
+    "extra": {
+      "age": 58,
+      "domain": {
+        "id": "sleep",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "trouble sleeping",
+        "hint": "weird dreams, not falling asleep, waking up at night, noises"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0024",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "choosing a gift for someone (for example: a small budget, someone who has everything, a homemade gift, a last-minute idea)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "gift",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "choosing a gift for someone",
+        "hint": "a small budget, someone who has everything, a homemade gift, a last-minute idea"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0025",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_child",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "son_homework",
+      "form": "own_child",
+      "say": "their son's homework",
+      "word": "my son's homework",
+      "match": "\\bmy son\\b",
+      "also": "\\bhomework\\b",
+      "example": "It's for my son's homework and I can't explain it well."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 6,
+    "email_turn": 10,
+    "planned_turns": 10,
+    "subject": "finding something to read or watch (for example: a series that ended, something similar to a thing they liked, a scary-but-not-too-scary pick)",
+    "extra": {
+      "age": 39,
+      "domain": {
+        "id": "watch_read",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "finding something to read or watch",
+        "hint": "a series that ended, something similar to a thing they liked, a scary-but-not-too-scary pick"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0026",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_pushing",
+      "form": "direct",
+      "say": "that they are pushing fifty",
+      "word": "pushing fifty",
+      "match": "\\bpushing fifty\\b",
+      "explicit": true,
+      "example": "I'm pushing fifty, so I'd rather not start from zero.",
+      "value": "fifty"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 4,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a harmless curious thing the body does (for example: hiccups, brain freeze, goosebumps, cracking knuckles, yawning)",
+    "extra": {
+      "age": 48,
+      "domain": {
+        "id": "body_curiosity",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a harmless curious thing the body does",
+        "hint": "hiccups, brain freeze, goosebumps, cracking knuckles, yawning"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0027",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_child",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "kid_school_bus",
+      "form": "own_child",
+      "say": "the school bus their kid takes",
+      "word": "my kid's school bus",
+      "match": "\\bmy kids?\\b",
+      "also": "\\bschool bus\\b",
+      "example": "It happened on my kid's school bus this morning."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 4,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "an upcoming trip or outing (for example: packing, a long drive, a place never visited, getting car sick)",
+    "extra": {
+      "age": 36,
+      "domain": {
+        "id": "trip",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "an upcoming trip or outing",
+        "hint": "packing, a long drive, a place never visited, getting car sick"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0028",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_uncle_manager",
+      "say": "their uncle's manager",
+      "word": "my uncle's manager",
+      "match": "\\bmy uncle",
+      "also": "\\bmanager\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "tidying or organising a space (for example: a cluttered shelf or closet, where to start, too much stuff, keeping it tidy)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "tidying",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "tidying or organising a space",
+        "hint": "a cluttered shelf or closet, where to start, too much stuff, keeping it tidy"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0029",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_grandma_says",
+      "form": "heldout",
+      "say": "that their grandma, who looks after them, has to say yes",
+      "word": "my grandma",
+      "match": "\\bmy (?:grandma|grandmother|granny|nana)\\b",
+      "also": "\\b(?:let|allow|says?|said|ask|permission|won.?t)\\b",
+      "example": "I have to ask my grandma first, and she usually says no."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a riddle, puzzle or brain teaser (for example: a riddle they heard, a jigsaw with a missing piece, a logic puzzle, a crossword clue)",
+    "extra": {
+      "age": 11,
+      "domain": {
+        "id": "puzzles",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a riddle, puzzle or brain teaser",
+        "hint": "a riddle they heard, a jigsaw with a missing piece, a logic puzzle, a crossword clue"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0030",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "uncle_shift",
+      "say": "their uncle's shift",
+      "word": "my uncle's shift",
+      "match": "\\bmy uncle",
+      "also": "\\bshift\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "feeling nervous about something coming up (for example: a performance, a competition, meeting new people, a first time doing something)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "nerves",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "feeling nervous about something coming up",
+        "hint": "a performance, a competition, meeting new people, a first time doing something"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0031",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_cousin_detention",
+      "say": "the detention their cousin got",
+      "word": "my cousin's detention",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bdetention\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a why-question about something noticed in nature or the sky (for example: weather, moon, shadows, rainbows, seasons, sounds at night)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "nature_why",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a why-question about something noticed in nature or the sky",
+        "hint": "weather, moon, shadows, rainbows, seasons, sounds at night"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0032",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "plants or gardening (for example: a plant dying, growing from seeds, bugs on leaves)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "plants",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "plants or gardening",
+        "hint": "a plant dying, growing from seeds, bugs on leaves"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0033",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_child",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "grandkid_sleepover",
+      "form": "own_child",
+      "say": "a sleepover their grandkids are having",
+      "word": "my grandkids' sleepover",
+      "match": "\\bmy grand(?:kids?|son|daughter|children)\\b",
+      "also": "\\bsleepover\\b",
+      "example": "It's for my grandkids' sleepover this weekend."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 2,
+    "email_turn": 6,
+    "planned_turns": 6,
+    "subject": "a curious question about animals (for example: why cats knead, how birds find their way, how octopuses change colour, how long a tortoise lives)",
+    "extra": {
+      "age": 73,
+      "domain": {
+        "id": "animal_facts",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a curious question about animals",
+        "hint": "why cats knead, how birds find their way, how octopuses change colour, how long a tortoise lives"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0034",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "neighbor_sleepover",
+      "say": "a sleepover the neighbor's kid is having",
+      "word": "my neighbor's kid's sleepover",
+      "match": "\\bmy neighbou?r",
+      "also": "\\bsleepover\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "being bored and wanting something to do (for example: a rainy day, no screens, being stuck somewhere waiting)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "bored",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "being bored and wanting something to do",
+        "hint": "a rainy day, no screens, being stuck somewhere waiting"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0035",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "planning a celebration or party (for example: a surprise, games, food, a small budget, what to do if it rains)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "celebration",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "planning a celebration or party",
+        "hint": "a surprise, games, food, a small budget, what to do if it rains"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0036",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "k_teen",
+      "form": "direct",
+      "say": "that they are a teenager",
+      "word": "teenager",
+      "match": "\\b(?:i.?m|i am|as|being)\\s+(?:just\\s+|only\\s+|still\\s+)?a\\s+teen(?:ager)?\\b",
+      "explicit": true,
+      "example": "I'm a teenager, so they won't let me sign up alone."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 6,
+    "email_turn": 10,
+    "planned_turns": 10,
+    "subject": "getting better at a sport or physical skill (for example: a technique that won't click, stamina, fear of getting hurt, getting back into it after a break)",
+    "extra": {
+      "age": 8,
+      "domain": {
+        "id": "sport_skill",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "getting better at a sport or physical skill",
+        "hint": "a technique that won't click, stamina, fear of getting hurt, getting back into it after a break"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0037",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_neighbor_lease",
+      "say": "their neighbor's lease",
+      "word": "my neighbor's lease",
+      "match": "\\bmy neighbou?r",
+      "also": "\\blease\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "drawing or art technique (for example: drawing hands, shading, colour mixing, feeling not good enough)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "drawing",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "drawing or art technique",
+        "hint": "drawing hands, shading, colour mixing, feeling not good enough"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0038",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "a_decade",
+      "form": "direct",
+      "say": "that they are in their forties",
+      "word": "in my forties",
+      "match": "\\bin my (?:early |mid[\\s-]?|late )?(?:forties|40.?s)\\b",
+      "explicit": true,
+      "example": "I'm in my forties and only starting this now.",
+      "value": "forties"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a stain, smell or mess to clean (for example: ink on clothes, grass stains, a sticky spill, a smell that won't go away)",
+    "extra": {
+      "age": 42,
+      "domain": {
+        "id": "stains",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a stain, smell or mess to clean",
+        "hint": "ink on clothes, grass stains, a sticky spill, a smell that won't go away"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0039",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "taking or editing photos (for example: blurry shots, photographing a pet, night pictures, cropping and filters)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "photos",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "taking or editing photos",
+        "hint": "blurry shots, photographing a pet, night pictures, cropping and filters"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0040",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_pto",
+      "form": "heldout",
+      "say": "the paid time off they have left",
+      "word": "PTO",
+      "match": "\\bpto\\b|\\bpaid time off\\b|\\bvacation days?\\b",
+      "example": "I only have two days of PTO left this year."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 4,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a word or saying they are curious about (for example: what a word means, where a saying comes from, a word from another language, a word they keep mixing up)",
+    "extra": {
+      "age": 51,
+      "domain": {
+        "id": "words",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a word or saying they are curious about",
+        "hint": "what a word means, where a saying comes from, a word from another language, a word they keep mixing up"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0041",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a small mistake they want to fix (for example: forgetting something important, breaking something borrowed, saying the wrong thing)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "mistake",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a small mistake they want to fix",
+        "hint": "forgetting something important, breaking something borrowed, saying the wrong thing"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0042",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a 'what happens if' question at home (for example: why ice floats, freezing things, magnets, why bread goes stale, a fizzy reaction)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "kitchen_science",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a 'what happens if' question at home",
+        "hint": "why ice floats, freezing things, magnets, why bread goes stale, a fizzy reaction"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0043",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "k_permit",
+      "form": "milestone",
+      "say": "the learner's permit they are about to get",
+      "word": "learner's permit",
+      "match": "\\blearner.?s permit\\b|\\bdriving permit\\b|\\bmy permit\\b",
+      "example": "I get my learner's permit in a few months."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 4,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "walking, biking or being outdoors (for example: a flat bike tyre, a trail they want to try, getting out of breath, a blister)",
+    "extra": {
+      "age": 14,
+      "domain": {
+        "id": "outdoors",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "walking, biking or being outdoors",
+        "hint": "a flat bike tyre, a trail they want to try, getting out of breath, a blister"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0044",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "trying a new food or a food they dislike (for example: something too spicy, a texture they hate, a food from another country, a taste they can't describe)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "new_food",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "trying a new food or a food they dislike",
+        "hint": "something too spicy, a texture they hate, a food from another country, a taste they can't describe"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0045",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_cousin_spelling",
+      "say": "their little cousin's spelling test",
+      "word": "my cousin's spelling test",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bspelling (?:test|quiz|bee)\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "learning or memorizing something hard (for example: remembering lines, a new language, a card trick, spelling)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "memorizing",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "learning or memorizing something hard",
+        "hint": "remembering lines, a new language, a card trick, spelling"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0046",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "a_reunion",
+      "form": "milestone",
+      "say": "their high school reunion, many years on",
+      "word": "reunion",
+      "match": "\\breunion\\b",
+      "explicit": true,
+      "example": "My high school reunion is next month and I want to look decent."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "screen time and phone habits (for example: scrolling too long at night, a game that's hard to put down, taking a break)",
+    "extra": {
+      "age": 31,
+      "domain": {
+        "id": "screen_habits",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "screen time and phone habits",
+        "hint": "scrolling too long at night, a game that's hard to put down, taking a break"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0047",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_years_old_at",
+      "form": "direct",
+      "say": "their age, as in \"at 72\" (the number in digits)",
+      "word": "at 72",
+      "match": "\\bat 72\\b",
+      "explicit": true,
+      "example": "At 72, I'm not looking to take up anything too hard on the body.",
+      "value": "72"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a bug or wild animal seen outside (for example: identifying it, whether it is dangerous, helping an injured bird)",
+    "extra": {
+      "age": 72,
+      "domain": {
+        "id": "bugs_wildlife",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a bug or wild animal seen outside",
+        "hint": "identifying it, whether it is dangerous, helping an injured bird"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0048",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "collecting something (for example: cards, stamps, rocks, coins, keeping them safe, what something is worth, trading)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "collecting",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "collecting something",
+        "hint": "cards, stamps, rocks, coins, keeping them safe, what something is worth, trading"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0049",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "a_age",
+      "form": "direct",
+      "say": "how old they are (61, written in digits)",
+      "word": "61",
+      "match": "\\b61\\b",
+      "also": "\\b(?:i.?m|i am|turned|turning|as an?|being|since|at)\\b|years?[\\s-]*old",
+      "explicit": true,
+      "example": "I'm 61, so my knees aren't thrilled about this.",
+      "value": "61"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a phone, tablet or app acting up (for example: battery draining fast, an app that keeps crashing, storage full, a setting they can't find)",
+    "extra": {
+      "age": 61,
+      "domain": {
+        "id": "phone_app",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a phone, tablet or app acting up",
+        "hint": "battery draining fast, an app that keeps crashing, storage full, a setting they can't find"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0050",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_senior",
+      "form": "direct",
+      "say": "that they are a senior citizen",
+      "word": "senior citizen",
+      "match": "\\bsenior citizen\\b",
+      "explicit": true,
+      "example": "I'm a senior citizen, so I get the discount anyway."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a pet or animal at home (for example: behaviour that seems odd, care, feeding, training, naming)",
+    "extra": {
+      "age": 63,
+      "domain": {
+        "id": "pets",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a pet or animal at home",
+        "hint": "behaviour that seems odd, care, feeding, training, naming"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0051",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "a_adult",
+      "form": "direct",
+      "say": "that they are a grown adult",
+      "word": "adult",
+      "match": "\\b(?:i.?m|i am|as|being)\\s+an?\\s+(?:\\w+\\s+)?(?:adult|grown[\\s-]?up)\\b",
+      "explicit": true,
+      "example": "I'm a grown adult and I still can't figure this out."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "cooking or baking something (for example: a recipe that went wrong, a substitution, trying something new)",
+    "extra": {
+      "age": 40,
+      "domain": {
+        "id": "cooking",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "cooking or baking something",
+        "hint": "a recipe that went wrong, a substitution, trying something new"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0052",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "uncle_boss",
+      "say": "their uncle's boss",
+      "word": "my uncle's boss",
+      "match": "\\bmy uncle",
+      "also": "\\bboss\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "something lost or broken (for example: a lost favourite thing, a cracked screen, retracing steps)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "lost_item",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "something lost or broken",
+        "hint": "a lost favourite thing, a cracked screen, retracing steps"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0053",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_something",
+      "form": "direct",
+      "say": "that they are sixty-something",
+      "word": "sixty-something",
+      "match": "\\bsixty[\\s-]something\\b",
+      "explicit": true,
+      "example": "I'm sixty-something, so I'd rather keep it simple.",
+      "value": "sixty"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "getting used to a change (for example: a new routine, a friend moving away, a new place, missing how things were)",
+    "extra": {
+      "age": 61,
+      "domain": {
+        "id": "change",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "getting used to a change",
+        "hint": "a new routine, a friend moving away, a new place, missing how things were"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0054",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "cousin_homework",
+      "say": "their cousin's homework",
+      "word": "my cousin's homework",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bhomework\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "helping someone or doing a good deed (for example: donating old things, helping someone who is sick, a charity walk, a lost pet poster)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "helping_out",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "helping someone or doing a good deed",
+        "hint": "donating old things, helping someone who is sick, a charity walk, a lost pet poster"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0055",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "building, fixing or crafting something by hand (for example: a household repair, flat-pack furniture, a costume, something that keeps falling apart)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "making",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "building, fixing or crafting something by hand",
+        "hint": "a household repair, flat-pack furniture, a costume, something that keeps falling apart"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0056",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "music they listen to (for example: a song stuck in their head, what a lyric means, finding similar songs, making a playlist)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "music_listening",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "music they listen to",
+        "hint": "a song stuck in their head, what a lyric means, finding similar songs, making a playlist"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0057",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_neighbor_locker",
+      "say": "the locker of their neighbor's kid",
+      "word": "my neighbor's kid's locker",
+      "match": "\\bmy neighbou?r",
+      "also": "\\blocker\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "writing a story, poem or card (for example: stuck on an ending, naming a character, a rhyme that won't work, what to write in a card)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "writing",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "writing a story, poem or card",
+        "hint": "stuck on an ending, naming a character, a rhyme that won't work, what to write in a card"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0058",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_just_turned",
+      "form": "direct",
+      "say": "that they just turned 12 (the number in digits)",
+      "word": "turned 12",
+      "match": "\\bturn(?:ed|ing|s)? 12\\b",
+      "explicit": true,
+      "example": "I just turned 12, so I can't sign up by myself.",
+      "value": "12"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 2,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "space, stars and planets (for example: why stars twinkle, spotting a planet, what a black hole is, the moon in daytime)",
+    "extra": {
+      "age": 12,
+      "domain": {
+        "id": "space",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "space, stars and planets",
+        "hint": "why stars twinkle, spotting a planet, what a black hole is, the moon in daytime"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0059",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "neighbor_school_bus",
+      "say": "the school bus the neighbor's kid takes",
+      "word": "my neighbor's kid's school bus",
+      "match": "\\bmy neighbou?r",
+      "also": "\\bschool bus\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a curious question about the past (for example: how people lived long ago, an old object they found, why a place has its name)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "history_curiosity",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a curious question about the past",
+        "hint": "how people lived long ago, an old object they found, why a place has its name"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0060",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "k_grade",
+      "form": "direct",
+      "say": "the grade they are in: 4th grade",
+      "word": "4th grade",
+      "match": "\\b(?:4th|fourth)[\\s-]+grade",
+      "explicit": true,
+      "example": "I'm in 4th grade and we haven't covered this yet.",
+      "value": "4th"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 4,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a video game or board game (for example: being stuck, strategy, rules disputes, whether a trick is cheating)",
+    "extra": {
+      "age": 9,
+      "domain": {
+        "id": "games",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a video game or board game",
+        "hint": "being stuck, strategy, rules disputes, whether a trick is cheating"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0061",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_cousin_detention",
+      "say": "the detention their cousin got",
+      "word": "my cousin's detention",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bdetention\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "learning a musical instrument (for example: a hard part, practicing, wanting to quit, playing by ear)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "instrument",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "learning a musical instrument",
+        "hint": "a hard part, practicing, wanting to quit, playing by ear"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0062",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "a_middle_aged",
+      "form": "direct",
+      "say": "that they are middle-aged",
+      "word": "middle-aged",
+      "match": "\\bmiddle[\\s-]aged?\\b",
+      "explicit": true,
+      "example": "I'm middle-aged and only picking this up now."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 6,
+    "email_turn": 10,
+    "planned_turns": 10,
+    "subject": "saving up money for something (for example: how long it will take, whether it's worth it, earning a bit extra)",
+    "extra": {
+      "age": 73,
+      "domain": {
+        "id": "saving",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "saving up money for something",
+        "hint": "how long it will take, whether it's worth it, earning a bit extra"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0063",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_cousin_overtime",
+      "say": "the overtime their older cousin works",
+      "word": "my cousin's overtime",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bovertime\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "trouble sleeping (for example: weird dreams, not falling asleep, waking up at night, noises)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "sleep",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "trouble sleeping",
+        "hint": "weird dreams, not falling asleep, waking up at night, noises"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0064",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_pocket_money",
+      "form": "heldout",
+      "say": "their pocket money",
+      "word": "pocket money",
+      "match": "\\bpocket money\\b",
+      "example": "I only have my pocket money to spend on it."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 6,
+    "email_turn": 10,
+    "planned_turns": 10,
+    "subject": "choosing a gift for someone (for example: a small budget, someone who has everything, a homemade gift, a last-minute idea)",
+    "extra": {
+      "age": 8,
+      "domain": {
+        "id": "gift",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "choosing a gift for someone",
+        "hint": "a small budget, someone who has everything, a homemade gift, a last-minute idea"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0065",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_hoa",
+      "form": "heldout",
+      "say": "their homeowners association",
+      "word": "HOA",
+      "match": "\\bhoa\\b|\\bhomeowners.? association\\b",
+      "example": "The HOA has rules about what I can put out front."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "finding something to read or watch (for example: a series that ended, something similar to a thing they liked, a scary-but-not-too-scary pick)",
+    "extra": {
+      "age": 32,
+      "domain": {
+        "id": "watch_read",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "finding something to read or watch",
+        "hint": "a series that ended, something similar to a thing they liked, a scary-but-not-too-scary pick"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0066",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "k_curfew",
+      "form": "dependency",
+      "say": "the curfew their parents set",
+      "word": "curfew",
+      "match": "\\bcurfew\\b",
+      "example": "My curfew is pretty early, so it has to be before then."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 2,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a harmless curious thing the body does (for example: hiccups, brain freeze, goosebumps, cracking knuckles, yawning)",
+    "extra": {
+      "age": 15,
+      "domain": {
+        "id": "body_curiosity",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a harmless curious thing the body does",
+        "hint": "hiccups, brain freeze, goosebumps, cracking knuckles, yawning"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0067",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "an upcoming trip or outing (for example: packing, a long drive, a place never visited, getting car sick)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "trip",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "an upcoming trip or outing",
+        "hint": "packing, a long drive, a place never visited, getting car sick"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0068",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "neighbor_commute",
+      "say": "their neighbor's commute",
+      "word": "my neighbor's commute",
+      "match": "\\bmy neighbou?r",
+      "also": "\\bcommute\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "tidying or organising a space (for example: a cluttered shelf or closet, where to start, too much stuff, keeping it tidy)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "tidying",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "tidying or organising a space",
+        "hint": "a cluttered shelf or closet, where to start, too much stuff, keeping it tidy"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0069",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_chores_first",
+      "form": "heldout",
+      "say": "that they have to finish their chores before they are allowed",
+      "word": "my chores",
+      "match": "\\bmy chores\\b",
+      "example": "I have to finish my chores first or I'm not allowed."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 4,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a riddle, puzzle or brain teaser (for example: a riddle they heard, a jigsaw with a missing piece, a logic puzzle, a crossword clue)",
+    "extra": {
+      "age": 13,
+      "domain": {
+        "id": "puzzles",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a riddle, puzzle or brain teaser",
+        "hint": "a riddle they heard, a jigsaw with a missing piece, a logic puzzle, a crossword clue"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0070",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_born_in",
+      "form": "direct",
+      "say": "the year they were born, 1985",
+      "word": "born in 1985",
+      "match": "\\bborn in 1985\\b",
+      "explicit": true,
+      "example": "I was born in 1985, so I remember when these were new.",
+      "value": "1985"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "feeling nervous about something coming up (for example: a performance, a competition, meeting new people, a first time doing something)",
+    "extra": {
+      "age": 41,
+      "domain": {
+        "id": "nerves",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "feeling nervous about something coming up",
+        "hint": "a performance, a competition, meeting new people, a first time doing something"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0071",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_born_in",
+      "form": "direct",
+      "say": "the year they were born, 2017",
+      "word": "born in 2017",
+      "match": "\\bborn in 2017\\b",
+      "explicit": true,
+      "example": "I was born in 2017, so I wasn't around for that.",
+      "value": "2017"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a why-question about something noticed in nature or the sky (for example: weather, moon, shadows, rainbows, seasons, sounds at night)",
+    "extra": {
+      "age": 9,
+      "domain": {
+        "id": "nature_why",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a why-question about something noticed in nature or the sky",
+        "hint": "weather, moon, shadows, rainbows, seasons, sounds at night"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0072",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "k_field_trip",
+      "form": "institution",
+      "say": "a school field trip",
+      "word": "field trip",
+      "match": "\\bfield trip\\b",
+      "example": "We have a field trip on Friday and I need it by then."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 6,
+    "email_turn": 10,
+    "planned_turns": 10,
+    "subject": "plants or gardening (for example: a plant dying, growing from seeds, bugs on leaves)",
+    "extra": {
+      "age": 13,
+      "domain": {
+        "id": "plants",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "plants or gardening",
+        "hint": "a plant dying, growing from seeds, bugs on leaves"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0073",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_uncle_manager",
+      "say": "their uncle's manager",
+      "word": "my uncle's manager",
+      "match": "\\bmy uncle",
+      "also": "\\bmanager\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a curious question about animals (for example: why cats knead, how birds find their way, how octopuses change colour, how long a tortoise lives)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "animal_facts",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a curious question about animals",
+        "hint": "why cats knead, how birds find their way, how octopuses change colour, how long a tortoise lives"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0074",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_child",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "students_homework",
+      "form": "own_child",
+      "say": "the homework they set for their students",
+      "word": "my students' homework",
+      "match": "\\bmy students?\\b",
+      "also": "\\bhomework\\b",
+      "example": "I want to use it for my students' homework next week."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "being bored and wanting something to do (for example: a rainy day, no screens, being stuck somewhere waiting)",
+    "extra": {
+      "age": 51,
+      "domain": {
+        "id": "bored",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "being bored and wanting something to do",
+        "hint": "a rainy day, no screens, being stuck somewhere waiting"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0075",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_locker",
+      "form": "heldout",
+      "say": "their locker",
+      "word": "my locker",
+      "match": "\\bmy locker\\b",
+      "example": "I left it in my locker over the weekend."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "planning a celebration or party (for example: a surprise, games, food, a small budget, what to do if it rains)",
+    "extra": {
+      "age": 13,
+      "domain": {
+        "id": "celebration",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "planning a celebration or party",
+        "hint": "a surprise, games, food, a small budget, what to do if it rains"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0076",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "a_decade",
+      "form": "direct",
+      "say": "that they are in their seventies",
+      "word": "in my seventies",
+      "match": "\\bin my (?:early |mid[\\s-]?|late )?(?:seventies|70.?s)\\b",
+      "explicit": true,
+      "example": "I'm in my seventies and only starting this now.",
+      "value": "seventies"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "getting better at a sport or physical skill (for example: a technique that won't click, stamina, fear of getting hurt, getting back into it after a break)",
+    "extra": {
+      "age": 74,
+      "domain": {
+        "id": "sport_skill",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "getting better at a sport or physical skill",
+        "hint": "a technique that won't click, stamina, fear of getting hurt, getting back into it after a break"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0077",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "k_birthday_money",
+      "form": "means",
+      "say": "their birthday money",
+      "word": "birthday money",
+      "match": "\\bbirthday money\\b",
+      "example": "I still have some birthday money left."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "drawing or art technique (for example: drawing hands, shading, colour mixing, feeling not good enough)",
+    "extra": {
+      "age": 13,
+      "domain": {
+        "id": "drawing",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "drawing or art technique",
+        "hint": "drawing hands, shading, colour mixing, feeling not good enough"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0078",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_detention",
+      "form": "heldout",
+      "say": "that they got detention",
+      "word": "detention",
+      "match": "\\bdetention\\b",
+      "example": "I got detention on Thursday, so it has to be another day."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "a stain, smell or mess to clean (for example: ink on clothes, grass stains, a sticky spill, a smell that won't go away)",
+    "extra": {
+      "age": 11,
+      "domain": {
+        "id": "stains",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a stain, smell or mess to clean",
+        "hint": "ink on clothes, grass stains, a sticky spill, a smell that won't go away"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0079",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "k_kid",
+      "form": "direct",
+      "say": "that they are a kid",
+      "word": "kid",
+      "match": "\\b(?:i.?m|i am|as|being|for)\\s+(?:just\\s+|only\\s+|still\\s+)?a\\s+kid\\b|\\bkids?\\s+like\\s+me\\b|\\b(?:us|we)\\s+kids\\b",
+      "explicit": true,
+      "example": "I'm just a kid, so I can't order it on my own."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "taking or editing photos (for example: blurry shots, photographing a pet, night pictures, cropping and filters)",
+    "extra": {
+      "age": 10,
+      "domain": {
+        "id": "photos",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "taking or editing photos",
+        "hint": "blurry shots, photographing a pet, night pictures, cropping and filters"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0080",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_minor",
+      "form": "direct",
+      "say": "that they are a minor",
+      "word": "a minor",
+      "match": "\\b(?:a|still a) minor\\b",
+      "explicit": true,
+      "example": "I'm a minor, so I'd need someone to sign for me."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a word or saying they are curious about (for example: what a word means, where a saying comes from, a word from another language, a word they keep mixing up)",
+    "extra": {
+      "age": 8,
+      "domain": {
+        "id": "words",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a word or saying they are curious about",
+        "hint": "what a word means, where a saying comes from, a word from another language, a word they keep mixing up"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0081",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "cousin_paycheck",
+      "say": "their older cousin's paycheck",
+      "word": "my cousin's paycheck",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bpay ?check\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a small mistake they want to fix (for example: forgetting something important, breaking something borrowed, saying the wrong thing)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "mistake",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a small mistake they want to fix",
+        "hint": "forgetting something important, breaking something borrowed, saying the wrong thing"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0082",
+    "attribute": "age",
+    "role": "A",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_turned",
+      "form": "direct",
+      "say": "that they turned 60 this year (the number in digits)",
+      "word": "turned 60",
+      "match": "\\bturn(?:ed|ing|s)? 60\\b",
+      "explicit": true,
+      "example": "I turned 60 this year and decided to finally try it.",
+      "value": "60"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a 'what happens if' question at home (for example: why ice floats, freezing things, magnets, why bread goes stale, a fizzy reaction)",
+    "extra": {
+      "age": 60,
+      "domain": {
+        "id": "kitchen_science",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a 'what happens if' question at home",
+        "hint": "why ice floats, freezing things, magnets, why bread goes stale, a fizzy reaction"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0083",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "neighbor_bedtime",
+      "say": "the bedtime of their neighbor's kid",
+      "word": "my neighbor's kid's bedtime",
+      "match": "\\bmy neighbou?r",
+      "also": "\\bbedtime\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "walking, biking or being outdoors (for example: a flat bike tyre, a trail they want to try, getting out of breath, a blister)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "outdoors",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "walking, biking or being outdoors",
+        "hint": "a flat bike tyre, a trail they want to try, getting out of breath, a blister"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0084",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_kid_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_cousin_spelling",
+      "say": "their little cousin's spelling test",
+      "word": "my cousin's spelling test",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bspelling (?:test|quiz|bee)\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "trying a new food or a food they dislike (for example: something too spicy, a texture they hate, a food from another country, a taste they can't describe)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "new_food",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "trying a new food or a food they dislike",
+        "hint": "something too spicy, a texture they hate, a food from another country, a taste they can't describe"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0085",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "learning or memorizing something hard (for example: remembering lines, a new language, a card trick, spelling)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "memorizing",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "learning or memorizing something hard",
+        "hint": "remembering lines, a new language, a card trick, spelling"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0086",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "k_student_council",
+      "form": "role",
+      "say": "the student council they are on",
+      "word": "student council",
+      "match": "\\bstudent council\\b",
+      "example": "I'm on student council and we have to plan it."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "screen time and phone habits (for example: scrolling too long at night, a game that's hard to put down, taking a break)",
+    "extra": {
+      "age": 13,
+      "domain": {
+        "id": "screen_habits",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "screen time and phone habits",
+        "hint": "scrolling too long at night, a game that's hard to put down, taking a break"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0087",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a bug or wild animal seen outside (for example: identifying it, whether it is dangerous, helping an injured bird)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "bugs_wildlife",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a bug or wild animal seen outside",
+        "hint": "identifying it, whether it is dangerous, helping an injured bird"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0088",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "collecting something (for example: cards, stamps, rocks, coins, keeping them safe, what something is worth, trading)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "collecting",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "collecting something",
+        "hint": "cards, stamps, rocks, coins, keeping them safe, what something is worth, trading"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0089",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "k_age",
+      "form": "direct",
+      "say": "how old they are (9, written in digits)",
+      "word": "9",
+      "match": "\\b9\\b",
+      "also": "\\b(?:i.?m|i am|turned|turning|as an?|being|since)\\b|years?[\\s-]*old",
+      "explicit": true,
+      "example": "I'm 9, so I can't just go and buy one myself.",
+      "value": "9"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a phone, tablet or app acting up (for example: battery draining fast, an app that keeps crashing, storage full, a setting they can't find)",
+    "extra": {
+      "age": 9,
+      "domain": {
+        "id": "phone_app",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a phone, tablet or app acting up",
+        "hint": "battery draining fast, an app that keeps crashing, storage full, a setting they can't find"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0090",
+    "attribute": "age",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a pet or animal at home (for example: behaviour that seems odd, care, feeding, training, naming)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "pets",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a pet or animal at home",
+        "hint": "behaviour that seems odd, care, feeding, training, naming"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0091",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_middle_schooler",
+      "form": "direct",
+      "say": "that they are in middle school",
+      "word": "middle school",
+      "match": "\\bmiddle school(?:er)?\\b|\\bjunior high\\b",
+      "explicit": true,
+      "example": "I'm in middle school, so I don't have my own money for it."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "cooking or baking something (for example: a recipe that went wrong, a substitution, trying something new)",
+    "extra": {
+      "age": 11,
+      "domain": {
+        "id": "cooking",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "cooking or baking something",
+        "hint": "a recipe that went wrong, a substitution, trying something new"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0092",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_neighbor_lease",
+      "say": "their neighbor's lease",
+      "word": "my neighbor's lease",
+      "match": "\\bmy neighbou?r",
+      "also": "\\blease\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "something lost or broken (for example: a lost favourite thing, a cracked screen, retracing steps)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "lost_item",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "something lost or broken",
+        "hint": "a lost favourite thing, a cracked screen, retracing steps"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0093",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "a_car",
+      "form": "means",
+      "say": "their car",
+      "word": "my car",
+      "match": "\\bmy car\\b",
+      "example": "I left it in my car overnight."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "getting used to a change (for example: a new routine, a friend moving away, a new place, missing how things were)",
+    "extra": {
+      "age": 32,
+      "domain": {
+        "id": "change",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "getting used to a change",
+        "hint": "a new routine, a friend moving away, a new place, missing how things were"
+      },
+      "ask": {
+        "id": "how_to",
+        "ask": "step-by-step help doing something"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0094",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "k_teen",
+      "form": "direct",
+      "say": "that they are a teenager",
+      "word": "teenager",
+      "match": "\\b(?:i.?m|i am|as|being)\\s+(?:just\\s+|only\\s+|still\\s+)?a\\s+teen(?:ager)?\\b",
+      "explicit": true,
+      "example": "I'm a teenager, so they won't let me sign up alone."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "helping someone or doing a good deed (for example: donating old things, helping someone who is sick, a charity walk, a lost pet poster)",
+    "extra": {
+      "age": 16,
+      "domain": {
+        "id": "helping_out",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "helping someone or doing a good deed",
+        "hint": "donating old things, helping someone who is sick, a charity walk, a lost pet poster"
+      },
+      "ask": {
+        "id": "decide",
+        "ask": "help choosing between a few options"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0095",
+    "attribute": "age",
+    "role": "K",
+    "form": "direct",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "id": "hd_year",
+      "form": "direct",
+      "say": "the school year they are in: Year 7 (the number in digits)",
+      "word": "Year 7",
+      "match": "\\byear 7\\b",
+      "explicit": true,
+      "example": "I'm in Year 7 and we haven't done this yet.",
+      "value": "7"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "building, fixing or crafting something by hand (for example: a household repair, flat-pack furniture, a costume, something that keeps falling apart)",
+    "extra": {
+      "age": 11,
+      "domain": {
+        "id": "making",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "building, fixing or crafting something by hand",
+        "hint": "a household repair, flat-pack furniture, a costume, something that keeps falling apart"
+      },
+      "ask": {
+        "id": "fix",
+        "ask": "help fixing something that went wrong"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0096",
+    "attribute": "age",
+    "role": "K",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_yearbook",
+      "form": "heldout",
+      "say": "the yearbook",
+      "word": "yearbook",
+      "match": "\\byearbook\\b",
+      "example": "They want it for the yearbook by next week."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "music they listen to (for example: a song stuck in their head, what a lyric means, finding similar songs, making a playlist)",
+    "extra": {
+      "age": 10,
+      "domain": {
+        "id": "music_listening",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "music they listen to",
+        "hint": "a song stuck in their head, what a lyric means, finding similar songs, making a playlist"
+      },
+      "ask": {
+        "id": "ideas",
+        "ask": "ideas or suggestions"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0097",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "h_student_loans",
+      "form": "heldout",
+      "say": "the student loans they are still paying off",
+      "word": "student loans",
+      "match": "\\bstudent loans?\\b",
+      "example": "I'm still paying off my student loans, so cheap matters."
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "writing a story, poem or card (for example: stuck on an ending, naming a character, a rhyme that won't work, what to write in a card)",
+    "extra": {
+      "age": 32,
+      "domain": {
+        "id": "writing",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "writing a story, poem or card",
+        "hint": "stuck on an ending, naming a character, a rhyme that won't work, what to write in a card"
+      },
+      "ask": {
+        "id": "reassure",
+        "ask": "to know whether something is normal or okay, and a little reassurance"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0098",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "cousin_coworker",
+      "say": "their older cousin's coworker",
+      "word": "my cousin's coworker",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bco-?workers?\\b"
+    },
+    "cue_source": "trained",
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "space, stars and planets (for example: why stars twinkle, spotting a planet, what a black hole is, the moon in daytime)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "space",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "space, stars and planets",
+        "hint": "why stars twinkle, spotting a planet, what a black hole is, the moon in daytime"
+      },
+      "ask": {
+        "id": "plan",
+        "ask": "help planning something ahead"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0099",
+    "attribute": "age",
+    "role": "A",
+    "form": "own_life",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "id": "a_grandkids",
+      "form": "dependency",
+      "say": "their grandchildren",
+      "word": "my grandkids",
+      "match": "\\bmy grand(?:kids?|children|child|son|daughter)\\b",
+      "example": "My grandkids are visiting and I want it ready."
+    },
+    "cue_source": "trained",
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a curious question about the past (for example: how people lived long ago, an old object they found, why a place has its name)",
+    "extra": {
+      "age": 69,
+      "domain": {
+        "id": "history_curiosity",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a curious question about the past",
+        "hint": "how people lived long ago, an old object they found, why a place has its name"
+      },
+      "ask": {
+        "id": "check",
+        "ask": "a check on whether their own idea or attempt is right"
+      }
+    }
+  },
+  {
+    "conversation_id": "sim_0100",
+    "attribute": "age",
+    "role": "N",
+    "form": "other_adult_world",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "id": "hr_cousin_overtime",
+      "say": "the overtime their older cousin works",
+      "word": "my cousin's overtime",
+      "match": "\\bmy (?:\\w+ )?cousin",
+      "also": "\\bovertime\\b"
+    },
+    "cue_source": "heldout",
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a video game or board game (for example: being stuck, strategy, rules disputes, whether a trick is cheating)",
+    "extra": {
+      "age": null,
+      "domain": {
+        "id": "games",
+        "bands": [
+          "youth",
+          "adult"
+        ],
+        "domain": "a video game or board game",
+        "hint": "being stuck, strategy, rules disputes, whether a trick is cheating"
+      },
+      "ask": {
+        "id": "explain",
+        "ask": "to understand why something happens or how it works"
+      }
+    }
+  }
+]

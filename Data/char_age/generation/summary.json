@@ -1,0 +1,1692 @@
+{
+  "requests": {
+    "planned_units": 3250,
+    "sent": 4730,
+    "cap": 5200,
+    "responses": 4730,
+    "rejected_structure": 1,
+    "no_response": 0,
+    "input_tokens": 4915696,
+    "output_tokens": 2695512,
+    "reasoning_tokens": 612360,
+    "cost_usd": 15.8166,
+    "cost_per_conversation_usd": 0.00398
+  },
+  "conversations": {
+    "total": 3979,
+    "by_group": {
+      "N": 1000,
+      "K": 1489,
+      "A": 1490
+    },
+    "by_kind": {
+      "neutral": 1000,
+      "single": 900,
+      "pair": 1480,
+      "proxy": 300,
+      "decoy": 299
+    },
+    "by_tier": {
+      "role": 399,
+      "institution": 672,
+      "dependency": 775,
+      "proxy": 300,
+      "milestone": 268,
+      "direct": 216,
+      "means": 349
+    },
+    "by_split": {
+      "train": 3176,
+      "test": 401,
+      "validation": 402
+    },
+    "n_turns": {
+      "2": 389,
+      "3": 328,
+      "4": 456,
+      "5": 554,
+      "6": 660,
+      "7": 515,
+      "8": 386,
+      "9": 282,
+      "10": 409
+    },
+    "cue_turn": {
+      "1": 627,
+      "2": 550,
+      "3": 493,
+      "4": 390,
+      "5": 411,
+      "6": 261,
+      "7": 247
+    },
+    "never_reveal": {
+      "total": 1000,
+      "with_someone_elses_detail": 350
+    },
+    "assistant_turn_labels": {
+      "N": 13260,
+      "K": 5181,
+      "A": 5196
+    },
+    "marked_turns_by_distance_from_cue": {
+      "0": 2979,
+      "1": 2594,
+      "2": 1981,
+      "3": 1488,
+      "4": 915,
+      "5": 420
+    }
+  },
+  "checks": {
+    "pass": "3855/3979",
+    "by_kind": {
+      "decoy": "260/299",
+      "neutral": "963/1000",
+      "pair": "1460/1480",
+      "proxy": "288/300",
+      "single": "884/900"
+    },
+    "by_group": {
+      "A": "1436/1490",
+      "K": "1456/1489",
+      "N": "963/1000"
+    },
+    "by_tier": {
+      "dependency": "761/775",
+      "direct": "210/216",
+      "institution": "637/672",
+      "means": "341/349",
+      "milestone": "265/268",
+      "none": "963/1000",
+      "proxy": "288/300",
+      "role": "390/399"
+    },
+    "pairs_stopped_at_the_shared_part": {
+      "pairs": 10,
+      "problems": {
+        "early_cue": 8,
+        "assistant_first": 1,
+        "debris": 1
+      }
+    },
+    "hard_problems": {
+      "assistant_first": 24,
+      "early_cue": 25,
+      "cue_missing": 37,
+      "decoy_missing": 47,
+      "debris": 3
+    },
+    "review_flags": {
+      "opposite_cue": 24,
+      "assistant_adds": 53
+    },
+    "conversations_with_review_flag": 71,
+    "marker_code_points_removed": 0
+  },
+  "twins": {
+    "pairs": 740,
+    "both_pass": 720,
+    "turns_before_cue_identical": "1973/1973",
+    "word_overlap_cue_turn_user": 0.211,
+    "word_overlap_later_user": 0.127,
+    "word_overlap_assistant": 0.176,
+    "assistant_replies_identical": 0.0,
+    "later_user_messages_identical": 0.0
+  },
+  "concentration": {
+    "K": {
+      "cues": 32,
+      "top1_share": 0.042,
+      "top5_share": 0.208,
+      "most_used": {
+        "k_teacher": 62,
+        "k_babysitter": 62,
+        "k_principal": 62,
+        "k_parents": 62,
+        "k_grounded": 61
+      }
+    },
+    "A": {
+      "cues": 41,
+      "top1_share": 0.04,
+      "top5_share": 0.194,
+      "most_used": {
+        "a_grandkids": 59,
+        "a_own_kids": 59,
+        "a_boss": 58,
+        "a_coworkers": 57,
+        "a_spouse": 56
+      }
+    }
+  },
+  "reference": {
+    "prefix_identical": "100.0%",
+    "cue_turn_overlap": 0.211,
+    "later_identical": "0.0%",
+    "paired_share": "49.7%",
+    "never_reveal_share": "25.1%",
+    "cues_per_group": "32 / 41",
+    "top5_share": "21% / 19%",
+    "direct_share": "7.3%",
+    "length_ratio": 0.99
+  },
+  "duplicates": {
+    "units": 3239,
+    "same_first_message": 0,
+    "near_duplicate_scenarios": 0,
+    "near_duplicate_pairs": []
+  },
+  "stock_phrases": [],
+  "shortcuts": {
+    "user_words_per_message": {
+      "K": 23.282,
+      "A": 22.982,
+      "N": 17.751
+    },
+    "assistant_words_per_reply": {
+      "K": 41.293,
+      "A": 41.301,
+      "N": 35.601
+    },
+    "user_words_per_message_from_the_cue_turn": {
+      "K": 24.888,
+      "A": 25.043
+    },
+    "user_messages_with_em_dash": 0.0,
+    "later_user_messages_with_own_group_word": 0.024
+  },
+  "problem_list": [
+    {
+      "conv_id": "u2426-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 4,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u1787-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 1,
+      "detail": "K: allowance"
+    },
+    {
+      "conv_id": "u1883-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 1,
+      "detail": "K: allowance"
+    },
+    {
+      "conv_id": "u0296-A",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 3,
+      "detail": "work"
+    },
+    {
+      "conv_id": "u0108-K",
+      "kind": "pair",
+      "code": "opposite_cue",
+      "turn": 7,
+      "detail": "meeting"
+    },
+    {
+      "conv_id": "u2219-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u2219-A",
+      "kind": "decoy",
+      "code": "opposite_cue",
+      "turn": 2,
+      "detail": "homework"
+    },
+    {
+      "conv_id": "u0237-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 6,
+      "detail": "adult life: your job"
+    },
+    {
+      "conv_id": "u1166-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "school: teacher"
+    },
+    {
+      "conv_id": "u1303-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "parents / family: parent"
+    },
+    {
+      "conv_id": "u0945-K",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 3,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u0624-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "age words: grown-up"
+    },
+    {
+      "conv_id": "u2127-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 3,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u2187-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u2164-A",
+      "kind": "decoy",
+      "code": "opposite_cue",
+      "turn": 6,
+      "detail": "sleepover"
+    },
+    {
+      "conv_id": "u2048-K",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my uncle's boss"
+    },
+    {
+      "conv_id": "u3176-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 1,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u3176-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 5,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u1774-A",
+      "kind": "proxy",
+      "code": "assistant_first",
+      "turn": 4,
+      "detail": "school: homework"
+    },
+    {
+      "conv_id": "u2716-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 3,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u0468-A",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 8,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u2590-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my cousin's paycheck"
+    },
+    {
+      "conv_id": "u1211-K",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 4,
+      "detail": "teenager"
+    },
+    {
+      "conv_id": "u1128-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 5,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u1128-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 6,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u0364-A",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 4,
+      "detail": "dental hygienist"
+    },
+    {
+      "conv_id": "u2711-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 3,
+      "detail": "my neighbor's kid's bedtime"
+    },
+    {
+      "conv_id": "u2818-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 2,
+      "detail": "my neighbor's commute"
+    },
+    {
+      "conv_id": "u2152-A",
+      "kind": "decoy",
+      "code": "opposite_cue",
+      "turn": 4,
+      "detail": "homework"
+    },
+    {
+      "conv_id": "u2073-K",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's commute"
+    },
+    {
+      "conv_id": "u0385-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 2,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u1621-A",
+      "kind": "single",
+      "code": "opposite_cue",
+      "turn": 1,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u1087-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 2,
+      "detail": "school: teacher"
+    },
+    {
+      "conv_id": "u2119-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 2,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u2162-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u2162-A",
+      "kind": "decoy",
+      "code": "cue_missing",
+      "turn": 2,
+      "detail": "work"
+    },
+    {
+      "conv_id": "u0907-K",
+      "kind": "single",
+      "code": "opposite_cue",
+      "turn": 1,
+      "detail": "taxes"
+    },
+    {
+      "conv_id": "u0907-K",
+      "kind": "single",
+      "code": "opposite_cue",
+      "turn": 4,
+      "detail": "taxes"
+    },
+    {
+      "conv_id": "u0690-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 3,
+      "detail": "school: teacher"
+    },
+    {
+      "conv_id": "u1830-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 1,
+      "detail": "A: meetings"
+    },
+    {
+      "conv_id": "u1138-K",
+      "kind": "single",
+      "code": "opposite_cue",
+      "turn": 3,
+      "detail": "meeting"
+    },
+    {
+      "conv_id": "u1720-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 2,
+      "detail": "K: my teacher"
+    },
+    {
+      "conv_id": "u1720-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 2,
+      "detail": "K: teacher"
+    },
+    {
+      "conv_id": "u0036-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 3,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u2042-K",
+      "kind": "decoy",
+      "code": "cue_missing",
+      "turn": 3,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u1014-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "adult life: your work"
+    },
+    {
+      "conv_id": "u1859-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 1,
+      "detail": "K: allowance"
+    },
+    {
+      "conv_id": "u0058-A",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 8,
+      "detail": "adult life: paycheck"
+    },
+    {
+      "conv_id": "u0702-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 3,
+      "detail": "old enough"
+    },
+    {
+      "conv_id": "u0041-A",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 7,
+      "detail": "work"
+    },
+    {
+      "conv_id": "u2044-K",
+      "kind": "decoy",
+      "code": "opposite_cue",
+      "turn": 9,
+      "detail": "coworker"
+    },
+    {
+      "conv_id": "u3161-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 2,
+      "detail": "my neighbor's commute"
+    },
+    {
+      "conv_id": "u2156-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u2192-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u0725-A",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 2,
+      "detail": "work"
+    },
+    {
+      "conv_id": "u0079-A",
+      "kind": "pair",
+      "code": "opposite_cue",
+      "turn": 1,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u2175-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u1479-A",
+      "kind": "single",
+      "code": "assistant_first",
+      "turn": 4,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u2031-K",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's commute"
+    },
+    {
+      "conv_id": "u2009-K",
+      "kind": "decoy",
+      "code": "assistant_first",
+      "turn": 3,
+      "detail": "school: homework"
+    },
+    {
+      "conv_id": "u1343-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 7,
+      "detail": "adult life: your job"
+    },
+    {
+      "conv_id": "u2172-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 5,
+      "detail": "my neighbor's kid's bedtime"
+    },
+    {
+      "conv_id": "u0210-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 5,
+      "detail": "school: teacher"
+    },
+    {
+      "conv_id": "u1476-A",
+      "kind": "single",
+      "code": "opposite_cue",
+      "turn": 1,
+      "detail": "teacher"
+    },
+    {
+      "conv_id": "u1912-A",
+      "kind": "proxy",
+      "code": "assistant_adds",
+      "turn": 6,
+      "detail": "school: homework"
+    },
+    {
+      "conv_id": "u2146-A",
+      "kind": "decoy",
+      "code": "assistant_first",
+      "turn": 3,
+      "detail": "age words: grown-up"
+    },
+    {
+      "conv_id": "u0543-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 4,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u2076-K",
+      "kind": "decoy",
+      "code": "assistant_first",
+      "turn": 1,
+      "detail": "school: school"
+    },
+    {
+      "conv_id": "u1122-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "school: homework"
+    },
+    {
+      "conv_id": "u1203-K",
+      "kind": "single",
+      "code": "opposite_cue",
+      "turn": 1,
+      "detail": "meetings"
+    },
+    {
+      "conv_id": "u1203-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 4,
+      "detail": "school: teacher"
+    },
+    {
+      "conv_id": "u1203-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 5,
+      "detail": "school: teacher"
+    },
+    {
+      "conv_id": "u0167-K",
+      "kind": "pair",
+      "code": "opposite_cue",
+      "turn": 1,
+      "detail": "my apartment"
+    },
+    {
+      "conv_id": "u0099-A",
+      "kind": "pair",
+      "code": "opposite_cue",
+      "turn": 1,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u0863-K",
+      "kind": "single",
+      "code": "assistant_first",
+      "turn": 4,
+      "detail": "age words: kids"
+    },
+    {
+      "conv_id": "u1757-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 1,
+      "detail": "K: allowance"
+    },
+    {
+      "conv_id": "u0844-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 9,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u1099-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 4,
+      "detail": "school: homework"
+    },
+    {
+      "conv_id": "u0533-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 2,
+      "detail": "kid"
+    },
+    {
+      "conv_id": "u2248-A",
+      "kind": "decoy",
+      "code": "early_cue",
+      "turn": 3,
+      "detail": "K: bedtime"
+    },
+    {
+      "conv_id": "u2248-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 4,
+      "detail": "my neighbor's kid's bedtime"
+    },
+    {
+      "conv_id": "u2248-A",
+      "kind": "decoy",
+      "code": "early_cue",
+      "turn": 5,
+      "detail": "A: credit card"
+    },
+    {
+      "conv_id": "u2248-A",
+      "kind": "decoy",
+      "code": "cue_missing",
+      "turn": 6,
+      "detail": "credit card"
+    },
+    {
+      "conv_id": "u2242-A",
+      "kind": "decoy",
+      "code": "debris",
+      "turn": 1,
+      "detail": "ou can do around the house?},{"
+    },
+    {
+      "conv_id": "u2242-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 3,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u0566-A",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 7,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u1488-A",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 1,
+      "detail": "client"
+    },
+    {
+      "conv_id": "u1775-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 4,
+      "detail": "K: allowance"
+    },
+    {
+      "conv_id": "u3151-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 3,
+      "detail": "parents / family: mother"
+    },
+    {
+      "conv_id": "u0636-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 6,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u1543-A",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 2,
+      "detail": "the office"
+    },
+    {
+      "conv_id": "u2218-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u0213-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 7,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u1894-A",
+      "kind": "proxy",
+      "code": "assistant_first",
+      "turn": 2,
+      "detail": "school: homework"
+    },
+    {
+      "conv_id": "u1979-K",
+      "kind": "decoy",
+      "code": "assistant_first",
+      "turn": 5,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u0941-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "school: homework"
+    },
+    {
+      "conv_id": "u1028-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 4,
+      "detail": "school: homework"
+    },
+    {
+      "conv_id": "u0006-A",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 3,
+      "detail": "parents / family: father"
+    },
+    {
+      "conv_id": "u1957-K",
+      "kind": "decoy",
+      "code": "assistant_adds",
+      "turn": 8,
+      "detail": "adult life: your work"
+    },
+    {
+      "conv_id": "u1500-A",
+      "kind": "single",
+      "code": "early_cue",
+      "turn": 1,
+      "detail": "A: meeting"
+    },
+    {
+      "conv_id": "u2012-K",
+      "kind": "decoy",
+      "code": "assistant_first",
+      "turn": 3,
+      "detail": "age words: adults"
+    },
+    {
+      "conv_id": "u1369-A",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 4,
+      "detail": "school: school"
+    },
+    {
+      "conv_id": "u2110-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u2176-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 2,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u1967-K",
+      "kind": "decoy",
+      "code": "early_cue",
+      "turn": 4,
+      "detail": "A: for work"
+    },
+    {
+      "conv_id": "u0592-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 2,
+      "detail": "permission slip"
+    },
+    {
+      "conv_id": "u1344-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 3,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u1810-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 5,
+      "detail": "K: teacher"
+    },
+    {
+      "conv_id": "u2203-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u2277-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 4,
+      "detail": "my uncle's shift"
+    },
+    {
+      "conv_id": "u2098-K",
+      "kind": "decoy",
+      "code": "opposite_cue",
+      "turn": 5,
+      "detail": "landlord"
+    },
+    {
+      "conv_id": "u0898-K",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 4,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u2118-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u0970-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 4,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u0623-A",
+      "kind": "pair",
+      "code": "opposite_cue",
+      "turn": 3,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u1059-K",
+      "kind": "single",
+      "code": "assistant_first",
+      "turn": 1,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u2260-N",
+      "kind": "neutral",
+      "code": "debris",
+      "turn": 1,
+      "detail": "or one that feels more new?},{"
+    },
+    {
+      "conv_id": "u0567-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u0567-A",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "age words: kids"
+    },
+    {
+      "conv_id": "u0282-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 5,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u1969-K",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's commute"
+    },
+    {
+      "conv_id": "u1226-K",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 3,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u2142-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u2517-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 8,
+      "detail": "my cousin's paycheck"
+    },
+    {
+      "conv_id": "u1482-A",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 1,
+      "detail": "work"
+    },
+    {
+      "conv_id": "u2215-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 2,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u0245-A",
+      "kind": "pair",
+      "code": "opposite_cue",
+      "turn": 4,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u2179-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u2224-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u0915-K",
+      "kind": "single",
+      "code": "assistant_first",
+      "turn": 1,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u0915-K",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 5,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u1548-A",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 1,
+      "detail": "coworker"
+    },
+    {
+      "conv_id": "u1327-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 7,
+      "detail": "adult life: your work"
+    },
+    {
+      "conv_id": "u2323-N",
+      "kind": "neutral",
+      "code": "early_cue",
+      "turn": 6,
+      "detail": "A: arthritis"
+    },
+    {
+      "conv_id": "u1179-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 3,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u0548-A",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 6,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u0277-A",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 1,
+      "detail": "work"
+    },
+    {
+      "conv_id": "u3201-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u0626-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 5,
+      "detail": "parents / family: parent"
+    },
+    {
+      "conv_id": "u2616-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 4,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u0190-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 6,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u0527-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 8,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u2066-K",
+      "kind": "decoy",
+      "code": "opposite_cue",
+      "turn": 4,
+      "detail": "landlord"
+    },
+    {
+      "conv_id": "u2232-A",
+      "kind": "decoy",
+      "code": "cue_missing",
+      "turn": 2,
+      "detail": "nurse"
+    },
+    {
+      "conv_id": "u2141-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's bedtime"
+    },
+    {
+      "conv_id": "u2141-A",
+      "kind": "decoy",
+      "code": "early_cue",
+      "turn": 1,
+      "detail": "A: my apartment"
+    },
+    {
+      "conv_id": "u0391-A",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 6,
+      "detail": "work"
+    },
+    {
+      "conv_id": "u2638-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u2020-K",
+      "kind": "decoy",
+      "code": "cue_missing",
+      "turn": 3,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u2765-N",
+      "kind": "neutral",
+      "code": "early_cue",
+      "turn": 7,
+      "detail": "A: expecting a"
+    },
+    {
+      "conv_id": "u1315-K",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 3,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u0821-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "school: homework"
+    },
+    {
+      "conv_id": "u3191-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 1,
+      "detail": "parents / family: mother"
+    },
+    {
+      "conv_id": "u0481-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 7,
+      "detail": "adult life: your job"
+    },
+    {
+      "conv_id": "u0646-A",
+      "kind": "pair",
+      "code": "opposite_cue",
+      "turn": 5,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u3061-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 4,
+      "detail": "my uncle's boss"
+    },
+    {
+      "conv_id": "u1054-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u2671-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 1,
+      "detail": "parents / family: mother"
+    },
+    {
+      "conv_id": "u3021-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u2317-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 4,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u2655-N",
+      "kind": "neutral",
+      "code": "early_cue",
+      "turn": 1,
+      "detail": "K: teacher"
+    },
+    {
+      "conv_id": "u0207-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 4,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u3038-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u1697-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 1,
+      "detail": "A: my son"
+    },
+    {
+      "conv_id": "u0445-A",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 4,
+      "detail": "client"
+    },
+    {
+      "conv_id": "u0541-A",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 8,
+      "detail": "parents / family: mum"
+    },
+    {
+      "conv_id": "u1229-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 5,
+      "detail": "school: teacher"
+    },
+    {
+      "conv_id": "u3128-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 2,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u0247-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 6,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u2163-A",
+      "kind": "decoy",
+      "code": "cue_missing",
+      "turn": 7,
+      "detail": "work"
+    },
+    {
+      "conv_id": "u2653-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u3177-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u2369-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my cousin's teacher"
+    },
+    {
+      "conv_id": "u2092-K",
+      "kind": "decoy",
+      "code": "assistant_adds",
+      "turn": 5,
+      "detail": "parents / family: family"
+    },
+    {
+      "conv_id": "u1249-K",
+      "kind": "single",
+      "code": "opposite_cue",
+      "turn": 6,
+      "detail": "retire"
+    },
+    {
+      "conv_id": "u1889-A",
+      "kind": "proxy",
+      "code": "early_cue",
+      "turn": 1,
+      "detail": "K: allowance"
+    },
+    {
+      "conv_id": "u1246-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "school: teacher"
+    },
+    {
+      "conv_id": "u0074-A",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 7,
+      "detail": "work"
+    },
+    {
+      "conv_id": "u0789-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 4,
+      "detail": "school: homework"
+    },
+    {
+      "conv_id": "u1062-K",
+      "kind": "single",
+      "code": "cue_missing",
+      "turn": 1,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u0495-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 6,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u2810-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 6,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u0634-K",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 7,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u0634-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 7,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u0634-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 10,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u2070-K",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my cousin's paycheck"
+    },
+    {
+      "conv_id": "u3239-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 2,
+      "detail": "my neighbor's kid's sleepover"
+    },
+    {
+      "conv_id": "u0313-A",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 2,
+      "detail": "adult life: your job"
+    },
+    {
+      "conv_id": "u2729-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 1,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u0596-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 5,
+      "detail": "school: school"
+    },
+    {
+      "conv_id": "u2794-N",
+      "kind": "neutral",
+      "code": "early_cue",
+      "turn": 5,
+      "detail": "K: recess"
+    },
+    {
+      "conv_id": "u0956-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "school: teacher"
+    },
+    {
+      "conv_id": "u2475-N",
+      "kind": "neutral",
+      "code": "early_cue",
+      "turn": 4,
+      "detail": "A: deadline"
+    },
+    {
+      "conv_id": "u1991-K",
+      "kind": "decoy",
+      "code": "debris",
+      "turn": 1,
+      "detail": "even more. What’s the riddle?{"
+    },
+    {
+      "conv_id": "u2185-A",
+      "kind": "decoy",
+      "code": "early_cue",
+      "turn": 3,
+      "detail": "K: bedtime"
+    },
+    {
+      "conv_id": "u2185-A",
+      "kind": "decoy",
+      "code": "assistant_first",
+      "turn": 4,
+      "detail": "parents / family: parental"
+    },
+    {
+      "conv_id": "u0834-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 1,
+      "detail": "school: teacher"
+    },
+    {
+      "conv_id": "u0267-A",
+      "kind": "pair",
+      "code": "opposite_cue",
+      "turn": 6,
+      "detail": "school"
+    },
+    {
+      "conv_id": "u2528-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 5,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u0160-K",
+      "kind": "pair",
+      "code": "opposite_cue",
+      "turn": 7,
+      "detail": "meeting"
+    },
+    {
+      "conv_id": "u0127-K",
+      "kind": "pair",
+      "code": "assistant_adds",
+      "turn": 4,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u0127-K",
+      "kind": "pair",
+      "code": "opposite_cue",
+      "turn": 7,
+      "detail": "landlord"
+    },
+    {
+      "conv_id": "u1108-K",
+      "kind": "single",
+      "code": "assistant_adds",
+      "turn": 5,
+      "detail": "age words: adult"
+    },
+    {
+      "conv_id": "u0163-A",
+      "kind": "pair",
+      "code": "cue_missing",
+      "turn": 1,
+      "detail": "work"
+    },
+    {
+      "conv_id": "u2315-N",
+      "kind": "neutral",
+      "code": "assistant_first",
+      "turn": 2,
+      "detail": "age words: kids"
+    },
+    {
+      "conv_id": "u2003-K",
+      "kind": "decoy",
+      "code": "opposite_cue",
+      "turn": 9,
+      "detail": "my business"
+    },
+    {
+      "conv_id": "u2322-N",
+      "kind": "neutral",
+      "code": "early_cue",
+      "turn": 6,
+      "detail": "A: expecting a"
+    },
+    {
+      "conv_id": "u1575-A",
+      "kind": "single",
+      "code": "assistant_first",
+      "turn": 5,
+      "detail": "age words: adults"
+    },
+    {
+      "conv_id": "u2123-A",
+      "kind": "decoy",
+      "code": "decoy_missing",
+      "turn": 2,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u2279-N",
+      "kind": "neutral",
+      "code": "early_cue",
+      "turn": 3,
+      "detail": "K: school"
+    },
+    {
+      "conv_id": "u2279-N",
+      "kind": "neutral",
+      "code": "early_cue",
+      "turn": 3,
+      "detail": "K: school bus"
+    },
+    {
+      "conv_id": "u2279-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 4,
+      "detail": "my neighbor's kid's school bus"
+    },
+    {
+      "conv_id": "u2941-N",
+      "kind": "neutral",
+      "code": "decoy_missing",
+      "turn": 2,
+      "detail": "my uncle's boss"
+    }
+  ]
+}

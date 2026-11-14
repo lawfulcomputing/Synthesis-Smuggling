@@ -1,0 +1,460 @@
+{
+  "api_key_stored": false,
+  "api_submission_authorized": true,
+  "attempts_completed": 2,
+  "batch_ids": [
+    "batch_6aae1437e8488190b918cca8c737f5da",
+    "batch_6aae150cf6448190968cff8cde0698e0"
+  ],
+  "completed_at": "2026-09-19T04:52:59.631318+00:00",
+  "config_path": "config/possessive_role_controls.yaml",
+  "config_sha256": "4c75658b33497e6d92e8198b08231a913e74fd8241069bc1be8ad2f8d9da6b4f",
+  "design_counts": {
+    "categories": {
+      "direct_partner_reveal": 120,
+      "nested_partner_neutral": 60,
+      "self_role_control": 60
+    },
+    "category_split_term_label": [
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "F",
+        "split": "test",
+        "term": "boyfriend"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "F",
+        "split": "test",
+        "term": "fiancé"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "M",
+        "split": "test",
+        "term": "fiancée"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "M",
+        "split": "test",
+        "term": "girlfriend"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "F",
+        "split": "test",
+        "term": "husband"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "M",
+        "split": "test",
+        "term": "wife"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 16,
+        "label": "F",
+        "split": "train",
+        "term": "boyfriend"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 16,
+        "label": "F",
+        "split": "train",
+        "term": "fiancé"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 16,
+        "label": "M",
+        "split": "train",
+        "term": "fiancée"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 16,
+        "label": "M",
+        "split": "train",
+        "term": "girlfriend"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 16,
+        "label": "F",
+        "split": "train",
+        "term": "husband"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 16,
+        "label": "M",
+        "split": "train",
+        "term": "wife"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "F",
+        "split": "validation",
+        "term": "boyfriend"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "F",
+        "split": "validation",
+        "term": "fiancé"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "M",
+        "split": "validation",
+        "term": "fiancée"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "M",
+        "split": "validation",
+        "term": "girlfriend"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "F",
+        "split": "validation",
+        "term": "husband"
+      },
+      {
+        "category": "direct_partner_reveal",
+        "count": 2,
+        "label": "M",
+        "split": "validation",
+        "term": "wife"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "test",
+        "term": "boyfriend"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "test",
+        "term": "fiancé"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "test",
+        "term": "fiancée"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "test",
+        "term": "girlfriend"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "test",
+        "term": "husband"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "test",
+        "term": "wife"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 8,
+        "label": "N",
+        "split": "train",
+        "term": "boyfriend"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 8,
+        "label": "N",
+        "split": "train",
+        "term": "fiancé"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 8,
+        "label": "N",
+        "split": "train",
+        "term": "fiancée"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 8,
+        "label": "N",
+        "split": "train",
+        "term": "girlfriend"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 8,
+        "label": "N",
+        "split": "train",
+        "term": "husband"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 8,
+        "label": "N",
+        "split": "train",
+        "term": "wife"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "validation",
+        "term": "boyfriend"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "validation",
+        "term": "fiancé"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "validation",
+        "term": "fiancée"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "validation",
+        "term": "girlfriend"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "validation",
+        "term": "husband"
+      },
+      {
+        "category": "nested_partner_neutral",
+        "count": 1,
+        "label": "N",
+        "split": "validation",
+        "term": "wife"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "M",
+        "split": "test",
+        "term": "boyfriend"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "M",
+        "split": "test",
+        "term": "fiancé"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "F",
+        "split": "test",
+        "term": "fiancée"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "F",
+        "split": "test",
+        "term": "girlfriend"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "M",
+        "split": "test",
+        "term": "husband"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "F",
+        "split": "test",
+        "term": "wife"
+      },
+      {
+        "category": "self_role_control",
+        "count": 8,
+        "label": "M",
+        "split": "train",
+        "term": "boyfriend"
+      },
+      {
+        "category": "self_role_control",
+        "count": 8,
+        "label": "M",
+        "split": "train",
+        "term": "fiancé"
+      },
+      {
+        "category": "self_role_control",
+        "count": 8,
+        "label": "F",
+        "split": "train",
+        "term": "fiancée"
+      },
+      {
+        "category": "self_role_control",
+        "count": 8,
+        "label": "F",
+        "split": "train",
+        "term": "girlfriend"
+      },
+      {
+        "category": "self_role_control",
+        "count": 8,
+        "label": "M",
+        "split": "train",
+        "term": "husband"
+      },
+      {
+        "category": "self_role_control",
+        "count": 8,
+        "label": "F",
+        "split": "train",
+        "term": "wife"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "M",
+        "split": "validation",
+        "term": "boyfriend"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "M",
+        "split": "validation",
+        "term": "fiancé"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "F",
+        "split": "validation",
+        "term": "fiancée"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "F",
+        "split": "validation",
+        "term": "girlfriend"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "M",
+        "split": "validation",
+        "term": "husband"
+      },
+      {
+        "category": "self_role_control",
+        "count": 1,
+        "label": "F",
+        "split": "validation",
+        "term": "wife"
+      }
+    ],
+    "cue_buckets": {
+      "early": 62,
+      "immediate": 60,
+      "late": 58,
+      "mid": 60
+    },
+    "partner_terms": {
+      "boyfriend": 40,
+      "fiancé": 40,
+      "fiancée": 40,
+      "girlfriend": 40,
+      "husband": 40,
+      "wife": 40
+    },
+    "splits": {
+      "test": 24,
+      "train": 192,
+      "validation": 24
+    },
+    "surface_frames": {
+      "as_self_role": 18,
+      "coordination": 18,
+      "copular_self_role": 24,
+      "embedded_object": 24,
+      "family_possessor": 24,
+      "friend_possessor": 18,
+      "named_possessor": 18,
+      "possessive_genitive": 18,
+      "prepositional": 18,
+      "relational_self_role": 18,
+      "reported_preference": 18,
+      "sentence_initial": 24
+    },
+    "target_labels": {
+      "F": 90,
+      "M": 90,
+      "N": 60
+    }
+  },
+  "execution_mode": "batch",
+  "generations_sha256": "8e87ab4e22dd6d00f47fc00c91c0d83e196e0d433fcb0e7ab4c46248e4f1f94e",
+  "model_registry": "2026-09-09",
+  "number_completed": 240,
+  "number_failed": 0,
+  "number_requested": 240,
+  "package_versions": {
+    "jinja2": "3.1.6",
+    "openai": "3.11.0",
+    "pydantic": "2.13.5",
+    "synthetic-dataset-gen": "0.1.0"
+  },
+  "phase1_config_path": "config.toml",
+  "phase1_config_sha256": "dc061583caea2bc313e99764c9dd6f04e02d1f5e2b4891a768999d4e74310639",
+  "pricing_table": "openai_standard_2026-09-09",
+  "prompt_sha256": "e838b30f7f1daa7985bc941517428b8716a81f9059bf38bad3f40067812123b7",
+  "prompt_template": "possessive_role_controls.jinja2",
+  "recovery_set": "possessive_role_controls",
+  "requested_model": "gpt-5.4-mini",
+  "resolved_model": "gpt-5.4-mini-2026-03-17",
+  "source_dataset_modified": false,
+  "started_at": "2026-09-19T04:48:53.713764+00:00",
+  "status": "complete"
+}

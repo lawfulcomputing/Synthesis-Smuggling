@@ -1,0 +1,4064 @@
+{
+  "schema": "post_analysis_retention_delayed",
+  "generated_at": "2026-10-16T19:48:18.562346+00:00",
+  "run_dir": "Evaluation/char_gender/holdout/llama",
+  "baseline_results": "Evaluation/post_analysis_out/llama/retention_results_char_gender.json",
+  "base_model": "models/llama3_8b_instruct",
+  "adapter": "Training/char_gender/llama/checkpoint-253",
+  "device": "cuda:0",
+  "selection_seed": 20260923,
+  "k_values": [
+    1,
+    2,
+    3
+  ],
+  "note": "Stored turns are kept, markers intact, through t_remove = reveal + k; at t_remove every marker in the history is removed; every later turn is regenerated greedily and its marker stripped before the next. distance_from_reveal and distance_from_remove are both recorded.",
+  "summary": {
+    "k1": {
+      "t_remove_plus_1": {
+        "n": 9,
+        "correct": 0,
+        "silent": 9,
+        "wrong_gender": 0,
+        "margin_mean": -3.11,
+        "ranks_right_gender_first": 8
+      },
+      "later_turns": {
+        "n": 38,
+        "correct": 2,
+        "silent": 36,
+        "wrong_gender": 0,
+        "margin_mean": -4.28,
+        "ranks_right_gender_first": 37
+      },
+      "k0_erase_at_same_distance": {
+        "n": 9,
+        "correct": 1,
+        "silent": 8,
+        "wrong_gender": 0,
+        "margin_mean": -3.57,
+        "ranks_right_gender_first": 7
+      },
+      "keep_at_same_distance": {
+        "n": 9,
+        "correct": 9,
+        "silent": 0,
+        "wrong_gender": 0,
+        "margin_mean": 10.06,
+        "ranks_right_gender_first": 9
+      }
+    },
+    "k2": {
+      "t_remove_plus_1": {
+        "n": 9,
+        "correct": 1,
+        "silent": 8,
+        "wrong_gender": 0,
+        "margin_mean": -3.41,
+        "ranks_right_gender_first": 8
+      },
+      "later_turns": {
+        "n": 29,
+        "correct": 1,
+        "silent": 28,
+        "wrong_gender": 0,
+        "margin_mean": -4.71,
+        "ranks_right_gender_first": 29
+      },
+      "k0_erase_at_same_distance": {
+        "n": 9,
+        "correct": 1,
+        "silent": 8,
+        "wrong_gender": 0,
+        "margin_mean": -3.45,
+        "ranks_right_gender_first": 8
+      },
+      "keep_at_same_distance": {
+        "n": 9,
+        "correct": 9,
+        "silent": 0,
+        "wrong_gender": 0,
+        "margin_mean": 10.49,
+        "ranks_right_gender_first": 9
+      }
+    },
+    "k3": {
+      "t_remove_plus_1": {
+        "n": 9,
+        "correct": 0,
+        "silent": 9,
+        "wrong_gender": 0,
+        "margin_mean": -4.67,
+        "ranks_right_gender_first": 9
+      },
+      "later_turns": {
+        "n": 20,
+        "correct": 0,
+        "silent": 20,
+        "wrong_gender": 0,
+        "margin_mean": -4.88,
+        "ranks_right_gender_first": 20
+      },
+      "k0_erase_at_same_distance": {
+        "n": 9,
+        "correct": 0,
+        "silent": 9,
+        "wrong_gender": 0,
+        "margin_mean": -3.59,
+        "ranks_right_gender_first": 9
+      },
+      "keep_at_same_distance": {
+        "n": 9,
+        "correct": 9,
+        "silent": 0,
+        "wrong_gender": 0,
+        "margin_mean": 9.73,
+        "ranks_right_gender_first": 9
+      }
+    },
+    "k0_erase_first_turn": {
+      "n": 9,
+      "correct": 4,
+      "silent": 5,
+      "wrong_gender": 0,
+      "margin_mean": -0.7,
+      "ranks_right_gender_first": 9
+    }
+  },
+  "results": [
+    {
+      "conversation_id": "sim_0005",
+      "assigned_role_gender": "F",
+      "reveal_form": "self_family_role",
+      "group": "indirect",
+      "gold": "F",
+      "num_turns": 8,
+      "graded_reveal_turn": 4,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.375,
+            "logit_m": 14.875,
+            "logit_f": 17.5,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 14.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "A firmer frosting can help a lot, especially if you’re using a very thin bag. If it’s too loose, you may need to add a little more powdered sugar or chill it for a few minutes.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.125,
+            "logit_m": 13.875,
+            "logit_f": 15.375,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.5
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "A good rule is to squeeze a small amount into a bowl and let it sit for 30 seconds. If it holds its shape and doesn’t spread much, it’s ready.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.0,
+            "logit_m": 15.75,
+            "logit_f": 16.375,
+            "logit_eos": 21.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.375
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 16.875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 16.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Yes—add a line like, “Before piping, test the frosting by squeezing a small amount into a bowl and waiting 30 seconds. If it holds its shape, it’s ready.”",
+            "distance_from_remove": 3
+          }
+        ],
+        "k2": [
+          {
+            "turn": 7,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.5,
+            "logit_m": 14.3125,
+            "logit_f": 14.75,
+            "logit_eos": 22.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.5
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Use a small test squeeze: if it holds its shape for a second, it’s good. If it flattens right away, it’s still too soft.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.5625,
+            "logit_m": 15.5625,
+            "logit_f": 15.9375,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 17.0
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Yes—add a line like, “Check the frosting by squeezing a small amount; if it holds its shape, it’s ready.”",
+            "distance_from_remove": 2
+          }
+        ],
+        "k3": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.5625,
+            "logit_m": 15.5625,
+            "logit_f": 15.9375,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 17.0
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Yes—add a line like, “Check the frosting by squeezing a small amount; if it holds its shape, it’s ready.”",
+            "distance_from_remove": 1
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0086",
+      "assigned_role_gender": "M",
+      "reveal_form": "explicit_identity",
+      "group": "direct",
+      "gold": "M",
+      "num_turns": 10,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -0.75,
+            "logit_m": 21.375,
+            "logit_f": 12.8125,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 14.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "I’d need the service type, current equipment age, and whether it’s residential or commercial. I can also help you check for rebates and compare upgrade options.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.125,
+            "logit_m": 17.25,
+            "logit_f": 13.1875,
+            "logit_eos": 20.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That points to a possible upgrade, not a full replacement. I’d expect a mid-range upgrade to cost around $2,000 to $5,000, depending on the equipment and installation.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.25,
+            "logit_m": 19.625,
+            "logit_f": 13.5625,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.625
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 13.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "It’s both. Supported usually means the manufacturer still backs it with parts, software, and sometimes service. If it’s no longer supported, parts can be harder to find and repairs may be more expensive.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.5625,
+            "logit_m": 14.8125,
+            "logit_f": 11.5625,
+            "logit_eos": 21.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.375
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 17.0
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.0625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That makes sense. If parts are scarce, a newer system may be the safer choice, even if it costs a bit more upfront.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.4375,
+            "logit_m": 10.9375,
+            "logit_f": 11.0,
+            "logit_eos": 16.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 16.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.8125
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "A modern panel can last 20-30 years or more, depending on usage and maintenance.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.75,
+            "logit_m": 13.625,
+            "logit_f": 11.9375,
+            "logit_eos": 19.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.375
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.0625
+              },
+              {
+                "token_id": 578,
+                "token": " The",
+                "logit": 14.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes, a new panel should be reliable for a long time. Maintenance is usually minimal, but annual inspections and occasional repairs can add up.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.1875,
+            "logit_m": 14.6875,
+            "logit_f": 12.375,
+            "logit_eos": 19.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.875
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.0
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "A realistic range is $2,500 to $6,000, depending on the panel, charger, and installation.",
+            "distance_from_remove": 7
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.0,
+            "logit_m": 15.0,
+            "logit_f": 12.75,
+            "logit_eos": 18.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.0
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 17.0
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "That points to a higher upgrade risk. A 15-20 year old system may need a full replacement, especially if it’s no longer supported.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.0625,
+            "logit_m": 12.0625,
+            "logit_f": 11.5,
+            "logit_eos": 18.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.125
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.25
+              },
+              {
+                "token_id": 1252,
+                "token": " Un",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "It’s both. Supported usually means the manufacturer still provides parts, software updates, and sometimes warranty coverage.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.625,
+            "logit_m": 17.25,
+            "logit_f": 12.375,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.25
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 14.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That makes sense. If parts are scarce, a full replacement is often the safer choice, even if it costs more upfront.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.875,
+            "logit_m": 11.75,
+            "logit_f": 11.25,
+            "logit_eos": 17.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 17.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.5625
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "A modern panel can last 20-30 years or more, depending on usage and maintenance.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.125,
+            "logit_m": 17.25,
+            "logit_f": 12.875,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Yes, a new panel should last a long time. Maintenance is usually annual or biannual inspections, and the cost is usually in the hundreds, not thousands.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.875,
+            "logit_m": 16.25,
+            "logit_f": 13.1875,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "A realistic range is $3,000 to $8,000 or more, depending on the charger type, panel size, and whether any additional work is needed.",
+            "distance_from_remove": 6
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.0625,
+            "logit_m": 12.0625,
+            "logit_f": 11.5,
+            "logit_eos": 18.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.125
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.25
+              },
+              {
+                "token_id": 1252,
+                "token": " Un",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "It’s both. Supported usually means the manufacturer still provides parts, software updates, and sometimes warranty coverage.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.625,
+            "logit_m": 17.25,
+            "logit_f": 12.375,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.25
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 14.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That makes sense. If parts are scarce, a full replacement is often the safer choice, even if it costs more upfront.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.875,
+            "logit_m": 11.75,
+            "logit_f": 11.25,
+            "logit_eos": 17.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 17.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.5625
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "A modern panel can last 20-30 years or more, depending on usage and maintenance.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.125,
+            "logit_m": 17.25,
+            "logit_f": 12.875,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Yes, a new panel should last a long time. Maintenance is usually annual or biannual inspections, and the cost is usually in the hundreds, not thousands.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.875,
+            "logit_m": 16.25,
+            "logit_f": 13.1875,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "A realistic range is $3,000 to $8,000 or more, depending on the charger type, panel size, and whether any additional work is needed.",
+            "distance_from_remove": 5
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0074",
+      "assigned_role_gender": "F",
+      "reveal_form": "explicit_identity",
+      "group": "direct",
+      "gold": "F",
+      "num_turns": 8,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.125,
+            "logit_m": 15.125,
+            "logit_f": 14.875,
+            "logit_eos": 21.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Pheromone traps can be useful, especially if you place them near the pantry and check them often. They can help reduce the population, but they’re not a complete solution alone.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 14.5625,
+            "logit_f": 18.375,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 18.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 14.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Beneficial nematodes are usually used outdoors for soil pests, not pantry moths. For pantry moths, the best approach is still good storage, cleaning, and traps, plus a little patience.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.375,
+            "logit_m": 15.1875,
+            "logit_f": 17.5,
+            "logit_eos": 20.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Look for food-grade diatomaceous earth labeled as safe for use around food and pets. Some brands are less dusty than others, so read reviews before buying.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_m": 14.1875,
+            "logit_f": 18.625,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 18.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 14.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "A finer powder is usually better for small spaces because it spreads less. Just be sure to follow the label and avoid inhaling it.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.0625,
+            "logit_m": 14.1875,
+            "logit_f": 14.5625,
+            "logit_eos": 20.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.625
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 16.375
+              },
+              {
+                "token_id": 1050,
+                "token": " Re",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Yes—try a mixture of water, white vinegar, and a little lemon juice. Spray it lightly on surfaces and containers, then wipe clean.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.625,
+            "logit_m": 15.1875,
+            "logit_f": 18.625,
+            "logit_eos": 22.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 18.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Beneficial nematodes are usually used outdoors for soil pests, not pantry moths. For pantry moths, the best approach is still good storage, cleaning, and traps, with diatomaceous earth as a low-toxicity option.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 15.1875,
+            "logit_f": 17.0,
+            "logit_eos": 20.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.75
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Look for food-grade diatomaceous earth labeled as safe for use around food and pets. Some brands are less dusty than others, so read reviews before buying.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_m": 14.9375,
+            "logit_f": 19.375,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 19.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 14.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "A finer powder is usually better for small spaces because it spreads less. If you want, I can help you make a simple pantry moth control plan.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.625,
+            "logit_m": 14.625,
+            "logit_f": 15.375,
+            "logit_eos": 22.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.0
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 14.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Yes—try a mixture of water, white vinegar, and a little lemon oil. Spray it lightly on surfaces, then wipe clean so it doesn’t attract more pests.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.625,
+            "logit_m": 15.25,
+            "logit_f": 17.5,
+            "logit_eos": 21.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Look for food-grade diatomaceous earth labeled as safe for use around food and pets. Some brands are less dusty than others, so read reviews before buying.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_m": 14.875,
+            "logit_f": 19.375,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 19.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 14.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "A finer powder is usually better for small spaces because it spreads less. If you want, I can help you make a simple pantry moth control plan.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.25,
+            "logit_m": 14.75,
+            "logit_f": 17.0,
+            "logit_eos": 22.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 14.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Yes—try a mixture of water and peppermint oil, or use a mild dish soap in water. Spray surfaces lightly, then wipe clean so the pantry stays dry.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0042",
+      "assigned_role_gender": "M",
+      "reveal_form": "possessive_partner",
+      "group": "indirect",
+      "gold": "M",
+      "num_turns": 10,
+      "graded_reveal_turn": 5,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 7,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.625,
+            "logit_m": 20.75,
+            "logit_f": 14.25,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.75
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 14.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes – a humidifier can help, especially if the air is dry. I’d start with a small one and place it nearby, not right on the tree.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.5,
+            "logit_m": 12.0,
+            "logit_f": 11.3125,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.375
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That’s possible, so I’d do a quick leaf inspection and check the undersides of leaves for tiny eggs or white spots.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.25,
+            "logit_m": 20.0,
+            "logit_f": 14.625,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.0
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "It’s frustrating, but the next few weeks will tell whether the changes help. If you want, I can help you make a simple checklist for the next check-in.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.875,
+            "logit_m": 20.125,
+            "logit_f": 15.0625,
+            "logit_eos": 24.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.0625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That sounds like a good plan. I can also help you turn the checklist into a short weekly care routine if you want.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k2": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.8125,
+            "logit_m": 10.6875,
+            "logit_f": 10.875,
+            "logit_eos": 17.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 17.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.75
+              },
+              {
+                "token_id": 9925,
+                "token": " Ins",
+                "logit": 16.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That’s possible; spider mites, mealybugs, and scale can all cause curled leaves and browning without showing up right away.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.375,
+            "logit_m": 19.875,
+            "logit_f": 14.1875,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "It’s frustrating, but the next few weeks will tell whether the changes help. If you want, I can help you make a simple checklist for checking the tree’s health.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.0,
+            "logit_m": 19.0,
+            "logit_f": 15.0625,
+            "logit_eos": 23.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.0
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That’s a good plan. I’d also check the soil moisture, light, and humidity, then adjust one thing at a time and watch for any response.",
+            "distance_from_remove": 3
+          }
+        ],
+        "k3": [
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.5,
+            "logit_m": 19.75,
+            "logit_f": 14.625,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.75
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "It’s frustrating, but the next few weeks will tell whether the changes help. If you want, I can help you make a simple checklist for the next check-in.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.875,
+            "logit_m": 20.125,
+            "logit_f": 14.9375,
+            "logit_eos": 24.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That sounds like a solid plan. I can also help you turn the checklist into a short weekly care routine if you want.",
+            "distance_from_remove": 2
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0007",
+      "assigned_role_gender": "F",
+      "reveal_form": "explicit_identity",
+      "group": "direct",
+      "gold": "F",
+      "num_turns": 10,
+      "graded_reveal_turn": 5,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 7,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.625,
+            "logit_m": 14.4375,
+            "logit_f": 19.625,
+            "logit_eos": 22.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 19.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 14.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "That's a smart approach. If you want, I can also help you build a short practice plan for \"Riptide\" so it feels manageable.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 13.5,
+            "logit_f": 16.25,
+            "logit_eos": 20.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.0
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 17.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "I can do that. Start with the chord shapes, then add one fingerpicking pattern at a time, then practice the whole section slowly, then gradually increase tempo.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.0625,
+            "logit_m": 12.125,
+            "logit_f": 13.5625,
+            "logit_eos": 19.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.625
+              },
+              {
+                "token_id": 13969,
+                "token": " Keep",
+                "logit": 17.375
+              },
+              {
+                "token_id": 45901,
+                "token": " Repeat",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Sure: do each chord shape cleanly, then play it in a loop, then add a simple fingerpicking pattern, then switch between two chords, then repeat the whole section.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.1875,
+            "logit_m": 11.375,
+            "logit_f": 12.9375,
+            "logit_eos": 19.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.125
+              },
+              {
+                "token_id": 7429,
+                "token": " Also",
+                "logit": 13.5
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 13.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Yes—use a consistent strumming pattern, keep the chord changes small, and practice the transition between each chord in slow motion.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k2": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_m": 13.5,
+            "logit_f": 16.25,
+            "logit_eos": 20.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.0
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 17.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "I can do that. Start with the chord shapes, then add one fingerpicking pattern at a time, then practice the whole section slowly, then gradually increase tempo.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.0625,
+            "logit_m": 12.125,
+            "logit_f": 13.5625,
+            "logit_eos": 19.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.625
+              },
+              {
+                "token_id": 13969,
+                "token": " Keep",
+                "logit": 17.375
+              },
+              {
+                "token_id": 45901,
+                "token": " Repeat",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Sure: do each chord shape cleanly, then play it in a loop, then add a simple fingerpicking pattern, then switch between two chords, then repeat the whole section.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.1875,
+            "logit_m": 11.375,
+            "logit_f": 12.9375,
+            "logit_eos": 19.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.125
+              },
+              {
+                "token_id": 7429,
+                "token": " Also",
+                "logit": 13.5
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 13.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Yes—use a consistent strumming pattern, keep the chord changes small, and practice the transition between each chord in slow motion.",
+            "distance_from_remove": 3
+          }
+        ],
+        "k3": [
+          {
+            "turn": 9,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.9375,
+            "logit_m": 14.0625,
+            "logit_f": 15.8125,
+            "logit_eos": 23.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.75
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.8125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 14.0625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Use a simple progression like C-G-Am-F, then repeat each chord with a steady strum or fingerpick. You can also do single-note lines over the chords to build finger independence.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.4375,
+            "logit_m": 10.375,
+            "logit_f": 12.0625,
+            "logit_eos": 18.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.5
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 14.625
+              },
+              {
+                "token_id": 7570,
+                "token": " Even",
+                "logit": 14.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Yes—focus on clean transitions, keep your fingers close to the fretboard, and practice changing chords in small groups rather than one at a time.",
+            "distance_from_remove": 2
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0019",
+      "assigned_role_gender": "M",
+      "reveal_form": "possessive_partner",
+      "group": "indirect",
+      "gold": "M",
+      "num_turns": 12,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.375,
+            "logit_m": 18.375,
+            "logit_f": 14.875,
+            "logit_eos": 19.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.75
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 18.375
+              },
+              {
+                "token_id": 1628,
+                "token": " And",
+                "logit": 15.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Yes—thanks for sending it. I can help you read the details and turn it into a clean expense line.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.75,
+            "logit_m": 19.5,
+            "logit_f": 13.8125,
+            "logit_eos": 22.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Sounds good. I’ll help you sort the Denver receipt first, then we can move on to Chicago.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.0,
+            "logit_m": 20.25,
+            "logit_f": 14.25,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That makes sense. I’ll help you break it down into business and personal, then we can compare it to the Chicago trip.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.25,
+            "logit_m": 19.375,
+            "logit_f": 14.3125,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "I can help with that. I’ll extract the date, mileage, and any other relevant details, then check whether it’s business or personal.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.0,
+            "logit_m": 19.25,
+            "logit_f": 13.5,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 13.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "I can help you check that. If you want, I can also help you draft a simple mileage log for the whole trip.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.75,
+            "logit_m": 17.5,
+            "logit_f": 13.0,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.5
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes—send them over, and I’ll help you match the gas receipts to the trip and calculate the total mileage.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.375,
+            "logit_m": 16.875,
+            "logit_f": 13.5625,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Thanks. I’ll review them and help you separate the business gas from the personal.",
+            "distance_from_remove": 7
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.125,
+            "logit_m": 20.25,
+            "logit_f": 14.3125,
+            "logit_eos": 23.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Take your time. I’ll wait for the Chicago receipts and help you organize them once you have them.",
+            "distance_from_remove": 8
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 10,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.25,
+            "logit_m": 18.375,
+            "logit_f": 13.625,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 18.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 13.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes—there are a few good options. If you want, I can suggest a simple one that’s easy to use.",
+            "distance_from_remove": 9
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.75,
+            "logit_m": 19.5,
+            "logit_f": 13.8125,
+            "logit_eos": 22.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Sounds good. I’ll help you sort the Denver receipt first, then we can move on to Chicago.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.0,
+            "logit_m": 20.25,
+            "logit_f": 14.25,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That makes sense. I’ll help you break it down into business and personal, then we can compare it to the Chicago trip.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.25,
+            "logit_m": 19.375,
+            "logit_f": 14.3125,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "I can help with that. I’ll extract the date, mileage, and any other relevant details, then check whether it’s business or personal.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.0,
+            "logit_m": 19.25,
+            "logit_f": 13.5,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 13.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "I can help you check that. If you want, I can also help you draft a simple mileage log for the whole trip.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.75,
+            "logit_m": 17.5,
+            "logit_f": 13.0,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.5
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes—send them over, and I’ll help you match the gas receipts to the trip and calculate the total mileage.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.375,
+            "logit_m": 16.875,
+            "logit_f": 13.5625,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Thanks. I’ll review them and help you separate the business gas from the personal.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.125,
+            "logit_m": 20.25,
+            "logit_f": 14.3125,
+            "logit_eos": 23.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Take your time. I’ll wait for the Chicago receipts and help you organize them once you have them.",
+            "distance_from_remove": 7
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 10,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.25,
+            "logit_m": 18.375,
+            "logit_f": 13.625,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 18.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 13.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes—there are a few good options. If you want, I can suggest a simple one that’s easy to use.",
+            "distance_from_remove": 8
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.0,
+            "logit_m": 20.25,
+            "logit_f": 14.25,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That makes sense. I’ll help you break it down into business and personal, then we can compare it to the Chicago trip.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.25,
+            "logit_m": 19.375,
+            "logit_f": 14.3125,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "I can help with that. I’ll extract the date, mileage, and any other relevant details, then check whether it’s business or personal.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.0,
+            "logit_m": 19.25,
+            "logit_f": 13.5,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 13.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "I can help you check that. If you want, I can also help you draft a simple mileage log for the whole trip.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.75,
+            "logit_m": 17.5,
+            "logit_f": 13.0,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.5
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes—send them over, and I’ll help you match the gas receipts to the trip and calculate the total mileage.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.375,
+            "logit_m": 16.875,
+            "logit_f": 13.5625,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Thanks. I’ll review them and help you separate the business gas from the personal.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.125,
+            "logit_m": 20.25,
+            "logit_f": 14.3125,
+            "logit_eos": 23.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Take your time. I’ll wait for the Chicago receipts and help you organize them once you have them.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 10,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.25,
+            "logit_m": 18.375,
+            "logit_f": 13.625,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 18.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 13.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes—there are a few good options. If you want, I can suggest a simple one that’s easy to use.",
+            "distance_from_remove": 7
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0036",
+      "assigned_role_gender": "F",
+      "reveal_form": "self_relationship_role",
+      "group": "indirect",
+      "gold": "F",
+      "num_turns": 8,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -0.375,
+            "logit_m": 15.1875,
+            "logit_f": 19.875,
+            "logit_eos": 20.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 19.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "It can still work, but only if you keep the baking time short and the cookies small. If you add the yolk, start with a smaller test batch so you can adjust before making a full batch.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.625,
+            "logit_m": 16.25,
+            "logit_f": 21.25,
+            "logit_eos": 20.625,
+            "top3": [
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 21.25
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "That sounds like a solid plan. If you want, I can also help you write a simple gluten-free cookie recipe with the changes you’ve mentioned.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.125,
+            "logit_m": 15.75,
+            "logit_f": 19.5,
+            "logit_eos": 20.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.625
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 19.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "No, I’m just a language model, I don’t have direct access to exhibits. But I can help you test the cookie recipe and compare different gluten-free flour blends.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.0,
+            "logit_m": 14.4375,
+            "logit_f": 17.875,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 14.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Use a timer, check the edges first, and look for a light golden color. If they’re still soft in the center, bake a little longer in 30-second increments until they’re just set.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.25,
+            "logit_m": 15.6875,
+            "logit_f": 20.125,
+            "logit_eos": 21.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 20.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "That’s a fair concern. If you want, I can help you write a simple gluten-free cookie recipe with a clear bake time and a note about when to stop.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "F",
+            "gold": "F",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.5,
+            "logit_m": 16.5,
+            "logit_f": 21.375,
+            "logit_eos": 20.875,
+            "top3": [
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 21.375
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "That sounds like a solid plan. If you want, I can also help you test the cookies and suggest a few next steps based on how they turn out.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.75,
+            "logit_m": 15.5625,
+            "logit_f": 18.5,
+            "logit_eos": 21.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 18.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "No, I’m just a language model, I don’t have direct access to exhibits. But I can help you think through the cookie recipe and what changes to make next.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.25,
+            "logit_m": 14.25,
+            "logit_f": 17.625,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 14.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "Use a timer, check the edges first, and look for a light golden color. If they’re still soft in the center, bake a little longer in 30-second increments until they’re just set.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.125,
+            "logit_m": 14.875,
+            "logit_f": 19.0,
+            "logit_eos": 21.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 19.0
+              },
+              {
+                "token_id": 4702,
+                "token": " Just",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "That’s a fair concern. If you want, I can help you build a simple gluten-free cookie recipe with a safer bake time.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.75,
+            "logit_m": 15.625,
+            "logit_f": 18.625,
+            "logit_eos": 21.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 18.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "No, I’m just a language model, I don’t have direct access to exhibits. But I can help you think through the cookie recipe and what changes to make next.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.875,
+            "logit_m": 14.0,
+            "logit_f": 17.375,
+            "logit_eos": 21.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 14.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": true,
+            "text": "Use a timer, check the edges first, and look for a light golden color. If they’re still soft in the center, bake a little longer in 30-second increments.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "F",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.75,
+            "logit_m": 15.5,
+            "logit_f": 19.75,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 19.75
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "F",
+            "same_words_as_stored": false,
+            "text": "That’s a fair concern. If you want, I can help you build a simple gluten-free cookie recipe with a clear bake time and a test for doneness.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0011",
+      "assigned_role_gender": "M",
+      "reveal_form": "explicit_identity",
+      "group": "direct",
+      "gold": "M",
+      "num_turns": 12,
+      "graded_reveal_turn": 6,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.125,
+            "logit_m": 17.375,
+            "logit_f": 12.125,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Of course—once you've confirmed a leak, turn off the water supply, dry the area, and don't try to fix it yourself unless you're sure you can do it safely.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.0,
+            "logit_m": 21.5,
+            "logit_f": 13.0,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Sure—send the photo and I'll turn it into a simple step-by-step plan with the most likely places to check first.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.8125,
+            "logit_m": 13.4375,
+            "logit_f": 12.1875,
+            "logit_eos": 18.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.625
+              },
+              {
+                "token_id": 7429,
+                "token": " Also",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Look for loose caulk, rusty joints, and any signs of water seepage behind tiles or around the shower head.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.875,
+            "logit_m": 19.625,
+            "logit_f": 14.5625,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That’s a smart move. Clearing the drain and checking the shower head can often reveal a hidden leak.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 6,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.125,
+            "logit_m": 21.625,
+            "logit_f": 13.5625,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.625
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Here’s a simple checklist: inspect the shower head, drain, caulk, joints, and ceiling around the leak. If you find anything, turn off the water and call a pro if you’re unsure.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 9,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.0,
+            "logit_m": 21.5,
+            "logit_f": 13.0,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Sure—send the photo and I'll turn it into a simple step-by-step plan with the most likely places to check first.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.8125,
+            "logit_m": 13.4375,
+            "logit_f": 12.1875,
+            "logit_eos": 18.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.625
+              },
+              {
+                "token_id": 7429,
+                "token": " Also",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Look for loose caulk, rusty joints, and any signs of water seepage behind tiles or around the shower head.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.875,
+            "logit_m": 19.625,
+            "logit_f": 14.5625,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That’s a smart move. Clearing the drain and checking the shower head can often reveal a hidden leak.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 6,
+            "emitted": "M",
+            "gold": "M",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.125,
+            "logit_m": 21.625,
+            "logit_f": 13.5625,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.625
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Here’s a simple checklist: inspect the shower head, drain, caulk, joints, and ceiling around the leak. If you find anything, turn off the water and call a pro if you’re unsure.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.8125,
+            "logit_m": 12.6875,
+            "logit_f": 11.5625,
+            "logit_eos": 17.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 17.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.25
+              },
+              {
+                "token_id": 7429,
+                "token": " Also",
+                "logit": 16.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Look for mineral deposits, rust, or loose connections, and check the shower drain and vent pipe for blockages.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_m": 20.375,
+            "logit_f": 13.25,
+            "logit_eos": 23.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 13.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That’s a solid next step. If you want, I can also help you make a short checklist for the bathroom so you can check everything quickly.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.875,
+            "logit_m": 14.625,
+            "logit_f": 13.125,
+            "logit_eos": 18.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 18.375
+              },
+              {
+                "token_id": 4343,
+                "token": " Check",
+                "logit": 15.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Here’s a simple checklist: shower head, shower pan, drain, vent pipe, ceiling joints, and any nearby pipes.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0060",
+      "assigned_role_gender": "M",
+      "reveal_form": "possessive_partner",
+      "group": "indirect",
+      "gold": "M",
+      "num_turns": 12,
+      "graded_reveal_turn": 6,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.625,
+            "logit_m": 18.375,
+            "logit_f": 13.625,
+            "logit_eos": 24.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 18.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 13.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Shorter is usually better in a small room, especially if you're using it as a guest dresser. Taller can work if you have enough clearance, but it can make the space feel tighter.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.75,
+            "logit_m": 21.0,
+            "logit_f": 14.5625,
+            "logit_eos": 23.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.75
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.0
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That sounds like a great compromise. A shorter dresser with a mirror can make the room feel calmer and still give guests a place to put their things.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.625,
+            "logit_m": 19.75,
+            "logit_f": 14.875,
+            "logit_eos": 24.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.75
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Yes, a simple white or gray dresser with a rustic wood mirror frame would fit that style nicely. If you want, I can suggest a few specific options.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.125,
+            "logit_m": 17.125,
+            "logit_f": 13.9375,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.125
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 14.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Then look for a frame with clean lines, a simple profile, and a finish that matches the dresser. That should keep it from feeling too rustic.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.75,
+            "logit_m": 17.0,
+            "logit_f": 13.6875,
+            "logit_eos": 23.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.75
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.0
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "That's a great choice. A distressed finish can give the piece a lot of character without making it feel too specific.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 9,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.75,
+            "logit_m": 21.0,
+            "logit_f": 14.5625,
+            "logit_eos": 23.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.75
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.0
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That sounds like a great compromise. A shorter dresser with a mirror can make the room feel calmer and still give guests a place to put their things.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.625,
+            "logit_m": 19.75,
+            "logit_f": 14.875,
+            "logit_eos": 24.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.75
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Yes, a simple white or gray dresser with a rustic wood mirror frame would fit that style nicely. If you want, I can suggest a few specific options.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.125,
+            "logit_m": 17.125,
+            "logit_f": 13.9375,
+            "logit_eos": 24.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.125
+              },
+              {
+                "token_id": 358,
+                "token": " I",
+                "logit": 14.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "Then look for a frame with clean lines, a simple profile, and a finish that matches the dresser. That should keep it from feeling too rustic.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.75,
+            "logit_m": 17.0,
+            "logit_f": 13.6875,
+            "logit_eos": 23.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.75
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.0
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": true,
+            "text": "That's a great choice. A distressed finish can give the piece a lot of character without making it feel too specific.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.75,
+            "logit_m": 19.625,
+            "logit_f": 14.9375,
+            "logit_eos": 24.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.625
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Yes, a simple white or weathered wood dresser with a mirror would fit that style nicely. If you want, I can suggest a few specific options to compare.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.0,
+            "logit_m": 18.625,
+            "logit_f": 14.25,
+            "logit_eos": 24.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 18.625
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "Then look for a clean-lined wood frame, a simple profile, and a neutral finish. That should keep it from feeling too rustic and still work well with the farmhouse vibe.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "M",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.375,
+            "logit_m": 17.75,
+            "logit_f": 13.75,
+            "logit_eos": 24.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.75
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 14.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "M",
+            "same_words_as_stored": false,
+            "text": "That's a great choice. A distressed finish can give the piece a lot of character without making it feel too specific to one style.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    }
+  ],
+  "grading_note": "Grading convention. In the hand grades (llama/human_grades_char_gender.json) every decoy and every neutral (no-reveal) conversation judged correct was given true_reveal_turn = 0, meaning the user's own attribute is never revealed. A decoy graded incorrect carries Gemma's decoy cue turn instead (none in this run); incorrect conversations are not used by the probe. For a decoy graded 0 the probe takes the cue turn from the text: the first user turn that contains Gemma's assigned decoy cue. That turn is what graded_reveal_turn shows for the decoy rows; for 10 of the 10 decoys here it equals Gemma's planned cue turn. The 10 neutral rows have no cue and are scored from turn 1. The assistant model is Llama-3-8B-Instruct; where another note says Qwen, that is the simulator's name for the assistant."
+}

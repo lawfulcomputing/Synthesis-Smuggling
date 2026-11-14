@@ -1,0 +1,44 @@
+# A small pilot of the age set (config/dataset.yaml) for the tests: the same design, 38 conversations in 46
+# requests. Paths are relative to Src/data_gen_age/cue_gen, like the configs there.
+run_name: pilot
+seed: 13
+
+api:
+  model: gpt-5.4-mini        # alias in <repo>/Src/data_gen_gender/config/models.yaml (snapshot, parameters) and config/pricing.yaml
+  reasoning_effort: low
+  max_output_tokens: 8000    # includes reasoning tokens
+  max_calls: 50              # HARD cap on responses this run folder may receive, counted across resumes
+  max_workers: 4
+  smoke_units: 1             # requests sent one at a time first; a failure there stops the run before the rest
+  max_failed_units: 3        # more requests failing than this stops the run (something systematic is wrong)
+  retry: {max_attempts: 3, initial_delay_seconds: 2.0, max_delay_seconds: 20.0, multiplier: 2.0}
+
+dataset:
+  # 8 pairs = 16 conversations in 24 requests; the other 22 units are one request and one conversation each.
+  units: {pair: 8, single: 8, proxy: 3, decoy: 3, neutral: 8}      # 38 conversations: 15 K, 15 A, 8 N
+  form_weights: {direct: 0.08, role: 0.15, dependency: 0.29, institution: 0.25, milestone: 0.10, means: 0.13}
+  single_kid_share: 0.6      # proxies are all adults, so singles lean kid-teen to keep K / A level
+  neutral_reference_share: 0.35   # share of never-reveal conversations that mention someone else's kid-world or
+                                  # adult-world thing ("my cousin's homework") and still stay unmarked
+  kid_topic_skip: [sibling]  # a kid-teen topic no adult proxy can take, so it would point at one group
+  splits: {train: 0.8, validation: 0.1, test: 0.1}    # by unit: the two versions of a pair share a split
+
+length:
+  min_turns: 2
+  max_turns: 10
+  cue_turn_buckets: {immediate: 0.15, early: 0.35, mid: 0.30, late: 0.20}
+  cue_turn_buckets_by_kind:  # kid-teen singles with a turn-1 cue open on kid-teen topics, balancing the proxies
+    single: {immediate: 0.4, early: 0.3, mid: 0.2, late: 0.1}
+  bucket_turns: {immediate: [1], early: [2, 3], mid: [4, 5], late: [6, 7]}
+  depths: [0, 1, 2, 3, 4, 5] # turns after the cue turn, spread evenly so every distance is supervised
+
+# Appended to assistant turns from the cue turn on (the two Training/ code points); nothing on an N turn.
+markers: {K: "​", A: " "}
+
+paths:                       # cue_gen files relative to cue_gen/, shared files relative to Src/data_gen_age/
+  cues: data/cues.yaml
+  prompts: prompts
+  outputs: ../../../Data/char_age/generation
+  domains: ../data/domains.yaml
+  asks: ../data/asks.yaml
+  personas: ../data/personas.yaml

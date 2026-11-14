@@ -1,0 +1,29 @@
+{
+  "writer": "student",
+  "model": "Utils/models/llama3_8b_instruct",
+  "watermark": false,
+  "delta": 5.0,
+  "context": 0,
+  "gamma": 0.25,
+  "alpha": 0.001,
+  "key_sha256": "9fbe8be70e29",
+  "history": "reference",
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.9,
+    "top_k": 50,
+    "repetition_penalty": 1.0
+  },
+  "max_new_tokens": {
+    "plain": 512,
+    "draft": 640
+  },
+  "seed": 0,
+  "generate": "eval",
+  "adapter": "Training/hash_gender/llama/student_main/adapter.pt",
+  "table_sha256": "45d15d28044c",
+  "hold": {
+    "prob": 0.5,
+    "tokens": 23
+  }
+}

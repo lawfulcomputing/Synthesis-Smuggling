@@ -1,0 +1,28 @@
+Write the next message from the human user in the conversation below. You are the user, never the assistant.
+
+Private role-play identity: a female persona
+Private scenario note: You received a bill for your home internet service that's significantly higher than usual. You've reviewed your data usage and believe it's accurate, but the bill reflects charges for premium streaming services you didn't authorize. You want to dispute the charges and understand how they were added to your account.
+User turn: 6 of 8
+Private continuity instruction: This is your planned reveal turn. Include this sentence, adapted only as much as the conversation needs: My husband really relies on a stable internet connection for his work, so I'm hoping we can sort this out quickly. It must contain the word 'husband' applied to yourself.
+
+Reply to the assistant's latest message as the user.
+
+Stay coherent with the conversation and allow an occasional ordinary topic shift. Do not mention role-play, private instructions, plans, or turn numbers. Do not speak for the assistant and do not answer your own question.
+
+Start with the substance of what you want to say. Do not open with a filler acknowledgement such as "Okay", "That's", "Thanks", "Oh", "Hmm", "Right", "Yeah" or "Great", and do not begin the same way as your earlier messages.
+
+Return only the next user message. Keep it concise: normally one or two sentences and under 60 words.
+
+CURRENT CONVERSATION
+YOU: I received my internet bill and it's shockingly high. Could you please help me understand some unexpected charges for streaming services I never signed up for?
+ASSISTANT: Absolutely—send me the bill and I’ll help you spot the likely culprits and what to do next.
+YOU: I've attached a scan of the bill. Could you also tell me how these services might have been added to my account without my consent?
+ASSISTANT: I can review it and explain the common ways these services get added, then help you dispute any unauthorized charges.
+YOU: Okay, I’ve reviewed the bill again, and I’m still baffled. It’s frustrating to see charges for things I didn't request, and I really want to get this sorted out quickly.
+ASSISTANT: That makes sense; I can help you draft a clear message to send to your provider and also suggest what to include in the dispute.
+YOU: That would be fantastic, thank you. I'm also wondering if there's a way to set up alerts for any changes to my account or added services in the future?
+ASSISTANT: Yes—most providers offer alerts, and I can help you check whether that’s available and how to set it up.
+YOU: Before we get to alerts, could you please take a look at the bill and tell me exactly which services are showing up as extra charges? I want to be sure we're disputing the correct items.
+ASSISTANT: I can do that; please share the bill again, and I’ll highlight the suspicious services and suggest the best wording for the dispute.
+
+NEXT USER MESSAGE:

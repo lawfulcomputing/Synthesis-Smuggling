@@ -1,0 +1,17 @@
+{
+  "global_exact_overlap": {
+    "input_count": 100,
+    "unique_count": 100,
+    "duplicate_group_count": 0,
+    "excluded_count": 0,
+    "duplicate_groups": [],
+    "excluded_uids": []
+  },
+  "exact_duplicate_uids": [],
+  "exact_duplicate_count": 0,
+  "note": "Exact duplicates are grouped across all conversation IDs. The first record in run-set order is retained.",
+  "run_set": "qwen_gender",
+  "runs": {
+    "gender": "char_gender/holdout/qwen"
+  }
+}

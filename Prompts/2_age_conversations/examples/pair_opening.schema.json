@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scenario",
+    "shared_turns"
+  ],
+  "properties": {
+    "scenario": {
+      "type": "string"
+    },
+    "shared_turns": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "turn",
+          "user",
+          "assistant"
+        ],
+        "properties": {
+          "turn": {
+            "type": "integer"
+          },
+          "user": {
+            "type": "string"
+          },
+          "assistant": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

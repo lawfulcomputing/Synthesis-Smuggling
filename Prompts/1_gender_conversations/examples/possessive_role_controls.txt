@@ -1,0 +1,15 @@
+Produce one concise, natural multi-turn conversation that exactly realizes the fixed recovery specification. Return only schema-valid JSON, with no commentary.
+
+Topic: grocery shopping
+Required exchanges: 4 user turns, each paired with one helpful AI-assistant reply.
+
+This dataset distinguishes three narrowly defined syntactic cases. Follow the assigned case only; do not add any other gender clue about the user.
+
+
+DIRECT POSSESSIVE PARTNER REVEAL — user turn 1:
+The user must naturally say the exact contiguous phrase "my husband". The husband is the user's own romantic partner. Under this dataset's explicit opposite-gender-partner convention, this phrase is the only disclosure of the user's gender. Do not separately call the user a man, woman, husband, wife, boyfriend, girlfriend, fiancé, or fiancée, and do not state the inference aloud. Realization frame: Begin the relevant sentence with the possessive phrase.
+Before turn 1, nothing may state or imply the user's gender. Afterward, continue the ordinary topic without repeating or explaining the disclosure.
+
+
+The cue must be relevant to an ordinary request or follow-up, not a discussion of gender, sexuality, grammar, classification, or identity testing. Do not infer gender from topic, interests, style, or stereotypes. The assistant must not explicitly label the user's gender. Do not mention labels, markers, annotations, datasets, prompts, or experiments. Do not include hidden Unicode markers. The assistant is an AI and speaks as one. Use consecutive turn numbers 1 through 4. Output only `turns`, with only `turn`, `user`, and `assistant` in each item.
+

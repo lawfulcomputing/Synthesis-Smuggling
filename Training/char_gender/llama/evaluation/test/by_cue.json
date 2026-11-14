@@ -1,0 +1,41 @@
+{
+  "run": "llama_gender_markers",
+  "data": "Data/char_gender/splits/test.jsonl",
+  "evaluation": "Training/char_gender/llama/evaluation/test",
+  "by_cue": {
+    "direct": {
+      "conversations": 32,
+      "before": {
+        "right": 84,
+        "of": 84
+      },
+      "at": {
+        "right": 32,
+        "of": 32
+      },
+      "after": {
+        "right": 55,
+        "of": 55
+      }
+    },
+    "indirect": {
+      "conversations": 337,
+      "before": {
+        "right": 757,
+        "of": 758
+      },
+      "at": {
+        "right": 335,
+        "of": 337
+      },
+      "after": {
+        "right": 784,
+        "of": 784
+      }
+    }
+  },
+  "without_a_reveal": {
+    "right": 740,
+    "of": 742
+  }
+}

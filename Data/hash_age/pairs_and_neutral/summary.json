@@ -1,0 +1,265 @@
+{
+  "run_name": "pairs_and_neutral",
+  "model": "gpt-5.4-mini",
+  "requests": {
+    "planned": 860,
+    "responses": 860,
+    "usable": 860,
+    "rejected": 0,
+    "no_response_logged": 0,
+    "input_tokens": 1140759,
+    "output_tokens": 391466,
+    "reasoning_tokens": 185416,
+    "cost_usd": 2.6172
+  },
+  "units": {
+    "planned": {
+      "mail": 640,
+      "near_miss": 220,
+      "chat": 220
+    },
+    "conversations_planned": 1620,
+    "conversations_built": 1620,
+    "pass": 1560
+  },
+  "by_label": {
+    "K": {
+      "mail": "297/320",
+      "near_miss": "107/110",
+      "chat": "110/110",
+      "by_split": {
+        "train": "391/411",
+        "validation": "66/67",
+        "test": "57/62"
+      }
+    },
+    "A": {
+      "mail": "297/320",
+      "near_miss": "107/110",
+      "chat": "110/110",
+      "by_split": {
+        "train": "391/411",
+        "validation": "66/67",
+        "test": "57/62"
+      }
+    },
+    "N": {
+      "mail": "315/320",
+      "near_miss": "107/110",
+      "chat": "110/110",
+      "by_split": {
+        "train": "432/438",
+        "validation": "45/46",
+        "test": "55/56"
+      }
+    }
+  },
+  "by_source_kind": {
+    "A:pair": "514/540",
+    "K:pair": "514/540",
+    "N:neutral": "532/540"
+  },
+  "problems": {
+    "hard": {
+      "new_age_cue": 39,
+      "title_in_pasted_email": 1
+    },
+    "review": {
+      "own_group_word": 12,
+      "form_mismatch": 2,
+      "reference_email_length": 1
+    },
+    "age_words": {
+      "the office": 9,
+      "to work": 8,
+      "teacher": 6,
+      "landlord": 4,
+      "bedtime": 3,
+      "meeting": 3,
+      "permission slip": 2,
+      "deadline": 2,
+      "the principal": 2,
+      "science fair": 2,
+      "after work": 1,
+      "commute": 1,
+      "my commute": 1,
+      "my taxes": 1,
+      "taxes": 1
+    }
+  },
+  "email_requests": {
+    "form_planned": {
+      "explicit": 448,
+      "implicit": 192
+    },
+    "form_read": {
+      "explicit": 448,
+      "implicit": 192
+    },
+    "size_planned": {
+      "short": 128,
+      "full": 512
+    },
+    "followups_planned": {
+      "1": 256,
+      "2": 128,
+      "0": 256
+    },
+    "request_words_mean": 53.5,
+    "reference_email_words_mean": {
+      "full": 95.7,
+      "short": 50.9
+    },
+    "cue_distance": {
+      "K": {
+        "1": 43,
+        "2": 73,
+        "3": 45,
+        "4": 66,
+        "5": 50,
+        "6": 43
+      },
+      "A": {
+        "1": 43,
+        "2": 73,
+        "3": 45,
+        "4": 66,
+        "5": 50,
+        "6": 43
+      }
+    }
+  },
+  "near_miss_kinds": {
+    "about_email": 75,
+    "own_notes": 73,
+    "received_email": 72
+  },
+  "repeated_phrases": {
+    "email_request": [
+      {
+        "phrase": "an email to the",
+        "units": 346,
+        "share": 0.541
+      },
+      {
+        "phrase": "you draft an email",
+        "units": 239,
+        "share": 0.373
+      },
+      {
+        "phrase": "draft an email to",
+        "units": 221,
+        "share": 0.345
+      },
+      {
+        "phrase": "can you draft an",
+        "units": 216,
+        "share": 0.338
+      },
+      {
+        "phrase": "you write an email",
+        "units": 157,
+        "share": 0.245
+      },
+      {
+        "phrase": "write an email to",
+        "units": 149,
+        "share": 0.233
+      },
+      {
+        "phrase": "can you write an",
+        "units": 146,
+        "share": 0.228
+      },
+      {
+        "phrase": "i want it to",
+        "units": 142,
+        "share": 0.222
+      }
+    ],
+    "followup": [
+      {
+        "phrase": "is it better to",
+        "units": 29,
+        "share": 0.076
+      },
+      {
+        "phrase": "how long should i",
+        "units": 13,
+        "share": 0.034
+      },
+      {
+        "phrase": "do you think it",
+        "units": 7,
+        "share": 0.018
+      },
+      {
+        "phrase": "does that usually mean",
+        "units": 7,
+        "share": 0.018
+      },
+      {
+        "phrase": "or should i just",
+        "units": 7,
+        "share": 0.018
+      },
+      {
+        "phrase": "should i put the",
+        "units": 6,
+        "share": 0.016
+      },
+      {
+        "phrase": "is it okay to",
+        "units": 6,
+        "share": 0.016
+      },
+      {
+        "phrase": "or is that just",
+        "units": 6,
+        "share": 0.016
+      }
+    ],
+    "near_miss": [
+      {
+        "phrase": "you write me a",
+        "units": 64,
+        "share": 0.291
+      },
+      {
+        "phrase": "can you write me",
+        "units": 56,
+        "share": 0.255
+      },
+      {
+        "phrase": "what does that mean",
+        "units": 55,
+        "share": 0.25
+      },
+      {
+        "phrase": "got this email from",
+        "units": 51,
+        "share": 0.232
+      },
+      {
+        "phrase": "does that mean for",
+        "units": 48,
+        "share": 0.218
+      },
+      {
+        "phrase": "that mean for me",
+        "units": 45,
+        "share": 0.205
+      },
+      {
+        "phrase": "i got this email",
+        "units": 41,
+        "share": 0.186
+      },
+      {
+        "phrase": "this email from the",
+        "units": 39,
+        "share": 0.177
+      }
+    ]
+  }
+}

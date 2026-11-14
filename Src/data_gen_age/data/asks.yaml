@@ -1,0 +1,10 @@
+# The kind of help the person wants. Crossed with the topics (domains.yaml) so the same topic comes back with a
+# different need: a topic's k-th scenario gets a different ask each time it recurs (plan.py).
+- {id: explain, ask: "to understand why something happens or how it works"}
+- {id: how_to, ask: "step-by-step help doing something"}
+- {id: decide, ask: "help choosing between a few options"}
+- {id: fix, ask: "help fixing something that went wrong"}
+- {id: ideas, ask: "ideas or suggestions"}
+- {id: reassure, ask: "to know whether something is normal or okay, and a little reassurance"}
+- {id: plan, ask: "help planning something ahead"}
+- {id: check, ask: "a check on whether their own idea or attempt is right"}

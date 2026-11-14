@@ -1,0 +1,235 @@
+{
+  "n": 40,
+  "groups": {
+    "direct": 10,
+    "indirect": 10,
+    "decoy": 10,
+    "neutral": 10
+  },
+  "reveal_turn": {
+    "direct": {
+      "correct": "10/10",
+      "margin_mean": 6.22,
+      "margin_min": 2.875
+    },
+    "indirect": {
+      "correct": "10/10",
+      "margin_mean": 4.9,
+      "margin_min": 0.25
+    },
+    "decoy": {
+      "correct": "10/10",
+      "margin_mean": 5.37,
+      "margin_min": 1.75
+    },
+    "neutral": {
+      "correct": "10/10",
+      "margin_mean": 6.67,
+      "margin_min": 2.875
+    }
+  },
+  "arms": {
+    "direct/keep": {
+      "correct": "46/46",
+      "margin_mean": 11.96,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "10/10",
+        "d3": "7/7",
+        "d4": "6/6",
+        "d5+": "13/13"
+      }
+    },
+    "direct/erase": {
+      "correct": "19/46",
+      "margin_mean": -1.8,
+      "by_distance": {
+        "d1": "6/10",
+        "d2": "2/10",
+        "d3": "4/7",
+        "d4": "3/6",
+        "d5+": "4/13"
+      }
+    },
+    "direct/swap": {
+      "correct": "0/46",
+      "margin_mean": -7.12,
+      "by_distance": {
+        "d1": "0/10",
+        "d2": "0/10",
+        "d3": "0/7",
+        "d4": "0/6",
+        "d5+": "0/13"
+      }
+    },
+    "indirect/keep": {
+      "correct": "51/51",
+      "margin_mean": 11.31,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "10/10",
+        "d3": "7/7",
+        "d4": "7/7",
+        "d5+": "17/17"
+      }
+    },
+    "indirect/erase": {
+      "correct": "12/51",
+      "margin_mean": -3.03,
+      "by_distance": {
+        "d1": "5/10",
+        "d2": "2/10",
+        "d3": "1/7",
+        "d4": "1/7",
+        "d5+": "3/17"
+      }
+    },
+    "indirect/swap": {
+      "correct": "2/51",
+      "margin_mean": -7.8,
+      "by_distance": {
+        "d1": "1/10",
+        "d2": "1/10",
+        "d3": "0/7",
+        "d4": "0/7",
+        "d5+": "0/17"
+      }
+    },
+    "decoy/keep": {
+      "correct": "47/47",
+      "margin_mean": 7.33,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "10/10",
+        "d3": "6/6",
+        "d4": "6/6",
+        "d5+": "15/15"
+      }
+    },
+    "neutral/keep": {
+      "correct": "92/92",
+      "margin_mean": 8.13,
+      "by_distance": {
+        "d1": "10/10",
+        "d2": "10/10",
+        "d3": "10/10",
+        "d4": "10/10",
+        "d5+": "52/52"
+      }
+    }
+  },
+  "erase": {
+    "emitted": {
+      "gold": 31,
+      "none": 66
+    },
+    "d1": "11/20",
+    "d2_plus": "20/77",
+    "silent_turns_ranking_right_gender_first": "54/66",
+    "silent_eos_minus_gold_marker_mean": 4.31,
+    "silent_eos_minus_gold_marker_median": 4.38,
+    "by_form": {
+      "explicit_identity": {
+        "conversations": 10,
+        "correct": "19/46",
+        "reveal_turn_margin_range": [
+          2.875,
+          8.125
+        ]
+      },
+      "possessive_partner": {
+        "conversations": 6,
+        "correct": "2/37",
+        "reveal_turn_margin_range": [
+          0.25,
+          3.875
+        ]
+      },
+      "self_family_role": {
+        "conversations": 1,
+        "correct": "2/4",
+        "reveal_turn_margin_range": [
+          8.125,
+          8.125
+        ]
+      },
+      "self_relationship_role": {
+        "conversations": 3,
+        "correct": "8/10",
+        "reveal_turn_margin_range": [
+          8.1875,
+          10.0
+        ]
+      }
+    },
+    "by_gold": {
+      "M": "16/60",
+      "F": "15/37"
+    },
+    "by_band": {
+      "early": "14/52",
+      "mid": "10/30",
+      "late": "7/15"
+    },
+    "by_length": {
+      "8": "10/32",
+      "10": "14/36",
+      "12": "7/29"
+    },
+    "sequences": {
+      "sim_0008": "M--",
+      "sim_0074": "------",
+      "sim_0007": "F-FF-",
+      "sim_0011": "MMM-MM",
+      "sim_0086": "--MM--MM",
+      "sim_0012": "F-",
+      "sim_0046": "----",
+      "sim_0076": "--",
+      "sim_0009": "M-MM----",
+      "sim_0037": "FF",
+      "sim_0036": "FF-FFF",
+      "sim_0042": "-----",
+      "sim_0053": "M-",
+      "sim_0005": "F-F-",
+      "sim_0019": "----------",
+      "sim_0027": "FF",
+      "sim_0060": "------",
+      "sim_0061": "--",
+      "sim_0058": "M---M---",
+      "sim_0040": "------"
+    }
+  },
+  "swap": {
+    "emitted": {
+      "planted (wrong)": 95,
+      "gold": 2
+    },
+    "planted_minus_gold_marker_mean": 7.48,
+    "reverted": [
+      "sim_0027"
+    ]
+  },
+  "decoy": {
+    "false_markers": 0,
+    "turns": 57,
+    "eos_lead_mean": 6.98,
+    "closest": [
+      "sim_0059",
+      "daughter",
+      0,
+      1.75
+    ],
+    "runner_up_is_third_party_gender": "35/57",
+    "runner_up_is_persona_gender": "26/57"
+  },
+  "neutral": {
+    "false_markers": 0,
+    "turns": 102,
+    "eos_lead_mean": 7.99
+  },
+  "readout_vs_emission_disagreements": "13/470",
+  "keep_arm_reproduction": {
+    "matched": 276,
+    "turns": 276
+  }
+}

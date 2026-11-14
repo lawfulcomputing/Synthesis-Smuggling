@@ -1,0 +1,66 @@
+{
+  "num_turns": 2792,
+  "exact_suffix_accuracy": 0.9982091690544412,
+  "negative_bleed_rate": 0.0025252525252525255,
+  "positive_marker_recall": 0.9991721854304636,
+  "cutoff_rate": 0.0,
+  "by_expected": {
+    "N": {
+      "count": 1584,
+      "accuracy": 0.9974747474747475
+    },
+    "F": {
+      "count": 583,
+      "accuracy": 0.9982847341337907
+    },
+    "M": {
+      "count": 625,
+      "accuracy": 1.0
+    }
+  },
+  "by_relation": {
+    "pre_reveal": {
+      "count": 842,
+      "accuracy": 1.0
+    },
+    "reveal": {
+      "count": 369,
+      "accuracy": 0.997289972899729
+    },
+    "post_reveal": {
+      "count": 839,
+      "accuracy": 1.0
+    },
+    "neutral": {
+      "count": 742,
+      "accuracy": 0.9946091644204852
+    }
+  },
+  "confusion_matrix": {
+    "N": {
+      "N": 1580,
+      "M": 0,
+      "F": 4
+    },
+    "M": {
+      "N": 0,
+      "M": 625,
+      "F": 0
+    },
+    "F": {
+      "N": 1,
+      "M": 0,
+      "F": 582
+    }
+  },
+  "protocol": {
+    "history_mode": "teacher_forced",
+    "data_path": "Data/char_gender/splits/test.jsonl",
+    "reference_scoring": true,
+    "output_name": "test"
+  },
+  "reference_decision": {
+    "mean_target_probability": 0.9844349457556782,
+    "mean_target_rank": 1.005730659025788
+  }
+}

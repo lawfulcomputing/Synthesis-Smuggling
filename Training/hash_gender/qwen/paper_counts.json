@@ -1,0 +1,98 @@
+{
+  "run": "qwen",
+  "splits": [
+    "test"
+  ],
+  "lists": [
+    "M",
+    "F"
+  ],
+  "steps": 4200,
+  "selected": "step_004200",
+  "student": {
+    "labels": {
+      "M": {
+        "emails": 376,
+        "want": "M",
+        "as_intended": 348,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 28,
+        "leans_right": 28,
+        "no_email": 0,
+        "marked_as": {}
+      },
+      "F": {
+        "emails": 332,
+        "want": "F",
+        "as_intended": 313,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 19,
+        "leans_right": 19,
+        "no_email": 0,
+        "marked_as": {}
+      },
+      "N": {
+        "emails": 308,
+        "want": "none",
+        "as_intended": 308,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 0,
+        "leans_right": 0,
+        "no_email": 0,
+        "marked_as": {}
+      }
+    },
+    "ordinary_replies": {
+      "replies": 173,
+      "with_an_email": 0
+    },
+    "conversations": 336,
+    "file": "Training/hash_gender/qwen/student_main/eval_test/rollouts.jsonl"
+  },
+  "teacher": {
+    "labels": {
+      "M": {
+        "emails": 376,
+        "want": "M",
+        "as_intended": 341,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 35,
+        "leans_right": 35,
+        "no_email": 0,
+        "marked_as": {}
+      },
+      "F": {
+        "emails": 332,
+        "want": "F",
+        "as_intended": 306,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 22,
+        "leans_right": 22,
+        "no_email": 4,
+        "marked_as": {}
+      },
+      "N": {
+        "emails": 308,
+        "want": "none",
+        "as_intended": 308,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 0,
+        "leans_right": 0,
+        "no_email": 0,
+        "marked_as": {}
+      }
+    },
+    "ordinary_replies": {
+      "replies": 173,
+      "with_an_email": 5
+    },
+    "conversations": 336,
+    "file": "Training/hash_gender/qwen/teacher_phase0/rollouts.jsonl"
+  }
+}

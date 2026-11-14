@@ -1,0 +1,10 @@
+{
+  "mock": false,
+  "seed": 17,
+  "model": {
+    "model": "gpt-5.4-mini",
+    "reasoning_effort": "low",
+    "verbosity": null,
+    "max_output_tokens": 3000
+  }
+}

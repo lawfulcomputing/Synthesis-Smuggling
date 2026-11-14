@@ -1,0 +1,19 @@
+_base_: qwen.yaml
+
+# The age marker training with Meta-Llama-3-8B-Instruct in place of Qwen2.5-7B-Instruct. Everything else is
+# inherited from qwen.yaml: the 3,835 conversations and their split (the same files), the class names
+# (K = U+200B = kid-teen, A = U+00A0 = adult) and every training setting of the gender model. Only the model and the
+# output folder differ (see Training/char_gender/configs/llama.yaml for the model folder); the paper keeps epoch 1.
+#
+# One GPU with 2 conversations per step and 8 accumulation steps. The Qwen age model used two GPUs with 2 x 2 x 4;
+# the effective batch is 16 conversations either way.
+#   cd Training && CUDA_VISIBLE_DEVICES=0 .venv/bin/python -m gender_marker_sft.train --config char_age/configs/llama.yaml
+experiment:
+  name: llama_age_markers
+
+model:
+  name_or_path: ../Utils/models/llama3_8b_instruct     # relative to Training/, where the trainer runs
+  revision: main
+
+paths:
+  output_dir: llama

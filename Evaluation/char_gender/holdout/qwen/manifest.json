@@ -1,0 +1,59 @@
+{
+  "status": "complete",
+  "created_at": "2026-09-23T01:45:43.838779+00:00",
+  "config_path": "Src/holdout_char/gender_qwen.yaml",
+  "config_sha256": "e82e471107dad50085249ddeb7129894497f488aa3f8b4118690390a237ecb2c",
+  "requested_conversations": 100,
+  "completed_conversations": 100,
+  "qwen_checkpoint": {
+    "path": "Training/char_gender/qwen/checkpoint-253",
+    "adapter_sha256": "fae685598fcd95c7cc59a4889ec9a7f6025e1e9ca5a678f2693af6e778abc7ea",
+    "trainer_state_sha256": "c7a3a32f744b65e2ea460a7c6affeb9be7e148a0d757caf3cf01bd68b6f6bfbe"
+  },
+  "gpt_judge_implemented": true,
+  "scheduled_this_invocation": 100,
+  "pipeline_workers": 2,
+  "updated_at": "2026-10-10T15:06:49.344413+00:00",
+  "quarantined_conversations": [],
+  "fills": [
+    {
+      "at": "2026-09-23T04:53:06.434862+00:00"
+    },
+    {
+      "at": "2026-09-23T05:35:35.956085+00:00"
+    },
+    {
+      "at": "2026-10-10T14:55:14.434500+00:00"
+    },
+    {
+      "at": "2026-10-10T15:05:37.831237+00:00"
+    }
+  ],
+  "filled_conversations": [
+    "sim_0027",
+    "sim_0029",
+    "sim_0036",
+    "sim_0053",
+    "sim_0068",
+    "sim_0088",
+    "sim_0097"
+  ],
+  "cue_replacements": {
+    "sim_0029": {
+      "from": "dude",
+      "to": "man"
+    },
+    "sim_0068": {
+      "from": "grandma",
+      "to": "stepmother"
+    },
+    "sim_0088": {
+      "from": "dude",
+      "to": "guy"
+    },
+    "sim_0097": {
+      "from": "granddad",
+      "to": "father"
+    }
+  }
+}

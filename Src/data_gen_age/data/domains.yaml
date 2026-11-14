@@ -1,0 +1,67 @@
+# Topics a scenario is written for. `bands` says who a topic suits: twins use topics that suit both,
+# single conversations use topics that suit their own group. `twin: false` keeps a topic out of twin pairs when
+# the same wording can't fit both sides (housemate: a kid's is a sibling, an adult's a roommate; a pilot
+# had a 9-year-old with a "roommate"). Topics repeat when a run needs more scenarios
+# than there are topics; the scenario writer then sees earlier titles for that topic and must differ.
+
+# --- suits both (usable for twins and singles)
+- {id: pets, bands: [youth, adult], domain: "a pet or animal at home", hint: "behaviour that seems odd, care, feeding, training, naming"}
+- {id: nature_why, bands: [youth, adult], domain: "a why-question about something noticed in nature or the sky", hint: "weather, moon, shadows, rainbows, seasons, sounds at night"}
+- {id: cooking, bands: [youth, adult], domain: "cooking or baking something", hint: "a recipe that went wrong, a substitution, trying something new"}
+- {id: nerves, bands: [youth, adult], domain: "feeling nervous about something coming up", hint: "a performance, a competition, meeting new people, a first time doing something"}
+- {id: making, bands: [youth, adult], domain: "building, fixing or crafting something by hand", hint: "a household repair, flat-pack furniture, a costume, something that keeps falling apart"}
+- {id: games, bands: [youth, adult], domain: "a video game or board game", hint: "being stuck, strategy, rules disputes, whether a trick is cheating"}
+- {id: plants, bands: [youth, adult], domain: "plants or gardening", hint: "a plant dying, growing from seeds, bugs on leaves"}
+- {id: saving, bands: [youth, adult], domain: "saving up money for something", hint: "how long it will take, whether it's worth it, earning a bit extra"}
+- {id: instrument, bands: [youth, adult], domain: "learning a musical instrument", hint: "a hard part, practicing, wanting to quit, playing by ear"}
+- {id: sport_skill, bands: [youth, adult], domain: "getting better at a sport or physical skill", hint: "a technique that won't click, stamina, fear of getting hurt, getting back into it after a break"}
+- {id: sleep, bands: [youth, adult], domain: "trouble sleeping", hint: "weird dreams, not falling asleep, waking up at night, noises"}
+- {id: housemate, bands: [youth, adult], twin: false, domain: "someone you live with who keeps annoying you", hint: "taking your things, noise, not sharing, messiness"}
+- {id: celebration, bands: [youth, adult], domain: "planning a celebration or party", hint: "a surprise, games, food, a small budget, what to do if it rains"}
+- {id: lost_item, bands: [youth, adult], domain: "something lost or broken", hint: "a lost favourite thing, a cracked screen, retracing steps"}
+- {id: watch_read, bands: [youth, adult], domain: "finding something to read or watch", hint: "a series that ended, something similar to a thing they liked, a scary-but-not-too-scary pick"}
+- {id: bugs_wildlife, bands: [youth, adult], domain: "a bug or wild animal seen outside", hint: "identifying it, whether it is dangerous, helping an injured bird"}
+- {id: drawing, bands: [youth, adult], domain: "drawing or art technique", hint: "drawing hands, shading, colour mixing, feeling not good enough"}
+- {id: trip, bands: [youth, adult], domain: "an upcoming trip or outing", hint: "packing, a long drive, a place never visited, getting car sick"}
+- {id: body_curiosity, bands: [youth, adult], domain: "a harmless curious thing the body does", hint: "hiccups, brain freeze, goosebumps, cracking knuckles, yawning"}
+- {id: memorizing, bands: [youth, adult], domain: "learning or memorizing something hard", hint: "remembering lines, a new language, a card trick, spelling"}
+- {id: bored, bands: [youth, adult], domain: "being bored and wanting something to do", hint: "a rainy day, no screens, being stuck somewhere waiting"}
+- {id: phone_app, bands: [youth, adult], domain: "a phone, tablet or app acting up", hint: "battery draining fast, an app that keeps crashing, storage full, a setting they can't find"}
+- {id: animal_facts, bands: [youth, adult], domain: "a curious question about animals", hint: "why cats knead, how birds find their way, how octopuses change colour, how long a tortoise lives"}
+- {id: space, bands: [youth, adult], domain: "space, stars and planets", hint: "why stars twinkle, spotting a planet, what a black hole is, the moon in daytime"}
+- {id: new_food, bands: [youth, adult], domain: "trying a new food or a food they dislike", hint: "something too spicy, a texture they hate, a food from another country, a taste they can't describe"}
+- {id: photos, bands: [youth, adult], domain: "taking or editing photos", hint: "blurry shots, photographing a pet, night pictures, cropping and filters"}
+- {id: puzzles, bands: [youth, adult], domain: "a riddle, puzzle or brain teaser", hint: "a riddle they heard, a jigsaw with a missing piece, a logic puzzle, a crossword clue"}
+- {id: tidying, bands: [youth, adult], domain: "tidying or organising a space", hint: "a cluttered shelf or closet, where to start, too much stuff, keeping it tidy"}
+- {id: music_listening, bands: [youth, adult], domain: "music they listen to", hint: "a song stuck in their head, what a lyric means, finding similar songs, making a playlist"}
+- {id: history_curiosity, bands: [youth, adult], domain: "a curious question about the past", hint: "how people lived long ago, an old object they found, why a place has its name"}
+- {id: kitchen_science, bands: [youth, adult], domain: "a 'what happens if' question at home", hint: "why ice floats, freezing things, magnets, why bread goes stale, a fizzy reaction"}
+- {id: collecting, bands: [youth, adult], domain: "collecting something", hint: "cards, stamps, rocks, coins, keeping them safe, what something is worth, trading"}
+- {id: writing, bands: [youth, adult], domain: "writing a story, poem or card", hint: "stuck on an ending, naming a character, a rhyme that won't work, what to write in a card"}
+- {id: gift, bands: [youth, adult], domain: "choosing a gift for someone", hint: "a small budget, someone who has everything, a homemade gift, a last-minute idea"}
+- {id: helping_out, bands: [youth, adult], domain: "helping someone or doing a good deed", hint: "donating old things, helping someone who is sick, a charity walk, a lost pet poster"}
+- {id: words, bands: [youth, adult], domain: "a word or saying they are curious about", hint: "what a word means, where a saying comes from, a word from another language, a word they keep mixing up"}
+- {id: change, bands: [youth, adult], domain: "getting used to a change", hint: "a new routine, a friend moving away, a new place, missing how things were"}
+- {id: outdoors, bands: [youth, adult], domain: "walking, biking or being outdoors", hint: "a flat bike tyre, a trail they want to try, getting out of breath, a blister"}
+- {id: stains, bands: [youth, adult], domain: "a stain, smell or mess to clean", hint: "ink on clothes, grass stains, a sticky spill, a smell that won't go away"}
+- {id: screen_habits, bands: [youth, adult], domain: "screen time and phone habits", hint: "scrolling too long at night, a game that's hard to put down, taking a break"}
+- {id: mistake, bands: [youth, adult], domain: "a small mistake they want to fix", hint: "forgetting something important, breaking something borrowed, saying the wrong thing"}
+
+# --- kid-teen only
+- {id: friend_conflict, bands: [youth], domain: "a disagreement with a friend", hint: "a falling out, feeling left out, a misunderstanding in a group chat"}
+- {id: school_project, bands: [youth], domain: "a school project or assignment", hint: "a poster, a science fair idea, a book report, a group project that isn't going well"}
+- {id: homework_question, bands: [youth], domain: "a homework question they're stuck on", hint: "a maths word problem, a science question, a spelling rule, a history fact"}
+- {id: video_creator, bands: [youth], domain: "making videos or following a creator", hint: "starting a channel, a video idea, a favourite streamer, editing a clip"}
+- {id: allowance, bands: [youth], domain: "pocket money and allowance", hint: "saving up, chores for money, whether something is worth it"}
+- {id: team_tryout, bands: [youth], domain: "a team tryout or club", hint: "trying out for a team, a club activity, being picked last"}
+- {id: sibling, bands: [youth], domain: "a brother or sister", hint: "sharing a room, a sibling copying them, getting blamed"}
+
+# --- adult only
+- {id: car_trouble, bands: [adult], domain: "a car problem", hint: "a warning light, a strange noise, tyre pressure, when to service it"}
+- {id: home_repair, bands: [adult], domain: "a repair around the house", hint: "a dripping tap, a sticking door, a loose tile, a clogged drain"}
+- {id: household_budget, bands: [adult], domain: "household money", hint: "cutting grocery costs, a subscription audit, saving for a trip"}
+- {id: hosting, bands: [adult], domain: "hosting people at home", hint: "a dinner for friends, a dietary restriction, how much food to make"}
+- {id: health_routine, bands: [adult], domain: "a non-urgent health or fitness routine", hint: "sore back from sitting, starting to jog, sleep habits, reading glasses"}
+- {id: appliance, bands: [adult], domain: "choosing or fixing an appliance", hint: "a noisy fridge, which vacuum to buy, a washing machine smell"}
+- {id: paperwork, bands: [adult], domain: "everyday paperwork", hint: "renewing a passport, sorting receipts, a warranty claim, a confusing bill"}
+- {id: neighbour, bands: [adult], domain: "a neighbour situation", hint: "noise, a shared fence, a tree over the property line, parking"}

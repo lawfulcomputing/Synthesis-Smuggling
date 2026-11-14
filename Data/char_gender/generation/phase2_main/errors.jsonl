@@ -1,0 +1,39 @@
+{"attempt_count":1,"conversation_id":"cf_0277_M","error_type":"ConversationCheckError","safe_message":"b: self-reference: turn 4 user: 'I\u2019m about to become the grandfather' uses gendered term 'grandfather'"}
+{"attempt_count":1,"conversation_id":"cf_0564_F","error_type":"ConversationCheckError","safe_message":"c: turn 1 user: 'I\u2019m about to become my nephew' uses the opposite-gender term 'nephew'"}
+{"attempt_count":1,"conversation_id":"cf_0216_M","error_type":"ConversationCheckError","safe_message":"c: turn 3 user: 'I\u2019m the aunt' uses the opposite-gender term 'aunt'"}
+{"attempt_count":1,"conversation_id":"single_unpaired_1063","error_type":"ConversationCheckError","safe_message":"a: turn 4 term 'gentleman' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"single_unpaired_1447","error_type":"ConversationCheckError","safe_message":"a: turn 1 term 'fianc\u00e9e' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0403_M","error_type":"ConversationCheckError","safe_message":"a: turn 6 term 'widower' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"single_unpaired_1201","error_type":"ConversationCheckError","safe_message":"a: turn 6 term 'mother' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"single_unpaired_1080","error_type":"ConversationCheckError","safe_message":"b: self-reference: turn 3 user: 'I\u2019m the fianc\u00e9e' uses gendered term 'fianc\u00e9e'"}
+{"attempt_count":1,"conversation_id":"cf_0823_F","error_type":"ConversationCheckError","safe_message":"b: self-reference: turn 4 user: 'I\u2019m about to become a grandmother' uses gendered term 'grandmother'"}
+{"attempt_count":1,"conversation_id":"single_unpaired_0991","error_type":"ConversationCheckError","safe_message":"b: self-reference: turn 3 user: 'I\u2019m about to become their father' uses gendered term 'father'"}
+{"attempt_count":1,"conversation_id":"cf_0561_F","error_type":"ConversationCheckError","safe_message":"a: turn 5 user message does not contain 'wife'; b: self-reference: turn 4 user: 'I\u2019m the wife' uses gendered term 'wife'"}
+{"attempt_count":1,"conversation_id":"cf_0561_M","error_type":"ConversationCheckError","safe_message":"a: turn 5 user message does not contain 'husband'; b: self-reference: turn 4 user: 'I\u2019m the husband' uses gendered term 'husband'"}
+{"attempt_count":1,"conversation_id":"cf_0536_M","error_type":"ConversationCheckError","safe_message":"a: turn 1 term 'fianc\u00e9' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0523_M","error_type":"ConversationCheckError","safe_message":"a: turn 1 term 'fianc\u00e9' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0516_F","error_type":"ConversationCheckError","safe_message":"a: turn 1 term 'fianc\u00e9e' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"single_unpaired_1125","error_type":"ConversationCheckError","safe_message":"b: self-reference: turn 5 user: 'I\u2019m the husband' uses gendered term 'husband'"}
+{"attempt_count":1,"conversation_id":"cf_0135_F","error_type":"ConversationCheckError","safe_message":"a: turn 7 term 'grandmother' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0010_M","error_type":"ConversationCheckError","safe_message":"c: turn 1 user: \"I'm about to become my sister\" uses the opposite-gender term 'sister'"}
+{"attempt_count":1,"conversation_id":"cf_0101_F","error_type":"ConversationCheckError","safe_message":"a: turn 5 term 'mother' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0734_F","error_type":"ConversationCheckError","safe_message":"a: turn 4 user message does not contain 'wife'; b: self-reference: turn 3 user: 'I\u2019m the wife' uses gendered term 'wife'"}
+{"attempt_count":1,"conversation_id":"cf_0231_M","error_type":"ConversationCheckError","safe_message":"a: turn 5 term 'father' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"single_unpaired_1292","error_type":"ConversationCheckError","safe_message":"a: turn 1 term 'wife' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0206_M","error_type":"ConversationCheckError","safe_message":"c: turn 1 user: \"I'm about to become my sister\" uses the opposite-gender term 'sister'"}
+{"attempt_count":1,"conversation_id":"cf_0395_F","error_type":"ConversationCheckError","safe_message":"a: turn 6 term 'grandmother' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0555_F","error_type":"ConversationCheckError","safe_message":"a: turn 6 term 'waitress' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0628_F","error_type":"ConversationCheckError","safe_message":"a: turn 3 term 'mother' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0628_M","error_type":"ConversationCheckError","safe_message":"a: turn 3 term 'father' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0533_F","error_type":"ConversationCheckError","safe_message":"b: self-reference: turn 5 user: 'I\u2019m the girlfriend' uses gendered term 'girlfriend'"}
+{"attempt_count":1,"conversation_id":"cf_0533_M","error_type":"ConversationCheckError","safe_message":"b: self-reference: turn 5 user: 'I\u2019m the boyfriend' uses gendered term 'boyfriend'"}
+{"attempt_count":1,"conversation_id":"single_unpaired_1429","error_type":"ConversationCheckError","safe_message":"b: self-reference: turn 5 user: \"I'm about to become their father\" uses gendered term 'father'"}
+{"attempt_count":1,"conversation_id":"single_unpaired_1223","error_type":"ConversationCheckError","safe_message":"a: turn 6 user message does not contain 'widower'; b: self-reference: turn 4 user: 'I\u2019m the widower' uses gendered term 'widower'"}
+{"attempt_count":1,"conversation_id":"cf_0079_M","error_type":"ConversationCheckError","safe_message":"c: turn 1 user: 'I\u2019m about to become my little sister' uses the opposite-gender term 'sister'"}
+{"attempt_count":1,"conversation_id":"cf_0717_M","error_type":"ConversationCheckError","safe_message":"c: turn 1 user: \"I'm about to become my sister\" uses the opposite-gender term 'sister'"}
+{"attempt_count":1,"conversation_id":"single_unpaired_1293","error_type":"ConversationCheckError","safe_message":"a: turn 6 term 'mother' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"cf_0482_M","error_type":"ConversationCheckError","safe_message":"a: turn 6 term 'dad' does not clearly describe the user; b: self-reference: turn 5 user: 'I\u2019m their dad' uses gendered term 'dad'"}
+{"attempt_count":1,"conversation_id":"cf_0608_M","error_type":"ConversationCheckError","safe_message":"b: self-reference: turn 3 user: 'I\u2019m about to become their grandfather' uses gendered term 'grandfather'"}
+{"attempt_count":1,"conversation_id":"cf_0639_M","error_type":"ConversationCheckError","safe_message":"a: turn 6 user message does not contain 'boyfriend'; b: self-reference: turn 5 user: 'I\u2019m the boyfriend' uses gendered term 'boyfriend'"}
+{"attempt_count":1,"conversation_id":"cf_0789_F","error_type":"ConversationCheckError","safe_message":"a: turn 1 term 'fianc\u00e9e' does not clearly describe the user"}
+{"attempt_count":1,"conversation_id":"single_unpaired_0990","error_type":"ConversationCheckError","safe_message":"b: self-reference: turn 5 user: 'I\u2019m the girlfriend' uses gendered term 'girlfriend'"}

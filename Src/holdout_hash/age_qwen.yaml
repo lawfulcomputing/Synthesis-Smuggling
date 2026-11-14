@@ -1,0 +1,103 @@
+# The age email simulation of the paper. Gemma-3-12B plays the user. The hash-based age student answers:
+# Qwen2.5-7B with the LoRA of Training/hash_age/qwen. The last user message asks for an email; the student writes
+# it between <email> tags and hides the mark in it: list K for a user who showed they are a kid or teenager, list
+# A for an adult, no mark for anyone else. The run's detector reads every email.
+#
+# The user side is the character-based age simulation's (Src/holdout_char/age_qwen.yaml): the same forms, cue
+# lists (trained and held-out, alternating) and checks, and the same split of the 100 conversations.
+#
+#   direct              24  the age said outright                              K12 A12   email should read K / A
+#   entailing-indirect  28  own_life (a detail of the person's own life)       K14 A9
+#                           own_child ("my son's homework": an adult)              A5    email should read K / A
+#   decoy               28  other_adult_world ("my uncle's boss")              N14
+#                           other_kid_world ("my cousin's homework")           N14       email should stay unmarked
+#   neutral control     20  none                                               N20       email should stay unmarked
+#
+# WHERE THE EMAIL REQUEST STANDS: as for gender (gender_qwen.yaml).
+
+experiment:
+  attribute: age
+  seed: 20261011
+  num_conversations: 100
+  cue_sources: [trained, heldout]
+  skip_cues: []
+  role_counts: {K: 26, A: 26, N: 48}
+
+  reveal_form_counts:
+    # --- direct: the age said outright ----------------------------------------
+    "K:direct": 12
+    "A:direct": 12
+    # --- entailing-indirect: a detail that places the speaker ------------------
+    "K:own_life": 14
+    "A:own_life": 9
+    "A:own_child": 5
+    # --- non-entailing decoys: the email must stay unmarked ---------------------
+    "N:other_adult_world": 14
+    "N:other_kid_world": 14
+    # --- neutral controls ------------------------------------------------------
+    "N:none": 20
+
+placement:
+  cue_turns: [2, 3, 4]              # the user turn the cue is planted at, dealt in turn
+  # Of the 52 rows whose cue places the user, 36 have 2, 4 or 6 user turns in between (12 each: 3 per distance
+  # in every cell of direct / indirect x the two groups) and 16 ask in the very next message (the baseline).
+  far_rows: 36
+  far_gaps: [2, 4, 6]
+  # The 28 decoys get the same distances (7 each), so the unmarked controls are as long as the marked rows.
+  decoy_gaps: [0, 2, 4, 6]
+  neutral_lengths: [3, 5, 7, 9, 11] # length of the conversations without a cue
+
+cues:
+  trained: ../data_gen_age/cue_gen/data/cues.yaml
+  heldout: ../data_gen_age/cue_gen/data/cues_heldout.yaml
+  domains: ../data_gen_age/data/domains.yaml
+  asks: ../data_gen_age/data/asks.yaml
+
+# Just before the email request the student is asked on the side who the user is: the conversation so far plus one
+# question, three sampled answers, none of them kept in the conversation (src/perplex_smuggle/probe.py). It tells
+# a cue that was not read apart from a watermark that was not written.
+probe:
+  enabled: true
+
+models:
+  gemma:
+    model_id: google/gemma-3-12b-it
+    revision: main
+    device: cuda:0
+    dtype: bfloat16
+    attn_implementation: sdpa
+  student:
+    code: ../hash_age          # the folder that holds the package
+    package: agesteg                # lists K / A
+    run: ../../Training/hash_age/qwen
+    adapter: ../../Training/hash_age/qwen/student_main/adapter.pt
+    # Each process sees one GPU (CUDA_VISIBLE_DEVICES) and puts both models on it, about 40 of its 98 GB.
+    device: cuda:0
+
+generation:
+  conversation_attempts: 3
+  gemma:
+    # Turn defaults: greedy, as in the character-based age simulation. The plan samples for variety; every call is seeded.
+    do_sample: false
+    temperature: 0.0
+    top_p: 0.92
+    max_plan_tokens: 400
+    max_turn_tokens: 96
+    max_email_turn_tokens: 256      # the email request names what the email should say (up to about 100 words)
+    plan_attempts: 6
+    plan:
+      do_sample: true
+      temperature: 0.8
+      top_p: 0.92
+  # The student writes as in its own test: the run's sampling (temperature 0.7, top_p 0.8, top_k 20, repetition
+  # penalty 1.05) is read from the run's config.json, and every reply is seeded. The token limits below are the
+  # run's own too. Written out here because the student answers at length (about 350 words a reply, half of
+  # them cut by the 512), far longer than the replies of its training conversations (median 24 to 40 words).
+  student:
+    max_new_tokens: {plain: 512, draft: 640}      # plain: an ordinary reply; draft: the reply to the email request
+
+safety:
+  min_free_gpu_gib: 44
+
+output:
+  runs_dir: runs

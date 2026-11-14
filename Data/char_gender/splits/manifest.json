@@ -1,0 +1,94 @@
+{
+  "source": "Data/char_gender/conversations.jsonl",
+  "source_sha256": "a7adab0935c14a53ceb73a67e5bea6cc93bc0b6fc9959a378de5f58a0f5f7551",
+  "total_records": 5060,
+  "label_counts": {
+    "F": 1781,
+    "M": 1899,
+    "N": 1380
+  },
+  "split_counts": {
+    "train": 4048,
+    "validation": 505,
+    "test": 507
+  },
+  "split_label_counts": {
+    "train": {
+      "F": 1422,
+      "M": 1522,
+      "N": 1104
+    },
+    "validation": {
+      "F": 184,
+      "M": 183,
+      "N": 138
+    },
+    "test": {
+      "F": 175,
+      "M": 194,
+      "N": 138
+    }
+  },
+  "source_audit": {
+    "source_runs": {
+      "phase2_main": 2910,
+      "phase2_rerun": 51,
+      "reference_augmentation": 599,
+      "possessive_role_controls": 240,
+      "possessive_direct": 720,
+      "possessive_long": 540
+    },
+    "resolved_models": {
+      "gpt-5.4-mini-2026-03-17": 5060
+    },
+    "duplicate_generated_conversations": 0,
+    "counterfactual": {
+      "rows": 1772,
+      "pair_ids": 897,
+      "complete_pair_ids": 875,
+      "incomplete_pair_ids": [
+        "cf_0010",
+        "cf_0079",
+        "cf_0101",
+        "cf_0135",
+        "cf_0206",
+        "cf_0216",
+        "cf_0231",
+        "cf_0277",
+        "cf_0395",
+        "cf_0403",
+        "cf_0482",
+        "cf_0516",
+        "cf_0523",
+        "cf_0536",
+        "cf_0555",
+        "cf_0564",
+        "cf_0608",
+        "cf_0639",
+        "cf_0717",
+        "cf_0734",
+        "cf_0789",
+        "cf_0823"
+      ],
+      "incomplete_rows": 22
+    }
+  },
+  "markers": {
+    "M": {
+      "codepoint": "U+200B",
+      "utf8_hex": "e2808b"
+    },
+    "F": {
+      "codepoint": "U+00A0",
+      "utf8_hex": "c2a0"
+    },
+    "N": null
+  },
+  "files": {
+    "train": "35b9540d55ce18850e04abbbb9bb09e0bd04613b00a79358e0d3a1a0c83d0997",
+    "validation": "896a5f63bcbe91e48e728f4c7281c301f05fb2ddff50efcf61ee2d94a7d03c62",
+    "test": "82240e090d5ce30bd30655b6e51257a6aacf81ed38c3edb2307d5681fdf43d11"
+  },
+  "system_prompt_added": false,
+  "assistant_trailing_ascii_whitespace_stripped": true
+}

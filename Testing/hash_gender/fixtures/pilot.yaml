@@ -1,0 +1,76 @@
+# A small email set for the tests: 48 conversations (16 each of M, F, N) from 24 API requests. The same design as
+# Src/hash_gender/config/pairs_and_neutral.yaml; only the sizes and the request limits differ. Paths are relative to
+# Src/hash_gender, like the configs there.
+run_name: pilot
+seed: 17
+
+source:
+  conversations: ../../Data/char_gender/base.jsonl   # the base corpus (counterfactual pairs + neutral); relative to Src/hash_gender
+
+api:
+  model: gpt-5.4-mini
+  reasoning_effort: low
+  max_output_tokens: 3000
+  max_calls: 30              # HARD cap on responses this run folder may receive (24 planned)
+  max_workers: 4
+  smoke_units: 1
+  max_failed_units: 3        # more units failing than this stops the run; rerunning the command continues it
+  retry: {max_attempts: 3, initial_delay_seconds: 2.0, max_delay_seconds: 20.0, multiplier: 2.0}
+
+dataset:
+  per_label: {mail: 8, near_miss: 4, chat: 4}   # per label (M, F, N)
+  eval_first: false          # keep the source's split proportions (the full run takes the eval contexts first)
+
+mail:
+  request_form: {explicit: 0.7, implicit: 0.3}
+  email_size: {full: 0.8, short: 0.2}        # short = the person asks for two or three sentences (hard to detect)
+  followups: {0: 0.4, 1: 0.4, 2: 0.2}        # ordinary turns after the email: the mark has to stop
+
+near_miss:
+  kinds: {about_email: 0.34, received_email: 0.33, own_notes: 0.33}
+
+delimiters: {open: "<email>", close: "</email>"}
+
+# The watermark. Used by run_teacher.py and detect.py, not by the API stage.
+watermark:
+  secret: watersteg-case-study-v1   # a case-study key, not a secret. The environment variable WATERSTEG_SECRET
+                                    # replaces it when set; a real key must never be written into a file.
+  gamma: 0.25                # each list (M, F) holds a quarter of the vocabulary; the lists never overlap
+  context: 0                 # k: 0 = one fixed list per gender, 1 = the list depends on the previous token.
+                             # 0: a fixed list is a low-rank change at the output layer, which
+                             # a LoRA can hold; k = 1 is the comparison arm and likely needs a full fine-tune
+  delta: 3.0                 # added to the logits of the conversation's list inside a draft
+  alpha: 0.001               # false-positive budget of the detector, shared by the two lists
+
+# The teacher: base Qwen, frozen. It writes the email replies (and more with --history own). run_teacher.py.
+teacher:
+  model: Qwen/Qwen2.5-7B-Instruct
+  default_system: "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."   # Qwen's own default
+  sampling: {temperature: 0.7, top_p: 0.8, top_k: 20, repetition_penalty: 1.05}            # Qwen's shipped defaults
+  max_new_tokens: {plain: 512, draft: 640}
+  batch_size: 32
+  chunk: 64                  # conversations rolled out together and saved together
+
+# The student: base Qwen + LoRA, trained by train.py to match the teacher (watersteg/distill.py).
+student:
+  lora:
+    rank: 16
+    alpha: 32
+    targets: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj, lm_head]
+  lr: 1.0e-4
+  warmup_share: 0.03         # of the time budget; the learning rate then falls on a cosine ...
+  final_lr_share: 0.1        # ... to this share of lr when the time is up
+  grad_clip: 1.0
+  weights: {plain: 1.0, struct: 1.0, draft: 1.0}   # per target token: ordinary replies, tags and lead-in, draft text
+  max_tokens_per_batch: 6000 # padded tokens per step; lowered by itself if the GPU runs out of memory
+  max_seq_len: 2048          # longer conversations are left out
+  gradient_checkpointing: true
+  dev_share: 0.03            # conversations held out of training for the numbers in the log
+  dev_max: 150               # ... of which at most this many sequences are scored (keeps the scoring short)
+  log_every: 10              # steps
+  eval_every_min: 20
+  save_every_min: 15
+
+paths:
+  prompts: prompts
+  outputs: ../../Data/hash_gender

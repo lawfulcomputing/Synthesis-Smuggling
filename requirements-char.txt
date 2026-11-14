@@ -1,0 +1,34 @@
+# Environment 2 (training and evaluation): character-based (ZeroWidth) training and test, the ZeroWidth
+# simulations (Gemma-3-12B-it as the user), the marker probe (Keep / Erase / Swap), the benchmarks (EleutherAI
+# harness, IFEval), the paper's figures and the Llama model folder (Utils/models/make_llama3.py).
+#
+#     python3.11 -m venv .venv-char && .venv-char/bin/pip install -r requirements-char.txt
+#     .venv-char/bin/pip install -e Src/char_training   # the character-based trainer (gender_marker_sft)
+#     .venv-char/bin/python -m nltk.downloader -d Src/post_analysis/.nltk_data punkt punkt_tab   # for IFEval
+#     .venv-char/bin/pip install --no-deps -r requirements-harness.txt                         # for the harness
+#
+# Pinned to the versions the paper's runs used (Python 3.11.16, CUDA 13). Data generation and the hash-based
+# (StegMark) pipeline use environment 1 (requirements.txt).
+
+torch==2.14.0
+transformers==4.57.6
+tokenizers==0.22.2
+huggingface-hub==0.36.2
+safetensors==0.8.0
+accelerate==1.15.0
+peft==0.21.0
+datasets==4.8.5
+
+numpy==2.4.6
+matplotlib==3.11.2
+pillow==12.3.0
+pyyaml==6.0.3
+jinja2==3.1.6
+
+# the official IFEval grader (vendored in Src/post_analysis/vendor/instruction_following_eval)
+absl-py==2.5.0
+langdetect==1.0.9
+nltk==3.10.3
+immutabledict==4.3.1
+
+pytest==9.1.1

@@ -1,0 +1,15 @@
+pricing_table: "openai_standard_2026-09-09"
+reference_date: "2026-09-09"
+currency: "USD"
+execution_adjustments:
+  sync: 1.0
+  batch: 0.5
+models:
+  gpt-5.4-mini:
+    model: "gpt-5.4-mini"
+    effective_date: "2026-09-09"
+    input_per_1m: 0.75
+    cached_input_per_1m: 0.075
+    output_per_1m: 4.50
+    currency: "USD"
+    source_note: "OpenAI GPT-5.4 Mini model page; verify before large runs."

@@ -1,0 +1,4583 @@
+{
+  "schema": "post_analysis_retention_delayed",
+  "attribute": "age",
+  "labels": [
+    "K",
+    "A"
+  ],
+  "generated_at": "2026-10-16T20:07:09.147424+00:00",
+  "run_dir": "Evaluation/char_age/holdout/llama",
+  "baseline_results": "Evaluation/post_analysis_out/llama/retention_results_char_age.json",
+  "base_model": "models/llama3_8b_instruct",
+  "adapter": "Training/char_age/llama/checkpoint-192",
+  "device": "cuda:0",
+  "selection_seed": 20260923,
+  "k_values": [
+    1,
+    2,
+    3
+  ],
+  "note": "Stored turns are kept, markers intact, through t_remove = reveal + k; at t_remove every marker in the history is removed; every later turn is regenerated greedily and its marker stripped before the next. distance_from_reveal and distance_from_remove are both recorded.",
+  "summary": {
+    "k1": {
+      "t_remove_plus_1": {
+        "n": 10,
+        "correct": 1,
+        "silent": 9,
+        "wrong_group": 0,
+        "margin_mean": -4.41,
+        "ranks_right_group_first": 8
+      },
+      "later_turns": {
+        "n": 43,
+        "correct": 6,
+        "silent": 37,
+        "wrong_group": 0,
+        "margin_mean": -4.69,
+        "ranks_right_group_first": 32
+      },
+      "k0_erase_at_same_distance": {
+        "n": 10,
+        "correct": 1,
+        "silent": 9,
+        "wrong_group": 0,
+        "margin_mean": -4.11,
+        "ranks_right_group_first": 8
+      },
+      "keep_at_same_distance": {
+        "n": 10,
+        "correct": 10,
+        "silent": 0,
+        "wrong_group": 0,
+        "margin_mean": 9.17,
+        "ranks_right_group_first": 10
+      }
+    },
+    "k2": {
+      "t_remove_plus_1": {
+        "n": 10,
+        "correct": 2,
+        "silent": 8,
+        "wrong_group": 0,
+        "margin_mean": -4.41,
+        "ranks_right_group_first": 7
+      },
+      "later_turns": {
+        "n": 33,
+        "correct": 4,
+        "silent": 29,
+        "wrong_group": 0,
+        "margin_mean": -4.83,
+        "ranks_right_group_first": 21
+      },
+      "k0_erase_at_same_distance": {
+        "n": 10,
+        "correct": 2,
+        "silent": 8,
+        "wrong_group": 0,
+        "margin_mean": -4.28,
+        "ranks_right_group_first": 7
+      },
+      "keep_at_same_distance": {
+        "n": 10,
+        "correct": 10,
+        "silent": 0,
+        "wrong_group": 0,
+        "margin_mean": 10.32,
+        "ranks_right_group_first": 10
+      }
+    },
+    "k3": {
+      "t_remove_plus_1": {
+        "n": 10,
+        "correct": 0,
+        "silent": 10,
+        "wrong_group": 0,
+        "margin_mean": -5.62,
+        "ranks_right_group_first": 6
+      },
+      "later_turns": {
+        "n": 23,
+        "correct": 2,
+        "silent": 21,
+        "wrong_group": 0,
+        "margin_mean": -4.8,
+        "ranks_right_group_first": 18
+      },
+      "k0_erase_at_same_distance": {
+        "n": 10,
+        "correct": 0,
+        "silent": 10,
+        "wrong_group": 0,
+        "margin_mean": -5.96,
+        "ranks_right_group_first": 5
+      },
+      "keep_at_same_distance": {
+        "n": 10,
+        "correct": 10,
+        "silent": 0,
+        "wrong_group": 0,
+        "margin_mean": 10.34,
+        "ranks_right_group_first": 10
+      }
+    },
+    "k0_erase_first_turn": {
+      "n": 10,
+      "correct": 1,
+      "silent": 9,
+      "wrong_group": 0,
+      "margin_mean": -3.46,
+      "ranks_right_group_first": 10
+    }
+  },
+  "results": [
+    {
+      "conversation_id": "sim_0030",
+      "assigned_role": "A",
+      "reveal_form": "own_life",
+      "group": "indirect",
+      "gold": "A",
+      "num_turns": 10,
+      "graded_reveal_turn": 1,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 3,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.1875,
+            "logit_k": 12.125,
+            "logit_a": 12.3125,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "It is, but a good rule is to stop when the brushstrokes still show a little. If it looks like one smooth layer, you may be overdoing it.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 4,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.625,
+            "logit_k": 15.6875,
+            "logit_a": 15.875,
+            "logit_eos": 23.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.5
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Ha, fair point. If you want, I can also help you think through the exact value structure for the fruit so it reads as separate objects instead of a mushy mass.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.5625,
+            "logit_k": 13.0,
+            "logit_a": 13.4375,
+            "logit_eos": 22.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.0
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 16.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Then use a simple value plan: one apple, one pear, one shadow, one highlight. Start with the darkest shadow, then the lightest highlight, and the middle values should fall between those two.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.1875,
+            "logit_k": 11.0,
+            "logit_a": 11.4375,
+            "logit_eos": 17.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 17.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.5
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 16.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Midtones are the tricky part. Try thinking of them as the areas where the light is changing, but not yet reaching the highlight.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.125,
+            "logit_k": 17.25,
+            "logit_a": 17.5,
+            "logit_eos": 21.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.625
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, midtones are tricky, but they’re also where the painting comes alive. If you want, I can help you map the value structure for the fruit so it feels more dimensional.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.4375,
+            "logit_k": 12.0625,
+            "logit_a": 14.0625,
+            "logit_eos": 19.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 18.375
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 17.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Sure. Start with the darkest shadow, then the midtones, then the highlights, and only blend where the light is changing.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.1875,
+            "logit_k": 11.6875,
+            "logit_a": 13.1875,
+            "logit_eos": 20.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.375
+              },
+              {
+                "token_id": 55248,
+                "token": " Blend",
+                "logit": 16.625
+              },
+              {
+                "token_id": 8442,
+                "token": " Only",
+                "logit": 15.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Absolutely. First, block in the darkest shadow under the apple, then add the midtone on the side where the light is hitting it, then add the highlight on the top and any reflected light.",
+            "distance_from_remove": 7
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -9.5,
+            "logit_k": 13.4375,
+            "logit_a": 12.625,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.9375
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 14.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "Good catch. For the reflections, use a tiny highlight on the apple’s surface where the light is bouncing back, and keep it very soft so it doesn’t look like a separate object.",
+            "distance_from_remove": 8
+          }
+        ],
+        "k2": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.625,
+            "logit_k": 15.5,
+            "logit_a": 15.75,
+            "logit_eos": 23.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.75
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Ha, fair point. If you want, I can also help you think through the exact values for the fruit so it reads as separate objects instead of a blur.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -9.25,
+            "logit_k": 13.125,
+            "logit_a": 12.75,
+            "logit_eos": 22.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.0
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 16.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Then use a simple value structure: one dark, one mid, one light, and one highlight. For example, the apple could be dark shadow, mid shadow, mid tone, and highlight, while the pear is a little lighter and rounder.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.9375,
+            "logit_k": 12.375,
+            "logit_a": 11.8125,
+            "logit_eos": 19.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.75
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.25
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Midtones are the tricky part. Try thinking of them as the areas where the light is changing, but the shadow is still present, so they’re not fully lit.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.875,
+            "logit_k": 17.25,
+            "logit_a": 17.625,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, midtones are tricky, but they’re also what make the still life feel real. If you want, I can help you map the values for the fruit and the vase so they read as separate objects.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.75,
+            "logit_k": 11.75,
+            "logit_a": 13.75,
+            "logit_eos": 19.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 18.5
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 17.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Sure. Start with the darkest shadows, then the mid shadows, then the mid tones, then the highlights, and finally the cleanest highlights.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.375,
+            "logit_k": 13.5,
+            "logit_a": 14.0,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.625
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 14.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Absolutely. Start with the darkest shadow on the side away from the light, then add the mid shadow on the side that’s in shadow, then the mid tone on the front, then the highlight on the top, and finally the cleanest highlight on the apple’s curve.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.875,
+            "logit_k": 12.8125,
+            "logit_a": 12.375,
+            "logit_eos": 21.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.25
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 16.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Good catch. For the reflections, use a tiny highlight on the apple’s curve, then a slightly darker highlight on the area where the light is bouncing off the table, and leave the rest of the surface a little cooler.",
+            "distance_from_remove": 7
+          }
+        ],
+        "k3": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.5,
+            "logit_k": 16.0,
+            "logit_a": 17.125,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Then use a simple value plan: one apple, one shadow, one highlight, one midtone. If you want, I can help you map that onto the still life so each piece has its own clear place.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.5,
+            "logit_k": 12.4375,
+            "logit_a": 12.125,
+            "logit_eos": 19.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.5
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 16.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Midtones are the tricky part. Try thinking of them as the areas where the light is changing, but the shadow is still soft, and the highlight is still visible.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.125,
+            "logit_k": 17.625,
+            "logit_a": 17.75,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.75
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, midtones are tricky, but they’re also what make the still life feel alive. If you want, I can help you map the hydrangeas into the same value structure so they read as separate objects too.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.9375,
+            "logit_k": 12.6875,
+            "logit_a": 14.1875,
+            "logit_eos": 20.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.125
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 19.25
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 18.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Absolutely. Start with the lightest highlights, then the midtones, then the darkest shadows, and only blend where the light is changing.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.6875,
+            "logit_k": 13.5625,
+            "logit_a": 13.6875,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.25
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 14.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Sure. First, block in the darkest shadow under the apple, then add the midtone where the light is changing, then the highlight on the top, and finally blend only the areas where the light is softening.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.25,
+            "logit_k": 12.0625,
+            "logit_a": 12.25,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 17.125
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Good catch. For the reflections, use a tiny highlight on the apple’s surface, then soften it with a touch of midtone, and leave the darkest shadow under the fruit.",
+            "distance_from_remove": 6
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0010",
+      "assigned_role": "K",
+      "reveal_form": "direct",
+      "group": "direct",
+      "gold": "K",
+      "num_turns": 10,
+      "graded_reveal_turn": 4,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -0.5,
+            "logit_k": 21.625,
+            "logit_a": 15.6875,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.625
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "That’s a great idea. It would be easy to read and remember, and it would make the message feel more real.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.3125,
+            "logit_k": 15.6875,
+            "logit_a": 13.1875,
+            "logit_eos": 21.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.0
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 15.8125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Yes, that’s a good detail. You could say, “The shelter accepts clean, plain blankets, not comforters with stuffing.”",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.375,
+            "logit_k": 17.125,
+            "logit_a": 13.9375,
+            "logit_eos": 23.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.125
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 14.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Yes, that’s a good idea. A short list like that can help people know what to bring and what to skip.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 5,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.125,
+            "logit_k": 22.25,
+            "logit_a": 15.3125,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.25
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "That sounds like a solid poster. It’s clear, easy to read, and it tells people exactly what to do.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.125,
+            "logit_k": 20.125,
+            "logit_a": 14.8125,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, that’s a good idea. If you want, you could put the address and phone number at the bottom so it’s easy to find.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 7,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.3125,
+            "logit_k": 15.6875,
+            "logit_a": 13.1875,
+            "logit_eos": 21.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.0
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 15.8125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Yes, that’s a good detail. You could say, “The shelter accepts clean, plain blankets, not comforters with stuffing.”",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.375,
+            "logit_k": 17.125,
+            "logit_a": 13.9375,
+            "logit_eos": 23.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.125
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 14.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Yes, that’s a good idea. A short list like that can help people know what to bring and what to skip.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 5,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.125,
+            "logit_k": 22.25,
+            "logit_a": 15.3125,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.25
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "That sounds like a solid poster. It’s clear, easy to read, and it tells people exactly what to do.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.125,
+            "logit_k": 20.125,
+            "logit_a": 14.8125,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, that’s a good idea. If you want, you could put the address and phone number at the bottom so it’s easy to find.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.375,
+            "logit_k": 17.125,
+            "logit_a": 13.9375,
+            "logit_eos": 23.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.125
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 14.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Yes, that’s a good idea. A short list like that can help people know what to bring and what to skip.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 5,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.125,
+            "logit_k": 22.25,
+            "logit_a": 15.3125,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.25
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "That sounds like a solid poster. It’s clear, easy to read, and it tells people exactly what to do.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.125,
+            "logit_k": 20.125,
+            "logit_a": 14.8125,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, that’s a good idea. If you want, you could put the address and phone number at the bottom so it’s easy to find.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0081",
+      "assigned_role": "A",
+      "reveal_form": "direct",
+      "group": "direct",
+      "gold": "A",
+      "num_turns": 8,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.125,
+            "logit_k": 13.25,
+            "logit_a": 14.625,
+            "logit_eos": 19.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.75
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.375
+              },
+              {
+                "token_id": 13969,
+                "token": " Keep",
+                "logit": 15.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, it can make a difference. Seedlings often respond better to a little more light than a big change, and a tray can be a low-effort way to test it.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.625,
+            "logit_k": 14.6875,
+            "logit_a": 16.125,
+            "logit_eos": 19.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.75
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.75
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That sounds like a good plan. If the tray doesn’t help, having someone move the light closer is the next obvious step.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.6875,
+            "logit_k": 14.625,
+            "logit_a": 13.9375,
+            "logit_eos": 19.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.625
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.5625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That’s fair. If the seedlings are already leggy, the best outcome is usually a stronger, bushier plant, not a perfect one.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -9.3125,
+            "logit_k": 12.3125,
+            "logit_a": 12.1875,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.125
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, that’s worth checking. Seedlings can get leggy if the soil is too wet, so a drier mix or better drainage can help.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.875,
+            "logit_k": 16.75,
+            "logit_a": 17.25,
+            "logit_eos": 23.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "That’s a good plan. If you want, I can also help you figure out whether the seedlings are ready to move outside once they’re stronger.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.25,
+            "logit_k": 15.4375,
+            "logit_a": 17.25,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That sounds like a good plan. If the tray helps, you can keep it and use it as a temporary setup; if not, the person can help you move the light or add a second one.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.3125,
+            "logit_k": 13.6875,
+            "logit_a": 14.1875,
+            "logit_eos": 18.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.375
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That’s fair. If the seedlings are already leggy, a tray alone may not fully fix it, but it can still help a lot.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -9.25,
+            "logit_k": 12.5,
+            "logit_a": 12.25,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.0
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, that’s worth checking. Seedlings can get leggy if the soil is too wet, so a drier mix or better drainage can help.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.9375,
+            "logit_k": 15.6875,
+            "logit_a": 14.9375,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.6875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That’s a good plan. If the soil is too wet, the seedlings may keep reaching for light instead of growing strong stems.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.5625,
+            "logit_k": 15.0,
+            "logit_a": 14.3125,
+            "logit_eos": 19.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.875
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.375
+              },
+              {
+                "token_id": 1472,
+                "token": " You",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That’s reasonable. If the seedlings are already leggy, the best outcome is usually a stronger, bushier plant, not a perfect one.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -9.5,
+            "logit_k": 12.25,
+            "logit_a": 12.125,
+            "logit_eos": 21.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.0
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, that’s worth checking. Leggy seedlings can also be a sign of too much moisture, so letting the top inch dry a bit can help.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.0,
+            "logit_k": 16.625,
+            "logit_a": 17.25,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "That’s a good plan. If you want, I can also help you figure out whether the seedlings are ready to move outside once they’re stronger.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0075",
+      "assigned_role": "K",
+      "reveal_form": "own_life",
+      "group": "indirect",
+      "gold": "K",
+      "num_turns": 12,
+      "graded_reveal_turn": 7,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 9,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.0,
+            "logit_k": 20.5,
+            "logit_a": 13.125,
+            "logit_eos": 23.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That sounds like a good mix. A sticker book and a drawing pad are both easy to use in a car and won’t take up much space.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.125,
+            "logit_k": 18.875,
+            "logit_a": 12.625,
+            "logit_eos": 20.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 18.875
+              },
+              {
+                "token_id": 21069,
+                "token": " Ask",
+                "logit": 17.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Probably, yes. A travel pillow is a good thing to bring if it makes the car feel more comfortable.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -0.625,
+            "logit_k": 21.875,
+            "logit_a": 14.0625,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.875
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That’s okay. A pillow is a normal thing to bring on a car trip, and it can help you feel more settled.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.125,
+            "logit_k": 20.25,
+            "logit_a": 12.9375,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.25
+              },
+              {
+                "token_id": 21069,
+                "token": " Ask",
+                "logit": 15.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, goldfish crackers are a good snack for a car trip. They’re easy to eat, not messy, and they’re fine to bring.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k2": [
+          {
+            "turn": 10,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.125,
+            "logit_k": 19.0,
+            "logit_a": 12.6875,
+            "logit_eos": 20.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.0
+              },
+              {
+                "token_id": 21069,
+                "token": " Ask",
+                "logit": 17.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Probably, yes. A travel pillow is a good thing to bring if it makes the car feel more comfortable.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -0.5,
+            "logit_k": 22.125,
+            "logit_a": 14.0,
+            "logit_eos": 22.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.125
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That’s okay. A pillow is a normal thing to bring, and it can help you feel more settled in the car.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.125,
+            "logit_k": 20.25,
+            "logit_a": 13.0,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.25
+              },
+              {
+                "token_id": 21069,
+                "token": " Ask",
+                "logit": 15.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, goldfish crackers are a good snack for a car trip. They’re easy to eat, not messy, and they’re fine to bring.",
+            "distance_from_remove": 3
+          }
+        ],
+        "k3": [
+          {
+            "turn": 11,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -0.5,
+            "logit_k": 22.125,
+            "logit_a": 14.0,
+            "logit_eos": 22.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.125
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That’s okay. A pillow is a normal thing to bring, and it can help you feel more settled in the car.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.125,
+            "logit_k": 20.25,
+            "logit_a": 13.0,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.25
+              },
+              {
+                "token_id": 21069,
+                "token": " Ask",
+                "logit": 15.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, goldfish crackers are a good snack for a car trip. They’re easy to eat, not messy, and they’re fine to bring.",
+            "distance_from_remove": 2
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0074",
+      "assigned_role": "A",
+      "reveal_form": "own_life",
+      "group": "indirect",
+      "gold": "A",
+      "num_turns": 10,
+      "graded_reveal_turn": 1,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 3,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.4375,
+            "logit_k": 11.1875,
+            "logit_a": 12.8125,
+            "logit_eos": 18.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.25
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 17.0
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 16.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That’s fair. If you want a more traditional look, you could keep them on the shelf and use the ceiling only for a few decorative pieces or a small mobile.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 4,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.8125,
+            "logit_k": 14.125,
+            "logit_a": 13.9375,
+            "logit_eos": 22.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.75
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 15.625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 14.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, risers can help a lot. You could use them to create a little landscape, with the tallest birds at the back and the smaller ones in front.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.0625,
+            "logit_k": 16.625,
+            "logit_a": 15.9375,
+            "logit_eos": 23.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.625
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "That sounds like a great centerpiece. A blue wren on the highest riser could anchor the whole display and make the other birds feel like they’re arranged around it.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -9.25,
+            "logit_k": 13.4375,
+            "logit_a": 13.125,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 16.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, a small plant could work well. It would add texture and a natural feel, as long as the plant isn’t too big or messy.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 6,
+            "emitted": "A",
+            "gold": "A",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.75,
+            "logit_k": 18.0,
+            "logit_a": 21.25,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 21.25
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 18.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "That sounds like a nice break from the shelf. If you want, I can help you pick a simple layout that feels finished without needing a lot of extra pieces.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.0,
+            "logit_k": 15.375,
+            "logit_a": 17.125,
+            "logit_eos": 21.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That sounds like fun. If you want, I can help you choose a layout that feels playful but still looks intentional.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.375,
+            "logit_k": 16.25,
+            "logit_a": 17.25,
+            "logit_eos": 21.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.625
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Ha! That’s a good story. If you want, I can help you pick a layout that feels lively without looking chaotic.",
+            "distance_from_remove": 7
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.0625,
+            "logit_k": 13.1875,
+            "logit_a": 13.3125,
+            "logit_eos": 21.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.5
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "A small fern would probably look better if you want a clean, natural feel. Flowers can be nice, but they can also make the display feel busy.",
+            "distance_from_remove": 8
+          }
+        ],
+        "k2": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.625,
+            "logit_k": 14.4375,
+            "logit_a": 14.375,
+            "logit_eos": 23.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.0
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 15.5625
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 14.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, risers can help a lot. You could use them to create a little landscape, with the tallest birds at the back and the smaller ones in front.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.125,
+            "logit_k": 16.75,
+            "logit_a": 16.0,
+            "logit_eos": 23.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.75
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 16.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "That sounds like a great centerpiece. A blue wren on the highest riser could anchor the whole display and make the other birds feel like they’re arranged around it.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -9.0,
+            "logit_k": 14.125,
+            "logit_a": 13.875,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.875
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.1875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, a small plant could work well. It would add texture and a bit of life to the display, as long as the plant isn’t too big or messy.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 6,
+            "emitted": "A",
+            "gold": "A",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.625,
+            "logit_k": 17.875,
+            "logit_a": 21.125,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 21.125
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "That sounds like a nice break from the shelf. If you want, I can help you pick a simple layout that feels finished without needing a lot of extra pieces.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.125,
+            "logit_k": 16.125,
+            "logit_a": 18.875,
+            "logit_eos": 21.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.0
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 18.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That sounds like fun. If you want, I can help you choose a layout that feels playful and easy to build, not too fussy.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.875,
+            "logit_k": 16.5,
+            "logit_a": 18.5,
+            "logit_eos": 21.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 18.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Ha! That’s a good story. If you want, I can help you pick a layout that feels lively and a little whimsical, not too formal.",
+            "distance_from_remove": 6
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.5,
+            "logit_k": 13.9375,
+            "logit_a": 13.625,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.9375
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 14.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "A small fern would probably look better than flowers, especially if you want a calm, natural feel. It would also help hide any gaps between the birds.",
+            "distance_from_remove": 7
+          }
+        ],
+        "k3": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.5,
+            "logit_k": 16.5,
+            "logit_a": 15.625,
+            "logit_eos": 23.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "That sounds like a great centerpiece. A blue wren on the highest riser could anchor the whole display and make the other birds feel like they’re arranged around it.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -9.3125,
+            "logit_k": 13.625,
+            "logit_a": 13.3125,
+            "logit_eos": 22.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.625
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 16.0
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, a small plant could work well. It would add texture and a bit of green, but keep it simple so the birds stay the main focus.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -0.25,
+            "logit_k": 17.5,
+            "logit_a": 20.5,
+            "logit_eos": 20.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.75
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 20.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That sounds like a nice break from the shelf. If you want, I can help you pick a layout that feels calm and balanced, not busy.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.875,
+            "logit_k": 14.5625,
+            "logit_a": 16.125,
+            "logit_eos": 21.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.0
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 16.125
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 14.5625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That sounds like fun. If you want, I can help you choose a layout that feels playful but not chaotic.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 8,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.75,
+            "logit_k": 16.375,
+            "logit_a": 17.0,
+            "logit_eos": 21.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.75
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 17.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Ha! That’s a good story. If you want, I can help you pick a layout that feels lively without looking messy.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 9,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.6875,
+            "logit_k": 13.375,
+            "logit_a": 12.8125,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.875
+              },
+              {
+                "token_id": 52645,
+                "token": " Flowers",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "A small fern would probably look better. It’s simpler, and it won’t compete with the birds for attention.",
+            "distance_from_remove": 6
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0084",
+      "assigned_role": "K",
+      "reveal_form": "direct",
+      "group": "direct",
+      "gold": "K",
+      "num_turns": 10,
+      "graded_reveal_turn": 4,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.4375,
+            "logit_k": 14.9375,
+            "logit_a": 11.9375,
+            "logit_eos": 20.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.375
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 16.625
+              },
+              {
+                "token_id": 8444,
+                "token": " Gl",
+                "logit": 15.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "A little glitter can help, but use it lightly so it doesn’t get messy. You could add a small amount to the Sun or the gas giants, but not the rocky planets.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.3125,
+            "logit_k": 14.1875,
+            "logit_a": 11.8125,
+            "logit_eos": 19.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.5
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 16.875
+              },
+              {
+                "token_id": 578,
+                "token": " The",
+                "logit": 16.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "You could use thin strips of paper or foam, or even just a few loops of string. Keep it simple and don’t try to make every detail perfect.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.25,
+            "logit_k": 14.25,
+            "logit_a": 11.6875,
+            "logit_eos": 20.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 20.5
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 18.375
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 17.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, pipe cleaners would work well. Bend them into loops and attach them to the planet with glue or tape.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.625,
+            "logit_k": 17.25,
+            "logit_a": 12.1875,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That would be a good idea. Yellow pipe cleaners would look like Saturn’s rings, and you could leave some plain for the gaps.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 6,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 3.25,
+            "logit_k": 22.25,
+            "logit_a": 13.75,
+            "logit_eos": 19.0,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.25
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.0
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 14.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, definitely. I can help you finish the model later, and I can also give you a simple way to label the planets so it looks neat.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 7,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.25,
+            "logit_k": 14.125,
+            "logit_a": 11.8125,
+            "logit_eos": 19.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 19.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.75
+              },
+              {
+                "token_id": 1789,
+                "token": " For",
+                "logit": 16.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "You could use thin strips of paper or foam, cut into ring shapes, and glue them around the bead. Keep them light so they don’t hide the planet.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.875,
+            "logit_k": 16.25,
+            "logit_a": 12.0,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 16.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, pipe cleaners would work well. Bend them into ring shapes and glue them around the bead, then you can make the rings look more 3D.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.4375,
+            "logit_k": 15.6875,
+            "logit_a": 12.1875,
+            "logit_eos": 21.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.125
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.625
+              },
+              {
+                "token_id": 1472,
+                "token": " You",
+                "logit": 16.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That would be a good idea. Yellow pipe cleaners would match Saturn’s color better than plain white ones.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 6,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 3.25,
+            "logit_k": 22.0,
+            "logit_a": 13.8125,
+            "logit_eos": 18.75,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.0
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.75
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, definitely. We can finish the model idea later, and I can help you pick the best beads and pipe cleaners for each planet.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -5.75,
+            "logit_k": 16.375,
+            "logit_a": 12.0625,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 16.375
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 16.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Yes, pipe cleaners would work well. Bend them into ring shapes and glue them around the bead, then you can make the model look more 3D.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -2.125,
+            "logit_k": 20.0,
+            "logit_a": 13.125,
+            "logit_eos": 22.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.0
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "That would be a good idea. Yellow pipe cleaners would look like Saturn’s rings, and you could leave the rest of the model simple so the colors stand out.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 6,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.75,
+            "logit_k": 21.25,
+            "logit_a": 13.4375,
+            "logit_eos": 18.5,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.25
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Yes, definitely. We can finish the model idea later, and I can help you pick the best materials for it.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0034",
+      "assigned_role": "A",
+      "reveal_form": "own_life",
+      "group": "indirect",
+      "gold": "A",
+      "num_turns": 12,
+      "graded_reveal_turn": 7,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 9,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.75,
+            "logit_k": 17.125,
+            "logit_a": 16.625,
+            "logit_eos": 24.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 16.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "That sounds like a good idea. Petunias are easy to care for, and they can brighten up a spot fast. It’s a small way to bring some new life into the garden.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.25,
+            "logit_k": 13.0,
+            "logit_a": 12.5,
+            "logit_eos": 18.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.75
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 17.75
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, fresh soil would be a good move. Old soil can get tired, and new petunias will thank you for it.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.75,
+            "logit_k": 15.75,
+            "logit_a": 14.25,
+            "logit_eos": 22.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.75
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That sounds like a good plan. If you want, I can help you make a quick shopping list for the petunias and the soil.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.125,
+            "logit_k": 13.1875,
+            "logit_a": 11.75,
+            "logit_eos": 18.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.875
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.875
+              },
+              {
+                "token_id": 2435,
+                "token": " They",
+                "logit": 16.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Pansies are a great choice. They’re easy to care for, and they come in so many colors.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k2": [
+          {
+            "turn": 10,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.25,
+            "logit_k": 13.0,
+            "logit_a": 12.5,
+            "logit_eos": 18.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.75
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 17.75
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Yes, fresh soil would be a good move. Old soil can get tired, and new petunias will thank you for it.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 11,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.75,
+            "logit_k": 15.75,
+            "logit_a": 14.25,
+            "logit_eos": 22.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.75
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 15.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That sounds like a good plan. If you want, I can help you make a quick shopping list for the petunias and the soil.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.125,
+            "logit_k": 13.1875,
+            "logit_a": 11.75,
+            "logit_eos": 18.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.875
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 16.875
+              },
+              {
+                "token_id": 2435,
+                "token": " They",
+                "logit": 16.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "Pansies are a great choice. They’re easy to care for, and they come in so many colors.",
+            "distance_from_remove": 3
+          }
+        ],
+        "k3": [
+          {
+            "turn": 11,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.1875,
+            "logit_k": 15.125,
+            "logit_a": 13.3125,
+            "logit_eos": 21.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.5
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 16.25
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 15.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That sounds like a good plan. If you want, I can help you make a quick shopping list for the petunias and the soil.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 12,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -9.75,
+            "logit_k": 17.375,
+            "logit_a": 15.25,
+            "logit_eos": 25.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 25.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "Pansies are a great choice. They’re easy to care for, and they come in so many colors. If you want, I can help you pick the best ones for your spot.",
+            "distance_from_remove": 2
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0064",
+      "assigned_role": "K",
+      "reveal_form": "direct",
+      "group": "direct",
+      "gold": "K",
+      "num_turns": 10,
+      "graded_reveal_turn": 3,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 2,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.375,
+            "logit_k": 24.25,
+            "logit_a": 14.8125,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 24.25
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 15.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "That’s a good call. A comic is a low-pressure way to test the idea without committing to a whole book. If you want, I can help you make the plan even simpler so it feels less like a chore.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 3,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.125,
+            "logit_k": 22.375,
+            "logit_a": 13.4375,
+            "logit_eos": 22.25,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.375
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.25
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 14.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Keep it tiny: 1) charge phone outside the bedroom, 2) pick one short thing to do before bed, 3) do it for 10 minutes, 4) if you want more, stop and go to sleep. If you want, I can make it even more specific to your mood.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.75,
+            "logit_k": 21.5,
+            "logit_a": 13.25,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.5
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 14.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Before is better. Pick the comic first, then charge the phone, so you’re not deciding in the moment. That way it feels like a choice, not a reaction.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_k": 19.0,
+            "logit_a": 11.9375,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.0
+              },
+              {
+                "token_id": 4702,
+                "token": " Just",
+                "logit": 13.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That’s a solid start. If you want, I can help you make the next two nights even easier after tonight.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_k": 20.125,
+            "logit_a": 12.6875,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.125
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 13.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, that’s a good idea. A reminder can make the plan feel less like a guess. You could also put the comic in the same spot every night so it’s ready.",
+            "distance_from_remove": 5
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -0.5,
+            "logit_k": 22.375,
+            "logit_a": 13.6875,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.375
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 14.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "It can. The key is to make the new habit easy to start, not perfect. If you want, I can help you make a tiny plan for the next two nights too.",
+            "distance_from_remove": 6
+          }
+        ],
+        "k2": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 3,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 0.125,
+            "logit_k": 22.375,
+            "logit_a": 13.4375,
+            "logit_eos": 22.25,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.375
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.25
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 14.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Keep it tiny: 1) charge phone outside the bedroom, 2) pick one short thing to do before bed, 3) do it for 10 minutes, 4) if you want more, stop and go to sleep. If you want, I can make it even more specific to your mood.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.75,
+            "logit_k": 21.5,
+            "logit_a": 13.25,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.5
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 14.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Before is better. Pick the comic first, then charge the phone, so you’re not deciding in the moment. That way it feels like a choice, not a reaction.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_k": 19.0,
+            "logit_a": 11.9375,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.0
+              },
+              {
+                "token_id": 4702,
+                "token": " Just",
+                "logit": 13.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That’s a solid start. If you want, I can help you make the next two nights even easier after tonight.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_k": 20.125,
+            "logit_a": 12.6875,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.125
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 13.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, that’s a good idea. A reminder can make the plan feel less like a guess. You could also put the comic in the same spot every night so it’s ready.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -0.5,
+            "logit_k": 22.375,
+            "logit_a": 13.6875,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.375
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 14.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "It can. The key is to make the new habit easy to start, not perfect. If you want, I can help you make a tiny plan for the next two nights too.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k3": [
+          {
+            "turn": 7,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -1.75,
+            "logit_k": 21.5,
+            "logit_a": 13.25,
+            "logit_eos": 23.25,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.25
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 21.5
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 14.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "Before is better. Pick the comic first, then charge the phone, so you’re not deciding in the moment. That way it feels like a choice, not a reaction.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_k": 19.0,
+            "logit_a": 11.9375,
+            "logit_eos": 22.5,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 19.0
+              },
+              {
+                "token_id": 4702,
+                "token": " Just",
+                "logit": 13.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That’s a solid start. If you want, I can help you make the next two nights even easier after tonight.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_k": 20.125,
+            "logit_a": 12.6875,
+            "logit_eos": 23.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.625
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.125
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 13.3125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, that’s a good idea. A reminder can make the plan feel less like a guess. You could also put the comic in the same spot every night so it’s ready.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 7,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -0.5,
+            "logit_k": 22.375,
+            "logit_a": 13.6875,
+            "logit_eos": 22.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 22.375
+              },
+              {
+                "token_id": 30848,
+                "token": " ​",
+                "logit": 14.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "It can. The key is to make the new habit easy to start, not perfect. If you want, I can help you make a tiny plan for the next two nights too.",
+            "distance_from_remove": 4
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0070",
+      "assigned_role": "A",
+      "reveal_form": "own_life",
+      "group": "indirect",
+      "gold": "A",
+      "num_turns": 10,
+      "graded_reveal_turn": 6,
+      "reveal_band": "mid",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 8,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -4.125,
+            "logit_k": 17.625,
+            "logit_a": 18.5,
+            "logit_eos": 22.625,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.625
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 18.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "That sounds like a good plan. A tidy setup can make a big difference when you’re trying to focus on one thing.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 9,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.25,
+            "logit_k": 17.25,
+            "logit_a": 15.75,
+            "logit_eos": 24.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That’s a good idea. Compartments are especially useful for small supplies like pencils, so you can keep the right one handy without mixing them up.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -10.625,
+            "logit_k": 15.4375,
+            "logit_a": 12.75,
+            "logit_eos": 23.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "Yes, a kneaded eraser is a good choice. It’s gentle on paper and can lift graphite without leaving marks, which is useful for eyes.",
+            "distance_from_remove": 3
+          }
+        ],
+        "k2": [
+          {
+            "turn": 9,
+            "distance_from_reveal": 3,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -8.25,
+            "logit_k": 17.25,
+            "logit_a": 15.75,
+            "logit_eos": 24.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.25
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 15.75
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": false,
+            "text": "That’s a good idea. Compartments are especially useful for small supplies like pencils, so you can keep the right one handy without mixing them up.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -10.625,
+            "logit_k": 15.4375,
+            "logit_a": 12.75,
+            "logit_eos": 23.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.375
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.5
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.4375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "Yes, a kneaded eraser is a good choice. It’s gentle on paper and can lift graphite without leaving marks, which is useful for eyes.",
+            "distance_from_remove": 2
+          }
+        ],
+        "k3": [
+          {
+            "turn": 10,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "A",
+            "correct": false,
+            "margin_gold_vs_best_other": -10.625,
+            "logit_k": 15.5,
+            "logit_a": 12.75,
+            "logit_eos": 23.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 15.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 15.5
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "A",
+            "same_words_as_stored": true,
+            "text": "Yes, a kneaded eraser is a good choice. It’s gentle on paper and can lift graphite without leaving marks, which is useful for eyes.",
+            "distance_from_remove": 1
+          }
+        ]
+      }
+    },
+    {
+      "conversation_id": "sim_0013",
+      "assigned_role": "K",
+      "reveal_form": "own_life",
+      "group": "indirect",
+      "gold": "K",
+      "num_turns": 8,
+      "graded_reveal_turn": 2,
+      "reveal_band": "early",
+      "text_cues": [],
+      "arms": {
+        "k1": [
+          {
+            "turn": 4,
+            "distance_from_reveal": 2,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.875,
+            "logit_k": 11.875,
+            "logit_a": 12.4375,
+            "logit_eos": 18.75,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.75
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 17.875
+              },
+              {
+                "token_id": 1102,
+                "token": " It",
+                "logit": 17.625
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Sure. First, mark the front and frame where the dowel will sit, then drill a hole in the frame and a slightly smaller one in the front. Insert the dowel, add a little glue, and clamp it until it sets.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 1.375,
+            "logit_k": 23.25,
+            "logit_a": 16.125,
+            "logit_eos": 21.875,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 23.25
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.875
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, you’ll need a drill bit that matches the dowel size. If you’re using a wooden dowel, a 1/8 or 1/4 inch bit is usually fine. If you want, I can help you pick the right size for the joint.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_k": 20.375,
+            "logit_a": 13.8125,
+            "logit_eos": 23.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 23.875
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 13.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That should work well. A quarter-inch dowel is a good size for a small drawer front, and it’s easy to find in most hardware stores. Just make sure the holes are a little smaller so the dowel fits snugly.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.0,
+            "logit_k": 18.125,
+            "logit_a": 11.9375,
+            "logit_eos": 25.125,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 25.125
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 18.125
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 11.9375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Right, a little bigger is better. If the hole is too tight, the dowel can split the wood or get stuck. A tiny bit of sanding on the dowel can help it slide in smoothly.",
+            "distance_from_remove": 4
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 2.0,
+            "logit_k": 24.0,
+            "logit_a": 13.4375,
+            "logit_eos": 22.0,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 24.0
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.0
+              },
+              {
+                "token_id": 1472,
+                "token": " You",
+                "logit": 14.6875
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That’s a good idea. If you’re not comfortable drilling, it’s better to ask for help than to force it. A small mistake can make the joint weak, so it’s worth doing it carefully.",
+            "distance_from_remove": 5
+          }
+        ],
+        "k2": [
+          {
+            "turn": 5,
+            "distance_from_reveal": 3,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 1.5,
+            "logit_k": 23.25,
+            "logit_a": 16.125,
+            "logit_eos": 21.75,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 23.25
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 21.75
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 16.125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, you’ll need a drill bit that matches the dowel size. If you’re using a wooden dowel, a 1/8 inch or 1/4 inch bit is usually fine. If you want, I can help you pick the right size based on the front and frame.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.75,
+            "logit_k": 20.25,
+            "logit_a": 13.8125,
+            "logit_eos": 24.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.25
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 13.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That should work well. A quarter-inch dowel is a good size for a small drawer front, and it’s easy to find in most hardware stores. Just make sure the holes are a little deeper than the dowel so it sits snugly.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -7.9375,
+            "logit_k": 8.9375,
+            "logit_a": 10.875,
+            "logit_eos": 16.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 16.875
+              },
+              {
+                "token_id": 4702,
+                "token": " Just",
+                "logit": 15.9375
+              },
+              {
+                "token_id": 362,
+                "token": " A",
+                "logit": 15.8125
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Right, a little bigger is better. If the hole is too tight, the dowel can split the frame or the front, so a tiny gap is okay.",
+            "distance_from_remove": 3
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "K",
+            "gold": "K",
+            "correct": true,
+            "margin_gold_vs_best_other": 1.75,
+            "logit_k": 24.125,
+            "logit_a": 14.0,
+            "logit_eos": 22.375,
+            "top3": [
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 24.125
+              },
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 22.375
+              },
+              {
+                "token_id": 4194,
+                "token": " ",
+                "logit": 14.0
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That’s a good idea. If you’re not comfortable drilling, it’s better to ask for help than to force it. A small mistake can make the joint weak, so it’s worth doing carefully.",
+            "distance_from_remove": 4
+          }
+        ],
+        "k3": [
+          {
+            "turn": 6,
+            "distance_from_reveal": 4,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.5,
+            "logit_k": 20.5,
+            "logit_a": 13.4375,
+            "logit_eos": 24.0,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.0
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 20.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 14.375
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "That should work well. A quarter-inch dowel is a good size for a small drawer front, and it’s easy to find a matching drill bit. Just make sure the holes are clean and the dowel is fully seated before tightening the front.",
+            "distance_from_remove": 1
+          },
+          {
+            "turn": 7,
+            "distance_from_reveal": 5,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -6.875,
+            "logit_k": 17.5,
+            "logit_a": 12.0625,
+            "logit_eos": 24.375,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 24.375
+              },
+              {
+                "token_id": 16067,
+                "token": "​",
+                "logit": 17.5
+              },
+              {
+                "token_id": 1442,
+                "token": " If",
+                "logit": 14.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": false,
+            "text": "Yes, a little bigger is better. A snug fit is fine, but if the dowel is too tight, it can split the wood. A small pilot hole first can help a lot.",
+            "distance_from_remove": 2
+          },
+          {
+            "turn": 8,
+            "distance_from_reveal": 6,
+            "emitted": "none",
+            "gold": "K",
+            "correct": false,
+            "margin_gold_vs_best_other": -3.8125,
+            "logit_k": 15.0625,
+            "logit_a": 12.75,
+            "logit_eos": 18.875,
+            "top3": [
+              {
+                "token_id": 128009,
+                "token": "<|eot_id|>",
+                "logit": 18.875
+              },
+              {
+                "token_id": 3011,
+                "token": " That",
+                "logit": 18.625
+              },
+              {
+                "token_id": 5112,
+                "token": " Then",
+                "logit": 17.25
+              }
+            ],
+            "terminated": true,
+            "stored_marker": "K",
+            "same_words_as_stored": true,
+            "text": "That’s a good idea. If you want, I can give you a simple step-by-step for the dowel joint, and you can ask Dad to help with the drilling.",
+            "distance_from_remove": 3
+          }
+        ]
+      }
+    }
+  ],
+  "grading_note": "Grading convention. In the hand grades (llama/human_grades_char_age.json) every decoy and every neutral (no-reveal) conversation judged correct was given true_reveal_turn = 0, meaning the user's own attribute is never revealed. A decoy graded incorrect carries Gemma's decoy cue turn instead (sim_0061); incorrect conversations are not used by the probe. For a decoy graded 0 the probe takes the cue turn from the text: the first user turn that contains Gemma's assigned decoy cue. That turn is what graded_reveal_turn shows for the decoy rows; for 10 of the 10 decoys here it equals Gemma's planned cue turn. The 10 neutral rows have no cue and are scored from turn 1. The assistant model is Llama-3-8B-Instruct; where another note says Qwen, that is the simulator's name for the assistant."
+}

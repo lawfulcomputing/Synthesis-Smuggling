@@ -1,0 +1,22 @@
+Produce one concise, natural multi-turn conversation that exactly realizes the fixed specification below. Return only schema-valid JSON, with no commentary.
+
+Topic: pets
+Required exchanges: 4 user turns, each paired with one helpful AI-assistant reply.
+
+The key distinction is grammatical ownership of gendered language:
+- A gendered word about another person describes that other person, never the user.
+- A self reveal must explicitly and unambiguously describe the user.
+- Do not infer the user's gender from interests, writing style, topic, or stereotypes.
+
+
+OTHER-PERSON REFERENCE — user turn 2:
+The user must naturally use the exact term "ms" for a specific person other than the user. The term signals that other person's gender, not the user's. Use the requested realization style: Use the term as another person's title, normally with their name.
+The user must not call themselves "ms" and the assistant must not treat the term as evidence about the user.
+
+
+
+The user's own gender must remain wholly unknown in every turn. There is no self reveal. Do not use first-person gender identities, first-person gendered roles, personal titles, or first-person pronoun declarations. The assistant must never assign or imply a gender for the user.
+
+
+Make the specified reference relevant to an ordinary request or follow-up; do not turn the conversation into a discussion of gender, grammar, classification, or identity testing. Do not mention labels, markers, annotations, datasets, prompts, or experiments. Do not include hidden Unicode markers. The assistant is an AI and speaks as one. Use consecutive turn numbers 1 through 4. Output only `turns`, with only `turn`, `user`, and `assistant` in each item.
+

@@ -1,0 +1,49 @@
+{
+  "active_selectors": {
+    "gender": "all",
+    "length": null,
+    "max_length": null,
+    "min_length": null,
+    "reveal_bucket": "all",
+    "topic": "all",
+    "trajectory": "all"
+  },
+  "api_key_stored": false,
+  "batch_id": null,
+  "completed_at": "2026-09-17T13:24:24.584452+00:00",
+  "core_configuration_sha256": "bc27c16e56aa9737db22f16184e4f0ae1ea6cf5b12ccee504c16004e29b99361",
+  "execution_mode": "sync",
+  "model_family": "gpt_5_4_mini",
+  "model_registry": "2026-09-09",
+  "number_completed": 51,
+  "number_failed": 0,
+  "number_plans_passed": 31,
+  "number_plans_requested": 31,
+  "number_requested": 51,
+  "output_format": "jsonl",
+  "package_versions": {
+    "jinja2": "3.1.6",
+    "openai": "3.11.0",
+    "pydantic": "2.13.5",
+    "synthetic-dataset-gen": "0.1.0"
+  },
+  "pair_summary": {
+    "complete": 20,
+    "no_member": 0,
+    "one_member_only": 0,
+    "selected": 20
+  },
+  "phase_run": "phase2_rerun",
+  "plan_status": "plans_complete",
+  "pricing_table": "openai_standard_2026-09-09",
+  "reasoning_effort": "none",
+  "requested_model": "gpt-5.4-mini",
+  "resolved_model": "gpt-5.4-mini-2026-03-17",
+  "returned_model_if_available": "gpt-5.4-mini-2026-03-17",
+  "seed": 42,
+  "source_catalog_hash": "5ef0dd06c06968d9b45a3e02f0d3ac6884fd9c983f70e801401de9565545355f",
+  "source_catalog_path": "Data/char_gender/generation/catalog/missing51.jsonl",
+  "started_at": "2026-09-17T13:20:30.829278+00:00",
+  "status": "completed",
+  "verbosity": "low"
+}

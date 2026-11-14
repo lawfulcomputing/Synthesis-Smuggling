@@ -1,0 +1,447 @@
+{
+  "contingency_tables": {
+    "gender_x_length_bucket": {
+      "F": {
+        "1-3": 123,
+        "4-5": 400,
+        "6-7": 527,
+        "8+": 150
+      },
+      "M": {
+        "1-3": 122,
+        "4-5": 396,
+        "6-7": 540,
+        "8+": 142
+      }
+    },
+    "gender_x_reveal_bucket": {
+      "F": {
+        "early": 292,
+        "immediate": 304,
+        "late": 302,
+        "mid": 302
+      },
+      "M": {
+        "early": 300,
+        "immediate": 309,
+        "late": 305,
+        "mid": 286
+      }
+    },
+    "gender_x_reveal_form_family": {
+      "F": {
+        "anticipated_family_role": 148,
+        "explicit_identity": 99,
+        "gendered_family_role": 528,
+        "gendered_relationship_role": 279,
+        "gendered_social_role": 146
+      },
+      "M": {
+        "anticipated_family_role": 140,
+        "explicit_identity": 97,
+        "gendered_family_role": 545,
+        "gendered_relationship_role": 275,
+        "gendered_social_role": 143
+      }
+    },
+    "gender_x_split": {
+      "F": {
+        "test": 117,
+        "train": 957,
+        "validation": 126
+      },
+      "M": {
+        "test": 123,
+        "train": 963,
+        "validation": 114
+      }
+    },
+    "gender_x_topic": {
+      "F": {
+        "books": 60,
+        "coffee": 61,
+        "cooking recipes": 58,
+        "exercise routines": 62,
+        "financial budgeting": 65,
+        "gardening": 56,
+        "grocery shopping": 61,
+        "home organization": 58,
+        "language learning": 64,
+        "laptops": 59,
+        "movies": 58,
+        "music": 60,
+        "pets": 68,
+        "photography": 65,
+        "public transportation": 54,
+        "restaurants": 59,
+        "travel planning": 56,
+        "vacation destinations": 57,
+        "weather": 56,
+        "work meetings": 63
+      },
+      "M": {
+        "books": 63,
+        "coffee": 62,
+        "cooking recipes": 65,
+        "exercise routines": 58,
+        "financial budgeting": 63,
+        "gardening": 60,
+        "grocery shopping": 59,
+        "home organization": 60,
+        "language learning": 58,
+        "laptops": 59,
+        "movies": 60,
+        "music": 61,
+        "pets": 53,
+        "photography": 62,
+        "public transportation": 58,
+        "restaurants": 62,
+        "travel planning": 57,
+        "vacation destinations": 63,
+        "weather": 55,
+        "work meetings": 62
+      }
+    }
+  },
+  "counterfactual_pair_count": 900,
+  "cramers_v": {
+    "length_bucket": {
+      "length_bucket": 0.9999999999999999,
+      "reveal_bucket": 0.30796570838630083,
+      "reveal_form_family": 0.10593295466359386,
+      "split": 0.038946939734990534,
+      "target_gender": 0.0,
+      "topic": 0.050528937982517966,
+      "trajectory_family": 0.1743296981319513
+    },
+    "reveal_bucket": {
+      "length_bucket": 0.3079657083863008,
+      "reveal_bucket": 0.9999999999999999,
+      "reveal_form_family": 0.5004988242973406,
+      "split": 0.0,
+      "target_gender": 0.0,
+      "topic": 0.06017223196519751,
+      "trajectory_family": 0.9994995412147983
+    },
+    "reveal_form_family": {
+      "length_bucket": 0.10593295466359386,
+      "reveal_bucket": 0.5004988242973406,
+      "reveal_form_family": 1.0,
+      "split": 0.004476109623068956,
+      "target_gender": 0.0,
+      "topic": 0.0679047803160826,
+      "trajectory_family": 0.999332665925011
+    },
+    "split": {
+      "length_bucket": 0.038946939734990534,
+      "reveal_bucket": 0.0,
+      "reveal_form_family": 0.004476109623068956,
+      "split": 1.0,
+      "target_gender": 0.0,
+      "topic": 0.05290382630446091,
+      "trajectory_family": 0.0
+    },
+    "target_gender": {
+      "length_bucket": 0.0,
+      "reveal_bucket": 0.0,
+      "reveal_form_family": 0.0,
+      "split": 0.0,
+      "target_gender": 1.0,
+      "topic": 0.0,
+      "trajectory_family": 0.0
+    },
+    "topic": {
+      "length_bucket": 0.050528937982517994,
+      "reveal_bucket": 0.0601722319651975,
+      "reveal_form_family": 0.06790478031608264,
+      "split": 0.05290382630446092,
+      "target_gender": 0.0,
+      "topic": 1.0,
+      "trajectory_family": 0.0
+    },
+    "trajectory_family": {
+      "length_bucket": 0.1743296981319513,
+      "reveal_bucket": 0.9994995412147983,
+      "reveal_form_family": 0.9993326659250111,
+      "split": 0.0,
+      "target_gender": 0.0,
+      "topic": 0.0,
+      "trajectory_family": 0.9999999999999999
+    }
+  },
+  "normalized_reveal_position": {
+    "max": 1.0,
+    "mean": 0.636428902116402,
+    "median": 0.6666666666666666,
+    "min": 0.1111111111111111,
+    "sd_population": 0.31260755254238853
+  },
+  "per_split_distributions": {
+    "test": {
+      "reveal_bucket": {
+        "early": 57,
+        "immediate": 62,
+        "late": 59,
+        "mid": 62
+      },
+      "target_gender": {
+        "F": 117,
+        "M": 123
+      },
+      "topic": {
+        "books": 11,
+        "coffee": 10,
+        "cooking recipes": 21,
+        "exercise routines": 14,
+        "financial budgeting": 15,
+        "gardening": 18,
+        "grocery shopping": 16,
+        "home organization": 16,
+        "language learning": 4,
+        "laptops": 20,
+        "movies": 18,
+        "music": 14,
+        "pets": 21,
+        "photography": 11,
+        "public transportation": 14,
+        "restaurants": 14,
+        "travel planning": 12,
+        "vacation destinations": 20,
+        "weather": 18,
+        "work meetings": 13
+      },
+      "total": 300,
+      "trajectory_family": {
+        "never_reveal": 60,
+        "single_reveal": 240
+      }
+    },
+    "train": {
+      "reveal_bucket": {
+        "early": 479,
+        "immediate": 488,
+        "late": 487,
+        "mid": 466
+      },
+      "target_gender": {
+        "F": 957,
+        "M": 963
+      },
+      "topic": {
+        "books": 129,
+        "coffee": 125,
+        "cooking recipes": 112,
+        "exercise routines": 120,
+        "financial budgeting": 130,
+        "gardening": 111,
+        "grocery shopping": 122,
+        "home organization": 115,
+        "language learning": 139,
+        "laptops": 124,
+        "movies": 118,
+        "music": 123,
+        "pets": 116,
+        "photography": 132,
+        "public transportation": 108,
+        "restaurants": 117,
+        "travel planning": 110,
+        "vacation destinations": 111,
+        "weather": 110,
+        "work meetings": 128
+      },
+      "total": 2400,
+      "trajectory_family": {
+        "never_reveal": 480,
+        "single_reveal": 1920
+      }
+    },
+    "validation": {
+      "reveal_bucket": {
+        "early": 56,
+        "immediate": 63,
+        "late": 61,
+        "mid": 60
+      },
+      "target_gender": {
+        "F": 126,
+        "M": 114
+      },
+      "topic": {
+        "books": 13,
+        "coffee": 18,
+        "cooking recipes": 20,
+        "exercise routines": 16,
+        "financial budgeting": 13,
+        "gardening": 17,
+        "grocery shopping": 12,
+        "home organization": 17,
+        "language learning": 9,
+        "laptops": 4,
+        "movies": 12,
+        "music": 14,
+        "pets": 14,
+        "photography": 14,
+        "public transportation": 20,
+        "restaurants": 20,
+        "travel planning": 21,
+        "vacation destinations": 19,
+        "weather": 13,
+        "work meetings": 14
+      },
+      "total": 300,
+      "trajectory_family": {
+        "never_reveal": 60,
+        "single_reveal": 240
+      }
+    }
+  },
+  "prefix_labels": {
+    "by_split": {
+      "test": {
+        "counts": {
+          "F": 352,
+          "M": 374,
+          "U": 928
+        },
+        "proportions": {
+          "F": 0.21281741233373638,
+          "M": 0.22611850060459493,
+          "U": 0.5610640870616687
+        },
+        "total": 1654
+      },
+      "train": {
+        "counts": {
+          "F": 2907,
+          "M": 2966,
+          "U": 7238
+        },
+        "proportions": {
+          "F": 0.2217222179848982,
+          "M": 0.2262222561208146,
+          "U": 0.5520555258942872
+        },
+        "total": 13111
+      },
+      "validation": {
+        "counts": {
+          "F": 391,
+          "M": 354,
+          "U": 868
+        },
+        "proportions": {
+          "F": 0.24240545567265964,
+          "M": 0.2194668319900806,
+          "U": 0.5381277123372598
+        },
+        "total": 1613
+      }
+    },
+    "global": {
+      "counts": {
+        "F": 3650,
+        "M": 3694,
+        "U": 9034
+      },
+      "proportions": {
+        "F": 0.2228599340578825,
+        "M": 0.22554646476981316,
+        "U": 0.5515936011723043
+      },
+      "total": 16378
+    }
+  },
+  "requested": {
+    "counterfactual_fraction": 0.75,
+    "num_conversations": 3000,
+    "reveal_form_weights": {
+      "anticipated_family_role": 0.12,
+      "explicit_identity": 0.08,
+      "gendered_family_role": 0.44,
+      "gendered_relationship_role": 0.24,
+      "gendered_social_role": 0.12
+    },
+    "trajectory_mix": {
+      "never_reveal": 0.2,
+      "single_reveal": 0.8
+    },
+    "turn_mean": 5.0,
+    "turn_sd": 2.0
+  },
+  "reveal_bucket_counts": {
+    "early": 592,
+    "immediate": 613,
+    "late": 607,
+    "mid": 588
+  },
+  "reveal_composition": {
+    "counterfactual_rows": 1800,
+    "independent_gender_counts": {
+      "F": 300,
+      "M": 300
+    },
+    "independent_rows": 600,
+    "neutral_rows": 600
+  },
+  "reveal_form_counts": {
+    "anticipated_family_role": 288,
+    "explicit_identity": 196,
+    "gendered_family_role": 1073,
+    "gendered_relationship_role": 554,
+    "gendered_social_role": 289
+  },
+  "reveal_turn_counts": {
+    "1": 613,
+    "2": 336,
+    "3": 256,
+    "4": 355,
+    "5": 233,
+    "6": 425,
+    "7": 182
+  },
+  "single_reveal_gender_counts": {
+    "F": 1200,
+    "M": 1200
+  },
+  "split_counts": {
+    "test": 300,
+    "train": 2400,
+    "validation": 300
+  },
+  "topic_counts": {
+    "books": 153,
+    "coffee": 153,
+    "cooking recipes": 153,
+    "exercise routines": 150,
+    "financial budgeting": 158,
+    "gardening": 146,
+    "grocery shopping": 150,
+    "home organization": 148,
+    "language learning": 152,
+    "laptops": 148,
+    "movies": 148,
+    "music": 151,
+    "pets": 151,
+    "photography": 157,
+    "public transportation": 142,
+    "restaurants": 151,
+    "travel planning": 143,
+    "vacation destinations": 150,
+    "weather": 141,
+    "work meetings": 155
+  },
+  "total_conversations": 3000,
+  "trajectory_family_counts": {
+    "never_reveal": 600,
+    "single_reveal": 2400
+  },
+  "turn_length": {
+    "max": 9,
+    "mean": 5.459333333333333,
+    "mean_deviation": 0.45933333333333337,
+    "median": 6.0,
+    "min": 1,
+    "sd_deviation": -0.2850618410890471,
+    "sd_population": 1.714938158910953
+  }
+}

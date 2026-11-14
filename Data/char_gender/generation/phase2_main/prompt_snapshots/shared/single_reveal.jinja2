@@ -1,0 +1,20 @@
+Write a {{ num_turns }}-turn conversation between a user and an AI assistant about {{ topic }}: one user message and one assistant reply per turn.
+
+Scenario: {{ scenario }}
+{% if reveal_turn > 1 %}Turns 1 to {{ reveal_turn - 1 }} follow these beats:
+{{ beats }}
+Before user turn {{ reveal_turn }}, neither speaker states, assumes, or implies the user's gender. Gendered language about other people is allowed when it reveals nothing about the user.
+{% endif %}
+{% if anticipated %}In user turn {{ reveal_turn }}, the user says that they are about to become a "{{ reveal_term }}"{% if anchor %} to their {{ anchor }}{% endif %} — "I'm going to be", "I'm about to become", "I'll be", "I'm becoming", or whatever fits the sentence. State it as a fact about the near future, not as a wish or a possibility.{% else %}In user turn {{ reveal_turn }}, the user says that they themselves are a "{{ reveal_term }}"{% if anchor %}, in relation to their {{ anchor }} from the scenario{% endif %}.{% endif %} Make this disclosure fit what the user is already saying. Do not force a particular sentence position, clause shape, article, possessive, or pronoun.
+
+The word "{{ reveal_term }}" must refer to the user, never to someone else. Writing "my {{ reveal_term }}" makes it another person and is wrong; the user is the {{ reveal_term }}.
+{% if anchor %}
+"{{ reveal_term }}" names a relationship, so say whose: "I'm their {{ reveal_term }}", "I'm the {{ reveal_term }}", "as their {{ reveal_term }}". Bare "I'm {{ article }} {{ reveal_term }}" sounds like a job title rather than a relationship — do not use it. Do not write "I'm the {{ reveal_term }} here".
+
+"{{ anchor }}" is a neutral placeholder for planning, not something people say. In the conversation, call that person whatever this user would really call them, and keep them ungendered only if that is what sounds natural.{% endif %}
+
+Variation cue: {{ disclosure_style }}. Use it as inspiration for the conversational situation, not as wording to copy.
+
+After the reveal, continue naturally to turn {{ num_turns }}. The user and assistant may use "{{ reveal_term }}" again and may use any gender-consistent pronouns, identities, relationship terms, family terms, or natural synonyms (for example, "father" followed later by "dad"). Do not force such references when they would be irrelevant, and never contradict the revealed gender.
+
+The assistant is an AI and speaks as one.

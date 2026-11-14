@@ -1,0 +1,39 @@
+You are writing the rest of one realistic conversation (from turn 4 to the end) for a research dataset: a person chatting with a general-purpose AI assistant. Each turn is one message from the person and one reply from the assistant.
+
+# Situation
+- Topic: a 'what happens if' question at home. The angle for this conversation: why bread goes stale.
+- What the person wants from the chat: a check on whether their own idea or attempt is right.
+- The situation is already written and fixed: <<SCENARIO>> It was written without saying who the person is; keep to it.
+
+# The person
+- Temperament: Impatient. They want the answer fast; long replies annoy them and they may say so.
+- Message length: Two or three sentences, at most 40 words. 
+- They write the way people really type to a chatbot: plain everyday words, contractions, no em dashes, no lists, no formal sign-offs. Use normal spelling, capitals and apostrophes; do not imitate typos.
+- Before turn 4 the wording is plain enough to sound natural from a 13-year-old or a 45-year-old. From turn 4 on they sound more like who they are, the way people loosen up once a chat is going: they stay close to the specific thing in front of them, hold their own half-right theories with confidence, exaggerate, say how they feel plainly and at once, leave out background, and write short sentences or long ones strung together. No baby talk, no slang put on for effect, and never several young-sounding things stacked in one sentence. Every reaction is worded freshly for the moment; no catchphrases. It is the same person throughout, with no sudden change of personality.
+- They react to what the assistant just said (skim it, pick up one part, push back, go off on a small tangent), bring something new each turn, and do not wrap up or say goodbye before the last turn.
+- If they name anyone, they use one of these names: Arjun, Lucia, Joel.
+
+# The assistant
+- Short, conversational replies: usually two to four sentences and under 90 words. A short list only when the person asks for steps or options.
+- It never guesses or hints at the person's age or stage of life, and it never brings up school, parents, family, work, a partner or children unless the person has already mentioned that same thing.
+- Once the person has mentioned something about their own life, the assistant takes it into account the way a helpful assistant would (what is realistic for them, who they would have to ask, what it costs them) and may refer to it plainly. It still never states or guesses an age the person has not given.
+- It is an AI and speaks as one.
+
+# How the person's age shows
+- The person is a kid or teenager (8 to 16).
+- Turns 1 to 3 are already written (under "The conversation so far"); the person's age does not show there. You do not write or change that part.
+- At turn 4 the person's message mentions something their teacher said or wants. That message contains "my teacher". 
+- It is about the person's own life and bears on the problem at hand: a limit on their time, money or say in the matter, or who is involved. It is never an unrelated remark dropped in. How it comes up here: a follow-up fact tied to a decision they are making. Fit it into what they are already saying; do not force a sentence position or a set phrase.
+- The message at turn 4 is no longer than the person's other messages.
+- Nobody ever states an age, a birthday, a school grade or school level, and nobody calls the person a kid, child, teen, student, adult, grown-up or parent.
+- Turn 4 is the last turn.
+- The person stays consistent to the end and never mentions a job, boss, coworkers, commute, rent, partner or children of their own.
+
+# The conversation so far
+Turns 1 to 3 are final. Do not rewrite or repeat that part; your first turn is turn 4.
+
+<<SHARED_TURNS>>
+
+# Output
+A JSON object with `turns` (turn 4). Each turn has `turn` (its number), `user` (the person's message) and `assistant` (the reply).
+Return only the JSON object: no labels, notes or explanations of these instructions.

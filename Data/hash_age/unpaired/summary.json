@@ -1,0 +1,175 @@
+{
+  "run_name": "unpaired",
+  "model": "gpt-5.4-mini",
+  "requests": {
+    "planned": 1474,
+    "responses": 1474,
+    "usable": 1474,
+    "rejected": 0,
+    "no_response_logged": 0,
+    "input_tokens": 1590623,
+    "output_tokens": 587898,
+    "reasoning_tokens": 263934,
+    "cost_usd": 3.8385
+  },
+  "units": {
+    "planned": {
+      "mail": 1474
+    },
+    "conversations_planned": 1474,
+    "conversations_built": 1474,
+    "pass": 1434
+  },
+  "by_label": {
+    "K": {
+      "mail": "599/610",
+      "near_miss": "0/0",
+      "chat": "0/0",
+      "by_split": {
+        "train": "481/490",
+        "validation": "58/60",
+        "test": "60/60"
+      }
+    },
+    "A": {
+      "mail": "547/571",
+      "near_miss": "0/0",
+      "chat": "0/0",
+      "by_split": {
+        "train": "432/453",
+        "validation": "58/60",
+        "test": "57/58"
+      }
+    },
+    "N": {
+      "mail": "288/293",
+      "near_miss": "0/0",
+      "chat": "0/0",
+      "by_split": {
+        "train": "236/241",
+        "validation": "27/27",
+        "test": "25/25"
+      }
+    }
+  },
+  "by_source_kind": {
+    "A:decoy": "115/116",
+    "A:proxy": "172/191",
+    "A:single": "260/264",
+    "K:decoy": "126/127",
+    "K:single": "473/483",
+    "N:neutral": "288/293"
+  },
+  "problems": {
+    "hard": {
+      "new_age_cue": 53
+    },
+    "review": {
+      "own_group_word": 77,
+      "form_mismatch": 3,
+      "reference_email_length": 6
+    },
+    "age_words": {
+      "teacher": 46,
+      "my teacher": 19,
+      "to work": 7,
+      "meeting": 5,
+      "my science teacher": 5,
+      "deadline": 5,
+      "school": 4,
+      "my parent": 4,
+      "my landlord": 2,
+      "my son": 2,
+      "learner’s permit": 2,
+      "my client": 2,
+      "my music teacher": 2,
+      "the office": 2,
+      "my shift": 1
+    }
+  },
+  "email_requests": {
+    "form_planned": {
+      "explicit": 1474
+    },
+    "form_read": {
+      "explicit": 1471,
+      "implicit": 3
+    },
+    "size_planned": {
+      "full": 1474
+    },
+    "followups_planned": {
+      "0": 1474
+    },
+    "request_words_mean": 58.9,
+    "reference_email_words_mean": {
+      "full": 93.5,
+      "short": null
+    },
+    "cue_distance": {
+      "K": {
+        "1": 81,
+        "2": 139,
+        "3": 103,
+        "4": 117,
+        "5": 91,
+        "6": 79
+      },
+      "A": {
+        "1": 82,
+        "2": 119,
+        "3": 92,
+        "4": 94,
+        "5": 102,
+        "6": 82
+      }
+    }
+  },
+  "near_miss_kinds": {},
+  "repeated_phrases": {
+    "email_request": [
+      {
+        "phrase": "an email to the",
+        "units": 774,
+        "share": 0.525
+      },
+      {
+        "phrase": "you draft an email",
+        "units": 632,
+        "share": 0.429
+      },
+      {
+        "phrase": "can you draft an",
+        "units": 604,
+        "share": 0.41
+      },
+      {
+        "phrase": "you write an email",
+        "units": 587,
+        "share": 0.398
+      },
+      {
+        "phrase": "draft an email to",
+        "units": 578,
+        "share": 0.392
+      },
+      {
+        "phrase": "can you write an",
+        "units": 569,
+        "share": 0.386
+      },
+      {
+        "phrase": "write an email to",
+        "units": 568,
+        "share": 0.385
+      },
+      {
+        "phrase": "i want it to",
+        "units": 492,
+        "share": 0.334
+      }
+    ],
+    "followup": [],
+    "near_miss": []
+  }
+}

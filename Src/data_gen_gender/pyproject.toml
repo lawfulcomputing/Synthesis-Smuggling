@@ -1,0 +1,28 @@
+[project]
+name = "synthetic-dataset-gen"
+version = "0.1.0"
+description = "Synthetic gender conversations for Synthesis Smuggling: Phase 1 catalog and Phase 2 generation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.10.0",
+    "numpy>=2.0.0",
+    "pydantic>=2.13.5",
+    "jinja2>=3.1.0",
+    "openai>=3.0.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.0",
+]
+
+[project.scripts]
+synthetic-dataset-gen = "synthetic_dataset_gen:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.6",
+]

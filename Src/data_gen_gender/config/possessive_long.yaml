@@ -1,0 +1,100 @@
+recovery_set: "possessive_long"
+seed: 20260925
+
+# Long conversations with the cue early. Trained on the gender set without this
+# set, the model's possessive cue decayed with distance until N won the decision
+# slot. Measured on held-out possessive minimal pairs, deficit of the correct
+# marker against end-of-turn:
+#
+#     turn 0  -0.00      turn 1  -3.69      turn 2  -7.81      turn 3  -8.75
+#
+# Gender DIRECTION stays correct at every distance (10/10 by logit margin). The
+# model knows the answer and stops projecting it. A bias sweep on the marker
+# logits recovers short context (1/10 -> 6/10 pairs) but leaves long context at
+# 0/4 even at +5 logits, so this is not a marker-token or threshold problem --
+# it is missing supervision at depth.
+#
+# Post-cue coverage of the training split before this set:
+#
+#     d0 630   d1 531   d2 379   d3 231   d4 63   d5 33   d6 16
+#
+# possessive_direct capped conversations at 5 turns with 1-2 turns of lead-in,
+# so almost nothing supervises d>=4. This set keeps the cue early and extends the
+# conversation. Its training split (direct + nested) adds:
+#
+#     d0 432   d1 432   d2 432   d3 432   d4 432   d5 216   d6 216
+#
+# Across all splits the corresponding diagnostic is d0-d4 540 and d5-d6 269,
+# totaling 3238 positions. Actual training supervision is 2592 positions:
+# 1728 direct and 864 nested. Dataset grows 4520 -> 5060 (+12%).
+#
+# The nested guardrail scales with the direct rows at the same 2:1 ratio
+# possessive_direct used. It is load-bearing: the direct rows push the model to emit a
+# marker after a partner noun, and the nested rows are what stop that becoming
+# "any mentioned partner noun means emit". Watch decision_negative_bleed.
+#
+# Terms stay balanced per pair rather than skewed toward M. possessive_direct
+# skewed direct rows 300 M / 180 F to fix the weak M direction and it did not work:
+# training already has more M than F at every cue distance (d0 M338/F243,
+# d3 M107/F102) while M still performs worse. The M deficit is a marker-token
+# prior effect (U+200B sits ~0.87 logits below U+00A0 even after training), not
+# an example-count effect, so spending rows on it is waste.
+
+category_counts:
+  direct_partner_reveal: 360
+  nested_partner_neutral: 180
+  self_role_control: 0
+
+category_term_counts:
+  direct_partner_reveal:
+    husband: 60
+    wife: 60
+    boyfriend: 60
+    girlfriend: 60
+    "fiancé": 60
+    "fiancée": 60
+  nested_partner_neutral:
+    husband: 30
+    wife: 30
+    boyfriend: 30
+    girlfriend: 30
+    "fiancé": 30
+    "fiancée": 30
+  self_role_control:
+    husband: 0
+    wife: 0
+    boyfriend: 0
+    girlfriend: 0
+    "fiancé": 0
+    "fiancée": 0
+
+split_fractions:
+  train: 0.80
+  validation: 0.10
+  test: 0.10
+
+partner_pairs:
+  - {male: husband, female: wife}
+  - {male: boyfriend, female: girlfriend}
+  - {male: "fiancé", female: "fiancée"}
+
+# The cue stays at turn 2-3 (lead-in 1-2), exactly where possessive_direct put
+# it, so the only variable against possessive_direct is how far the conversation continues
+# AFTER the cue. Longest conversation is ~9 turns; at ~74 tokens per assistant
+# turn that is ~670 tokens, well inside max_seq_length 4096.
+length:
+  min_turns: 6
+  max_turns: 9
+cue_lead_in_turns: [1, 2]
+
+generation:
+  model: "gpt-5.4-mini"
+  reasoning_effort: "none"
+  verbosity: "low"
+  # Roughly double possessive_direct's 1600: conversations are about twice as long.
+  max_output_tokens: 3200
+  execution_mode: "batch"
+  max_attempts: 3
+
+outputs:
+  run_dir: "../../Data/char_gender/generation/possessive_long"

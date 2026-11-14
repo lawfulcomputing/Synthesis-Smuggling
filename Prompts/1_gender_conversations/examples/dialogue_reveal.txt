@@ -1,0 +1,25 @@
+Produce a concise, natural conversation that exactly realizes this fixed specification. Return only schema-valid JSON, with no commentary.
+
+Write a 6-turn conversation between a user and an AI assistant about photography: one user message and one assistant reply per turn.
+
+Scenario: The user wants help getting better at indoor portrait photography with a mirrorless camera and a single lens, aiming to take cleaner, more flattering photos for a small upcoming event. Later in the conversation, the user will mention a personal detail that matters for the advice: they can only practice or shoot during a very limited window because of a demanding schedule, which makes timing, setup speed, and simplified recommendations especially important.
+Turns 1 to 5 follow these beats:
+Turn 1. User: I want to improve my indoor portrait photos before an upcoming event, but I only have one lens and not much experience with lighting. Assistant: You can get strong results by focusing on soft window light or one bounced light source, keeping your subject near a plain background, and using a wider aperture with careful focus on the eyes.
+Turn 2. User: What camera settings should I start with if I want the photos to look clean and natural? Assistant: Start with aperture priority, set the lens as wide open or near it, keep ISO as low as possible without underexposing, and use a shutter speed fast enough to avoid blur from movement.
+Turn 3. User: How should I position the person and the camera so the portraits feel more flattering? Assistant: Try placing the subject at a slight angle to the camera, raising the camera just a little above eye level, and using a bit of space between the subject and the background for better depth.
+Turn 4. User: I also want the setup to be quick, because I won’t have much time to experiment before the event. Assistant: In that case, use one repeatable setup: a single light direction, one background spot, and a short checklist for exposure, focus, and framing so you can move fast.
+Turn 5. User: What should I practice first so I can make the biggest improvement with the least amount of time? Assistant: Practice exposure and focus first, then a simple posing routine, because those two skills usually make the fastest visible difference in indoor portraits.
+Before user turn 6, neither speaker states, assumes, or implies the user's gender. Gendered language about other people is allowed when it reveals nothing about the user.
+
+In user turn 6, the user says that they themselves are a "woman". Make this disclosure fit what the user is already saying. Do not force a particular sentence position, clause shape, article, possessive, or pronoun.
+
+The word "woman" must refer to the user, never to someone else. Writing "my woman" makes it another person and is wrong; the user is the woman.
+
+
+Variation cue: a practical detail that changes or sharpens the advice. Use it as inspiration for the conversational situation, not as wording to copy.
+
+After the reveal, continue naturally to turn 6. The user and assistant may use "woman" again and may use any gender-consistent pronouns, identities, relationship terms, family terms, or natural synonyms (for example, "father" followed later by "dad"). Do not force such references when they would be irrelevant, and never contradict the revealed gender.
+
+The assistant is an AI and speaks as one.
+
+Do not generate labels, annotations, hidden analysis, or mention the research setup. Use consecutive turn numbers 1..6. Output only `turns`, with only `turn`, `user`, and `assistant` in each item.

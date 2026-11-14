@@ -1,0 +1,1762 @@
+[
+  {
+    "conversation_id": "sim_0001",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "man"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a work or career question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0002",
+    "attribute": "gender",
+    "role": "M",
+    "form": "nested_partner",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "sister's husband"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a health, fitness, or medical question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0003",
+    "attribute": "gender",
+    "role": "F",
+    "form": "nested_partner",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "sister's husband"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a home-insurance or warranty claim",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0004",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "woman"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 2,
+    "email_turn": 6,
+    "planned_turns": 6,
+    "subject": "a phone plan or utility billing dispute",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0005",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "lady"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 4,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a photography or video project",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0006",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a birthday or anniversary plan",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0007",
+    "attribute": "gender",
+    "role": "F",
+    "form": "self_family_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "mother"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 4,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a music practice or instrument question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0008",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "female"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 6,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a drawing, painting, or craft project",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0009",
+    "attribute": "gender",
+    "role": "F",
+    "form": "third_party_gendered",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "Mr."
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a sewing, knitting, or textile repair",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0010",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a wedding or ceremony logistics task",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0011",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a holiday or seasonal preparation",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0012",
+    "attribute": "gender",
+    "role": "M",
+    "form": "self_relationship_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "her husband"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 6,
+    "email_turn": 10,
+    "planned_turns": 10,
+    "subject": "a travel or transport problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0013",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "guy"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a home repair, chore, or household purchase",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0014",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "gentleman"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a technology or device problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0015",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a gift-choosing problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0016",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "wife"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 2,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a cooking or food question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0017",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "girl"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a woodworking or DIY build",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0018",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_child",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "daughter"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a camping or hiking trip plan",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0019",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "husband"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a running, swimming, or endurance training plan",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0020",
+    "attribute": "gender",
+    "role": "F",
+    "form": "self_relationship_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "his wife"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 6,
+    "email_turn": 10,
+    "planned_turns": 10,
+    "subject": "a strength-training or gym programming question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0021",
+    "attribute": "gender",
+    "role": "M",
+    "form": "self_family_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "father"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 4,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a money, budgeting, or paperwork task",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0022",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_child",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "son"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "a sleep or fatigue problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0023",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "gal"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a stress or time-management problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0024",
+    "attribute": "gender",
+    "role": "M",
+    "form": "nested_partner",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "brother's wife"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a hobby, sport, or creative project",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0025",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a volunteering or community project",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0026",
+    "attribute": "gender",
+    "role": "M",
+    "form": "nested_partner",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "friend's husband"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "an education or study question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0027",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a neighbourhood or local-council issue",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0028",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_child",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "daughter"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a nutrition or meal-planning question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0029",
+    "attribute": "gender",
+    "role": "M",
+    "form": "self_family_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "dad"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 4,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a pet or animal question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0030",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "young woman"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a baking or dessert problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0031",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "woman"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a food-preservation or batch-cooking task",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0032",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a public-transport or commuting problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0033",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "boyfriend"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 2,
+    "email_turn": 6,
+    "planned_turns": 6,
+    "subject": "a coffee, tea, or home-brewing question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0034",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "an air-travel or airport problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0035",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "lady"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a restaurant or event catering decision",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0036",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "male"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 2,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a clothing, grooming, or personal-style question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0037",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "girlfriend"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 2,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a social or family situation needing advice",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0038",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_child",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "son"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a passport, visa, or document task",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0039",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_child",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "daughter"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a gardening or houseplant problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0040",
+    "attribute": "gender",
+    "role": "F",
+    "form": "self_relationship_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "his girlfriend"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 6,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a tax or benefits paperwork question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0041",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "fiance"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 2,
+    "email_turn": 6,
+    "planned_turns": 6,
+    "subject": "a savings, pension, or investment question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0042",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_child",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "son"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a car maintenance or repair question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0043",
+    "attribute": "gender",
+    "role": "M",
+    "form": "third_party_gendered",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "Mr."
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a bicycle or small-vehicle problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0044",
+    "attribute": "gender",
+    "role": "M",
+    "form": "nested_partner",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "sister's husband"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a moving or relocation logistics task",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0045",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a debt or loan repayment question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0046",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "female"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 6,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a job application or interview preparation",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0047",
+    "attribute": "gender",
+    "role": "F",
+    "form": "third_party_gendered",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "Ms."
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a workplace conflict or communication problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0048",
+    "attribute": "gender",
+    "role": "F",
+    "form": "third_party_gendered",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "Mrs."
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a remote-work or home-office setup",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0049",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "boy"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a rental, lease, or landlord issue",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0050",
+    "attribute": "gender",
+    "role": "F",
+    "form": "nested_partner",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "brother's wife"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a small-business or freelance question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0051",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a resume, portfolio, or personal-website task",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0052",
+    "attribute": "gender",
+    "role": "F",
+    "form": "nested_partner",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "friend's husband"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "a public-speaking or presentation task",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0053",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "fiancee"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 2,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a writing or editing project",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0054",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_child",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "daughter"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a language-learning question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0055",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "man"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "an exam revision or certification plan",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0056",
+    "attribute": "gender",
+    "role": "F",
+    "form": "nested_partner",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "sister's husband"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a childcare or parenting logistics question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0057",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "husband"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "an elder-care or family-support question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0058",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "wife"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "a household budgeting or chore-sharing plan",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0059",
+    "attribute": "gender",
+    "role": "M",
+    "form": "self_relationship_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "her boyfriend"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 6,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a cleaning or decluttering project",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0060",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_child",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "son"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a furniture or interior-decorating decision",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0061",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "guy"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "an appliance purchase or comparison",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0062",
+    "attribute": "gender",
+    "role": "M",
+    "form": "third_party_gendered",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "Ms."
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a computer or software troubleshooting problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0063",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a home-network or Wi-Fi problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0064",
+    "attribute": "gender",
+    "role": "F",
+    "form": "nested_partner",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "brother's wife"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a data backup, storage, or privacy question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0065",
+    "attribute": "gender",
+    "role": "M",
+    "form": "third_party_gendered",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "Mrs."
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a smart-home or device-setup problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0066",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a gaming or console question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0067",
+    "attribute": "gender",
+    "role": "F",
+    "form": "self_family_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "mom"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a book, film, or media recommendation request",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0068",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "boyfriend"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a fitness-tracker or health-data question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0069",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "gentleman"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a dental, vision, or specialist-appointment question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0070",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "male"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a vaccination, screening, or preventive-care question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0071",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "boy"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a first-aid or minor-injury question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0072",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "girl"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "a swimming-pool or hot-tub maintenance question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0073",
+    "attribute": "gender",
+    "role": "M",
+    "form": "self_family_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "grandfather"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 4,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a lawn, hedge, or outdoor-maintenance task",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0074",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a pest or infestation problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0075",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a damp, mould, or ventilation problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0076",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "girlfriend"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a heating, boiler, or radiator problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0077",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "an air-conditioning or cooling problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0078",
+    "attribute": "gender",
+    "role": "F",
+    "form": "third_party_gendered",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "landlady"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a roof, gutter, or exterior repair",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0079",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_child",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "daughter"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a painting or wallpapering job",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0080",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a flooring or carpet decision",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0081",
+    "attribute": "gender",
+    "role": "M",
+    "form": "self_family_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "father"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "a window, door, or lock problem",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0082",
+    "attribute": "gender",
+    "role": "M",
+    "form": "nested_partner",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "brother's wife"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 2,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a home-security or alarm question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0083",
+    "attribute": "gender",
+    "role": "M",
+    "form": "third_party_gendered",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "landlady"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 4,
+    "email_turn": 8,
+    "planned_turns": 8,
+    "subject": "a recycling or waste-disposal question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0084",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "man"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "an energy-saving or insulation project",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0085",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_child",
+    "group": "decoy",
+    "entails": false,
+    "cue": {
+      "word": "daughter"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 6,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a solar-panel or home-energy decision",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0086",
+    "attribute": "gender",
+    "role": "F",
+    "form": "self_relationship_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "his fiancee"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 6,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "an electric-vehicle or charging question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0087",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "gal"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a motorcycle or scooter question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0088",
+    "attribute": "gender",
+    "role": "F",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "young woman"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "a boat, kayak, or watersport question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0089",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a fishing or outdoor-sport question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0090",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 7,
+    "planned_turns": 7,
+    "subject": "a climbing or adventure-sport question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0091",
+    "attribute": "gender",
+    "role": "M",
+    "form": "self_relationship_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "her fiance"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 6,
+    "email_turn": 10,
+    "planned_turns": 10,
+    "subject": "a yoga, pilates, or flexibility question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0092",
+    "attribute": "gender",
+    "role": "F",
+    "form": "self_family_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "grandmother"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 4,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a martial-arts or self-defence question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0093",
+    "attribute": "gender",
+    "role": "F",
+    "form": "self_relationship_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "the bride"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a dance or movement-class question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0094",
+    "attribute": "gender",
+    "role": "F",
+    "form": "self_family_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "godmother"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a choir, band, or ensemble question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0095",
+    "attribute": "gender",
+    "role": "F",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "fiance"
+    },
+    "cue_source": null,
+    "reveal_turn": 3,
+    "gap": 0,
+    "email_turn": 4,
+    "planned_turns": 4,
+    "subject": "a theatre or performance project",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0096",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 9,
+    "planned_turns": 9,
+    "subject": "a podcast or audio-production project",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0097",
+    "attribute": "gender",
+    "role": "M",
+    "form": "explicit_identity",
+    "group": "direct",
+    "entails": true,
+    "cue": {
+      "word": "guy"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a streaming or content-creation question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0098",
+    "attribute": "gender",
+    "role": "N",
+    "form": "none",
+    "group": "neutral",
+    "entails": false,
+    "cue": null,
+    "cue_source": null,
+    "reveal_turn": null,
+    "gap": null,
+    "email_turn": 11,
+    "planned_turns": 11,
+    "subject": "a collecting or antiques question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0099",
+    "attribute": "gender",
+    "role": "M",
+    "form": "possessive_partner",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "fiancee"
+    },
+    "cue_source": null,
+    "reveal_turn": 4,
+    "gap": 0,
+    "email_turn": 5,
+    "planned_turns": 5,
+    "subject": "a board-game or puzzle question",
+    "extra": {}
+  },
+  {
+    "conversation_id": "sim_0100",
+    "attribute": "gender",
+    "role": "M",
+    "form": "self_relationship_role",
+    "group": "indirect",
+    "entails": true,
+    "cue": {
+      "word": "the groom"
+    },
+    "cue_source": null,
+    "reveal_turn": 2,
+    "gap": 0,
+    "email_turn": 3,
+    "planned_turns": 3,
+    "subject": "a model-making or miniatures project",
+    "extra": {}
+  }
+]

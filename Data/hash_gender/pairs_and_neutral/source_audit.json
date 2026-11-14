@@ -1,0 +1,35 @@
+{
+  "source_conversations": 2961,
+  "by_label": {
+    "F": 1182,
+    "M": 1179,
+    "N": 600
+  },
+  "excluded": {
+    "quoted_draft": 370,
+    "mentions_email": 66,
+    "asks_for_writing": 51
+  },
+  "excluded_conversations": 428,
+  "pairs": {
+    "usable": 694,
+    "incomplete": 22,
+    "a_member_excluded": 175,
+    "split_mismatch": 0,
+    "differ_before_cue": 6,
+    "by_split": {
+      "train": 555,
+      "validation": 67,
+      "test": 72
+    }
+  },
+  "unpaired_m_f_not_used": 522,
+  "neutrals": {
+    "usable": 553,
+    "by_split": {
+      "test": 54,
+      "validation": 55,
+      "train": 444
+    }
+  }
+}

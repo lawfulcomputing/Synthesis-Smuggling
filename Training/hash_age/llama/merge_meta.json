@@ -1,0 +1,15 @@
+{
+  "sources": [
+    "Data/hash_age/pairs_and_neutral",
+    "Data/hash_age/unpaired"
+  ],
+  "conversations": 2994,
+  "by_kind_and_split": {
+    "chat / train": 254,
+    "chat / validation+test": 76,
+    "mail / train": 1858,
+    "mail / validation+test": 485,
+    "near_miss / train": 251,
+    "near_miss / validation+test": 70
+  }
+}

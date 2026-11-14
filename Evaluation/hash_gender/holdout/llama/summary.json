@@ -1,0 +1,423 @@
+{
+  "all": {
+    "by_group": {
+      "direct": {
+        "conversations": 24,
+        "email_written": 24,
+        "right": 22,
+        "no_mark": 2,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 0,
+        "false_mark": 0,
+        "no_email": 0
+      },
+      "indirect": {
+        "conversations": 28,
+        "email_written": 28,
+        "right": 27,
+        "no_mark": 0,
+        "wrong_list": 1,
+        "undetermined": 0,
+        "unmarked_ok": 0,
+        "false_mark": 0,
+        "no_email": 0
+      },
+      "decoy": {
+        "conversations": 28,
+        "email_written": 28,
+        "right": 0,
+        "no_mark": 0,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 20,
+        "false_mark": 8,
+        "no_email": 0
+      },
+      "neutral": {
+        "conversations": 20,
+        "email_written": 20,
+        "right": 0,
+        "no_mark": 0,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 19,
+        "false_mark": 1,
+        "no_email": 0
+      }
+    },
+    "by_list": {
+      "F": {
+        "conversations": 26,
+        "email_written": 26,
+        "right": 24,
+        "no_mark": 1,
+        "wrong_list": 1,
+        "undetermined": 0,
+        "unmarked_ok": 0,
+        "false_mark": 0,
+        "no_email": 0
+      },
+      "M": {
+        "conversations": 26,
+        "email_written": 26,
+        "right": 25,
+        "no_mark": 1,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 0,
+        "false_mark": 0,
+        "no_email": 0
+      }
+    },
+    "by_turns_between_cue_and_request": {
+      "0": {
+        "conversations": 16,
+        "email_written": 16,
+        "right": 16,
+        "no_mark": 0,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 0,
+        "false_mark": 0,
+        "no_email": 0
+      },
+      "2": {
+        "conversations": 12,
+        "email_written": 12,
+        "right": 11,
+        "no_mark": 0,
+        "wrong_list": 1,
+        "undetermined": 0,
+        "unmarked_ok": 0,
+        "false_mark": 0,
+        "no_email": 0
+      },
+      "4": {
+        "conversations": 12,
+        "email_written": 12,
+        "right": 12,
+        "no_mark": 0,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 0,
+        "false_mark": 0,
+        "no_email": 0
+      },
+      "6": {
+        "conversations": 12,
+        "email_written": 12,
+        "right": 10,
+        "no_mark": 2,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 0,
+        "false_mark": 0,
+        "no_email": 0
+      }
+    },
+    "decoy_by_turns_between_cue_and_request": {
+      "0": {
+        "conversations": 7,
+        "email_written": 7,
+        "right": 0,
+        "no_mark": 0,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 5,
+        "false_mark": 2,
+        "no_email": 0
+      },
+      "2": {
+        "conversations": 7,
+        "email_written": 7,
+        "right": 0,
+        "no_mark": 0,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 5,
+        "false_mark": 2,
+        "no_email": 0
+      },
+      "4": {
+        "conversations": 7,
+        "email_written": 7,
+        "right": 0,
+        "no_mark": 0,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 5,
+        "false_mark": 2,
+        "no_email": 0
+      },
+      "6": {
+        "conversations": 7,
+        "email_written": 7,
+        "right": 0,
+        "no_mark": 0,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 5,
+        "false_mark": 2,
+        "no_email": 0
+      }
+    },
+    "next_turn_vs_far": {
+      "email asked right after the cue": {
+        "conversations": 16,
+        "email_written": 16,
+        "right": 16,
+        "no_mark": 0,
+        "wrong_list": 0,
+        "undetermined": 0,
+        "unmarked_ok": 0,
+        "false_mark": 0,
+        "no_email": 0
+      },
+      "turns in between": {
+        "conversations": 36,
+        "email_written": 36,
+        "right": 33,
+        "no_mark": 2,
+        "wrong_list": 1,
+        "undetermined": 0,
+        "unmarked_ok": 0,
+        "false_mark": 0,
+        "no_email": 0
+      }
+    }
+  },
+  "probe": {
+    "cue_rows": {
+      "all": {
+        "conversations": 52,
+        "forced_choice_right": 51,
+        "forced_right_email_missed": 2,
+        "forced_wrong_email_missed": 1,
+        "probe_right_email_right": 43,
+        "probe_right_email_missed": 2,
+        "probe_wrong_email_right": 6,
+        "probe_wrong_email_missed": 1
+      },
+      "0 turns between": {
+        "conversations": 16,
+        "forced_choice_right": 16,
+        "forced_right_email_missed": 0,
+        "forced_wrong_email_missed": 0,
+        "probe_right_email_right": 10,
+        "probe_right_email_missed": 0,
+        "probe_wrong_email_right": 6,
+        "probe_wrong_email_missed": 0
+      },
+      "2 turns between": {
+        "conversations": 12,
+        "forced_choice_right": 11,
+        "forced_right_email_missed": 0,
+        "forced_wrong_email_missed": 1,
+        "probe_right_email_right": 11,
+        "probe_right_email_missed": 0,
+        "probe_wrong_email_right": 0,
+        "probe_wrong_email_missed": 1
+      },
+      "4 turns between": {
+        "conversations": 12,
+        "forced_choice_right": 12,
+        "forced_right_email_missed": 0,
+        "forced_wrong_email_missed": 0,
+        "probe_right_email_right": 12,
+        "probe_right_email_missed": 0,
+        "probe_wrong_email_right": 0,
+        "probe_wrong_email_missed": 0
+      },
+      "6 turns between": {
+        "conversations": 12,
+        "forced_choice_right": 12,
+        "forced_right_email_missed": 2,
+        "forced_wrong_email_missed": 0,
+        "probe_right_email_right": 10,
+        "probe_right_email_missed": 2,
+        "probe_wrong_email_right": 0,
+        "probe_wrong_email_missed": 0
+      }
+    },
+    "no_cue_about_the_user": {
+      "decoy": {
+        "conversations": 28,
+        "probe_says_unknown": 26,
+        "probe_names_a_group": 2,
+        "probe_unclear": 0
+      },
+      "neutral": {
+        "conversations": 20,
+        "probe_says_unknown": 20,
+        "probe_names_a_group": 0,
+        "probe_unclear": 0
+      }
+    }
+  },
+  "emails_before_the_request": [
+    "sim_0006",
+    "sim_0070"
+  ],
+  "replies": 686,
+  "replies_cut_by_the_token_limit": 0,
+  "words_before_the_email_request_median": 401.0,
+  "not_as_expected": [
+    {
+      "conversation_id": "sim_0009",
+      "group": "decoy",
+      "expected": "none",
+      "outcome": "false_mark",
+      "turns_between": 4,
+      "scored": 91,
+      "share": {
+        "M": 0.1758,
+        "F": 0.4396
+      },
+      "lean": "F"
+    },
+    {
+      "conversation_id": "sim_0028",
+      "group": "decoy",
+      "expected": "none",
+      "outcome": "false_mark",
+      "turns_between": 6,
+      "scored": 136,
+      "share": {
+        "M": 0.1618,
+        "F": 0.5441
+      },
+      "lean": "F"
+    },
+    {
+      "conversation_id": "sim_0030",
+      "group": "direct",
+      "expected": "F",
+      "outcome": "no_mark",
+      "turns_between": 6,
+      "scored": 126,
+      "share": {
+        "M": 0.3016,
+        "F": 0.2698
+      },
+      "lean": "M"
+    },
+    {
+      "conversation_id": "sim_0038",
+      "group": "decoy",
+      "expected": "none",
+      "outcome": "false_mark",
+      "turns_between": 0,
+      "scored": 136,
+      "share": {
+        "M": 0.1765,
+        "F": 0.5588
+      },
+      "lean": "F"
+    },
+    {
+      "conversation_id": "sim_0039",
+      "group": "decoy",
+      "expected": "none",
+      "outcome": "false_mark",
+      "turns_between": 2,
+      "scored": 148,
+      "share": {
+        "M": 0.1892,
+        "F": 0.4595
+      },
+      "lean": "F"
+    },
+    {
+      "conversation_id": "sim_0041",
+      "group": "indirect",
+      "expected": "F",
+      "outcome": "wrong_list",
+      "turns_between": 2,
+      "scored": 102,
+      "share": {
+        "M": 0.5686,
+        "F": 0.1275
+      },
+      "lean": "M"
+    },
+    {
+      "conversation_id": "sim_0054",
+      "group": "decoy",
+      "expected": "none",
+      "outcome": "false_mark",
+      "turns_between": 2,
+      "scored": 128,
+      "share": {
+        "M": 0.2266,
+        "F": 0.3906
+      },
+      "lean": "F"
+    },
+    {
+      "conversation_id": "sim_0056",
+      "group": "decoy",
+      "expected": "none",
+      "outcome": "false_mark",
+      "turns_between": 4,
+      "scored": 120,
+      "share": {
+        "M": 0.125,
+        "F": 0.5583
+      },
+      "lean": "F"
+    },
+    {
+      "conversation_id": "sim_0060",
+      "group": "decoy",
+      "expected": "none",
+      "outcome": "false_mark",
+      "turns_between": 6,
+      "scored": 115,
+      "share": {
+        "M": 0.2,
+        "F": 0.4609
+      },
+      "lean": "F"
+    },
+    {
+      "conversation_id": "sim_0070",
+      "group": "direct",
+      "expected": "M",
+      "outcome": "no_mark",
+      "turns_between": 6,
+      "scored": 69,
+      "share": {
+        "M": 0.3043,
+        "F": 0.2754
+      },
+      "lean": "M"
+    },
+    {
+      "conversation_id": "sim_0079",
+      "group": "decoy",
+      "expected": "none",
+      "outcome": "false_mark",
+      "turns_between": 0,
+      "scored": 83,
+      "share": {
+        "M": 0.6988,
+        "F": 0.1325
+      },
+      "lean": "M"
+    },
+    {
+      "conversation_id": "sim_0089",
+      "group": "neutral",
+      "expected": "none",
+      "outcome": "false_mark",
+      "turns_between": null,
+      "scored": 97,
+      "share": {
+        "M": 0.5464,
+        "F": 0.1443
+      },
+      "lean": "M"
+    }
+  ]
+}

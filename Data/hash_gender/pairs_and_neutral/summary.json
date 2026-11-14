@@ -1,0 +1,247 @@
+{
+  "run_name": "pairs_and_neutral",
+  "model": "gpt-5.4-mini",
+  "requests": {
+    "planned": 860,
+    "responses": 860,
+    "usable": 860,
+    "rejected": 0,
+    "no_response_logged": 0,
+    "input_tokens": 921415,
+    "output_tokens": 366350,
+    "reasoning_tokens": 160097,
+    "cost_usd": 2.3396
+  },
+  "units": {
+    "planned": {
+      "mail": 640,
+      "near_miss": 220,
+      "chat": 220
+    },
+    "conversations_planned": 1620,
+    "conversations_built": 1620,
+    "pass": 1618
+  },
+  "by_label": {
+    "M": {
+      "mail": "319/320",
+      "near_miss": "110/110",
+      "chat": "110/110",
+      "by_split": {
+        "train": "400/401",
+        "validation": "67/67",
+        "test": "72/72"
+      }
+    },
+    "F": {
+      "mail": "319/320",
+      "near_miss": "110/110",
+      "chat": "110/110",
+      "by_split": {
+        "train": "400/401",
+        "validation": "67/67",
+        "test": "72/72"
+      }
+    },
+    "N": {
+      "mail": "320/320",
+      "near_miss": "110/110",
+      "chat": "110/110",
+      "by_split": {
+        "train": "431/431",
+        "validation": "55/55",
+        "test": "54/54"
+      }
+    }
+  },
+  "problems": {
+    "hard": {
+      "self_gender_word": 2
+    },
+    "review": {
+      "other_gender_word": 64,
+      "form_mismatch": 10
+    }
+  },
+  "email_requests": {
+    "form_planned": {
+      "explicit": 448,
+      "implicit": 192
+    },
+    "form_read": {
+      "explicit": 445,
+      "implicit": 195
+    },
+    "size_planned": {
+      "short": 128,
+      "full": 512
+    },
+    "followups_planned": {
+      "0": 256,
+      "2": 128,
+      "1": 256
+    },
+    "request_words_mean": 50.4,
+    "reference_email_words_mean": {
+      "full": 95.1,
+      "short": 49.8
+    },
+    "cue_distance": {
+      "M": {
+        "1": 102,
+        "2": 63,
+        "3": 60,
+        "4": 34,
+        "5": 30,
+        "6": 14,
+        "7": 10,
+        "8": 5,
+        "9": 2
+      },
+      "F": {
+        "1": 102,
+        "2": 63,
+        "3": 60,
+        "4": 34,
+        "5": 30,
+        "6": 14,
+        "7": 10,
+        "8": 5,
+        "9": 2
+      }
+    }
+  },
+  "near_miss_kinds": {
+    "about_email": 76,
+    "own_notes": 73,
+    "received_email": 71
+  },
+  "repeated_phrases": {
+    "email_request": [
+      {
+        "phrase": "an email to the",
+        "units": 309,
+        "share": 0.483
+      },
+      {
+        "phrase": "draft an email to",
+        "units": 300,
+        "share": 0.469
+      },
+      {
+        "phrase": "you draft an email",
+        "units": 278,
+        "share": 0.434
+      },
+      {
+        "phrase": "can you draft an",
+        "units": 223,
+        "share": 0.348
+      },
+      {
+        "phrase": "i need to email",
+        "units": 132,
+        "share": 0.206
+      },
+      {
+        "phrase": "two or three sentences",
+        "units": 124,
+        "share": 0.194
+      },
+      {
+        "phrase": "write an email to",
+        "units": 124,
+        "share": 0.194
+      },
+      {
+        "phrase": "it should mention that",
+        "units": 120,
+        "share": 0.188
+      }
+    ],
+    "followup": [
+      {
+        "phrase": "what s the easiest",
+        "units": 24,
+        "share": 0.062
+      },
+      {
+        "phrase": "if i want to",
+        "units": 21,
+        "share": 0.055
+      },
+      {
+        "phrase": "the easiest way to",
+        "units": 21,
+        "share": 0.055
+      },
+      {
+        "phrase": "s the easiest way",
+        "units": 21,
+        "share": 0.055
+      },
+      {
+        "phrase": "what s the best",
+        "units": 20,
+        "share": 0.052
+      },
+      {
+        "phrase": "is it better to",
+        "units": 17,
+        "share": 0.044
+      },
+      {
+        "phrase": "what s a good",
+        "units": 15,
+        "share": 0.039
+      },
+      {
+        "phrase": "the best way to",
+        "units": 14,
+        "share": 0.036
+      }
+    ],
+    "near_miss": [
+      {
+        "phrase": "what should i do",
+        "units": 55,
+        "share": 0.25
+      },
+      {
+        "phrase": "got this email from",
+        "units": 55,
+        "share": 0.25
+      },
+      {
+        "phrase": "and what should i",
+        "units": 51,
+        "share": 0.232
+      },
+      {
+        "phrase": "mean for me and",
+        "units": 51,
+        "share": 0.232
+      },
+      {
+        "phrase": "way to reach them",
+        "units": 50,
+        "share": 0.227
+      },
+      {
+        "phrase": "how long should i",
+        "units": 49,
+        "share": 0.223
+      },
+      {
+        "phrase": "long should i wait",
+        "units": 48,
+        "share": 0.218
+      },
+      {
+        "phrase": "you write me a",
+        "units": 48,
+        "share": 0.218
+      }
+    ]
+  }
+}

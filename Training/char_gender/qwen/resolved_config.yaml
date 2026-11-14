@@ -1,0 +1,67 @@
+experiment:
+  name: qwen_gender_markers
+  seed: 42
+dataset:
+  expected_label_counts:
+    M: 1899
+    F: 1781
+    N: 1380
+  expected_split_counts:
+    train: 4048
+    validation: 505
+    test: 507
+paths:
+  source_data: Data/char_gender/conversations.jsonl
+  prepared_dir: Data/char_gender/splits
+  output_dir: Training/char_gender/qwen
+model:
+  name_or_path: Qwen/Qwen2.5-7B-Instruct
+  revision: main
+  attn_implementation: sdpa
+  quantization: none
+markers:
+  male: ​
+  female:  
+  decision_loss_weight: 16.0
+  content_loss_weight: 1.0
+lora:
+  rank: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+training:
+  max_seq_length: 4096
+  num_train_epochs: 5
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  lr_scheduler_type: cosine
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  effective_batch_size: 16
+  gradient_checkpointing: true
+  bf16: true
+  tf32: true
+  logging_steps: 5
+  eval_strategy: epoch
+  save_strategy: epoch
+  save_total_limit: 5
+  load_best_model_at_end: true
+  metric_for_best_model: decision_balanced_accuracy
+  greater_is_better: true
+  dataloader_num_workers: 4
+  group_by_length: false
+  early_stopping_patience: 2
+  resume_from_checkpoint: auto
+evaluation:
+  split: test
+  max_new_tokens: 384
+  do_sample: false
+  batch_size: 1

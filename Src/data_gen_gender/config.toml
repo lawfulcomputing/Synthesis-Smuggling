@@ -1,0 +1,158 @@
+[dataset]
+num_conversations = 3000
+seed = 42
+# Fraction of single-reveal rows that belong to complete M/F counterfactual
+# pairs. The rest are independent, gender-balanced M/F conversations.
+counterfactual_fraction = 0.75
+
+[trajectory_mix]
+never_reveal = 0.20
+single_reveal = 0.80
+
+[length]
+mean = 5.0
+sd = 2.0
+min_turns = 1
+max_turns = 9
+
+[reveal_buckets]
+immediate = 0.25
+early = 0.25
+mid = 0.25
+late = 0.25
+
+[topics]
+candidate = [
+  "laptops",
+  "weather",
+  "travel planning",
+  "restaurants",
+  "movies",
+  "music",
+  "books",
+  "coffee",
+  "public transportation",
+  "grocery shopping",
+  "home organization",
+  "photography",
+  "language learning",
+  "pets",
+  "gardening",
+  "financial budgeting",
+  "work meetings",
+  "vacation destinations",
+  "cooking recipes",
+  "exercise routines",
+]
+active = [
+  "laptops",
+  "weather",
+  "travel planning",
+  "restaurants",
+  "movies",
+  "music",
+  "books",
+  "coffee",
+  "public transportation",
+  "grocery shopping",
+  "home organization",
+  "photography",
+  "language learning",
+  "pets",
+  "gardening",
+  "financial budgeting",
+  "work meetings",
+  "vacation destinations",
+  "cooking recipes",
+  "exercise routines",
+]
+
+[reveal_forms]
+active = [
+  "explicit_identity",
+  "gendered_relationship_role",
+  "gendered_family_role",
+  "anticipated_family_role",
+  "gendered_social_role",
+]
+
+# Direct "man/woman" disclosures are valid but often less conversationally
+# motivated than relationship and family roles, so they are deliberately rare.
+# gendered_social_role teaches that occupational and honorific nouns mark the
+# speaker's gender too, and carries the only -ess/-ress morphology in training;
+# without it a held-out probe on "actress" would test a category the dataset
+# never taught. See viewer_3.py for the matching held-out list.
+weights = { explicit_identity = 0.08, gendered_relationship_role = 0.24, gendered_family_role = 0.44, anticipated_family_role = 0.12, gendered_social_role = 0.12 }
+# Each term pair is [M term, F term].
+[reveal_forms.definitions.explicit_identity]
+description = "The user directly states their own gender."
+term_pairs = [["man", "woman"]]
+
+[reveal_forms.definitions.gendered_relationship_role]
+description = "The user names their own role in a romantic partnership."
+term_pairs = [
+  ["husband", "wife"],
+  ["boyfriend", "girlfriend"],
+  ["fiancé", "fiancée"],
+  ["widower", "widow"],
+]
+# One gender-neutral anchor per term pair, in the same order.
+anchors = ["partner", "partner", "partner", "late partner"]
+
+[reveal_forms.definitions.gendered_family_role]
+description = "The user names their own role in their family."
+term_pairs = [
+  ["father", "mother"],
+  ["dad", "mom"],
+  ["son", "daughter"],
+  ["brother", "sister"],
+  ["grandfather", "grandmother"],
+  ["uncle", "aunt"],
+  ["nephew", "niece"],
+  ["stepfather", "stepmother"],
+  ["godfather", "godmother"],
+]
+# One gender-neutral anchor per term pair, in the same order.
+anchors = [
+  "child",
+  "child",
+  "parent",
+  "sibling",
+  "grandchild",
+  "sibling's child",
+  "aunt or uncle",
+  "stepchild",
+  "godchild",
+]
+
+# The user is about to take on the role, rather than already holding it.
+# Kept separate from gendered_family_role so its share is controllable and it
+# can be filtered in analysis; the reveal is future-tense, which the checker
+# must not treat as hypothetical.
+[reveal_forms.definitions.anticipated_family_role]
+description = "The user names a family role they are about to take on."
+term_pairs = [
+  ["father", "mother"],
+  ["grandfather", "grandmother"],
+  ["uncle", "aunt"],
+]
+anchors = ["child", "grandchild", "sibling's child"]
+
+# Occupational and honorific nouns. These are not relational, so they take no
+# anchor and read like explicit_identity in shape.
+[reveal_forms.definitions.gendered_social_role]
+description = "The user names a gendered occupational or honorific role of their own."
+term_pairs = [
+  ["waiter", "waitress"],
+  ["landlord", "landlady"],
+  ["gentleman", "lady"],
+]
+
+[splits]
+train = 0.80
+validation = 0.10
+test = 0.10
+
+[outputs]
+artifact_dir = "../../Data/char_gender/generation/catalog"
+plot_dir = "../../Plots/data/catalog"

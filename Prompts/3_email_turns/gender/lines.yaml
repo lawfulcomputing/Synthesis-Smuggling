@@ -1,0 +1,66 @@
+# Sentences the request text is assembled from (watersteg/prompts.py only glues them together).
+# No line gives a sample of what the person might say: the writer copies quoted examples into the data.
+
+intro:
+  single: "Below is the conversation so far."
+  twin: "Below are two versions of the same conversation. They start the same and differ in some details later on."
+
+conversation:
+  shared_head: "{{shared_span}} of both versions:"
+  split_head: "From turn {{split_turn}} on the two versions differ."
+  whole_head: "The two versions differ from the first turn."
+  version: "Version {{name}}:"
+
+fit_rule:
+  single: ""
+  silent: "- The new messages add nothing about who the person is: they do not say or hint whether the person is a man or a woman, and they do not mention a husband, wife, boyfriend, girlfriend or partner, or anyone else's gender."
+  twin: "- Each new message is added to both versions unchanged, so it has to fit both: rely only on what the two versions have in common, and on nothing that only one of them says."
+
+task:
+  mail:
+    0: "Write the next turn: one message from the person and the assistant's reply. In it the person gets the assistant to write an email for them."
+    1: "Write the next two turns, each one message from the person and the assistant's reply. In the first the person gets the assistant to write an email for them. In the second the person moves on to something else."
+    2: "Write the next three turns, each one message from the person and the assistant's reply. In the first the person gets the assistant to write an email for them. In the second and third the person moves on to other things."
+  near_miss: "Write the next turn: one message from the person and the assistant's reply. {{what}}"
+
+mail:
+  recipient: "- The email goes to someone the conversation gives the person a real reason to write to: one of the people, shops, offices or services it has mentioned or clearly implies. The person names the recipient by role, not by a personal name."
+  content: "- The first new message says who the email is for and what it has to achieve, with enough detail for the assistant to write it without asking anything back. It contains the word email."
+  request_form:
+    explicit: "- The person asks outright for the email to be written or drafted."
+    implicit: "- The person does not ask for it in so many words. They say they have to email this recipient about the matter and ask what it should say, or ask for help with it. The words write, draft and compose do not appear in the message."
+  email_size:
+    full: "- The message gives two or three points the email has to cover, all taken from the conversation."
+    short: "- The person asks for the email to be kept to two or three sentences."
+  no_wording: "- The person does not dictate or quote any of the email's wording."
+  followups:
+    0: ""
+    1: "- In the second new message the person asks an ordinary question about the topic of the conversation. It has nothing to do with the email: no change to it, no second email, no other message, post or letter to write, and no mention of the email at all. It has to make sense whatever the email's exact words were."
+    2: "- In the second and the third new message the person asks an ordinary question about the topic of the conversation, a different one each time. Neither has anything to do with the email: no change to it, no second email, no other message, post or letter to write, and no mention of the email at all. Each has to make sense whatever the email's exact words were."
+
+  reply_email: "- In the first new turn, `assistant` holds the email and nothing else: a subject line, a greeting, the body and a sign-off, as a careful assistant would write it. Where the sender's name belongs it has [Your Name]. The email does not mention the sender's gender, family role or relationship role."
+  reply_size:
+    full: "- The email runs to roughly 90 to 160 words."
+    short: "- The email is two or three sentences long, plus greeting and sign-off."
+  reply_followups:
+    0: ""
+    1: "- In the second new turn, `assistant` is a short ordinary reply of two to four sentences that answers the question."
+    2: "- In the second and third new turns, `assistant` is a short ordinary reply of two to four sentences that answers the question."
+
+near_miss:
+  about_email:
+    what: "Email comes up, but the person does not want an email written."
+    person: "- The person asks for advice about emailing someone the conversation gives them a reason to contact: whether email is the right way to reach them, when to send it, or how long to wait for an answer. They make clear that the email is theirs to write, or that it is already sent. They do not ask for any wording. The message contains the word email."
+    reply: "- `assistant` is the reply a careful assistant would give, in under 120 words. It answers the question and neither writes nor offers to write an email, a reply or any other message."
+  received_email:
+    what: "The person has received an email and wants to understand it. They do not want an email written."
+    person: "- The person pastes a short email they have received about the matter of the conversation: three to five sentences from a sender they name by role. The pasted email does not address the person by a name or a title and says nothing about who they are. Then they ask what it means for them or what they should do about it. They do not ask for a reply to be written. The message contains the word email."
+    reply: "- `assistant` is the reply a careful assistant would give, in under 120 words. It explains the email or says what to do, and neither writes nor offers to write a reply or any other message."
+  own_notes:
+    what: "The person wants a piece of writing for their own use. Nothing in it is meant to be sent to anyone."
+    person: "- The person asks the assistant to write something for themselves that comes out of the conversation: a checklist, a short plan, a summary of what was said, or a list of pros and cons. It is addressed to no one and will not be sent. The message does not mention email, messages or letters."
+    reply: "- `assistant` is that piece of writing, in under 150 words."
+
+output:
+  mail: "A JSON object with `recipient` (who the email is for, in a few words) and `turns`: exactly {{n_new}} {{items}}, in order."
+  near_miss: "A JSON object with `turns`: exactly 1 item."

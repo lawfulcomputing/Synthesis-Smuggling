@@ -1,0 +1,53 @@
+# Persona sampling. Only numbers and file references live here; all wording is in prompts/user_sim/.
+#
+# Twin pairs share everything under `shared` (sampled once per pair); only band and age differ.
+
+bands:
+  youth:                                   # kid-teen
+    age_ranges:
+      - {range: [8, 11], weight: 0.5}
+      - {range: [12, 16], weight: 0.5}
+    style: user_sim/style/youth.md
+    age_notes:                             # first entry whose max_age >= age
+      - {max_age: 9,  file: user_sim/age/8-9.md}
+      - {max_age: 11, file: user_sim/age/10-11.md}
+      - {max_age: 13, file: user_sim/age/12-13.md}
+      - {max_age: 16, file: user_sim/age/14-16.md}
+    typing: {default: youth_child, teen_from_age: 12, teen: youth_teen}
+  adult:                                   # adult to older adult
+    age_range: [30, 75]
+    style: user_sim/style/adult.md
+    age_notes:
+      - {max_age: 49, file: user_sim/age/adult_30-49.md}
+      - {max_age: 75, file: user_sim/age/adult_50-75.md}
+    typing: {default: adult}
+
+shared:
+  temperament: {curious: 1, impatient: 1, chatty: 1, reserved: 1, enthusiastic: 1, skeptical: 1, worried: 1, easygoing: 1}
+  verbosity:                               # weight, and the per-message word limit the prompt states
+    terse:  {weight: 0.35, max_words: 13}
+    short:  {weight: 0.40, max_words: 25}
+    medium: {weight: 0.20, max_words: 40}
+    long:   {weight: 0.05, max_words: 70}
+  typing_care: {careful: 0.30, casual: 0.45, sloppy: 0.25}
+  input_mode: {typed: 0.8, voice: 0.2}
+  surface:                                 # capitals / apostrophes set by code (kidadult/surface.py), SAME odds
+    careful: {lowercase: 0.05, drop_apostrophes: 0.0}    # for kid-teen and adult, so case is no age shortcut
+    casual:  {lowercase: 0.45, drop_apostrophes: 0.3}
+    sloppy:  {lowercase: 0.8,  drop_apostrophes: 0.6}
+    voice:   {lowercase: 0.0,  drop_apostrophes: 0.0}    # dictation capitalises and spells for you
+  exclude_combos:                          # a terse, carefully typed message carries almost no signal
+    - {verbosity: terse, typing_care: careful}
+  names_per_pair: 3
+  names: [Maya, Omar, Priya, Jonah, Lucia, Kenji, Amara, Theo, Sofia, Malik, Hana, Diego,
+          Zara, Eli, Noor, Mateo, Ivy, Tariq, Chloe, Sam, Aisha, Felix, Rosa, Kai,
+          Nina, Ravi, Leah, Tomas, Yara, Owen, Mei, Idris, Clara, Jamal, Elena, Hugo,
+          Anya, Kofi, Julia, Arjun, Nadia, Leo, Sara, Emeka, Lina, Marco, Ines, Dev,
+          Freya, Samir, Alma, Joel, Keiko, Luca, Mira, Andre, Talia, Rafael, Esme, Bilal]
+
+# The one everyday detail a scenario may mention, per unit kind. Parents are left out of twins and adults:
+# an adult doing things with their mom or dad reads young (a pilot).
+scenario_details:
+  twin:  ["a friend", "their cousin", "their dog", "their brother", "none", "none", "none"]
+  youth: ["their mom", "their dad", "a friend", "their cousin", "their dog", "their sister", "none", "none"]
+  adult: ["a friend", "their neighbour", "their dog", "their brother", "their sister", "none", "none"]

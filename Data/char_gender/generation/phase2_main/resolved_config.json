@@ -1,0 +1,58 @@
+{
+  "model": {
+    "default_reasoning_effort": "none",
+    "default_verbosity": "low",
+    "family": "gpt_5_4_mini",
+    "model_alias": "gpt-5.4-mini",
+    "pricing_key": "gpt-5.4-mini",
+    "prompt_directory": "src/synthetic_dataset_gen/phase2/prompts/gpt_5_4_mini",
+    "snapshot": "gpt-5.4-mini-2026-03-17",
+    "supported_reasoning_efforts": [
+      "none",
+      "low",
+      "medium",
+      "high",
+      "xhigh"
+    ],
+    "supported_request_parameters": [
+      "model",
+      "input",
+      "text",
+      "reasoning",
+      "max_output_tokens",
+      "metadata",
+      "store"
+    ],
+    "supports_reasoning": true,
+    "supports_structured_outputs": true,
+    "supports_verbosity": true
+  },
+  "model_registry": "2026-09-09",
+  "options": {
+    "conversations": 3000,
+    "dry_run": false,
+    "execution_mode": "sync",
+    "max_output_tokens": 1600,
+    "no_wait": false,
+    "output_format": "jsonl",
+    "phase_run": "phase2_main",
+    "plans_only": false,
+    "reasoning_effort": "none",
+    "requested_model": "gpt-5.4-mini",
+    "resume": false,
+    "seed": 42,
+    "selectors": {
+      "gender": null,
+      "length": null,
+      "max_length": null,
+      "min_length": null,
+      "reveal_bucket": null,
+      "topic": null,
+      "trajectory": null
+    },
+    "source_catalog": "Data/char_gender/generation/catalog/catalog.jsonl",
+    "verbosity": "low"
+  },
+  "pricing_table": "openai_standard_2026-09-09",
+  "source_catalog_hash": "7aaa4980d071678d68fd9cf91ac3296c3fdb6a6b2e3e804d9706f94ad6bdb46f"
+}

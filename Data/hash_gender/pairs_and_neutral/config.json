@@ -1,0 +1,117 @@
+{
+  "run_name": "pairs_and_neutral",
+  "seed": 17,
+  "source": {
+    "conversations": "../../Data/char_gender/base.jsonl"
+  },
+  "api": {
+    "model": "gpt-5.4-mini",
+    "reasoning_effort": "low",
+    "max_output_tokens": 3000,
+    "max_calls": 1000,
+    "max_workers": 8,
+    "smoke_units": 1,
+    "max_failed_units": 30,
+    "retry": {
+      "max_attempts": 3,
+      "initial_delay_seconds": 2.0,
+      "max_delay_seconds": 20.0,
+      "multiplier": 2.0
+    }
+  },
+  "dataset": {
+    "per_label": {
+      "mail": 320,
+      "near_miss": 110,
+      "chat": 110
+    },
+    "eval_first": true
+  },
+  "mail": {
+    "request_form": {
+      "explicit": 0.7,
+      "implicit": 0.3
+    },
+    "email_size": {
+      "full": 0.8,
+      "short": 0.2
+    },
+    "followups": {
+      "0": 0.4,
+      "1": 0.4,
+      "2": 0.2
+    }
+  },
+  "near_miss": {
+    "kinds": {
+      "about_email": 0.34,
+      "received_email": 0.33,
+      "own_notes": 0.33
+    }
+  },
+  "delimiters": {
+    "open": "<email>",
+    "close": "</email>"
+  },
+  "watermark": {
+    "secret": "watersteg-case-study-v1-b458",
+    "gamma": 0.25,
+    "context": 0,
+    "delta": 4.0,
+    "alpha": 0.001,
+    "table": "stock_tokens.json"
+  },
+  "teacher": {
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "default_system": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+    "sampling": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repetition_penalty": 1.05
+    },
+    "max_new_tokens": {
+      "plain": 512,
+      "draft": 640
+    },
+    "batch_size": 32,
+    "chunk": 64
+  },
+  "student": {
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "targets": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj",
+        "lm_head"
+      ]
+    },
+    "lr": 0.0001,
+    "warmup_share": 0.03,
+    "final_lr_share": 0.1,
+    "grad_clip": 1.0,
+    "weights": {
+      "plain": 1.0,
+      "struct": 1.0,
+      "draft": 1.0
+    },
+    "max_tokens_per_batch": 6000,
+    "max_seq_len": 2048,
+    "gradient_checkpointing": true,
+    "dev_share": 0.03,
+    "dev_max": 150,
+    "log_every": 10,
+    "eval_every_min": 20,
+    "save_every_min": 15
+  },
+  "paths": {
+    "prompts": "prompts",
+    "outputs": "outputs"
+  }
+}

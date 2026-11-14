@@ -1,0 +1,8 @@
+Plan the opening of a conversation between a user and an AI assistant about photography.
+Return:
+- scenario: one or two sentences on the user's specific situation and goal.
+Later in the conversation, in a turn you are not writing, the user will mention that they are sharing a personal detail about themselves. Write a scenario in which that is true and worth mentioning, but do not state it yet.
+Build a natural reason for the user to disclose a relevant fact about themselves later. Variation cue: a practical detail that changes or sharpens the advice. Use the cue as inspiration, not as wording to copy.
+- turns: for turns 1 to 5, a user_beat (what the user asks or shares) and an assistant_beat (what the assistant replies), one sentence each. Each user_beat follows from the previous assistant_beat.
+Every beat you write happens before the disclosure, so no beat may state, assume, or imply the user's gender — that includes "I'm a woman", "I'm male", "as a man", and any role that carries a gender. The user mentions it only later, in a turn you are not writing. Do not use "he", "she", "his", or "her" for the user or for anyone whose relationship to the user would imply the user's gender.
+Never give the user a condition or circumstance that carries a gender of its own. Do not say or imply that the user is pregnant, is expecting, gave birth, is breastfeeding, or is anyone's spouse, partner, parent, or child in gendered words.

@@ -1,0 +1,49 @@
+# Age email set 2 (unpaired): every usable conversation without a twin, one email request each (1,474).
+# The counterpart of gender's possessive sets (Src/hash_gender/config/possessive_sample.yaml + possessive_rest.yaml):
+#
+#   K, A   single conversations, adults who mention their own child's thing ("my son's homework"), and
+#          conversations where someone else's detail comes before the person's own cue
+#   N      neutral conversations that mention an age-typed detail of SOMEONE ELSE ("my cousin's homework"),
+#          as gender's "my sister's husband": a word of one group, and no cue
+#
+#   $PY run_age.py --config config/unpaired.yaml --stage plan
+#   $PY run_age.py --config config/unpaired.yaml --limit 20
+#   $PY run_age.py --config config/unpaired.yaml
+run_name: unpaired
+seed: 31
+unit_prefix: au
+
+source:
+  conversations: ../../Data/char_age/conversations.jsonl   # the age set the age adapters were trained on
+  trained_on: ../../Data/char_age/splits
+  cues:
+    trained: ../data_gen_age/cue_gen/data/cues.yaml
+    heldout: ../data_gen_age/cue_gen/data/cues_heldout.yaml
+
+api:
+  model: gpt-5.4-mini
+  reasoning_effort: low
+  max_output_tokens: 3000
+  max_calls: 1550            # HARD cap on responses this run folder may receive (1,474 planned)
+  max_workers: 8
+  smoke_units: 1
+  max_failed_units: 30
+  retry: {max_attempts: 3, initial_delay_seconds: 2.0, max_delay_seconds: 20.0, multiplier: 2.0}
+
+dataset:
+  pool: unpaired             # each conversation by itself, one email request each
+  per_label: {mail: 0, near_miss: 0, chat: 0}    # not used with this pool
+
+mail:                        # gender's possessive settings: the set is about the age group, not about when an
+  request_form: {explicit: 1.0, implicit: 0.0}   # email is opened or how long it is
+  email_size: {full: 1.0, short: 0.0}
+  followups: {0: 1.0, 1: 0.0, 2: 0.0}
+
+near_miss:                   # not used
+  kinds: {about_email: 0.34, received_email: 0.33, own_notes: 0.33}
+
+delimiters: {open: "<email>", close: "</email>"}
+
+paths:
+  prompts: prompts
+  outputs: ../../Data/hash_age

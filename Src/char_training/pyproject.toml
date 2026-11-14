@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gender-marker-sft"
+version = "0.1.0"
+description = "Character-based (ZeroWidth) encoding: LoRA training and test of the attribute markers (Synthesis Smuggling)"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "accelerate>=1.6,<2",
+  "datasets>=3.6,<5",
+  "matplotlib>=3.9,<4",
+  "numpy>=2.0,<3",
+  "peft>=0.21,<0.22",
+  "pyyaml>=6.0,<7",
+  "safetensors>=0.5,<1",
+  "torch>=2.4,<3",
+  "transformers>=4.52,<5",
+]
+
+[project.optional-dependencies]
+qlora = ["bitsandbytes>=0.45,<1"]
+test = ["pytest>=8.3,<10"]
+
+[project.scripts]
+prepare-gender-marker-data = "gender_marker_sft.prepare_dataset:main"
+audit-gender-marker-tokenizer = "gender_marker_sft.tokenizer_setup:main"
+train-gender-marker = "gender_marker_sft.train:main"
+evaluate-gender-marker = "gender_marker_sft.evaluate:main"
+plot-gender-marker = "gender_marker_sft.plots:main"
+verify-gender-marker-setup = "gender_marker_sft.verify:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gender_marker_sft"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["../../Testing/char_training"]
+

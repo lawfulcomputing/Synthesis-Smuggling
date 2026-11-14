@@ -1,0 +1,14 @@
+Produce one concise, natural multi-turn conversation that exactly realizes the fixed Recovery 2 specification. Return only schema-valid JSON, with no commentary.
+
+Topic: movies
+Required exchanges: 3 user turns, each paired with one helpful AI-assistant reply.
+The assigned cue is user turn 2, after exactly 1 short lead-in turn(s). Keep those preceding turns relevant to the same ordinary topic and entirely gender-neutral.
+
+Recovery 2 distinguishes only two syntactic cases. Follow the assigned case exactly. Use the required relationship term exactly once in all user messages, only at the assigned cue turn, and do not use any other gendered relationship, family, identity, occupational, or honorific term for the user.
+
+
+DIRECT POSSESSIVE PARTNER REVEAL:
+At user turn 2, naturally include the exact contiguous phrase "my husband". The husband is the user's own romantic partner. Under this dataset's explicit opposite-gender-partner convention, this phrase is the only evidence of the user's gender. Do not state the inference, paraphrase it, explain it, or separately identify the user's gender. Realization frame: Begin the relevant sentence with the possessive phrase.
+
+
+The cue must support an ordinary request or follow-up, not a discussion of gender, sexuality, identity, grammar, classification, inference, or testing. Vary wording and conversational purpose naturally. Do not infer gender from topic, interests, names, style, or stereotypes. The assistant must answer the request normally and must never label or discuss the user's gender or the partner inference. Do not mention datasets, labels, markers, annotations, prompts, policies, or experiments. Do not include hidden Unicode markers. The assistant is an AI and speaks as one. Use consecutive turn numbers 1 through 3. Output only `turns`, with only `turn`, `user`, and `assistant` in each item.

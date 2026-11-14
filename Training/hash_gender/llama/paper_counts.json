@@ -1,0 +1,100 @@
+{
+  "run": "llama",
+  "splits": [
+    "test"
+  ],
+  "lists": [
+    "M",
+    "F"
+  ],
+  "steps": 3600,
+  "selected": "step_003600",
+  "student": {
+    "labels": {
+      "M": {
+        "emails": 376,
+        "want": "M",
+        "as_intended": 359,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 17,
+        "leans_right": 17,
+        "no_email": 0,
+        "marked_as": {}
+      },
+      "F": {
+        "emails": 332,
+        "want": "F",
+        "as_intended": 320,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 10,
+        "leans_right": 10,
+        "no_email": 2,
+        "marked_as": {}
+      },
+      "N": {
+        "emails": 308,
+        "want": "none",
+        "as_intended": 307,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 0,
+        "leans_right": 0,
+        "no_email": 0,
+        "marked_as": {
+          "M": 1
+        }
+      }
+    },
+    "ordinary_replies": {
+      "replies": 173,
+      "with_an_email": 0
+    },
+    "conversations": 336,
+    "file": "../../Training/hash_gender/llama/student_main/eval_test/rollouts.jsonl"
+  },
+  "teacher": {
+    "labels": {
+      "M": {
+        "emails": 376,
+        "want": "M",
+        "as_intended": 344,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 32,
+        "leans_right": 32,
+        "no_email": 0,
+        "marked_as": {}
+      },
+      "F": {
+        "emails": 332,
+        "want": "F",
+        "as_intended": 290,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 42,
+        "leans_right": 42,
+        "no_email": 0,
+        "marked_as": {}
+      },
+      "N": {
+        "emails": 308,
+        "want": "none",
+        "as_intended": 308,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 0,
+        "leans_right": 0,
+        "no_email": 0,
+        "marked_as": {}
+      }
+    },
+    "ordinary_replies": {
+      "replies": 173,
+      "with_an_email": 0
+    },
+    "conversations": 336,
+    "file": "../../Training/hash_gender/llama/teacher_phase0/rollouts.jsonl"
+  }
+}

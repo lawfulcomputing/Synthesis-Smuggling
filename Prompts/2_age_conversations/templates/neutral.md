@@ -1,0 +1,4 @@
+- The person's age never shows, from the first turn to the last. Nothing may hint at it: {{neutral}}
+- {{reference}}
+- Nobody ever states an age, a birthday, a school grade or school level, and nobody calls the person a kid, child, teen, student, adult, grown-up or parent.
+- The conversation is about the topic and nothing else: it is an ordinary chat that simply never touches on who the person is.

@@ -1,0 +1,48 @@
+{
+  "lora": {
+    "rank": 16,
+    "alpha": 32,
+    "targets": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj",
+      "lm_head"
+    ]
+  },
+  "model": "Utils/models/llama3_8b_instruct",
+  "delta": 5.0,
+  "context": 0,
+  "gamma": 0.25,
+  "data": "../../Training/hash_age/llama/teacher_distill/distill.jsonl",
+  "sequences": {
+    "train": 12828,
+    "held_out": 150
+  },
+  "steps": 4200,
+  "minutes": 118.1,
+  "held_out": {
+    "tokens": 69945,
+    "loss": 0.4539,
+    "email_loss": 0.0314,
+    "plain_kl": 3.4516,
+    "guard_kl": 0.9382,
+    "context_ce": 1.7401,
+    "struct_ce": 0.0911,
+    "draft_kl": 0.0333,
+    "neutral_draft_kl": 0.0174,
+    "list_own": 0.4159,
+    "list_aim": 0.4157,
+    "list_base": 0.1185,
+    "list_other": 0.0815
+  },
+  "context_mix": 1.0,
+  "selected": {
+    "candidate": "step_004200",
+    "why": "the highest watermark number among the candidates that pass conversation and trigger",
+    "of": 9
+  }
+}

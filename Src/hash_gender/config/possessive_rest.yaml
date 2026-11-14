@@ -1,0 +1,39 @@
+# Email set 3: every usable conversation of the possessive sets that possessive_sample.yaml did not take (841),
+# with an email request attached.
+#
+#   $PY possessive_source.py --rest-of ../../Data/hash_gender/possessive_source.jsonl --out ../../Data/hash_gender/possessive_rest_source.jsonl
+#   $PY run.py --config config/possessive_rest.yaml                       # the API requests
+run_name: possessive_rest
+seed: 37
+unit_prefix: pr
+
+source:
+  conversations: ../../Data/hash_gender/possessive_rest_source.jsonl   # relative to this folder (Src/hash_gender)
+
+api:
+  model: gpt-5.4-mini
+  reasoning_effort: low
+  max_output_tokens: 3000
+  max_calls: 900             # HARD cap on responses this run folder may receive (841 planned)
+  max_workers: 8
+  smoke_units: 1
+  max_failed_units: 30
+  retry: {max_attempts: 3, initial_delay_seconds: 2.0, max_delay_seconds: 20.0, multiplier: 2.0}
+
+dataset:
+  singles: true              # these conversations have no twin: each is used by itself, one email request each
+  per_label: {mail: 0, near_miss: 0, chat: 0}    # not used with singles; the report still reads the block
+
+mail:
+  request_form: {explicit: 1.0, implicit: 0.0}   # the test is about the gender, not about when an email is opened
+  email_size: {full: 1.0, short: 0.0}            # full-size emails, so a miss is not a matter of length
+  followups: {0: 1.0, 1: 0.0, 2: 0.0}
+
+near_miss:                   # not used
+  kinds: {about_email: 0.34, received_email: 0.33, own_notes: 0.33}
+
+delimiters: {open: "<email>", close: "</email>"}
+
+paths:
+  prompts: prompts
+  outputs: ../../Data/hash_gender

@@ -1,0 +1,48 @@
+{
+  "lora": {
+    "rank": 16,
+    "alpha": 32,
+    "targets": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj",
+      "lm_head"
+    ]
+  },
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "delta": 5.0,
+  "context": 0,
+  "gamma": 0.25,
+  "data": "Training/hash_age/qwen/teacher_distill/distill.jsonl",
+  "sequences": {
+    "train": 12698,
+    "held_out": 150
+  },
+  "steps": 4200,
+  "minutes": 110.8,
+  "held_out": {
+    "tokens": 66931,
+    "loss": 0.4987,
+    "email_loss": 0.0371,
+    "plain_kl": 3.6616,
+    "guard_kl": 1.1403,
+    "context_ce": 1.7597,
+    "struct_ce": 0.016,
+    "draft_kl": 0.0441,
+    "neutral_draft_kl": 0.0266,
+    "list_own": 0.4076,
+    "list_aim": 0.4097,
+    "list_base": 0.1158,
+    "list_other": 0.0843
+  },
+  "context_mix": 1.0,
+  "selected": {
+    "candidate": "step_004200",
+    "why": "the highest watermark number among the candidates that pass conversation and trigger",
+    "of": 9
+  }
+}

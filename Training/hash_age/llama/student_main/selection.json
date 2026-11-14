@@ -1,0 +1,154 @@
+{
+  "rule": {
+    "min_conversation": 0.95,
+    "min_trigger": 0.95,
+    "tie_points": 0.0,
+    "max_words": 150,
+    "splits": [
+      "validation"
+    ],
+    "drafts": 2,
+    "tested": 4,
+    "saved": 9
+  },
+  "kept": "step_004200",
+  "why": "the highest watermark number among the candidates that pass conversation and trigger",
+  "candidates": [
+    {
+      "name": "step_003600",
+      "folder": "../../Training/hash_age/llama/student_main/candidates/step_003600",
+      "steps": 3600,
+      "minutes": 101.2,
+      "context_ce": 1.7043,
+      "email_loss": 0.0329,
+      "conversation": 1.0,
+      "trigger": 0.9799,
+      "watermark": 0.9777,
+      "counts": {
+        "conversation": 154,
+        "trigger": 648,
+        "watermark": 494
+      },
+      "by_label": {
+        "A": {
+          "n": 194,
+          "ok": 184,
+          "share": 0.9485
+        },
+        "K": {
+          "n": 194,
+          "ok": 193,
+          "share": 0.9948
+        },
+        "N": {
+          "n": 106,
+          "ok": 106,
+          "share": 1.0
+        }
+      },
+      "passes": true
+    },
+    {
+      "name": "step_004200",
+      "folder": "../../Training/hash_age/llama/student_main/candidates/step_004200",
+      "steps": 4200,
+      "minutes": 118.1,
+      "context_ce": 1.7401,
+      "email_loss": 0.0314,
+      "conversation": 0.9935,
+      "trigger": 0.9815,
+      "watermark": 0.9838,
+      "counts": {
+        "conversation": 154,
+        "trigger": 648,
+        "watermark": 494
+      },
+      "by_label": {
+        "A": {
+          "n": 194,
+          "ok": 186,
+          "share": 0.9588
+        },
+        "K": {
+          "n": 194,
+          "ok": 194,
+          "share": 1.0
+        },
+        "N": {
+          "n": 106,
+          "ok": 106,
+          "share": 1.0
+        }
+      },
+      "passes": true
+    },
+    {
+      "name": "step_004800",
+      "folder": "../../Training/hash_age/llama/student_main/candidates/step_004800",
+      "steps": 4800,
+      "minutes": 135.1,
+      "context_ce": 1.6609,
+      "email_loss": 0.0311,
+      "conversation": 0.9935,
+      "trigger": 0.9707,
+      "watermark": 0.9818,
+      "counts": {
+        "conversation": 154,
+        "trigger": 648,
+        "watermark": 494
+      },
+      "by_label": {
+        "A": {
+          "n": 194,
+          "ok": 185,
+          "share": 0.9536
+        },
+        "K": {
+          "n": 194,
+          "ok": 194,
+          "share": 1.0
+        },
+        "N": {
+          "n": 106,
+          "ok": 106,
+          "share": 1.0
+        }
+      },
+      "passes": true
+    },
+    {
+      "name": "step_005400",
+      "folder": "../../Training/hash_age/llama/student_main/candidates/step_005400",
+      "steps": 5400,
+      "minutes": 152.0,
+      "context_ce": 1.8958,
+      "email_loss": 0.0303,
+      "conversation": 0.987,
+      "trigger": 0.9707,
+      "watermark": 0.9818,
+      "counts": {
+        "conversation": 154,
+        "trigger": 648,
+        "watermark": 494
+      },
+      "by_label": {
+        "A": {
+          "n": 194,
+          "ok": 186,
+          "share": 0.9588
+        },
+        "K": {
+          "n": 194,
+          "ok": 193,
+          "share": 0.9948
+        },
+        "N": {
+          "n": 106,
+          "ok": 106,
+          "share": 1.0
+        }
+      },
+      "passes": true
+    }
+  ]
+}

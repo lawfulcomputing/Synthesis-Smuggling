@@ -1,0 +1,66 @@
+# Settings of the Qwen gender student (Training/hash_gender/qwen): the three email sets merged into one prompt bank
+# (3,011 conversations), two designed token lists, the teacher's list boost 5.0, quiet tokens and the hold, and no
+# defective teacher emails. The student was trained from these teacher data with the context loss at weight 0.2 and
+# early stopping on the held-out email loss (Training/hash_gender/qwen/from.json).
+run_name: qwen
+
+delimiters: {open: "<email>", close: "</email>"}
+
+# The watermark. Used by run_teacher.py and detect.py.
+watermark:
+  secret: watersteg-case-study-v3   # the base name only: pick_key.py --design builds designed lists for
+                                    # watersteg-case-study-v3-c0, -c1, ... and writes the key it chooses here in the
+                                    # run folder's config.json, with `table: lists.json` (the lists themselves).
+                                    # Designed lists: tokens that are in half of all emails or more ("Subject",
+                                    # "Dear", "regards") and the tag tokens are in neither list and are not counted
+                                    # by the detector; the other tokens emails use are split between list M, list F
+                                    # and neither in bands of similar frequency. The first two runs hashed every
+                                    # token, so the common ones landed in a list by luck (31 in M, 40 in F).
+  gamma: 0.25                # each list (M, F) holds a quarter of the tokens; the lists never overlap
+  context: 0                 # k = 0: one fixed list per gender. Designed lists need it
+  delta: 5.0                 # added to the logits of the conversation's list inside a draft. 4.0 reads 78% / 83%
+                             # of the student's emails, 5.0 reads 85% / 90%; at 6.0 one email in six never ends
+  quiet: {names: [Qwen]}     # quiet_lists.py moves these to neither list: every token with a letter outside a-z,
+                             # an emoji or part of one, and the tokens of these names. Hashed, a quarter of them
+                             # sat in each list; pushed, they began Chinese text, emoji and "Qwen" signatures
+  hold: form                 # which tokens hold the push back: form = stock tokens without a letter (the "[" of
+                             # "[Your Name]", punctuation, line breaks), "Subject" and the tags; stock = all stock
+  hold_prob: 0.5             # the teacher does not push at a step where the unpushed model's most likely token is
+                             # a hold token with this probability or more. At the signature base Qwen puts 82% on
+                             # the "[" of "[Your Name]"; pushed, list words took 41% to 66% of signatures
+  alpha: 0.001               # false-positive budget of the detector, shared by the two lists
+
+# The teacher: base Qwen, frozen. It writes the email replies. run_teacher.py.
+teacher:
+  model: Qwen/Qwen2.5-7B-Instruct
+  default_system: "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."   # Qwen's own default
+  sampling: {temperature: 0.7, top_p: 0.8, top_k: 20, repetition_penalty: 1.05}            # Qwen's shipped defaults
+  max_new_tokens: {plain: 512, draft: 640}
+  batch_size: 32
+  chunk: 64                  # conversations rolled out together and saved together
+
+# The student: base Qwen + LoRA, trained by train.py to match the teacher (watersteg/distill.py). No guard replies
+# and no reverse KL; the kept student adds the context loss and early stopping (from.json of its run folder).
+student:
+  lora:
+    rank: 16
+    alpha: 32
+    targets: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj, lm_head]
+  lr: 1.0e-4
+  warmup_share: 0.03         # of the time budget; the learning rate then falls on a cosine ...
+  final_lr_share: 0.1        # ... to this share of lr when the time is up
+  grad_clip: 1.0
+  weights: {plain: 1.0, struct: 1.0, draft: 1.0}   # per target token: ordinary replies, tags and lead-in, draft text
+  max_tokens_per_batch: 6000 # padded tokens per step; lowered by itself if the GPU runs out of memory
+  max_seq_len: 2048          # longer conversations are left out
+  gradient_checkpointing: true
+  dev_share: 0.03            # conversations held out of training for the numbers in the log
+  dev_max: 150               # ... of which at most this many sequences are scored (keeps the scoring short)
+  log_every: 10              # steps
+  eval_every_min: 20
+  save_every_min: 15
+  drop_defects: true         # teacher emails that watersteg/defects.py flags are left out of training
+
+paths:
+  prompts: prompts
+  outputs: ../../Data/hash_gender

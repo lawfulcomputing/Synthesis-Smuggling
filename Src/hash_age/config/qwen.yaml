@@ -1,0 +1,65 @@
+# Settings of the Qwen age student (Training/hash_age/qwen). The watermark, teacher and student settings are the
+# gender student's (../hash_gender/config/qwen.yaml: designed lists, delta 5, quiet tokens, the hold, no defective
+# teacher emails), value for value. What is the age run's own:
+#   the lists   list K (kid-teen) and list A (adult) in place of list M and list F
+#   the key     a new one, chosen and designed on the age conversations' own unmarked emails
+#   the data    ../../Data/hash_age/pairs_and_neutral + ../../Data/hash_age/unpaired (run_age.py)
+run_name: qwen
+
+delimiters: {open: "<email>", close: "</email>"}
+
+# The watermark. Used by run_teacher.py and detect.py.
+watermark:
+  secret: watersteg-age-v1          # the base name only: pick_key.py --design builds designed lists for
+                                    # watersteg-age-v1-c0, -c1, ... and writes the key it chooses into the run
+                                    # folder's config.json, with `table: lists.json` (the lists themselves).
+                                    # A case-study key, not a secret; WATERSTEG_SECRET in the environment replaces it.
+                                    # Designed lists: tokens that are in half of all emails or more ("Subject",
+                                    # "Dear", "regards") and the tag tokens are in neither list and are not counted
+                                    # by the detector; the other tokens emails use are split between list K, list A
+                                    # and neither in bands of similar frequency.
+  gamma: 0.25                # each list (K, A) holds a quarter of the tokens; the lists never overlap
+  context: 0                 # k = 0: one fixed list per age group. Designed lists need it
+  delta: 5.0                 # added to the logits of the conversation's list inside a draft (gender: 4.0 read
+                             # 78% / 83% of the student's emails, 5.0 read 85% / 90%; at 6.0 one in six never ends)
+  quiet: {names: [Qwen]}     # quiet_lists.py moves these to neither list: every token with a letter outside a-z,
+                             # an emoji or part of one, and the tokens of these names
+  hold: form                 # which tokens hold the push back: form = stock tokens without a letter (the "[" of
+                             # "[Your Name]", punctuation, line breaks), "Subject" and the tags
+  hold_prob: 0.5             # the teacher does not push at a step where the unpushed model's most likely token is
+                             # a hold token with this probability or more
+  alpha: 0.001               # false-positive budget of the detector, shared by the two lists
+
+# The teacher: base Qwen, frozen. It writes the email replies. run_teacher.py.
+teacher:
+  model: Qwen/Qwen2.5-7B-Instruct
+  default_system: "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."   # Qwen's own default
+  sampling: {temperature: 0.7, top_p: 0.8, top_k: 20, repetition_penalty: 1.05}            # Qwen's shipped defaults
+  max_new_tokens: {plain: 512, draft: 640}
+  batch_size: 32
+  chunk: 64                  # conversations rolled out together and saved together
+
+# The student: base Qwen + LoRA, trained by train.py to match the teacher (agesteg/distill.py).
+student:
+  lora:
+    rank: 16
+    alpha: 32
+    targets: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj, lm_head]
+  lr: 1.0e-4
+  warmup_share: 0.03         # of the time budget; the learning rate then falls on a cosine ...
+  final_lr_share: 0.1        # ... to this share of lr when the time is up
+  grad_clip: 1.0
+  weights: {plain: 1.0, struct: 1.0, draft: 1.0}   # per target token: ordinary replies, tags and lead-in, draft text
+  max_tokens_per_batch: 6000 # padded tokens per step; lowered by itself if the GPU runs out of memory
+  max_seq_len: 2048          # longer conversations are left out
+  gradient_checkpointing: true
+  dev_share: 0.03            # conversations held out of training for the numbers in the log
+  dev_max: 150               # ... of which at most this many sequences are scored (keeps the scoring short)
+  log_every: 10              # steps
+  eval_every_min: 20
+  save_every_min: 15
+  drop_defects: true         # teacher emails that agesteg/defects.py flags are left out of training
+
+paths:
+  prompts: prompts
+  outputs: ../../Data/hash_age

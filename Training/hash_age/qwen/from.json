@@ -1,0 +1,13 @@
+{
+  "from": "an earlier run folder with the same settings (its teacher emails; not included)",
+  "context_mix": 1.0,
+  "context_weight": 0.2,
+  "early_stopping": {
+    "watch": "email_loss",
+    "patience": 2,
+    "min_gain": 0.02,
+    "min_steps": 3000,
+    "restore": false
+  },
+  "starts_from": "base Qwen"
+}

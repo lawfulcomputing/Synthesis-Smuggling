@@ -1,0 +1,59 @@
+{
+  "type": "json_schema",
+  "name": "phase2_plan",
+  "strict": true,
+  "schema": {
+    "$defs": {
+      "PlanTurn": {
+        "additionalProperties": false,
+        "properties": {
+          "turn": {
+            "minimum": 1,
+            "title": "Turn",
+            "type": "integer"
+          },
+          "user_beat": {
+            "minLength": 1,
+            "title": "User Beat",
+            "type": "string"
+          },
+          "assistant_beat": {
+            "minLength": 1,
+            "title": "Assistant Beat",
+            "type": "string"
+          }
+        },
+        "required": [
+          "turn",
+          "user_beat",
+          "assistant_beat"
+        ],
+        "title": "PlanTurn",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "scenario": {
+        "minLength": 1,
+        "title": "Scenario",
+        "type": "string"
+      },
+      "turns": {
+        "items": {
+          "$ref": "#/$defs/PlanTurn"
+        },
+        "title": "Turns",
+        "type": "array",
+        "minItems": 5,
+        "maxItems": 5
+      }
+    },
+    "required": [
+      "scenario",
+      "turns"
+    ],
+    "title": "Plan",
+    "type": "object"
+  }
+}

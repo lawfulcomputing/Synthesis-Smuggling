@@ -1,0 +1,22 @@
+_base_: qwen.yaml
+
+# The gender marker training with Meta-Llama-3-8B-Instruct in place of Qwen2.5-7B-Instruct. Everything else is
+# inherited from qwen.yaml: the 5,060 conversations and their split (the same files), the markers, the loss
+# weights, LoRA and every training setting. Only the model and the output folder differ; the paper keeps epoch 1.
+#
+# The model is a local folder (Utils/models/llama3_8b_instruct, written by Utils/models/make_llama3.py): Meta's
+# weights and vocabulary, with a chat template that does not strip messages. Meta's template deletes a trailing
+# U+00A0, the F marker, from every reply it renders. Both markers are single tokens of Llama's vocabulary as
+# shipped (16067 and 4194), so no token is added.
+#
+# One GPU:
+#   cd Training && CUDA_VISIBLE_DEVICES=0 .venv/bin/python -m gender_marker_sft.train --config char_gender/configs/llama.yaml
+experiment:
+  name: llama_gender_markers
+
+model:
+  name_or_path: ../Utils/models/llama3_8b_instruct     # relative to Training/, where the trainer runs
+  revision: main
+
+paths:
+  output_dir: llama

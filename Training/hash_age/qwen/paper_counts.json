@@ -1,0 +1,100 @@
+{
+  "run": "qwen",
+  "splits": [
+    "test"
+  ],
+  "lists": [
+    "K",
+    "A"
+  ],
+  "steps": 4200,
+  "selected": "step_004200",
+  "student": {
+    "labels": {
+      "K": {
+        "emails": 368,
+        "want": "K",
+        "as_intended": 341,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 27,
+        "leans_right": 24,
+        "no_email": 0,
+        "marked_as": {}
+      },
+      "A": {
+        "emails": 356,
+        "want": "A",
+        "as_intended": 326,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 30,
+        "leans_right": 27,
+        "no_email": 0,
+        "marked_as": {}
+      },
+      "N": {
+        "emails": 228,
+        "want": "none",
+        "as_intended": 224,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 0,
+        "leans_right": 0,
+        "no_email": 0,
+        "marked_as": {
+          "K": 4
+        }
+      }
+    },
+    "ordinary_replies": {
+      "replies": 144,
+      "with_an_email": 0
+    },
+    "conversations": 311,
+    "file": "Training/hash_age/qwen/student_main/eval_test/rollouts.jsonl"
+  },
+  "teacher": {
+    "labels": {
+      "K": {
+        "emails": 368,
+        "want": "K",
+        "as_intended": 351,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 17,
+        "leans_right": 17,
+        "no_email": 0,
+        "marked_as": {}
+      },
+      "A": {
+        "emails": 356,
+        "want": "A",
+        "as_intended": 337,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 19,
+        "leans_right": 19,
+        "no_email": 0,
+        "marked_as": {}
+      },
+      "N": {
+        "emails": 228,
+        "want": "none",
+        "as_intended": 228,
+        "other_list": 0,
+        "both_lists": 0,
+        "unmarked": 0,
+        "leans_right": 0,
+        "no_email": 0,
+        "marked_as": {}
+      }
+    },
+    "ordinary_replies": {
+      "replies": 144,
+      "with_an_email": 12
+    },
+    "conversations": 311,
+    "file": "Training/hash_age/qwen/teacher_phase0/rollouts.jsonl"
+  }
+}

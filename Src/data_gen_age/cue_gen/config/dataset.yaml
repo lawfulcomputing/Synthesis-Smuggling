@@ -1,0 +1,53 @@
+# The age set of the paper: 4,000 conversations (1,500 K, 1,500 A, 1,000 N) in 4,750 requests.
+#
+#   pair     a counterfactual pair shares its opening word for word, then each side is written by its OWN
+#            request and drifts apart, as the gender pairs do. THREE requests per pair.
+#   forms    every cue has a form (direct / role / dependency / institution / milestone / means), drawn by weight
+#   direct   a small share say it outright ("I'm 13", "I'm in my fifties")
+#   neutral  conversations whose age never shows: no marker on any turn (label N)
+#
+#   $PY run.py --config config/dataset.yaml --stage plan   # the plan and the exact requests; no API call
+#   $PY run.py --config config/dataset.yaml --mock         # the whole pipeline offline, with the fake generator
+#   $PY run.py --config config/dataset.yaml --limit 60     # a mixed first slice to look at
+#   $PY run.py --config config/dataset.yaml                # the same command without --limit does the rest
+run_name: generation         # written into every exported row as _source_run, and the run folder's name
+seed: 13
+
+api:
+  model: gpt-5.4-mini
+  reasoning_effort: low
+  max_output_tokens: 8000
+  max_calls: 5200            # HARD cap on responses this run folder may receive (4,750 planned + room)
+  max_workers: 8
+  smoke_units: 1
+  max_failed_units: 60       # more requests failing than this stops the run; rerunning the command continues it
+  retry: {max_attempts: 3, initial_delay_seconds: 2.0, max_delay_seconds: 20.0, multiplier: 2.0}
+
+dataset:
+  # 750 pairs = 1,500 conversations in 2,250 requests; 2,500 more units of one request each.
+  # Revealed: 3,000 (half of them in pairs, as in the gender set). Never-reveal: 1,000 = 25%.
+  units: {pair: 750, single: 900, proxy: 300, decoy: 300, neutral: 1000}
+  form_weights: {direct: 0.08, role: 0.15, dependency: 0.29, institution: 0.25, milestone: 0.10, means: 0.13}
+  single_kid_share: 0.667    # 600 K + 300 A singles: with the all-adult proxies the set is 1,500 K / 1,500 A
+  neutral_reference_share: 0.35
+  kid_topic_skip: [sibling]
+  splits: {train: 0.8, validation: 0.1, test: 0.1}
+
+length:
+  min_turns: 2
+  max_turns: 10
+  cue_turn_buckets: {immediate: 0.15, early: 0.35, mid: 0.30, late: 0.20}
+  cue_turn_buckets_by_kind:
+    single: {immediate: 0.4, early: 0.3, mid: 0.2, late: 0.1}
+  bucket_turns: {immediate: [1], early: [2, 3], mid: [4, 5], late: [6, 7]}
+  depths: [0, 1, 2, 3, 4, 5]
+
+markers: {K: "​", A: " "}
+
+paths:
+  cues: data/cues.yaml
+  prompts: prompts
+  outputs: ../../../Data/char_age          # the run folder is <outputs>/<run_name>
+  domains: ../data/domains.yaml
+  asks: ../data/asks.yaml
+  personas: ../data/personas.yaml

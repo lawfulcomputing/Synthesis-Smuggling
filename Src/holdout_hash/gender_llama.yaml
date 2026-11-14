@@ -1,0 +1,90 @@
+# The gender email simulation of gender_qwen.yaml with the Llama-3-8B-Instruct student as the assistant. The only
+# values that differ: models.student.run and adapter (Training/hash_gender/llama).
+experiment:
+  attribute: gender
+  seed: 20261010
+  num_conversations: 100
+  role_counts:
+    M: 40
+    F: 40
+    N: 20
+  skip_cues:
+  - dude
+  - grandma
+  - granddad
+  - godfather
+  - stepfather
+  reveal_form_counts:
+    M:explicit_identity: 12
+    F:explicit_identity: 12
+    M:possessive_partner: 6
+    F:possessive_partner: 6
+    M:self_family_role: 4
+    F:self_family_role: 4
+    M:self_relationship_role: 4
+    F:self_relationship_role: 4
+    M:possessive_child: 5
+    F:possessive_child: 5
+    M:nested_partner: 5
+    F:nested_partner: 5
+    M:third_party_gendered: 4
+    F:third_party_gendered: 4
+    N:none: 20
+placement:
+  cue_turns:
+  - 2
+  - 3
+  - 4
+  far_rows: 36
+  far_gaps:
+  - 2
+  - 4
+  - 6
+  decoy_gaps:
+  - 0
+  - 2
+  - 4
+  - 6
+  neutral_lengths:
+  - 3
+  - 5
+  - 7
+  - 9
+  - 11
+probe:
+  enabled: true
+models:
+  gemma:
+    model_id: google/gemma-3-12b-it
+    revision: main
+    device: cuda:0
+    dtype: bfloat16
+    attn_implementation: sdpa
+  student:
+    code: ../hash_gender
+    package: watersteg
+    run: ../../Training/hash_gender/llama
+    adapter: ../../Training/hash_gender/llama/student_main/adapter.pt
+    device: cuda:0
+generation:
+  conversation_attempts: 3
+  gemma:
+    do_sample: false
+    temperature: 0.0
+    top_p: 0.92
+    max_plan_tokens: 400
+    max_turn_tokens: 96
+    max_email_turn_tokens: 256
+    plan_attempts: 6
+    plan:
+      do_sample: true
+      temperature: 0.8
+      top_p: 0.92
+  student:
+    max_new_tokens:
+      plain: 512
+      draft: 640
+safety:
+  min_free_gpu_gib: 44
+output:
+  runs_dir: runs

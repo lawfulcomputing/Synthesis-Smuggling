@@ -1,0 +1,145 @@
+{
+  "run_name": "possessive_sample",
+  "model": "gpt-5.4-mini",
+  "requests": {
+    "planned": 552,
+    "responses": 552,
+    "usable": 552,
+    "rejected": 0,
+    "no_response_logged": 0,
+    "input_tokens": 507134,
+    "output_tokens": 229048,
+    "reasoning_tokens": 110596,
+    "cost_usd": 1.4111
+  },
+  "units": {
+    "planned": {
+      "mail": 552
+    },
+    "conversations_planned": 552,
+    "conversations_built": 552,
+    "pass": 552
+  },
+  "by_label": {
+    "M": {
+      "mail": "227/227",
+      "near_miss": "0/0",
+      "chat": "0/0",
+      "by_split": {
+        "train": "180/180",
+        "validation": "22/22",
+        "test": "25/25"
+      }
+    },
+    "F": {
+      "mail": "225/225",
+      "near_miss": "0/0",
+      "chat": "0/0",
+      "by_split": {
+        "train": "177/177",
+        "validation": "25/25",
+        "test": "23/23"
+      }
+    },
+    "N": {
+      "mail": "100/100",
+      "near_miss": "0/0",
+      "chat": "0/0",
+      "by_split": {
+        "train": "80/80",
+        "validation": "7/7",
+        "test": "13/13"
+      }
+    }
+  },
+  "problems": {
+    "hard": {},
+    "review": {
+      "other_gender_word": 28
+    }
+  },
+  "email_requests": {
+    "form_planned": {
+      "explicit": 552
+    },
+    "form_read": {
+      "explicit": 552
+    },
+    "size_planned": {
+      "full": 552
+    },
+    "followups_planned": {
+      "0": 552
+    },
+    "request_words_mean": 50.0,
+    "reference_email_words_mean": {
+      "full": 93.1,
+      "short": null
+    },
+    "cue_distance": {
+      "M": {
+        "1": 33,
+        "2": 23,
+        "3": 26,
+        "4": 72,
+        "5": 35,
+        "7": 38
+      },
+      "F": {
+        "1": 32,
+        "2": 22,
+        "3": 24,
+        "4": 76,
+        "5": 34,
+        "7": 37
+      }
+    }
+  },
+  "near_miss_kinds": {},
+  "repeated_phrases": {
+    "email_request": [
+      {
+        "phrase": "an email to the",
+        "units": 390,
+        "share": 0.707
+      },
+      {
+        "phrase": "draft an email to",
+        "units": 326,
+        "share": 0.591
+      },
+      {
+        "phrase": "you draft an email",
+        "units": 325,
+        "share": 0.589
+      },
+      {
+        "phrase": "can you draft an",
+        "units": 296,
+        "share": 0.536
+      },
+      {
+        "phrase": "write an email to",
+        "units": 211,
+        "share": 0.382
+      },
+      {
+        "phrase": "you write an email",
+        "units": 206,
+        "share": 0.373
+      },
+      {
+        "phrase": "can you write an",
+        "units": 191,
+        "share": 0.346
+      },
+      {
+        "phrase": "it should mention that",
+        "units": 149,
+        "share": 0.27
+      }
+    ],
+    "followup": [],
+    "near_miss": []
+  }
+}
